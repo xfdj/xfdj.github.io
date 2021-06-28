@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta property="og:type" content="article">
+<meta property="og:title" content="【转载】桌面用PDF重排工具：K2pdfopt简明教程">
+<meta property="og:url" content="http://example.com/2020/06/16/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="兴趣使然的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_k2pdfopt.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example1_1.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example1_2.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example1_3.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example2_1.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example2_2.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example2_3.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example3_1.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example3_2.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example3_3.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example4_1.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example4_2.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example4_3.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_k2pdfopt_gui_win.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_k2pdfopt_win.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_k2pdfopt_mac.png">
+<meta property="article:published_time" content="2020-06-16T15:45:38.000Z">
+<meta property="article:modified_time" content="2021-03-15T12:29:27.651Z">
+<meta property="article:author" content="想飞的鸡">
+<meta property="article:tag" content="转载">
+<meta property="article:tag" content="Kindle">
+<meta property="article:tag" content="PDF">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_k2pdfopt.png">
+
+
+<link rel="canonical" href="http://example.com/2020/06/16/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2020/06/16/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/","path":"2020/06/16/【转载】桌面用PDF重排工具：K2pdfopt简明教程/","title":"【转载】桌面用PDF重排工具：K2pdfopt简明教程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【转载】桌面用PDF重排工具：K2pdfopt简明教程 | 兴趣使然的博客</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">兴趣使然的博客</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80k2pdfopt-%E7%9A%84%E9%87%8D%E6%8E%92%E6%95%88%E6%9E%9C"><span class="nav-number">1.</span> <span class="nav-text">一、K2pdfopt 的重排效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E4%B8%8B%E8%BD%BD%E8%BD%AF%E4%BB%B6-k2pdfopt"><span class="nav-number">2.</span> <span class="nav-text">二、下载软件 K2pdfopt</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89windows-%E7%89%88-%E5%B8%A6gui-%E7%89%88%E6%9C%AC%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text">三、Windows 版 带GUI 版本操作步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%89%88%E6%9C%AC%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">4.</span> <span class="nav-text">四、命令行版本操作步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#windows-%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.1.</span> <span class="nav-text">1、Windows 系统：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mac-os-x-%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.2.</span> <span class="nav-text">2、Mac OS X 系统：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linux-%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.3.</span> <span class="nav-text">3、Linux 系统：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AC%E8%BD%BD%E6%9D%A5%E6%BA%90"><span class="nav-number">5.</span> <span class="nav-text">转载来源</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">想飞的鸡</p>
+  <div class="site-description" itemprop="description">文章要认认真真写鸭</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">88</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+          </div>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/06/16/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="想飞的鸡">
+      <meta itemprop="description" content="文章要认认真真写鸭">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="兴趣使然的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【转载】桌面用PDF重排工具：K2pdfopt简明教程
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-06-16 23:45:38" itemprop="dateCreated datePublished" datetime="2020-06-16T23:45:38+08:00">2020-06-16</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-15 20:29:27" itemprop="dateModified" datetime="2021-03-15T20:29:27+08:00">2021-03-15</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <script src="/assets/js/DPlayer.min.js"> </script><figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_k2pdfopt.png" alt="k2pdfopt.png" /><figcaption aria-hidden="true">k2pdfopt.png</figcaption>
+</figure>
+<p>用 Kindle 阅读 PDF 一直以来都遭到小伙伴们的无限吐槽，在那 Kindle 还能越狱的时代，我们有 Koreader 之类优秀的 Kindle 第三方插件实现 PDF 文档的实时重排，但是随着 Kindle 固件版本升级的频率加快，越狱已经跟不上进度了，所以 Koreader 等第三方插件也失去了着力点。好在现在有了 K2pdfopt，这是一款可以直接在桌面环境下运行的软件，桌面系统比 Kindle 的性能强劲，在重排 PDF 的时候更快速，也从根本上脱离了越狱的限制。</p>
+<h1 id="一k2pdfopt-的重排效果">一、K2pdfopt 的重排效果</h1>
+<table>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 31%" />
+<col style="width: 31%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>示例类型</strong></th>
+<th><strong>原始文件</strong></th>
+<th><strong>为 Kindle 优化</strong> (默认设置)</th>
+<th><strong>为智能手机优化</strong> (<a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/help/dpi.shtml">-odpi 250</a>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>四栏内容：</td>
+<td><a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/examples/original/declaration.pdf"><img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example1_1.png" alt="Example1_1.png" /></a></td>
+<td><a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/examples/kindle/declaration_k2opt.pdf"><img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example1_2.png" alt="Example1_2.png" /></a> (must use <strong>-col 4</strong>)</td>
+<td><a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/examples/smartphone/declaration_k2opt.pdf"><img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example1_3.png" alt="Example1_3.png" /></a> (must use <strong>-col 4</strong>)</td>
+</tr>
+<tr class="even">
+<td>扫描内容：</td>
+<td><a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/examples/original/pooh.pdf"><img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example2_1.png" alt="Example2_1.png" /></a></td>
+<td><a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/examples/kindle/pooh_k2opt.pdf"><img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example2_2.png" alt="Example2_2.png" /></a></td>
+<td><a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/examples/smartphone/pooh_k2opt.pdf"><img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example2_3.png" alt="Example2_3.png" /></a></td>
+</tr>
+<tr class="odd">
+<td>两栏内容：</td>
+<td><a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/examples/original/sig-alternate.pdf"><img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example3_1.png" alt="Example3_1.png" /></a></td>
+<td><a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/examples/kindle/sig-alternate_k2opt.pdf"><img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example3_2.png" alt="Example3_2.png" /></a></td>
+<td><a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/examples/smartphone/sig-alternate_k2opt.pdf"><img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example3_3.png" alt="Example3_3.png" /></a></td>
+</tr>
+<tr class="even">
+<td>一栏内容：</td>
+<td><a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/examples/original/PDF-Example-Fonts-1.pdf"><img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example4_1.png" alt="Example4_1.png" /></a></td>
+<td><a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/examples/kindle/PDF-Example-Fonts-1_k2opt.pdf"><img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example4_2.png" alt="Example4_2.png" /></a></td>
+<td><a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/examples/smartphone/PDF-Example-Fonts-1_k2opt.pdf"><img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_Example4_3.png" alt="Example4_3.png" /></a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="二下载软件-k2pdfopt">二、下载软件 K2pdfopt</h1>
+<p>K2pdfopt 支持 Windows、Mac OS X、Linux 系统，请下载适用于自己系统的版本：</p>
+<p>软件下载页面：<a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/download/">官方下载页面</a></p>
+<p>*<strong>注意：</strong>在使用 K2pdfopt 时，请避免路径、文件名出现中文字符。</p>
+<h1 id="三windows-版-带gui-版本操作步骤">三、Windows 版 带GUI 版本操作步骤</h1>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_k2pdfopt_gui_win.png" alt="k2pdfopt_gui_win.png" /><figcaption aria-hidden="true">k2pdfopt_gui_win.png</figcaption>
+</figure>
+<p>仅有 Windows 版 K2pdfopt 集成了带界面的 GUI 版本，使用方法也很简单：</p>
+<ol type="1">
+<li>点击“ADD FILE”或直接通过鼠标将 PDF 文档导入到“File list”。支持导入多个 PDF 文档。</li>
+<li>在“Env. var”栏填写转换后文档的输出路径。留空代表输出转换后的文档到源文件所在目录。</li>
+<li>在“Additional opions”栏填写“-ws -1”。据网友经验，填写此项可改善排版。</li>
+<li>选择设备“Device”。每一种设备的尺寸和 DPI 是不同的，请根据你的设备选择。</li>
+<li>选择转换模式“Conversion Mode”，一般使用默认“default”即可。可在左侧面板微调参数。</li>
+<li>设置好后可点击右下角的“Preview”预览效果。最后点击“Convert All Files”进行开始转换。</li>
+</ol>
+<p><strong>官方使用引导视频（英文）：</strong><a target="_blank" rel="noopener" href="http://v.youku.com/v_show/id_XMTI4Nzg5NzM0MA==.html">优酷视频</a></p>
+<h1 id="四命令行版本操作步骤">四、命令行版本操作步骤</h1>
+<p>K2pdfopt 在 Windows、Mac OS X、Linux 系统中均有命令行版本。</p>
+<h2 id="windows-系统">1、Windows 系统：</h2>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_k2pdfopt_win.png" alt="k2pdfopt_win.png" /><figcaption aria-hidden="true">k2pdfopt_win.png</figcaption>
+</figure>
+<p>Windows 版 K2pdfopt 默认是打开 GUI 版本的。如果想要在 Windows 下使用命令行版本的 K2pdfopt，需要进行以下操作：</p>
+<ol type="1">
+<li>在可执行文件“K2pdfopt.exe”上点击鼠标右键，在弹出的菜单中选择“创建快捷方式”。</li>
+<li>在创建的快捷方式上点击鼠标右键，在弹出的菜单中选择“属性”，在弹出的对话框中，在“目标”栏中的路径后面添加“ -gui-”（注意要有空格），点击“确定”。</li>
+<li>双击修改后的快捷方式运行命令行模式的 K2pdfopt。</li>
+<li>可根据提示填写参数。比如“-ws -1”，回车确认（使用默认设置可忽略此步）。</li>
+<li>把 PDF 文档拖放到命令提示符上(或输入 PDF 路径)，回车确认。然后再次回车开始转换。</li>
+<li>最后生成名称类似“file_k2opt.pdf”的最终文档。</li>
+</ol>
+<h2 id="mac-os-x-系统">2、Mac OS X 系统：</h2>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_06_16_%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B_k2pdfopt_mac.png" alt="k2pdfopt_mac.png" /><figcaption aria-hidden="true">k2pdfopt_mac.png</figcaption>
+</figure>
+<ol type="1">
+<li>下载 K2pdfopt 到桌面；</li>
+<li>打开“终端”，输入 <code>cd ~/desktop</code>；</li>
+<li>接着输入 <code>chmod 755 k2pdfopt</code>，按回车键将 K2pdfopt 变成可执行文件；</li>
+<li>双击运行 K2pdfopt；</li>
+<li>可根据提示填写参数。比如“-ws -1”，回车确认（使用默认设置可忽略此步）；</li>
+<li>然后把 PDF 文档拖放到命令提示符上，点击回车确认。然后再次点回车开始转换；</li>
+<li>最后生成名称类似“file_k2opt.pdf”的最终文档。</li>
+</ol>
+<h2 id="linux-系统">3、Linux 系统：</h2>
+<p>在 Linux 系统中，需要将下载的 k2pdfopt 文件移动到你自己的路径，并将其修改为可执行，然后再通过终端运行它。具体步骤请打开一个终端然后参照下面的命令依次输入：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ~/Downloads/ <span class="token comment">#这里的“/Downloads/”是指下载 K2pdfopt 所在的路径</span>
+<span class="token function">sudo</span> <span class="token function">mv</span> k2pdfopt /usr/bin <span class="token comment">#这里的路径可以按照你的喜好设置</span>
+<span class="token function">chmod</span> +x /usr/bin/k2pdfopt <span class="token comment">#将 k2pdfopt 变成可执行文件</span>
+<span class="token builtin class-name">cd</span> /my/pdf/folder <span class="token comment">#定位到 PDF 文档所在目录</span>
+k2pdfopt myfile.pdf <span class="token comment">#开始转换 PDF 文档</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>你可以创建一个脚本。具体操作请<a target="_blank" rel="noopener" href="http://www.willus.com/k2pdfopt/help/linux.shtml">移步这里</a>。</p>
+<h1 id="转载来源">转载来源</h1>
+<p><a target="_blank" rel="noopener" href="https://bookfere.com/post/134.html">强大的桌面用 PDF 重排工具：K2pdfopt 简明教程 – 书伴</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag"><i class="fa fa-tag"></i> 转载</a>
+              <a href="/tags/Kindle/" rel="tag"><i class="fa fa-tag"></i> Kindle</a>
+              <a href="/tags/PDF/" rel="tag"><i class="fa fa-tag"></i> PDF</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/05/12/%E5%A6%82%E4%BD%95%E5%9C%A8Hexo%E7%9A%84%E5%8D%9A%E6%96%87%E4%B8%AD%E5%BC%95%E7%94%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%87%E7%AB%A0/" rel="prev" title="如何在Hexo的博文中引用自己的文章">
+                  <i class="fa fa-chevron-left"></i> 如何在Hexo的博文中引用自己的文章
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/07/25/%E6%95%B0%E6%8D%AE%E5%BA%93Redis%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/" rel="next" title="数据库Redis命令入门">
+                  数据库Redis命令入门 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">想飞的鸡</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">328k</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.9.3/dist/mermaid.min.js","integrity":"sha256-OyJHvRcZHaRR6Ig73ppxF4QXk8HzvfgTprRWkulCkfY="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+  <script class="next-config" data-name="nprogress" type="application/json">{"enable":true,"spinner":true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js","integrity":"sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":2,"hOffset":0,"vOffset":0,"position":"left","width":200,"height":300},"mobile":{"show":false,"scale":0.2},"react":{"opacity":0.5},"log":false});</script></body>
+</html>

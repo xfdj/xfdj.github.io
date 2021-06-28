@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="Redis 简介  Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库Redis命令入门">
+<meta property="og:url" content="http://example.com/2020/07/25/%E6%95%B0%E6%8D%AE%E5%BA%93Redis%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:site_name" content="兴趣使然的博客">
+<meta property="og:description" content="Redis 简介  Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-25T08:20:59.000Z">
+<meta property="article:modified_time" content="2021-03-15T12:29:27.657Z">
+<meta property="article:author" content="想飞的鸡">
+<meta property="article:tag" content="数据库">
+<meta property="article:tag" content="Redis">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2020/07/25/%E6%95%B0%E6%8D%AE%E5%BA%93Redis%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2020/07/25/%E6%95%B0%E6%8D%AE%E5%BA%93Redis%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/","path":"2020/07/25/数据库Redis命令入门/","title":"数据库Redis命令入门"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>数据库Redis命令入门 | 兴趣使然的博客</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">兴趣使然的博客</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#redis-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">Redis 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#redis-%E4%BC%98%E5%8A%BF"><span class="nav-number">1.1.</span> <span class="nav-text">Redis 优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis%E4%B8%8E%E5%85%B6%E4%BB%96key-value%E5%AD%98%E5%82%A8%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C"><span class="nav-number">1.2.</span> <span class="nav-text">Redis与其他key-value存储有什么不同？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#redis%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">Redis操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-number">2.1.</span> <span class="nav-text">启动服务端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">2.2.</span> <span class="nav-text">启动客户端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E9%94%AE%E5%80%BC%E5%AF%B9"><span class="nav-number">2.3.</span> <span class="nav-text">新建键值对</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E9%94%AE%E5%80%BC%E5%AF%B9"><span class="nav-number">2.4.</span> <span class="nav-text">获取键值对</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E7%BB%99%E5%AE%9A%E9%94%AE%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8"><span class="nav-number">2.5.</span> <span class="nav-text">判断给定键是否存在</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E9%94%AE%E5%80%BC%E5%AF%B9"><span class="nav-number">2.6.</span> <span class="nav-text">删除键值对</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%80%BC"><span class="nav-number">2.7.</span> <span class="nav-text">修改值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A9%E9%94%AE%E5%80%BC%E5%AF%B9%E5%AD%98%E5%9C%A8%E6%8C%87%E5%AE%9A%E9%95%BF%E7%9A%84%E6%97%B6%E9%97%B4"><span class="nav-number">2.8.</span> <span class="nav-text">让键值对存在指定长的时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0"><span class="nav-number">2.9.</span> <span class="nav-text">添加列表元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%90%E5%88%97%E8%A1%A8"><span class="nav-number">2.10.</span> <span class="nav-text">子列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%BB%E9%99%A4%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0"><span class="nav-number">2.11.</span> <span class="nav-text">移除列表元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E6%AC%A1%E6%B7%BB%E5%8A%A0%E5%A4%9A%E4%B8%AA%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0"><span class="nav-number">2.12.</span> <span class="nav-text">一次添加多个列表元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0"><span class="nav-number">2.13.</span> <span class="nav-text">添加集合元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%BB%E9%99%A4%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0"><span class="nav-number">2.14.</span> <span class="nav-text">移除集合元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E7%BB%99%E5%AE%9A%E5%80%BC%E6%98%AF%E5%90%A6%E5%9C%A8%E9%9B%86%E5%90%88%E4%B8%AD"><span class="nav-number">2.15.</span> <span class="nav-text">测试给定值是否在集合中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E5%87%BA%E9%9B%86%E5%90%88%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-number">2.16.</span> <span class="nav-text">列出集合中的元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E9%9B%86%E5%90%88"><span class="nav-number">2.17.</span> <span class="nav-text">合并两个集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E5%88%A0%E9%99%A4%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0"><span class="nav-number">2.18.</span> <span class="nav-text">随机删除集合元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88"><span class="nav-number">2.19.</span> <span class="nav-text">有序集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%88%E5%B8%8C"><span class="nav-number">2.20.</span> <span class="nav-text">哈希</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%93%88%E5%B8%8C%E5%AD%97%E6%AE%B5%E7%9A%84%E5%80%BC"><span class="nav-number">2.21.</span> <span class="nav-text">修改哈希字段的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%87%E6%8D%A2%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">2.22.</span> <span class="nav-text">切换数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E7%A9%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E5%86%85%E5%AE%B9"><span class="nav-number">2.23.</span> <span class="nav-text">清空数据库内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E9%A1%B5"><span class="nav-number">3.</span> <span class="nav-text">参考网页</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">想飞的鸡</p>
+  <div class="site-description" itemprop="description">文章要认认真真写鸭</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">88</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+          </div>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/07/25/%E6%95%B0%E6%8D%AE%E5%BA%93Redis%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="想飞的鸡">
+      <meta itemprop="description" content="文章要认认真真写鸭">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="兴趣使然的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数据库Redis命令入门
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-07-25 16:20:59" itemprop="dateCreated datePublished" datetime="2020-07-25T16:20:59+08:00">2020-07-25</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-15 20:29:27" itemprop="dateModified" datetime="2021-03-15T20:29:27+08:00">2021-03-15</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>10 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <script src="/assets/js/DPlayer.min.js"> </script><h1 id="redis-简介">Redis 简介</h1>
+<blockquote>
+<p>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries and streams. Redis has built-in replication, Lua scripting, LRU eviction, transactions and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster.</p>
+<p>——<a target="_blank" rel="noopener" href="https://redis.io/">Redis官网</a></p>
+</blockquote>
+<p>Redis 是完全开源免费的，遵守BSD协议，是一个高性能的key-value数据库。</p>
+<p>Redis 与其他 key-value 缓存产品有以下三个特点：</p>
+<ul>
+<li>Redis支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用。</li>
+<li>Redis不仅仅支持简单的key-value类型的数据，同时还提供list，set，zset，hash等数据结构的存储。</li>
+<li>Redis支持数据的备份，即master-slave模式的数据备份。</li>
+</ul>
+<h2 id="redis-优势">Redis 优势</h2>
+<ul>
+<li>性能极高：Redis能读的速度是110000次/s,写的速度是81000次/s 。</li>
+<li>丰富的数据类型：Redis支持二进制案例的 Strings, Lists, Hashes, Sets 及 Ordered Sets 数据类型操作。</li>
+<li>原子性：Redis的所有操作都是原子性的，意思就是要么成功执行要么失败完全不执行。单个操作是原子性的。多个操作也支持事务，即原子性，通过MULTI和EXEC指令包起来。</li>
+<li>丰富的特性：Redis还支持 publish/subscribe, 通知, key 过期等等特性。</li>
+</ul>
+<h2 id="redis与其他key-value存储有什么不同">Redis与其他key-value存储有什么不同？</h2>
+<ul>
+<li>Redis有着更为复杂的数据结构并且提供对他们的原子性操作，这是一个不同于其他数据库的进化路径。Redis的数据类型都是基于基本数据结构的同时对程序员透明，无需进行额外的抽象。</li>
+<li>Redis运行在内存中但是可以持久化到磁盘，所以在对不同数据集进行高速读写时需要权衡内存，因为数据量不能大于硬件内存。在内存数据库方面的另一个优点是，相比在磁盘上相同的复杂的数据结构，在内存中操作起来非常简单，这样Redis可以做很多内部复杂性很强的事情。同时，在磁盘格式方面他们是紧凑的以追加的方式产生的，因为他们并不需要进行随机访问。</li>
+</ul>
+<h1 id="redis操作">Redis操作</h1>
+<h2 id="启动服务端">启动服务端</h2>
+<p>安装成功后，通过终端键入如下命令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">redis-server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如果出现类似下面的提示：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token number">8672</span><span class="token punctuation">]</span> 06 Aug <span class="token number">19</span>:42:44.727 <span class="token comment"># oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo</span>
+<span class="token punctuation">[</span><span class="token number">8672</span><span class="token punctuation">]</span> 06 Aug <span class="token number">19</span>:42:44.727 <span class="token comment"># Redis version=5.0.9, bits=64, commit=9414ab9b, modified=0, pid=8672, just started</span>
+<span class="token punctuation">[</span><span class="token number">8672</span><span class="token punctuation">]</span> 06 Aug <span class="token number">19</span>:42:44.728 <span class="token comment"># Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf</span>
+                _._
+           _.-`<span class="token variable"><span class="token variable">`</span>__ <span class="token string">''</span>-._
+      _.-<span class="token variable">`</span></span><span class="token variable"><span class="token variable">`</span>    <span class="token variable">`</span></span><span class="token builtin class-name">.</span>  <span class="token variable"><span class="token variable">`</span>_.  <span class="token string">''</span>-._           Redis <span class="token number">5.0</span>.9 <span class="token punctuation">(</span>9414ab9b/0<span class="token punctuation">)</span> <span class="token number">64</span> bit
+  .-<span class="token variable">`</span></span><span class="token variable"><span class="token variable">`</span> .-<span class="token variable">`</span></span>`<span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">.</span>  <span class="token variable">`</span></span>`<span class="token variable"><span class="token variable">`</span><span class="token punctuation">\</span>/    _.,_ <span class="token string">''</span>-._
+ <span class="token punctuation">(</span>    '      ,       .-<span class="token variable">`</span></span>  <span class="token operator">|</span> <span class="token variable"><span class="token variable">`</span>,    <span class="token punctuation">)</span>     Running <span class="token keyword">in</span> standalone mode
+ <span class="token operator">|</span><span class="token variable">`</span></span>-._<span class="token variable"><span class="token variable">`</span>-<span class="token punctuation">..</span>.-<span class="token variable">`</span></span> __<span class="token punctuation">..</span>.-.`<span class="token variable"><span class="token variable">`</span>-._<span class="token operator">|</span>'<span class="token variable">`</span></span> _.-<span class="token string">'|     Port: 6379
+ |    <span class="token variable"><span class="token variable">`</span>-._   <span class="token variable">`</span></span>._    /     _.-'</span>    <span class="token operator">|</span>     PID: <span class="token number">8672</span>
+  <span class="token variable"><span class="token variable">`</span>-._    <span class="token variable">`</span></span>-._  <span class="token variable"><span class="token variable">`</span>-./  _.-<span class="token string">'    _.-'</span>
+ <span class="token operator">|</span><span class="token variable">`</span></span>-._<span class="token variable"><span class="token variable">`</span>-._    <span class="token variable">`</span></span>-.__.-<span class="token string">'    _.-'</span>_.-<span class="token string">'|
+ |    <span class="token variable"><span class="token variable">`</span>-._<span class="token variable">`</span></span>-._        _.-'</span>_.-<span class="token string">'    |           http://redis.io
+  <span class="token variable"><span class="token variable">`</span>-._    <span class="token variable">`</span></span>-._<span class="token variable"><span class="token variable">`</span>-.__.-<span class="token string">'_.-'</span>    _.-'
+ <span class="token operator">|</span><span class="token variable">`</span></span>-._<span class="token variable"><span class="token variable">`</span>-._    <span class="token variable">`</span></span>-.__.-'</span>    _.-<span class="token string">'_.-'</span><span class="token operator">|</span>
+ <span class="token operator">|</span>    <span class="token variable"><span class="token variable">`</span>-._<span class="token variable">`</span></span>-._        _.-<span class="token string">'_.-'</span>    <span class="token operator">|</span>
+  <span class="token variable"><span class="token variable">`</span>-._    <span class="token variable">`</span></span>-._<span class="token variable"><span class="token variable">`</span>-.__.-<span class="token string">'_.-'</span>    _.-'
+      <span class="token variable">`</span></span>-._    <span class="token variable"><span class="token variable">`</span>-.__.-<span class="token string">'    _.-'</span>
+          <span class="token variable">`</span></span>-._        _.-'
+              `-.__.-'
+
+<span class="token punctuation">[</span><span class="token number">8672</span><span class="token punctuation">]</span> 06 Aug <span class="token number">19</span>:42:44.735 <span class="token comment"># Server initialized</span>
+<span class="token punctuation">[</span><span class="token number">8672</span><span class="token punctuation">]</span> 06 Aug <span class="token number">19</span>:42:44.736 * DB loaded from disk: <span class="token number">0.001</span> seconds
+<span class="token punctuation">[</span><span class="token number">8672</span><span class="token punctuation">]</span> 06 Aug <span class="token number">19</span>:42:44.736 * Ready to accept connections<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>则说明服务端启动成功。之后这个服务端需要一直保持开启，直到访问结束。</p>
+<h2 id="启动客户端">启动客户端</h2>
+<p>新打开一个终端，键入命令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">redis-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>命令行如果出现下面的提示，则说明启动成功。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="新建键值对">新建键值对</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> <span class="token keyword">SET</span> server:name <span class="token string">"fido"</span>
+OK<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>新建了一个键名为<code>server:name</code>，值为<code>"fido"</code>的键值对。</p>
+<h2 id="获取键值对">获取键值对</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> GET server:name
+<span class="token string">"fido"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>获取键<code>server:name</code>所对应的值。</p>
+<h2 id="判断给定键是否存在">判断给定键是否存在</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> <span class="token keyword">EXISTS</span> server:name
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> <span class="token keyword">EXISTS</span> server:blabla
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>存在的键输出1，不存在输出0。</p>
+<h2 id="删除键值对">删除键值对</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> <span class="token keyword">SET</span> connections <span class="token number">10</span>
+OK
+<span class="token operator">></span> DEL connections
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>删除成功输出1，删除失败（比如删除原本就不存在的键）输出0。</p>
+<h2 id="修改值">修改值</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> <span class="token keyword">SET</span> connections <span class="token number">10</span>
+OK
+<span class="token operator">></span> INCR connections
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">11</span>
+<span class="token operator">></span> INCRBY connections <span class="token number">100</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">111</span>
+<span class="token operator">></span> DECR connections
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">110</span>
+<span class="token operator">></span> DECRBY connections <span class="token number">10</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">100</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>INCR</code>表示让给定键对应的值自增1，<code>DECR</code>则是自减1，<code>INCRBY</code>和<code>DECRBY</code>分别可以指定增加或减少的值。需要注意的是，这里的操作全都是原子操作。</p>
+<h2 id="让键值对存在指定长的时间">让键值对存在指定长的时间</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> <span class="token keyword">SET</span> resource:<span class="token keyword">lock</span> <span class="token string">"Redis Demo"</span>
+OK
+<span class="token operator">></span> EXPIRE resource:<span class="token keyword">lock</span> <span class="token number">120</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> TTL resource:<span class="token keyword">lock</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">110</span>
+<span class="token operator">></span> TTL resource:<span class="token keyword">lock</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">91</span>
+<span class="token operator">></span> TTL resource:<span class="token keyword">lock</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token number">2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>EXPIRE</code>可以指定给定的键的存在时间（例子中是120秒），<code>TTL</code>可以查看给定的键还剩余多少时间，-2表示键已经不再存在了。对应的<code>PEXPIRE</code>和<code>PTTL</code>将单位换成了毫秒。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> <span class="token keyword">SET</span> resource:<span class="token keyword">lock</span> <span class="token string">"Redis Demo 1"</span>
+OK
+<span class="token operator">></span> EXPIRE resource:<span class="token keyword">lock</span> <span class="token number">120</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> TTL resource:<span class="token keyword">lock</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">119</span>
+<span class="token operator">></span> <span class="token keyword">SET</span> resource:<span class="token keyword">lock</span> <span class="token string">"Redis Demo 2"</span>
+OK
+<span class="token operator">></span> TTL resource:<span class="token keyword">lock</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>-1表示键不会到期，可以一直存在下去。如果重新<code>SET</code>了一个键，会修改它的终止期限。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> <span class="token keyword">SET</span> resource:<span class="token keyword">lock</span> <span class="token string">"Redis Demo 3"</span> EX <span class="token number">5</span>
+OK
+<span class="token operator">></span> PERSIST resource:<span class="token keyword">lock</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> TTL resource:<span class="token keyword">lock</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>SET</code>也可以通过追加参数的方式来指定键存在的时间。<code>PERSIST</code>用来取消终止时间。</p>
+<h2 id="添加列表元素">添加列表元素</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> RPUSH friends <span class="token string">"Alice"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> RPUSH friends <span class="token string">"Bob"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token operator">></span> LPUSH friends <span class="token string">"Sam"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>RPUSH</code>表示将元素添加到列表末尾，<code>LPUSH</code>则表示将元素添加到列表开头。返回值代表列表中的元素个数。</p>
+<h2 id="子列表">子列表</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> LRANGE friends <span class="token number">0</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">"Sam"</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">"Alice"</span>
+<span class="token number">3</span><span class="token punctuation">)</span> <span class="token string">"Bob"</span>
+<span class="token operator">></span> LRANGE friends <span class="token number">1</span> <span class="token number">2</span>
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">"Alice"</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">"Bob"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>LRANGE</code>可以获取列表的给定子集，-1表示倒数第一个元素，-2则表示倒数第二个，以此类推。</p>
+<h2 id="移除列表元素">移除列表元素</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> LPOP friends
+<span class="token string">"Sam"</span>
+<span class="token operator">></span> RPOP friends
+<span class="token string">"Bob"</span>
+<span class="token operator">></span> LLEN friends
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>LPOP</code>移除列表最左侧元素并返回值，<code>RPOP</code>移除列表最右侧元素并返回值，<code>LLEN</code>获取当前列表长度。</p>
+<h2 id="一次添加多个列表元素">一次添加多个列表元素</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> RPUSH friends <span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">4</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><code>RPUSH</code>和<code>LPUSH</code>都是可变参数的，因此可以一次向列表中添加多个元素。</p>
+<h2 id="添加集合元素">添加集合元素</h2>
+<p>集合类似于列表，只是它没有特定的顺序，而且每个元素只能出现一次。两个数据结构都非常有用,因为列表可以快速访问列表顶部或底部附近的元素，并且元素的顺序被保存下来。集合可以快速测试成员是否存在，也就是说，立即知道是否添加一个给定的元素。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> SADD superpowers <span class="token string">"flight"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> SADD superpowers <span class="token string">"x-ray vision"</span> <span class="token string">"reflexes"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>SADD</code>向集合中添加元素，可以一次添加多个。如果我们尝试添加的元素已经在里面，那么返回0，否则<code>SADD</code>返回成功添加的元素个数。</p>
+<h2 id="移除集合元素">移除集合元素</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> SREM superpowers <span class="token string">"reflexes"</span>
+<span class="token number">1</span>
+<span class="token operator">></span> SREM superpowers <span class="token string">"making pizza"</span>
+<span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>SREM</code>从集合中移除给定元素，输出1表示成功移除，输出0表示集合中不存在给定元素。</p>
+<h2 id="测试给定值是否在集合中">测试给定值是否在集合中</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> SISMEMBER superpowers <span class="token string">"flight"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> SISMEMBER superpowers <span class="token string">"reflexes"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>SISMEMBER</code>测试给定值是否在集合中，1表示肯定，0表示否定。</p>
+<h2 id="列出集合中的元素">列出集合中的元素</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> SMEMBERS superpowers
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">"x-ray vision"</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">"flight"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="合并两个集合">合并两个集合</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> SADD birdpowers <span class="token string">"pecking"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> SADD birdpowers <span class="token string">"flight"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> SUNION superpowers birdpowers
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">"flight"</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">"x-ray vision"</span>
+<span class="token number">3</span><span class="token punctuation">)</span> <span class="token string">"pecking"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>SUNION</code>组合两个或多个集合并返回所有元素的列表。</p>
+<h2 id="随机删除集合元素">随机删除集合元素</h2>
+<p>集合还有一个非常类似于<code>LPOP</code>和<code>RPOP</code>的命令，用于从集合中删除元素，并将它们返回给客户端。但是，由于集合不是有序的数据结构，因此返回（和删除）的元素在本例中完全是随意的。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> SADD letters a b c d e f
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">6</span>
+<span class="token operator">></span> SPOP letters
+<span class="token string">"c"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="有序集合">有序集合</h2>
+<p>排序集与常规集类似，但是现在每个值都有一个关联的分数。这个分数用于对集合中的元素进行排序。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> ZADD hackers <span class="token number">1940</span> <span class="token string">"Alan Kay"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> ZADD hackers <span class="token number">1906</span> <span class="token string">"Grace Hopper"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> ZADD hackers <span class="token number">1953</span> <span class="token string">"Richard Stallman"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> ZADD hackers <span class="token number">1965</span> <span class="token string">"Yukihiro Matsumoto"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> ZADD hackers <span class="token number">1916</span> <span class="token string">"Claude Shannon"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> ZADD hackers <span class="token number">1969</span> <span class="token string">"Linus Torvalds"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> ZADD hackers <span class="token number">1957</span> <span class="token string">"Sophie Wilson"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> ZADD hackers <span class="token number">1912</span> <span class="token string">"Alan Turing"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> ZRANGE hackers <span class="token number">2</span> <span class="token number">4</span>
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">"Claude Shannon"</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">"Alan Kay"</span>
+<span class="token number">3</span><span class="token punctuation">)</span> <span class="token string">"Richard Stallman"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>ZADD</code>在键和值之间添加了一个用于排序的分数，排序集按照从小到大的顺序排序。</p>
+<h2 id="哈希">哈希</h2>
+<p>哈希（也叫散列）是字符串字段和字符串值之间的映射，所以它们是表示对象的完美数据类型（例如：用户有很多字段，比如名字、姓氏、年龄等等）：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> HSET <span class="token keyword">user</span>:<span class="token number">1000</span> name <span class="token string">"John Smith"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> HSET <span class="token keyword">user</span>:<span class="token number">1000</span> email <span class="token string">"john.smith@example.com"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> HSET <span class="token keyword">user</span>:<span class="token number">1000</span> password <span class="token string">"s3cret"</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>格式：<code>HSET key field value</code></p>
+<p>可以看出其实是在key和value之间多加了一层field。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> HGETALL <span class="token keyword">user</span>:<span class="token number">1000</span>
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">"name"</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">"John Smith"</span>
+<span class="token number">3</span><span class="token punctuation">)</span> <span class="token string">"email"</span>
+<span class="token number">4</span><span class="token punctuation">)</span> <span class="token string">"john.smith@example.com"</span>
+<span class="token number">5</span><span class="token punctuation">)</span> <span class="token string">"password"</span>
+<span class="token number">6</span><span class="token punctuation">)</span> <span class="token string">"s3cret"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>HGETALL</code>返回保存的数据。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> HMSET <span class="token keyword">user</span>:<span class="token number">1001</span> name <span class="token string">"Mary Jones"</span> password <span class="token string">"hidden"</span> email <span class="token string">"mjones@example.com"</span>
+OK<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>也可以一次添加多个字段。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> HGET <span class="token keyword">user</span>:<span class="token number">1001</span> name
+<span class="token string">"Mary Jones"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>如果只需要一个字段可以使用<code>HGET</code>。</p>
+<h2 id="修改哈希字段的值">修改哈希字段的值</h2>
+<p>哈希字段中的数值的处理与简单字符串中的处理完全相同，有一些操作可以以原子的方式递增该值。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> HSET <span class="token keyword">user</span>:<span class="token number">1000</span> visits <span class="token number">10</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> HINCRBY <span class="token keyword">user</span>:<span class="token number">1000</span> visits <span class="token number">1</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">11</span>
+<span class="token operator">></span> HINCRBY <span class="token keyword">user</span>:<span class="token number">1000</span> visits <span class="token number">10</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">21</span>
+<span class="token operator">></span> HDEL <span class="token keyword">user</span>:<span class="token number">1000</span> visits
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">></span> HINCRBY <span class="token keyword">user</span>:<span class="token number">1000</span> visits <span class="token number">1</span>
+<span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="切换数据库">切换数据库</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">redis <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span>:<span class="token number">6379</span><span class="token operator">></span> <span class="token keyword">SELECT</span> <span class="token number">1</span>
+OK
+redis <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span>:<span class="token number">6379</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><code>SELECT</code>用于切换到指定的数据库，Redis默认有16个数据库，编号从0到15。切换成功后命令提示符前会显示当前的数据库编号。</p>
+<h2 id="清空数据库内容">清空数据库内容</h2>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span> FLUSHDB
+OK<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><code>FLUSHDB</code>命令会清空当前数据库中的所有key。如果要同时清空所有数据库，可以使用<code>FLUSHALL</code>命令。</p>
+<h1 id="参考网页">参考网页</h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/redis/redis-tutorial.html">Redis 教程 | 菜鸟教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_37696997/article/details/78633444">golang-redis之list类型简单操作_代码界的小姑娘的博客-CSDN博客_go redis list</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangshubo1989/article/details/75050024">Go实战--golang中使用redis(redigo和go-redis/redis)_一蓑烟雨任平生 也无风雨也无晴-CSDN博客_golang redis</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag"><i class="fa fa-tag"></i> 数据库</a>
+              <a href="/tags/Redis/" rel="tag"><i class="fa fa-tag"></i> Redis</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/06/16/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E6%A1%8C%E9%9D%A2%E7%94%A8PDF%E9%87%8D%E6%8E%92%E5%B7%A5%E5%85%B7%EF%BC%9AK2pdfopt%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/" rel="prev" title="【转载】桌面用PDF重排工具：K2pdfopt简明教程">
+                  <i class="fa fa-chevron-left"></i> 【转载】桌面用PDF重排工具：K2pdfopt简明教程
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/08/05/%E8%87%AA%E7%84%B6%E7%A0%81%E5%8F%A3%E8%AF%80/" rel="next" title="自然码口诀">
+                  自然码口诀 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">想飞的鸡</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">328k</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.9.3/dist/mermaid.min.js","integrity":"sha256-OyJHvRcZHaRR6Ig73ppxF4QXk8HzvfgTprRWkulCkfY="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+  <script class="next-config" data-name="nprogress" type="application/json">{"enable":true,"spinner":true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js","integrity":"sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":2,"hOffset":0,"vOffset":0,"position":"left","width":200,"height":300},"mobile":{"show":false,"scale":0.2},"react":{"opacity":0.5},"log":false});</script></body>
+</html>

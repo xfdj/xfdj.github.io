@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="什么是虚拟环境？为什么要使用虚拟环境？ 虚拟环境是指Python程序在其中运行时，所使用的包是独立于全局安装的包的情况。使用虚拟环境可以允许同时安装不同版本的包，让不同的程序各取所需，互不干扰，也能避免全局安装过多的包，产生各种各样的依赖问题。 使用virtualen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习使用Python虚拟环境virtualenv">
+<meta property="og:url" content="http://example.com/2019/09/08/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83virtualenv/index.html">
+<meta property="og:site_name" content="兴趣使然的博客">
+<meta property="og:description" content="什么是虚拟环境？为什么要使用虚拟环境？ 虚拟环境是指Python程序在其中运行时，所使用的包是独立于全局安装的包的情况。使用虚拟环境可以允许同时安装不同版本的包，让不同的程序各取所需，互不干扰，也能避免全局安装过多的包，产生各种各样的依赖问题。 使用virtualen">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_09_08_jupyter%E4%B8%AD%E7%9A%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83.png">
+<meta property="article:published_time" content="2019-09-08T05:03:23.000Z">
+<meta property="article:modified_time" content="2021-03-15T12:29:27.656Z">
+<meta property="article:author" content="想飞的鸡">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_09_08_jupyter%E4%B8%AD%E7%9A%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83.png">
+
+
+<link rel="canonical" href="http://example.com/2019/09/08/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83virtualenv/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2019/09/08/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83virtualenv/","path":"2019/09/08/学习使用Python虚拟环境virtualenv/","title":"学习使用Python虚拟环境virtualenv"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>学习使用Python虚拟环境virtualenv | 兴趣使然的博客</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">兴趣使然的博客</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">什么是虚拟环境？为什么要使用虚拟环境？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8virtualenv"><span class="nav-number">2.</span> <span class="nav-text">使用virtualenv</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">2.2.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8F%82%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">其他参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8jupyter-notebook%E9%87%8C%E4%BD%BF%E7%94%A8virtualenv"><span class="nav-number">2.4.</span> <span class="nav-text">在Jupyter Notebook里使用virtualenv</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8virtualenvwrapper"><span class="nav-number">3.</span> <span class="nav-text">使用virtualenvwrapper</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#windows%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">3.1.</span> <span class="nav-text">Windows下的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">3.2.</span> <span class="nav-text">基本使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%9C%89%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">3.3.</span> <span class="nav-text">其他有用的命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E9%A1%B5"><span class="nav-number">4.</span> <span class="nav-text">参考网页</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">想飞的鸡</p>
+  <div class="site-description" itemprop="description">文章要认认真真写鸭</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">88</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+          </div>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/09/08/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83virtualenv/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="想飞的鸡">
+      <meta itemprop="description" content="文章要认认真真写鸭">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="兴趣使然的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          学习使用Python虚拟环境virtualenv
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-09-08 13:03:23" itemprop="dateCreated datePublished" datetime="2019-09-08T13:03:23+08:00">2019-09-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-15 20:29:27" itemprop="dateModified" datetime="2021-03-15T20:29:27+08:00">2021-03-15</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <script src="/assets/js/DPlayer.min.js"> </script><h1 id="什么是虚拟环境为什么要使用虚拟环境">什么是虚拟环境？为什么要使用虚拟环境？</h1>
+<p>虚拟环境是指Python程序在其中运行时，所使用的包是独立于全局安装的包的情况。使用虚拟环境可以允许同时安装不同版本的包，让不同的程序各取所需，互不干扰，也能避免全局安装过多的包，产生各种各样的依赖问题。</p>
+<h1 id="使用virtualenv">使用virtualenv</h1>
+<p><code>virtualenv</code>是Python的一个包，用来创建和管理虚拟环境，这些环境互相是隔离的，可以各自安装所需要的指定版本的包。</p>
+<h2 id="安装">安装</h2>
+<p>首先使用<code>pip</code>来安装<code>virtualenv</code>：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> virtualenv<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="使用">使用</h2>
+<p>我们在要创建虚拟环境的目录下运行下面指令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">virtualenv --no-site-packages venv<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这样就可以在当前目录下创建一个名为venv的Python虚拟运行环境。</p>
+<p>参数<code>--no-site-packages</code>表示不复制已经安装到系统Python环境中的所有第三方包。这样就得到了一个干净的Python环境。</p>
+<div class="note info"><p>从virtualenv 1.7版本之后，将<code>--no-site-packages</code>改成了默认行为，因此不再需要这个参数。</p>
+</div>
+<p>虚拟环境全部都被放到了venv目录下。</p>
+<p>接下来我们需要用下面的命令来进入这个虚拟环境：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> venv/Scripts/activate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如果是cmd的话就把上面的命令换成下面的：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">venv<span class="token punctuation">\</span>Scripts<span class="token punctuation">\</span>activate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这里是Windows的activate目录，Linux下的activate的目录可能稍微有些区别。执行完之后你会发现命令行前端出现了一个<code>(venv)</code>前缀，表示我们已经进入venv虚拟环境中了。</p>
+<p>接下来使用<code>pip</code>安装的包，都会安装在venv环境中，全局环境不受影响。</p>
+<p>如果要退出虚拟环境，使用下面的命令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>此时可以发现前缀消失，我们又回到了正常的环境中了。</p>
+<h2 id="其他参数">其他参数</h2>
+<p>直接在命令行里输入</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">virtualenv --help<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>就可以查看virtualenv的各种参数和用法。</p>
+<h2 id="在jupyter-notebook里使用virtualenv">在Jupyter Notebook里使用virtualenv</h2>
+<ol type="1">
+<li><p>在命令行下进入虚拟环境（这里以venv举例）</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> venv/Scripts/activate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>安装Jupyter Notebook和ipykernel</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip installl jupyter ipykernel<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>将virtualenv加入ipykernel</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">python -m ipykernel <span class="token function">install</span> --user --name<span class="token operator">=</span>pytorch<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>name后面根据需要随便取个名字，由于我是在学习PyTorch的时候接触到virtualenv的，所以想在Jupyter里使用PyTorch的虚拟环境。</p></li>
+<li><p>开启Jupyter Notebook</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">jupyter notebook<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>就可以看到你加入的虚拟环境了。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_09_08_jupyter%E4%B8%AD%E7%9A%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83.png" alt="jupyter中的虚拟环境.png" /><figcaption aria-hidden="true">jupyter中的虚拟环境.png</figcaption>
+</figure></li>
+</ol>
+<h1 id="使用virtualenvwrapper">使用virtualenvwrapper</h1>
+<p><code>virtualenv</code>虽然好用，但是还是存在一些问题，比如对中文路径的支持比较差，如果在一个包含中文的路径下创建虚拟环境，会无法通过activate进入这个虚拟环境（即使在执行了activate命令之后，命令行会显示虚拟环境的名称）。为了解决这个问题，我们可以将虚拟环境统一放在一个不含中文的目录中，为了方便管理这些虚拟环境，我们可以使用<code>virtualenvwrapper</code>。</p>
+<p><code>virtualenvwrapper</code>提供了一系列命令使得和虚拟环境工作变得愉快许多。它把所有的虚拟环境都放在一个地方。</p>
+<p>在Windows下Git Bash对virtualenvwrapper的支持不是太好。</p>
+<h2 id="windows下的安装">Windows下的安装</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> virtualenvwrapper-win<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>随后添加一个环境变量<code>WORKON_HOME</code>，填上自己想保存虚拟环境的地址。</p>
+<h2 id="基本使用">基本使用</h2>
+<ol type="1">
+<li><p>创建一个虚拟环境：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">mkvirtualenv venv<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这会在 <code>WORKON_HOME</code> 中创建一个<code>venv</code> 文件夹，并创建虚拟环境。</p></li>
+<li><p>在虚拟环境上工作：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">workon venv<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>virtualenvwrapper 提供环境名字的Tab补全功能。当你有很多环境， 并且很难记住它们的名字时，这就显得很有用。 <code>workon</code> 也能停止当前所在的环境，所以您可以在环境之间快速的切换。</p></li>
+<li><p>停止是一样的：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>删除：</p>
+<pre class="line-numbers language-none"><code class="language-none">rmvirtualenv venv<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<h2 id="其他有用的命令">其他有用的命令</h2>
+<ul>
+<li><p><code>lsvirtualenv</code></p>
+<p>列举所有的环境。</p></li>
+<li><p><code>cdvirtualenv</code></p>
+<p>导航到当前激活的虚拟环境的目录中，比如说这样你就能够浏览它的 <code>site-packages</code> 。</p></li>
+<li><p><code>cdsitepackages</code></p>
+<p>和上面的类似，但是是直接进入到 <code>site-packages</code> 目录中。</p></li>
+<li><p><code>lssitepackages</code></p>
+<p>显示 <code>site-packages</code> 目录中的内容。</p></li>
+</ul>
+<p>更多命令的用法可以查看文末给出的官方文档。</p>
+<h1 id="参考网页">参考网页</h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://virtualenv-chinese-docs.readthedocs.io/en/latest/">virtualenv —— virtualenv 1.7.1.2.post1 documentation</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/1016959663602400/1019273143120480">virtualenv - 廖雪峰的官方网站</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/33257881">Virtualenv in IPython Jupyter Notebook - 知乎</a></li>
+<li><a target="_blank" rel="noopener" href="https://pythonguidecn.readthedocs.io/zh/latest/dev/virtualenvs.html">Pipenv &amp; 虚拟环境 — The Hitchhiker's Guide to Python</a></li>
+<li><a target="_blank" rel="noopener" href="https://virtualenvwrapper.readthedocs.io/en/latest/index.html">virtualenvwrapper 5.0.1.dev2 — virtualenvwrapper 5.0.1.dev2 documentation</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/08/26/Windows%E8%87%AA%E5%B8%A6%E5%B7%A5%E5%85%B7%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6MD5/" rel="prev" title="Windows自带工具查看文件MD5">
+                  <i class="fa fa-chevron-left"></i> Windows自带工具查看文件MD5
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/11/01/LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%AC%A6%E5%8F%B7%E5%A4%87%E5%BF%98/" rel="next" title="LaTeX数学公式符号备忘">
+                  LaTeX数学公式符号备忘 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">想飞的鸡</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">328k</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.9.3/dist/mermaid.min.js","integrity":"sha256-OyJHvRcZHaRR6Ig73ppxF4QXk8HzvfgTprRWkulCkfY="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+  <script class="next-config" data-name="nprogress" type="application/json">{"enable":true,"spinner":true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js","integrity":"sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":2,"hOffset":0,"vOffset":0,"position":"left","width":200,"height":300},"mobile":{"show":false,"scale":0.2},"react":{"opacity":0.5},"log":false});</script></body>
+</html>

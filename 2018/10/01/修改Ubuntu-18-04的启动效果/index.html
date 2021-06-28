@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="Ubuntu 18.04的启动效果看起来比较土，所以打算更换Ubuntu的Grub主题和加载动画。在网上查找资料时发现有许多方法都已经过时，所以自己在这里整理出适用于18.04版本的方法。亲测可用。 更改Grub主题 Grub是Linux的系统启动管理器。如果你的电脑上同时安装了Windows和Linux，可以在Grub里选择你">
+<meta property="og:type" content="article">
+<meta property="og:title" content="修改Ubuntu 18.04的启动效果">
+<meta property="og:url" content="http://example.com/2018/10/01/%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C/index.html">
+<meta property="og:site_name" content="兴趣使然的博客">
+<meta property="og:description" content="Ubuntu 18.04的启动效果看起来比较土，所以打算更换Ubuntu的Grub主题和加载动画。在网上查找资料时发现有许多方法都已经过时，所以自己在这里整理出适用于18.04版本的方法。亲测可用。 更改Grub主题 Grub是Linux的系统启动管理器。如果你的电脑上同时安装了Windows和Linux，可以在Grub里选择你">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_gnome-look%E7%BD%91%E7%AB%99.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_Grub-theme-vimix%E7%BD%91%E9%A1%B5.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_Grub-theme-vimix%E4%B8%8B%E8%BD%BD%E9%A1%B5.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_Vimix%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%86%85%E5%AE%B9.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_Install%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_Ubuntu%20splash.jpg">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_ubuntu-spinner-logo%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%86%85%E5%AE%B9.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_%E7%BC%96%E8%BE%91ubuntu-spinner-logo.plymouth.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_%E9%80%89%E6%8B%A9Plymouth%E4%B8%BB%E9%A2%98.png">
+<meta property="article:published_time" content="2018-10-01T08:39:36.000Z">
+<meta property="article:modified_time" content="2021-03-15T12:29:27.655Z">
+<meta property="article:author" content="想飞的鸡">
+<meta property="article:tag" content="Ubuntu">
+<meta property="article:tag" content="Grub">
+<meta property="article:tag" content="Plymouth">
+<meta property="article:tag" content="Gnome">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_gnome-look%E7%BD%91%E7%AB%99.png">
+
+
+<link rel="canonical" href="http://example.com/2018/10/01/%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2018/10/01/%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C/","path":"2018/10/01/修改Ubuntu-18-04的启动效果/","title":"修改Ubuntu 18.04的启动效果"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>修改Ubuntu 18.04的启动效果 | 兴趣使然的博客</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">兴趣使然的博客</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9grub%E4%B8%BB%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">更改Grub主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDgrub%E4%B8%BB%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">下载Grub主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85grub%E4%B8%BB%E9%A2%98"><span class="nav-number">1.2.</span> <span class="nav-text">安装Grub主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4grub%E4%B8%BB%E9%A2%98"><span class="nav-number">1.3.</span> <span class="nav-text">删除Grub主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2%E4%B8%BB%E9%A2%98%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"><span class="nav-number">1.4.</span> <span class="nav-text">替换主题背景图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2%E4%B8%BB%E9%A2%98%E6%96%87%E5%AD%97"><span class="nav-number">1.5.</span> <span class="nav-text">替换主题文字</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9plymouth%E4%B8%BB%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">更改Plymouth主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDplymouth%E4%B8%BB%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">下载Plymouth主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85plymouth%E4%B8%BB%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">安装Plymouth主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E8%83%BD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%94%99%E8%AF%AF"><span class="nav-number">2.3.</span> <span class="nav-text">可能出现的错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4plymouth%E4%B8%BB%E9%A2%98"><span class="nav-number">2.4.</span> <span class="nav-text">删除Plymouth主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-number">3.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">想飞的鸡</p>
+  <div class="site-description" itemprop="description">文章要认认真真写鸭</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">88</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+          </div>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/10/01/%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="想飞的鸡">
+      <meta itemprop="description" content="文章要认认真真写鸭">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="兴趣使然的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          修改Ubuntu 18.04的启动效果
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-10-01 16:39:36" itemprop="dateCreated datePublished" datetime="2018-10-01T16:39:36+08:00">2018-10-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-15 20:29:27" itemprop="dateModified" datetime="2021-03-15T20:29:27+08:00">2021-03-15</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <script src="/assets/js/DPlayer.min.js"> </script><p>Ubuntu 18.04的启动效果看起来比较土，所以打算更换Ubuntu的Grub主题和加载动画。在网上查找资料时发现有许多方法都已经过时，所以自己在这里整理出适用于18.04版本的方法。亲测可用。</p>
+<h2 id="更改grub主题">更改Grub主题</h2>
+<p>Grub是Linux的系统启动管理器。如果你的电脑上同时安装了Windows和Linux，可以在Grub里选择你要启动的操作系统。Ubuntu 18.04使用的是Grub2作为默认启动管理器。</p>
+<h3 id="下载grub主题">下载Grub主题</h3>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header-name keyword">https:</span>//www.gnome-look.org/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这个网站有包括Grub主题在内的许多主题免费下载。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_gnome-look%E7%BD%91%E7%AB%99.png" alt="gnome-look网站.png" /><figcaption aria-hidden="true">gnome-look网站.png</figcaption>
+</figure>
+<p>选择左侧的<code>Grub Themes</code>链接，就能看到其他人制作的Grub启动器主题，右侧的<code>3 Months Ranking</code>是近三个月的主题下载排名，排名高的一般都是比较好看的主题，可以参考。此外，每个主题有评分和更新日期，尽量选择离现在比较近的那些主题，因为太久之前更新的主题有可能不兼容现在的Grub。</p>
+<p>以<code>Grub-theme-vimix</code>这个主题为例。找到<code>Grub-theme-vimix</code>的页面，点击页面中的<code>Files</code>，然后下载。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_Grub-theme-vimix%E7%BD%91%E9%A1%B5.png" alt="Grub-theme-vimix网页.png" /><figcaption aria-hidden="true">Grub-theme-vimix网页.png</figcaption>
+</figure>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_Grub-theme-vimix%E4%B8%8B%E8%BD%BD%E9%A1%B5.png" alt="Grub-theme-vimix下载页.png" /><figcaption aria-hidden="true">Grub-theme-vimix下载页.png</figcaption>
+</figure>
+<h3 id="安装grub主题">安装Grub主题</h3>
+<p>将下载好的文件解压，解压出来的文件夹里面有一个名为<code>Vimix</code>的文件夹和一个名为<code>Install</code>的文件。如下图所示。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_Vimix%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%86%85%E5%AE%B9.png" alt="Vimix压缩包内容.png" /><figcaption aria-hidden="true">Vimix压缩包内容.png</figcaption>
+</figure>
+<p>我们只需用到文件夹，<code>Install</code>文件是用来自动安装主题的，打开这个文件的内容就能看到Grub主题是怎么被安装的，鉴于有些主题里的文件太老，不适合最新的系统，所以我们采取手动安装的方式。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_Install%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9.png" alt="Install文件内容.png" /><figcaption aria-hidden="true">Install文件内容.png</figcaption>
+</figure>
+<p>首先将<code>Vimix</code>文件夹拷贝到<code>/boot/grub/themes</code>目录下（需要root权限，如果没有<code>themes</code>文件夹就新建一个）。用命令行的指令如下（首先进到<code>Vimix</code>文件夹所在的目录）：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">cp</span> -r Vimix /boot/grub/themes<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>-r</code>表示复制目录及其子目录内的所有内容。</p>
+<p>第二步是修改Grub的配置文件。找到并打开<code>/etc/default</code>目录下的<code>grub</code>文件（也需要root权限）。在最后一行加上：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">GRUB_THEME</span><span class="token operator">=</span><span class="token string">"/boot/grub/themes/Vimix/theme.txt"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>大概的意思就是使用刚才复制到<code>themes</code>目录下的主题，在<code>Vimix</code>文件夹下有一个名为<code>theme.txt</code>的文件，它会告诉Grub如何加载这个主题。</p>
+<p>编辑完不要忘记保存。</p>
+<p>最后在命令行bash中输入如下命令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">update-grub</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这个命令会根据刚才的配置文件更新Grub的配置。重新启动一下，你就能看到刚才安装的主题了。</p>
+<h3 id="删除grub主题">删除Grub主题</h3>
+<p>要想删除安装的Grub主题，只需要将对应的主题文件夹（比如Vimix）移除，再把<code>/etc/default/grub</code>里加上的那一行删掉，最后执行<code>sudo update-grub</code>命令更新Grub配置即可。</p>
+<h3 id="替换主题背景图片">替换主题背景图片</h3>
+<p>如果想把主题的背景图片换成自己喜欢的图片，可以查看<code>themes.txt</code>文件，找到<code>desktop-image</code>一项，后面的图片就是背景图片，所以在文件夹中找到图片，用自己准备好的图片代替（名称要完全相同）就行了。</p>
+<h3 id="替换主题文字">替换主题文字</h3>
+<p>如果对主体的文字不满意，想要换成自己喜欢的文字，由于Grub不支持.ttf、.otf格式的字体文件，所以准备好字体之后，需要用<code>grub-mkfont</code>生成Grub专用的字体格式：.pf2格式。举个例子，如果准备的字体名称是<code>myfont.ttf</code>，在终端执行：</p>
+<pre class="line-numbers language-none"><code class="language-none">grub-mkfont -o myfont.pf2 -s 32 -n &quot;myfont&quot; myfont.ttf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>-o</code>表示输出的文件名，<code>-s</code>表示字体的大小，<code>-n</code>表示字体的名称（用于修改<code>themes.txt</code>文件），最后是字体文件名。</p>
+<p>执行成功后目录下就会多出一个<code>myfont.pf2</code>字体文件，将这个文件复制到主题文件夹和<code>themes.txt</code>同目录下。</p>
+<p>接下来打开<code>themes.txt</code>文件，将<code>terminal-font</code>、<code>item_font</code>、<code>font</code>等所有带font的配置都改成之前<code>-n</code>设置的字体名称，比如改成：<code>terminal-font:"myfont"</code>。保存退出。</p>
+<p>然后按照之前的安装步骤正常安装即可。</p>
+<h2 id="更改plymouth主题">更改Plymouth主题</h2>
+<blockquote>
+<p>Plymouth is the application which provides the graphical "splash" screen when booting and shutting down an Ubuntu system.</p>
+<p>——Ubuntu Wiki</p>
+</blockquote>
+<p>如Ubuntu Wiki所说，Plymouth就是显示下面这个紫薯效果的东西。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_Ubuntu%20splash.jpg" alt="Ubuntu splash.jpg" /><figcaption aria-hidden="true">Ubuntu splash.jpg</figcaption>
+</figure>
+<p>下面就来更换这个默认的主题。</p>
+<p><code>警告：更改Plymouth主题有让电脑变砖的风险，请小心操作并提前备份好你的重要数据!</code></p>
+<h3 id="下载plymouth主题">下载Plymouth主题</h3>
+<p>Plymoyth的主题同样是到刚才的网站</p>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header-name keyword">https:</span>//www.gnome-look.org/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>下载。点击左侧的<code>Plymouth Themes</code>链接就可以看到许多Plymouth主题，不过和Grub主题一样，有些Plymouth主题由于“年代久远”，并不兼容现在的Plymouth，原则上来说一般不建议下载2010年以前的主题。</p>
+<p>Plymouth主题的下载方式和Grub主题的一样，这里就不再赘述。</p>
+<h3 id="安装plymouth主题">安装Plymouth主题</h3>
+<p>为了接下来的操作方便，首先安装一些Plymouth的默认主题。可以通过下面这个命令安装：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> plymouth-themes<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这条命令会自动创建<code>/usr/share/plymouth/themes</code>并且附带几个简单的主题。</p>
+<p>下面开始安装自定义主题。以<code>Ubunut Spinner Logo Plymouth</code>这个主题为例（从下载下来的文件来看，这里是网页上的主题标题打错了）。</p>
+<p>解压下载好的文件，里面有一个名为<code>ubuntu-spinner-logo</code>的文件夹还有一个readme文件，那个文件夹就是我们需要的主题。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_ubuntu-spinner-logo%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%86%85%E5%AE%B9.png" alt="ubuntu-spinner-logo压缩包内容.png" /><figcaption aria-hidden="true">ubuntu-spinner-logo压缩包内容.png</figcaption>
+</figure>
+<p>如果你去看<code>Install Read Me</code>文件的话，你会发现这个主题是要复制到<code>/lib/plymouth/themes</code>这里去，但是别着急，刚才说到有一些主题是较早时间发布的老版本主题，因此这些路径是已经失效的，现在Plymouth的主题放置路径是在刚才安装<code>plymouth-themes</code>时提到的那个路径下。</p>
+<p>首先，打开<code>ubuntu-spinner-logo</code>目录下的<code>ubuntu-spinner-logo.plymouth</code>文件，文件里两个路径：</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_%E7%BC%96%E8%BE%91ubuntu-spinner-logo.plymouth.png" alt="编辑ubuntu-spinner-logo.plymouth.png" /><figcaption aria-hidden="true">编辑ubuntu-spinner-logo.plymouth.png</figcaption>
+</figure>
+<p>刚才说过这两个路径已经失效，因此需要把他们更改过来，也就是将</p>
+<pre class="line-numbers language-none"><code class="language-none">ImageDir&#x3D;&#x2F;lib&#x2F;plymouth&#x2F;themes&#x2F;ubuntu-spinner-logo
+ScriptFile&#x3D;&#x2F;lib&#x2F;plymouth&#x2F;themes&#x2F;ubuntu-spinner-logo&#x2F;ubuntu-spinner-logo.script<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>改成</p>
+<pre class="line-numbers language-none"><code class="language-none">ImageDir&#x3D;&#x2F;usr&#x2F;share&#x2F;plymouth&#x2F;themes&#x2F;ubuntu-spinner-logo
+ScriptFile&#x3D;&#x2F;usr&#x2F;share&#x2F;plymouth&#x2F;themes&#x2F;ubuntu-spinner-logo&#x2F;ubuntu-spinner-logo.script<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>并保存。</p>
+<p>修改完以后，要顺便检查一下目录名称。从刚才编辑的文件中我们可以得知这个主题的名字叫<code>ubuntu-spinner-logo</code>，Plymouth的主题名称和主题文件名以及主题目录名，必须完全一致，不然会报错。所以检查一下文件夹名是否也为<code>ubuntu-spinner-logo</code>，如果不是要改过来。</p>
+<p>接下来将<code>ubuntu-spinner-logo</code>文件夹拷贝到相应的目录下：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">cp</span> -r ubuntu-spinner-logo /usr/share/plymouth/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>复制完以后，还需要使用下面这条命令安装这个主题：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/ubuntu-spinner-logo/ubuntu-spinner-logo.plymouth <span class="token number">100</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这里解释一下<code>--install</code>后面的四个参数的含义，第一和第二个参数是默认主题的路径和名称，安装主题时这两个参数都一样，第三个参数是你需要安装的主题的路径，需要填的是对应的主题目录下<code>.plymouth</code>的路径，最后一个参数表示的是优先级，不需要知道是什么意思，都设成100就好。</p>
+<p>接着使用下面的命令选择刚刚安装的主题：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> update-alternatives --config default.plymouth<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如果安装成功了，就会在选项中出现候选的主题，如下图所示。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_01_%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C_%E9%80%89%E6%8B%A9Plymouth%E4%B8%BB%E9%A2%98.png" alt="选择Plymouth主题.png" /><figcaption aria-hidden="true">选择Plymouth主题.png</figcaption>
+</figure>
+<p>最后输入一条命令使刚才选择的设置生效：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> update-initramfs -u<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如果没有问题，重启一下，就可以看到效果了。</p>
+<h3 id="可能出现的错误">可能出现的错误</h3>
+<p>如果在最后两步不幸遇到了和下面类似的错误提示：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">W: plymouth module <span class="token string">"(/usr/lib/i386-linux-gnu/plymouth//.so)"</span> missing, skipping that theme.<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>据说这是一个内核级的错误，这时候千万不要重启，不然可能会卡在开机界面。这种情况有可能是路径设置错误，或者是主题太老，需要删除主题，尝试检查路径并重来一遍。</p>
+<h3 id="删除plymouth主题">删除Plymouth主题</h3>
+<p>和Grub主题不一样，Plymouth主题涉及到安装命令，因此删除主题不是简单地移除文件夹，还需要相应的卸载命令，卸载命令如下（以ubuntu-spinner-）：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> update-alternatives --remove default.plymouth /usr/share/plymouth/themes/ubuntu-spinner-logo/ubuntu-spinner-logo.plymouth<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后移除文件夹，用<code>sudo update-alternatives --config default.plymouth</code>命令重新指定主题，最后用<code>sudo update-initramfs -u</code>更新配置。主题才算删除。</p>
+<h2 id="参考文章">参考文章</h2>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/41708902#3-grub-%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%BE%8E%E5%8C%96">Ubuntu 18.04 安装、配置和美化</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/feipeng8848/p/8970556.html">给Ubuntu18.04安装mac os主题 - feipeng8848 - 博客园</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.topspeedsnail.com/archives/2630">改变Ubuntu/Linux Mint启动动画界面（Plymoyth） -WTF Daily Blog</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/zhuxiaojie/p/8066466.html">ubuntu更换开机动画 - 朱小杰 - 博客园</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/mutilcam_prince/article/details/78299628">Ubuntu 16.04美化——Plymouth(splash screen/开机画面)主题安装 - 一个年迈的程序员 - CSDN博客</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/yaoxing/archive/2013/02/11/customize-gnome.html">定制GNOME的一些方法 - yaoxing - 博客园</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d8963538bcd9">修改grub主题（分辨率，字体大小） - 简书</a></li>
+</ul>
+<p>文章里还有关于美化Ubuntu 18.04桌面的方法，由于比较简单就不在本文介绍。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Ubuntu/" rel="tag"><i class="fa fa-tag"></i> Ubuntu</a>
+              <a href="/tags/Grub/" rel="tag"><i class="fa fa-tag"></i> Grub</a>
+              <a href="/tags/Plymouth/" rel="tag"><i class="fa fa-tag"></i> Plymouth</a>
+              <a href="/tags/Gnome/" rel="tag"><i class="fa fa-tag"></i> Gnome</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/09/07/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9ANexT%E4%B8%BB%E9%A2%98%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/" rel="prev" title="优化博客（二）：NexT主题详细配置">
+                  <i class="fa fa-chevron-left"></i> 优化博客（二）：NexT主题详细配置
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/10/02/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/" rel="next" title="优化博客（三）：添加本地搜索功能">
+                  优化博客（三）：添加本地搜索功能 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">想飞的鸡</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">328k</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.9.3/dist/mermaid.min.js","integrity":"sha256-OyJHvRcZHaRR6Ig73ppxF4QXk8HzvfgTprRWkulCkfY="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+  <script class="next-config" data-name="nprogress" type="application/json">{"enable":true,"spinner":true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js","integrity":"sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":2,"hOffset":0,"vOffset":0,"position":"left","width":200,"height":300},"mobile":{"show":false,"scale":0.2},"react":{"opacity":0.5},"log":false});</script></body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="最近浏览博客的时候发现了一个很有科技感的博客，拉到网页底部一看还是一个Hexo的博客，于是我搜索了一下这个博客网站的主题，也就是这篇文章要介绍的Hexo主题：Alpha Dust。 作者 这个主题的作者名叫Jonathan Klughertz，是一个全栈工程师。除了Alpha Dust以外，他还制作了很多Hexo的主题，这都可以在他的博客上">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo主题Alpha Dust">
+<meta property="og:url" content="http://example.com/2019/07/11/Hexo%E4%B8%BB%E9%A2%98Alpha-Dust/index.html">
+<meta property="og:site_name" content="兴趣使然的博客">
+<meta property="og:description" content="最近浏览博客的时候发现了一个很有科技感的博客，拉到网页底部一看还是一个Hexo的博客，于是我搜索了一下这个博客网站的主题，也就是这篇文章要介绍的Hexo主题：Alpha Dust。 作者 这个主题的作者名叫Jonathan Klughertz，是一个全栈工程师。除了Alpha Dust以外，他还制作了很多Hexo的主题，这都可以在他的博客上">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_Hexo%E4%B8%BB%E9%A2%98Alpha-Dust_Alpha%20Dust.jpg">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_Hexo%E4%B8%BB%E9%A2%98Alpha-Dust_%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%98%BE%E7%A4%BA%E6%95%88%E6%9E%9C.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_Hexo%E4%B8%BB%E9%A2%98Alpha-Dust_menu.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_Hexo%E4%B8%BB%E9%A2%98Alpha-Dust_logo.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_Hexo%E4%B8%BB%E9%A2%98Alpha-Dust_footer.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_Hexo%E4%B8%BB%E9%A2%98Alpha-Dust_social%20account.png">
+<meta property="article:published_time" content="2019-07-11T15:11:00.000Z">
+<meta property="article:modified_time" content="2021-03-15T12:29:27.647Z">
+<meta property="article:author" content="想飞的鸡">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Alpha Dust">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_Hexo%E4%B8%BB%E9%A2%98Alpha-Dust_Alpha%20Dust.jpg">
+
+
+<link rel="canonical" href="http://example.com/2019/07/11/Hexo%E4%B8%BB%E9%A2%98Alpha-Dust/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2019/07/11/Hexo%E4%B8%BB%E9%A2%98Alpha-Dust/","path":"2019/07/11/Hexo主题Alpha-Dust/","title":"Hexo主题Alpha Dust"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Hexo主题Alpha Dust | 兴趣使然的博客</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">兴趣使然的博客</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%9C%E8%80%85"><span class="nav-number">1.</span> <span class="nav-text">作者</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E6%A6%82%E8%A7%88"><span class="nav-number">2.</span> <span class="nav-text">主题概览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">常用配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#menu"><span class="nav-number">4.1.</span> <span class="nav-text">Menu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logo"><span class="nav-number">4.2.</span> <span class="nav-text">Logo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B5%E8%84%9A"><span class="nav-number">4.3.</span> <span class="nav-text">页脚</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BE%E4%BA%A4%E8%B4%A6%E6%88%B7%E5%9B%BE%E6%A0%87"><span class="nav-number">4.4.</span> <span class="nav-text">社交账户图标</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%84%E4%BB%B7"><span class="nav-number">5.</span> <span class="nav-text">评价</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99"><span class="nav-number">6.</span> <span class="nav-text">相关网站</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">想飞的鸡</p>
+  <div class="site-description" itemprop="description">文章要认认真真写鸭</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">88</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+          </div>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/07/11/Hexo%E4%B8%BB%E9%A2%98Alpha-Dust/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="想飞的鸡">
+      <meta itemprop="description" content="文章要认认真真写鸭">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="兴趣使然的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo主题Alpha Dust
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-07-11 23:11:00" itemprop="dateCreated datePublished" datetime="2019-07-11T23:11:00+08:00">2019-07-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-15 20:29:27" itemprop="dateModified" datetime="2021-03-15T20:29:27+08:00">2021-03-15</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <script src="/assets/js/DPlayer.min.js"> </script><p>最近浏览博客的时候发现了一个很有科技感的博客，拉到网页底部一看还是一个Hexo的博客，于是我搜索了一下这个博客网站的主题，也就是这篇文章要介绍的Hexo主题：Alpha Dust。</p>
+<h1 id="作者">作者</h1>
+<p>这个主题的作者名叫Jonathan Klughertz，是一个全栈工程师。除了Alpha Dust以外，他还制作了很多Hexo的主题，这都可以在他的博客上找到。（<a target="_blank" rel="noopener" href="http://www.codeblocq.com">点此访问Jonathan的博客</a>）</p>
+<h1 id="主题概览">主题概览</h1>
+<p>这个主题的博客介绍和Github项目链接下面给出：</p>
+<ul>
+<li>博客：<a target="_blank" rel="noopener" href="http://www.codeblocq.com/2016/07/New-Hexo-Theme-Alpha-Dust/">New Hexo Theme Alpha Dust - CodeBlocQ</a></li>
+<li>Github：<a target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-alpha-dust">klugjo/hexo-theme-alpha-dust: 🌠 Original Futuristic Hexo Theme</a></li>
+</ul>
+<p>网站的demo可以访问下面的链接：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.codeblocq.com/assets/projects/hexo-theme-alpha-dust/">Alpha Dust</a></li>
+</ul>
+<p>这是截图，可以感受一下：</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_Hexo%E4%B8%BB%E9%A2%98Alpha-Dust_Alpha%20Dust.jpg" alt="Alpha Dust.jpg" /><figcaption aria-hidden="true">Alpha Dust.jpg</figcaption>
+</figure>
+<h1 id="安装">安装</h1>
+<p>和安装NexT时候类似，都是直接把Github上的项目克隆到本地。</p>
+<p>在博客根目录下执行下面的指令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/klugjo/hexo-theme-alpha-dust themes/alpha-dust<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后更新<strong>站点配置文件</strong><code>_config.yml</code>来将主题设为Alpha Dust。如下所示：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Extensions</span>
+<span class="token comment">## Plugins: https://hexo.io/plugins/</span>
+<span class="token comment">## Themes: https://hexo.io/themes/</span>
+<span class="token comment"># theme: next</span>
+<span class="token key atrule">theme</span><span class="token punctuation">:</span> alpha<span class="token punctuation">-</span>dust<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>重新部署一下博客，就能看到这个新的主题了。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_Hexo%E4%B8%BB%E9%A2%98Alpha-Dust_%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%98%BE%E7%A4%BA%E6%95%88%E6%9E%9C.png" alt="我的博客显示效果.png" /><figcaption aria-hidden="true">我的博客显示效果.png</figcaption>
+</figure>
+<h1 id="常用配置">常用配置</h1>
+<p>配置也是和其它主题一样靠编辑<strong>主题配置文件</strong><code>themes/alpha-dust/_config.yml</code>实现。</p>
+<h2 id="menu">Menu</h2>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Header</span>
+<span class="token key atrule">menu</span><span class="token punctuation">:</span>
+  <span class="token key atrule">Home</span><span class="token punctuation">:</span> /
+  <span class="token key atrule">Archives</span><span class="token punctuation">:</span> /archives
+  <span class="token comment"># About: /about.html</span>
+  <span class="token key atrule">Tags</span><span class="token punctuation">:</span> /tags
+  <span class="token key atrule">Categories</span><span class="token punctuation">:</span> /categories
+  <span class="token comment"># Contact: /contact.html</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>可以用来控制菜单栏的显示内容，key是label，value是网页的路径。比如说像上面的代码一样注释掉一些不需要的菜单，博客的效果会变成这样：</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_Hexo%E4%B8%BB%E9%A2%98Alpha-Dust_menu.png" alt="menu.png" /><figcaption aria-hidden="true">menu.png</figcaption>
+</figure>
+<h2 id="logo">Logo</h2>
+<p>上图中博客标题上的logo实际上是<a target="_blank" rel="noopener" href="https://fontawesome.com/icons?from=io">Font Awesome class</a>字体，任何合法的字体都可以来替换默认的logo，只要更改下面的片段，比如我随便在Font Awesome网站上选一个：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Logo (Font Awesome Class)</span>
+<span class="token comment"># fa_logo: fa-cube</span>
+<span class="token key atrule">fa_logo</span><span class="token punctuation">:</span> fa<span class="token punctuation">-</span>eye<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>网页的logo就换成了下面的样子：</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_Hexo%E4%B8%BB%E9%A2%98Alpha-Dust_logo.png" alt="logo.png" /><figcaption aria-hidden="true">logo.png</figcaption>
+</figure>
+<h2 id="页脚">页脚</h2>
+<p>页脚的关于和版权部分的文字可以通过下面的片段来编辑：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Footer About Text</span>
+<span class="token key atrule">footer_about</span><span class="token punctuation">:</span> <span class="token string">"This theme was developed by &lt;a href=\"https://github.com/klugjo\">Jonathan Klughertz&lt;/a>. The source code is available on Github. Create Websites. Make Magic."</span>
+
+<span class="token comment"># Footer Copyright Line</span>
+<span class="token key atrule">footer_copyright</span><span class="token punctuation">:</span> <span class="token string">"@Untitled. All right reserved | Design &amp; Hexo &lt;a href=\"http://www.codeblocq.com/\">Jonathan Klughertz&lt;/a>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>对应的是页脚About部分的显示：</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_Hexo%E4%B8%BB%E9%A2%98Alpha-Dust_footer.png" alt="footer.png" /><figcaption aria-hidden="true">footer.png</figcaption>
+</figure>
+<h2 id="社交账户图标">社交账户图标</h2>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Social Accounts</span>
+<span class="token key atrule">twitter_url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//twitter.com/<span class="token punctuation">?</span>lang=en
+<span class="token key atrule">facebook_url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//www.facebook.com/
+<span class="token key atrule">instagram_url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//www.instagram.com/
+<span class="token key atrule">dribble_url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//dribbble.com/
+<span class="token key atrule">github_url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/klugjo/hexo<span class="token punctuation">-</span>theme<span class="token punctuation">-</span>alpha<span class="token punctuation">-</span>dust
+<span class="token key atrule">googleplus_url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//plus.google.com/
+<span class="token key atrule">behance_url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//www.behance.net/
+<span class="token key atrule">fivehundredpx_url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//500px.com/
+<span class="token key atrule">email_url</span><span class="token punctuation">:</span> test@example.com
+<span class="token key atrule">rss_url</span><span class="token punctuation">:</span> \<span class="token comment">#</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这会更改同样在页脚的社交图标的显示和链接，如果没有链接就不显示。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_Hexo%E4%B8%BB%E9%A2%98Alpha-Dust_social%20account.png" alt="social account.png" /><figcaption aria-hidden="true">social account.png</figcaption>
+</figure>
+<h1 id="评价">评价</h1>
+<p>由于这是个人作品，从主题配置文件就可以看得出功能偏少，另外，网页的排版还不够灵活，比如全屏网页时文章左右没有留白，这样看起来不是很舒服，还有首页上的文章都是全文显示，不方便浏览，代码框没有复制按钮等等，就高级功能来说，NexT还是更胜一筹，所以玩了之后，我还是打算换回NexT。如果需要实现这些功能需要自己进一步改进主题，目前自己暂时没有这个能力。不过这个主题还是很好看的，期待作者后续能够给主题加入更多功能。</p>
+<h1 id="相关网站">相关网站</h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://mlln.cn/">DataScience</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+              <a href="/tags/Alpha-Dust/" rel="tag"><i class="fa fa-tag"></i> Alpha Dust</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/07/11/%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86/" rel="prev" title="电影下载网站整理">
+                  <i class="fa fa-chevron-left"></i> 电影下载网站整理
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/07/18/BT%E6%8F%90%E9%80%9F%E6%96%B9%E6%B3%95%EF%BC%9A%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89Tracker/" rel="next" title="BT提速方法：添加自定义Tracker">
+                  BT提速方法：添加自定义Tracker <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">想飞的鸡</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">328k</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.9.3/dist/mermaid.min.js","integrity":"sha256-OyJHvRcZHaRR6Ig73ppxF4QXk8HzvfgTprRWkulCkfY="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+  <script class="next-config" data-name="nprogress" type="application/json">{"enable":true,"spinner":true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js","integrity":"sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":2,"hOffset":0,"vOffset":0,"position":"left","width":200,"height":300},"mobile":{"show":false,"scale":0.2},"react":{"opacity":0.5},"log":false});</script></body>
+</html>
