@@ -31,7 +31,7 @@
 <meta property="og:description" content="任何容量网络的最大流的流量是唯一确定的，但是可行的最大流不唯一。 假设一个容量网络\(G&#x3D;(V, E)\)。源点\(V_s\)，汇点\(V_t\)，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-11T02:52:55.000Z">
-<meta property="article:modified_time" content="2021-07-11T05:13:15.855Z">
+<meta property="article:modified_time" content="2021-07-11T09:38:16.020Z">
 <meta property="article:author" content="想飞的鸡">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="网络流">
@@ -265,7 +265,7 @@ p.spoiler {
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-07-11 10:52:55 / 修改时间：13:13:15" itemprop="dateCreated datePublished" datetime="2021-07-11T10:52:55+08:00">2021-07-11</time>
+      <time title="创建时间：2021-07-11 10:52:55 / 修改时间：17:38:16" itemprop="dateCreated datePublished" datetime="2021-07-11T10:52:55+08:00">2021-07-11</time>
     </span>
 
   
@@ -274,14 +274,14 @@ p.spoiler {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
+      <span>3.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>5 分钟</span>
     </span>
 </div>
 
@@ -327,6 +327,124 @@ f(u, v) &amp; (u, v) \not\in P
 \end{cases}
 \]</span></p>
 <p>如此反复，直到<span class="math inline">\(f\)</span>为最大流（<span class="math inline">\(W(f)\)</span>中没有最短路径）为止。</p>
+<p>MATLAB实现：</p>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token keyword">function</span> <span class="token punctuation">[</span>f<span class="token punctuation">,</span> wf<span class="token punctuation">,</span> rwf<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">bg</span><span class="token punctuation">(</span>C<span class="token punctuation">,</span> vs<span class="token punctuation">,</span> vt<span class="token punctuation">,</span> r<span class="token punctuation">)</span>
+<span class="token comment">% f 最小费用最大流矩阵</span>
+<span class="token comment">% wf 最大流量</span>
+<span class="token comment">% rwf 最小费用</span>
+<span class="token comment">% C 容量矩阵</span>
+<span class="token comment">% vs 源点</span>
+<span class="token comment">% vt 汇点</span>
+<span class="token comment">% r 弧上单位流量的费用</span>
+n <span class="token operator">=</span> <span class="token function">length</span><span class="token punctuation">(</span>C<span class="token punctuation">)</span><span class="token punctuation">;</span>
+f <span class="token operator">=</span> <span class="token function">zeros</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+wf <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+rwf <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+w <span class="token operator">=</span> <span class="token function">createw</span><span class="token punctuation">(</span>C<span class="token punctuation">,</span> r<span class="token punctuation">,</span> f<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">[</span>path<span class="token punctuation">,</span> len<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">spfa</span><span class="token punctuation">(</span>w<span class="token punctuation">,</span> vs<span class="token punctuation">,</span> vt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token operator">~</span><span class="token function">isinf</span><span class="token punctuation">(</span>len<span class="token punctuation">)</span>
+    alpha <span class="token operator">=</span> Inf<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token number">i</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">:</span><span class="token function">length</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span>
+        <span class="token keyword">if</span> <span class="token function">C</span><span class="token punctuation">(</span><span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">~=</span> <span class="token number">0</span>
+            alpha <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>alpha<span class="token punctuation">,</span> <span class="token function">C</span><span class="token punctuation">(</span><span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token function">f</span><span class="token punctuation">(</span><span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+            alpha <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>alpha<span class="token punctuation">,</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">end</span>
+    <span class="token keyword">end</span>
+    wf <span class="token operator">=</span> wf <span class="token operator">+</span> alpha<span class="token punctuation">;</span>
+    sumr <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token number">i</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">:</span><span class="token function">length</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span>
+        <span class="token keyword">if</span> <span class="token function">C</span><span class="token punctuation">(</span><span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">~=</span> <span class="token number">0</span>
+            <span class="token function">f</span><span class="token punctuation">(</span><span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> alpha<span class="token punctuation">;</span>
+            sumr <span class="token operator">=</span> sumr <span class="token operator">+</span> <span class="token function">r</span><span class="token punctuation">(</span><span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+            <span class="token function">f</span><span class="token punctuation">(</span><span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">-</span> alpha<span class="token punctuation">;</span>
+            sumr <span class="token operator">=</span> sumr <span class="token operator">-</span> <span class="token function">r</span><span class="token punctuation">(</span><span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">path</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">end</span>
+    <span class="token keyword">end</span>
+    rwf <span class="token operator">=</span> rwf <span class="token operator">+</span> sumr<span class="token operator">*</span>alpha<span class="token punctuation">;</span>
+    w <span class="token operator">=</span> <span class="token function">createw</span><span class="token punctuation">(</span>C<span class="token punctuation">,</span> r<span class="token punctuation">,</span> f<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">[</span>path<span class="token punctuation">,</span> len<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">spfa</span><span class="token punctuation">(</span>w<span class="token punctuation">,</span> vs<span class="token punctuation">,</span> vt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span>
+<span class="token keyword">end</span>
+
+<span class="token keyword">function</span> w <span class="token operator">=</span> <span class="token function">createw</span><span class="token punctuation">(</span>C<span class="token punctuation">,</span> r<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
+<span class="token comment">% w 伴随网络</span>
+<span class="token comment">% C 容量矩阵</span>
+<span class="token comment">% r 弧上单位流量的费用</span>
+<span class="token comment">% f 流量矩阵</span>
+n <span class="token operator">=</span> <span class="token function">length</span><span class="token punctuation">(</span>C<span class="token punctuation">)</span><span class="token punctuation">;</span>
+w <span class="token operator">=</span> <span class="token function">Inf</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> u <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">:</span>n
+    <span class="token keyword">for</span> v <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">:</span>n
+        <span class="token keyword">if</span> <span class="token function">f</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> v<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token function">C</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+            <span class="token function">w</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> v<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">r</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">end</span>
+        <span class="token keyword">if</span> <span class="token function">f</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> v<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span>
+            <span class="token function">w</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> u<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token function">r</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">end</span>
+    <span class="token keyword">end</span>
+<span class="token keyword">end</span>
+<span class="token keyword">end</span>
+
+<span class="token keyword">function</span> <span class="token punctuation">[</span>path<span class="token punctuation">,</span> len<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">spfa</span><span class="token punctuation">(</span>G<span class="token punctuation">,</span> vs<span class="token punctuation">,</span> vt<span class="token punctuation">)</span>
+<span class="token comment">% path 最短路径</span>
+<span class="token comment">% len 最短路径长度</span>
+<span class="token comment">% G 网络的邻接矩阵</span>
+<span class="token comment">% vs 源点</span>
+<span class="token comment">% vt 汇点</span>
+n <span class="token operator">=</span> <span class="token function">length</span><span class="token punctuation">(</span>G<span class="token punctuation">)</span><span class="token punctuation">;</span> %
+dist <span class="token operator">=</span> <span class="token function">Inf</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">dist</span><span class="token punctuation">(</span>vs<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+from <span class="token operator">=</span> <span class="token function">zeros</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">from</span><span class="token punctuation">(</span>vs<span class="token punctuation">)</span> <span class="token operator">=</span> vs<span class="token punctuation">;</span>
+q <span class="token operator">=</span> <span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> vs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+inq <span class="token operator">=</span> <span class="token function">zeros</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">inq</span><span class="token punctuation">(</span>vs<span class="token punctuation">)</span> <span class="token operator">=</span> true<span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token operator">~</span><span class="token function">isempty</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span>
+    <span class="token punctuation">[</span>u<span class="token punctuation">,</span> q<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">pop</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">inq</span><span class="token punctuation">(</span>u<span class="token punctuation">)</span> <span class="token operator">=</span> false<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> v <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">:</span>n
+        <span class="token keyword">if</span> <span class="token function">dist</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token function">dist</span><span class="token punctuation">(</span>u<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">G</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+            <span class="token function">dist</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">dist</span><span class="token punctuation">(</span>u<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">G</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">from</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">=</span> u<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token operator">~</span><span class="token function">inq</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span>
+                q <span class="token operator">=</span> <span class="token function">push</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">inq</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">=</span> true<span class="token punctuation">;</span>
+            <span class="token keyword">end</span>
+        <span class="token keyword">end</span>
+    <span class="token keyword">end</span>
+<span class="token keyword">end</span>
+path <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+len <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+v <span class="token operator">=</span> vt<span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token function">from</span><span class="token punctuation">(</span>vt<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span>
+    len <span class="token operator">=</span> Inf<span class="token punctuation">;</span>
+<span class="token keyword">else</span>
+    <span class="token keyword">while</span> v <span class="token operator">~=</span> vs
+        path <span class="token operator">=</span> <span class="token function">push</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        len <span class="token operator">=</span> len <span class="token operator">+</span> <span class="token function">G</span><span class="token punctuation">(</span><span class="token function">from</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        v <span class="token operator">=</span> <span class="token function">from</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">end</span>
+    path <span class="token operator">=</span> <span class="token function">push</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> vs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    path <span class="token operator">=</span> <span class="token function">fliplr</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span>
+<span class="token keyword">end</span>
+
+<span class="token keyword">function</span> ansq <span class="token operator">=</span> <span class="token function">push</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span> el<span class="token punctuation">)</span>
+<span class="token comment">% ansq 压入队尾元素的队列</span>
+<span class="token comment">% q 队列</span>
+<span class="token comment">% el 要压入队尾元素的数字</span>
+ansq <span class="token operator">=</span> <span class="token punctuation">[</span>q el<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span>
+
+<span class="token keyword">function</span> <span class="token punctuation">[</span>v<span class="token punctuation">,</span> ansq<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">pop</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span>
+<span class="token comment">% v q的队首元素</span>
+<span class="token comment">% ansq 去掉队首元素的队列</span>
+<span class="token comment">% q 队列</span>
+v <span class="token operator">=</span> <span class="token function">q</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ansq <span class="token operator">=</span> <span class="token function">q</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">:</span><span class="token keyword">end</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
     </div>
 
@@ -382,7 +500,7 @@ f(u, v) &amp; (u, v) \not\in P
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">330k</span>
+    <span title="站点总字数">331k</span>
   </span>
 </div>
 
