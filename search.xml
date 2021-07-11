@@ -15272,20 +15272,24 @@ r\left(f&#39;\right)-r(f) &amp;= \sum_{&lt;u, v&gt; \in E} f&#39;(u, v) * r(u, v
 W(u, v) = \begin{cases}
  r(u, v) &amp; \text{若} f(u, v) &lt; c(u, v) \\
  +\infty &amp; \text{若} f(u, v) = c(u, v)
-\end{cases} \\
+\end{cases}
+\]</span> <span class="math display">\[
 W(v, u) = \begin{cases}
  -r(u, v) &amp; \text{若} f(u, v) &gt; 0 \\
  +\infty &amp; \text{若} f(u, v) = 0
-\end{cases} 
-\]</span> 长度为<span class="math inline">\(+\infty\)</span>的弧可以从<span class="math inline">\(W(f)\)</span>中略去。</p>
+\end{cases}
+\]</span></p>
+<p>长度为<span class="math inline">\(+\infty\)</span>的弧可以从<span class="math inline">\(W(f)\)</span>中略去。</p>
 <p>在网络中寻找关于<span class="math inline">\(f\)</span>的最小费用增广路，等价于在<span class="math inline">\(W(f)\)</span>中寻找从<span class="math inline">\(V_s\)</span>到<span class="math inline">\(V_t\)</span>的最短路（不能使用Dijkstra，可以使用SPFA或Bellman-Ford）。在原网络中得到相应的增广路<span class="math inline">\(P\)</span>，沿<span class="math inline">\(P\)</span>对<span class="math inline">\(f\)</span>调整。 <span class="math display">\[
-\alpha = \min\left\{\min_{P+} (c(u, v)-f(u, v)), \min_{P-} f(u, v)\right\} \\
+\alpha = \min\left\{\min_{P+} (c(u, v)-f(u, v)), \min_{P-} f(u, v)\right\}
+\]</span> <span class="math display">\[
 f&#39;(u, v) = \begin{cases}
 f(u, v) + \alpha &amp; (u, v) \in P+ \\
 f(u, v) - \alpha &amp; (u, v) \in P- \\
 f(u, v) &amp; (u, v) \not\in P
 \end{cases}
-\]</span> 如此反复，直到<span class="math inline">\(f\)</span>为最大流（<span class="math inline">\(W(f)\)</span>中没有最短路径）为止。</p>
+\]</span></p>
+<p>如此反复，直到<span class="math inline">\(f\)</span>为最大流（<span class="math inline">\(W(f)\)</span>中没有最短路径）为止。</p>
 ]]></content>
       <tags>
         <tag>算法</tag>
