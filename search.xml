@@ -66,6 +66,24 @@ http:&#x2F;&#x2F;open.trackerlist.xyz:80&#x2F;announce
       </tags>
   </entry>
   <entry>
+    <title>C4D学习笔记（12）：渲染基础</title>
+    <url>/2019/02/15/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8812%EF%BC%89%EF%BC%9A%E6%B8%B2%E6%9F%93%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="知识结构图">知识结构图</h1>
+<ul>
+<li>三点打光</li>
+<li>灯光设置</li>
+<li>渲染设置</li>
+</ul>
+<h1 id="视频链接">视频链接</h1>
+<ul>
+<li><a href="https://www.bilibili.com/video/av11289655/">【优设C4D基础篇】NO .12渲染基础</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>C4D</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C4D学习笔记（10）：灯光基础</title>
     <url>/2019/02/14/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8810%EF%BC%89%EF%BC%9A%E7%81%AF%E5%85%89%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="知识结构图">知识结构图</h1>
@@ -153,43 +171,6 @@ http:&#x2F;&#x2F;open.trackerlist.xyz:80&#x2F;announce
       </tags>
   </entry>
   <entry>
-    <title>C4D学习笔记（11）：摄像机基础</title>
-    <url>/2019/02/14/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8811%EF%BC%89%EF%BC%9A%E6%91%84%E5%83%8F%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="知识结构图">知识结构图</h1>
-<ul>
-<li>对象</li>
-<li>物理</li>
-<li>细节</li>
-<li>合成</li>
-</ul>
-<h1 id="视频链接">视频链接</h1>
-<ul>
-<li><a href="https://www.bilibili.com/video/av11289675/">【优设C4D基础篇】NO .11摄像机基础</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>C4D</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C4D学习笔记（12）：渲染基础</title>
-    <url>/2019/02/15/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8812%EF%BC%89%EF%BC%9A%E6%B8%B2%E6%9F%93%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="知识结构图">知识结构图</h1>
-<ul>
-<li>三点打光</li>
-<li>灯光设置</li>
-<li>渲染设置</li>
-</ul>
-<h1 id="视频链接">视频链接</h1>
-<ul>
-<li><a href="https://www.bilibili.com/video/av11289655/">【优设C4D基础篇】NO .12渲染基础</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>C4D</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C4D学习笔记（13）：材质基础-上</title>
     <url>/2019/02/15/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8813%EF%BC%89%EF%BC%9A%E6%9D%90%E8%B4%A8%E5%9F%BA%E7%A1%80-%E4%B8%8A/</url>
     <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="知识结构图">知识结构图</h1>
@@ -205,6 +186,25 @@ http:&#x2F;&#x2F;open.trackerlist.xyz:80&#x2F;announce
 <h1 id="视频链接">视频链接</h1>
 <ul>
 <li><a href="https://www.bilibili.com/video/av11324865/">【优设C4D基础篇】NO .13材质基础-上</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>C4D</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C4D学习笔记（11）：摄像机基础</title>
+    <url>/2019/02/14/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8811%EF%BC%89%EF%BC%9A%E6%91%84%E5%83%8F%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="知识结构图">知识结构图</h1>
+<ul>
+<li>对象</li>
+<li>物理</li>
+<li>细节</li>
+<li>合成</li>
+</ul>
+<h1 id="视频链接">视频链接</h1>
+<ul>
+<li><a href="https://www.bilibili.com/video/av11289675/">【优设C4D基础篇】NO .11摄像机基础</a></li>
 </ul>
 ]]></content>
       <tags>
@@ -664,11 +664,11 @@ http:&#x2F;&#x2F;open.trackerlist.xyz:80&#x2F;announce
       </tags>
   </entry>
   <entry>
-    <title>C4D学习笔记（26）：动画基础</title>
-    <url>/2019/02/19/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8826%EF%BC%89%EF%BC%9A%E5%8A%A8%E7%94%BB%E5%9F%BA%E7%A1%80/</url>
+    <title>C4D学习笔记（25）：常用标签</title>
+    <url>/2019/02/19/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8825%EF%BC%89%EF%BC%9A%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</url>
     <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="视频链接">视频链接</h1>
 <ul>
-<li><a href="https://www.bilibili.com/video/av14979302/">【优设C4D基础篇】NO .24动画基础</a></li>
+<li><a href="https://www.bilibili.com/video/av13032976/">【优设C4D基础篇】NO .23常用标签</a></li>
 </ul>
 ]]></content>
       <tags>
@@ -676,11 +676,11 @@ http:&#x2F;&#x2F;open.trackerlist.xyz:80&#x2F;announce
       </tags>
   </entry>
   <entry>
-    <title>C4D学习笔记（25）：常用标签</title>
-    <url>/2019/02/19/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8825%EF%BC%89%EF%BC%9A%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</url>
+    <title>C4D学习笔记（26）：动画基础</title>
+    <url>/2019/02/19/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8826%EF%BC%89%EF%BC%9A%E5%8A%A8%E7%94%BB%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="视频链接">视频链接</h1>
 <ul>
-<li><a href="https://www.bilibili.com/video/av13032976/">【优设C4D基础篇】NO .23常用标签</a></li>
+<li><a href="https://www.bilibili.com/video/av14979302/">【优设C4D基础篇】NO .24动画基础</a></li>
 </ul>
 ]]></content>
       <tags>
@@ -762,6 +762,30 @@ http:&#x2F;&#x2F;open.trackerlist.xyz:80&#x2F;announce
       </tags>
   </entry>
   <entry>
+    <title>C4D学习笔记（4）：坐标与创建工具组</title>
+    <url>/2019/02/11/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%884%EF%BC%89%EF%BC%9A%E5%9D%90%E6%A0%87%E4%B8%8E%E5%88%9B%E5%BB%BA%E5%B7%A5%E5%85%B7%E7%BB%84/</url>
+    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="知识结构图">知识结构图</h1>
+<ul>
+<li>坐标管理器</li>
+<li>创建工具
+<ul>
+<li>切刀</li>
+<li>倒角</li>
+<li>挤压</li>
+<li>桥接：线模式</li>
+<li>焊接：点模式</li>
+</ul></li>
+</ul>
+<h1 id="视频链接">视频链接</h1>
+<ul>
+<li><a href="https://www.bilibili.com/video/av11288951/">【优设C4D基础篇】NO .4坐标与创建工具组</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>C4D</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C4D学习笔记（3）：对象与对象轴，对齐与独显</title>
     <url>/2019/02/09/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%883%EF%BC%89%EF%BC%9A%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%AF%B9%E8%B1%A1%E8%BD%B4%EF%BC%8C%E5%AF%B9%E9%BD%90%E4%B8%8E%E7%8B%AC%E6%98%BE/</url>
     <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="知识结构图">知识结构图</h1>
@@ -808,58 +832,6 @@ http:&#x2F;&#x2F;open.trackerlist.xyz:80&#x2F;announce
 <h1 id="视频链接">视频链接</h1>
 <ul>
 <li><a href="https://www.bilibili.com/video/av11288975/">【优设C4D基础篇】NO .3对象与对象轴对齐与独显</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>C4D</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C4D学习笔记（4）：坐标与创建工具组</title>
-    <url>/2019/02/11/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%884%EF%BC%89%EF%BC%9A%E5%9D%90%E6%A0%87%E4%B8%8E%E5%88%9B%E5%BB%BA%E5%B7%A5%E5%85%B7%E7%BB%84/</url>
-    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="知识结构图">知识结构图</h1>
-<ul>
-<li>坐标管理器</li>
-<li>创建工具
-<ul>
-<li>切刀</li>
-<li>倒角</li>
-<li>挤压</li>
-<li>桥接：线模式</li>
-<li>焊接：点模式</li>
-</ul></li>
-</ul>
-<h1 id="视频链接">视频链接</h1>
-<ul>
-<li><a href="https://www.bilibili.com/video/av11288951/">【优设C4D基础篇】NO .4坐标与创建工具组</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>C4D</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C4D学习笔记（5）：移动与捕捉工具</title>
-    <url>/2019/02/12/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89%EF%BC%9A%E7%A7%BB%E5%8A%A8%E4%B8%8E%E6%8D%95%E6%8D%89%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="知识结构图">知识结构图</h1>
-<ul>
-<li>移动工具
-<ul>
-<li>笔刷：基础塑形</li>
-<li>熨烫：平滑画面</li>
-<li>镜像：倒映对象</li>
-<li>滑动：调节分段</li>
-</ul></li>
-<li>捕捉工具
-<ul>
-<li>点、线、面、样条、轴心</li>
-<li>启动量化</li>
-</ul></li>
-<li>对象周线-建立模型：按住Alt</li>
-</ul>
-<h1 id="视频链接">视频链接</h1>
-<ul>
-<li><a href="https://www.bilibili.com/video/av11288917/">【优设C4D基础篇】NO .5移动与捕捉工具组</a></li>
 </ul>
 ]]></content>
       <tags>
@@ -916,6 +888,73 @@ http:&#x2F;&#x2F;open.trackerlist.xyz:80&#x2F;announce
       </tags>
   </entry>
   <entry>
+    <title>C4D学习笔记（5）：移动与捕捉工具</title>
+    <url>/2019/02/12/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89%EF%BC%9A%E7%A7%BB%E5%8A%A8%E4%B8%8E%E6%8D%95%E6%8D%89%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="知识结构图">知识结构图</h1>
+<ul>
+<li>移动工具
+<ul>
+<li>笔刷：基础塑形</li>
+<li>熨烫：平滑画面</li>
+<li>镜像：倒映对象</li>
+<li>滑动：调节分段</li>
+</ul></li>
+<li>捕捉工具
+<ul>
+<li>点、线、面、样条、轴心</li>
+<li>启动量化</li>
+</ul></li>
+<li>对象周线-建立模型：按住Alt</li>
+</ul>
+<h1 id="视频链接">视频链接</h1>
+<ul>
+<li><a href="https://www.bilibili.com/video/av11288917/">【优设C4D基础篇】NO .5移动与捕捉工具组</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>C4D</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C4D学习笔记（8）：变形工具</title>
+    <url>/2019/02/12/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%888%EF%BC%89%EF%BC%9A%E5%8F%98%E5%BD%A2%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="知识结构图">知识结构图</h1>
+<ul>
+<li>层级
+<ul>
+<li>模型的子层级</li>
+<li>模型的同层级</li>
+</ul></li>
+<li>效果可以叠加
+<ul>
+<li>注意顺序</li>
+</ul></li>
+<li>常用变形工具
+<ul>
+<li>扭曲</li>
+<li>膨胀</li>
+<li>锥化</li>
+<li>螺旋</li>
+<li>FFD</li>
+<li>溶解</li>
+<li>爆炸</li>
+<li>破碎</li>
+<li>爆炸FX</li>
+<li>置换</li>
+<li>减面</li>
+<li>样条约束</li>
+</ul></li>
+</ul>
+<h1 id="视频链接">视频链接</h1>
+<ul>
+<li><a href="https://www.bilibili.com/video/av11289498/">【优设C4D基础篇】NO .8变形工具</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>C4D</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C4D学习笔记（7）：造型器基础</title>
     <url>/2019/02/12/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%887%EF%BC%89%EF%BC%9A%E9%80%A0%E5%9E%8B%E5%99%A8%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="知识结构图">知识结构图</h1>
@@ -962,45 +1001,6 @@ http:&#x2F;&#x2F;open.trackerlist.xyz:80&#x2F;announce
 <h1 id="视频链接">视频链接</h1>
 <ul>
 <li><a href="https://www.bilibili.com/video/av11289296/">【优设C4D基础篇】NO .7造型器基础</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>C4D</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C4D学习笔记（8）：变形工具</title>
-    <url>/2019/02/12/C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%888%EF%BC%89%EF%BC%9A%E5%8F%98%E5%BD%A2%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="知识结构图">知识结构图</h1>
-<ul>
-<li>层级
-<ul>
-<li>模型的子层级</li>
-<li>模型的同层级</li>
-</ul></li>
-<li>效果可以叠加
-<ul>
-<li>注意顺序</li>
-</ul></li>
-<li>常用变形工具
-<ul>
-<li>扭曲</li>
-<li>膨胀</li>
-<li>锥化</li>
-<li>螺旋</li>
-<li>FFD</li>
-<li>溶解</li>
-<li>爆炸</li>
-<li>破碎</li>
-<li>爆炸FX</li>
-<li>置换</li>
-<li>减面</li>
-<li>样条约束</li>
-</ul></li>
-</ul>
-<h1 id="视频链接">视频链接</h1>
-<ul>
-<li><a href="https://www.bilibili.com/video/av11289498/">【优设C4D基础篇】NO .8变形工具</a></li>
 </ul>
 ]]></content>
       <tags>
@@ -1082,6 +1082,92 @@ http:&#x2F;&#x2F;open.trackerlist.xyz:80&#x2F;announce
 ]]></content>
       <tags>
         <tag>Golang</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo黑科技：你看不清了</title>
+    <url>/2019/01/08/Hexo%E9%BB%91%E7%A7%91%E6%8A%80%EF%BC%9A%E4%BD%A0%E7%9C%8B%E4%B8%8D%E6%B8%85%E4%BA%86/</url>
+    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><p>偶然在一个博客发现Hexo的黑科技，据说你
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">撸多了</span>
+  </span>会视物模糊？</p>
+<h1 id="怎么做到的">怎么做到的？</h1>
+<p>实际上这是Hexo的一个有趣的插件实现的。模糊的文字点击即可查看，再次点击则又会模糊。首先来安装插件。</p>
+<h2 id="安装">安装</h2>
+<p>在博客目录下输入</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yarn add hexo-spoiler<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>或</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install hexo-spoiler --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>完成安装。</p>
+<h2 id="使用">使用</h2>
+<p>在你写博客的时候，如果想马赛克某段文字，你可以这么使用。</p>
+<pre class="line-numbers language-none"><code class="language-none">&#123;% spoiler 没错，你眼睛花了。 %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>效果嘛就是这样的：</p>
+
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">没错，你眼睛花了。</span>
+  </span>
+<h1 id="什么地方可以用">什么地方可以用</h1>
+<ul>
+<li><p>正常文本：
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">可以遮蔽</span>
+  </span></p></li>
+<li><p>带格式的文本：</p>
+<ul>
+<li><p>斜体：<em>
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">可以遮蔽</span>
+  </span></em></p></li>
+<li><p>粗体：<strong>
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">可以遮蔽</span>
+  </span></strong></p></li>
+<li><p>下标：<sub>
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">可以遮蔽</span>
+  </span></sub></p></li>
+<li><p>删除线：<del>
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">可以遮蔽</span>
+  </span></del></p></li>
+<li><p>下划线：<u>
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">可以遮蔽</span>
+  </span></u></p></li>
+<li><p>行内代码：<code>&#123;% spoiler 可以遮蔽 %&#125;</code></p></li>
+<li><p>超链接：<a href="https://www.baidu.com">
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">可以遮蔽，不过点我会被驱逐至百度</span>
+  </span></a></p></li>
+<li><p>引用：</p>
+<blockquote>
+
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">可以遮蔽</span>
+  </span>
+</blockquote></li>
+</ul></li>
+</ul>
+<p>带格式的文本需要把格式符放在外面，像这样：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token bold"><span class="token punctuation">**</span><span class="token content">&#123;% spoiler 把粗体格式的符号放在外面 %&#125;</span><span class="token punctuation">**</span></span>
+<span class="token url">[<span class="token content">&#123;% spoiler 把超链接的符号放在外面 %&#125;</span>](<span class="token url">https://www.baidu.com</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>不知道是不是markdown渲染引擎的缘故，如果格式符放在里面是没有格式效果的。另外，行内公式还无法使用马赛克。</p>
+<p>就是这么简单~目前除了好玩之外也想不到有什么用处了，也许以后可以在出问题的时候把答案遮住？嗯，似乎是个不错的主意。</p>
+<h1 id="参考网页">参考网页</h1>
+<ul>
+<li><a href="http://blog.caoxl.com/2018/08/02/Hexo-Black-Screen/">hexo 黑科技 | Caoxl’s Blog</a></li>
+<li><a href="https://unnamed42.github.io/2016-06-25-hexo-spoiler%E6%8F%92%E4%BB%B6.html">hexo spoiler插件 - BUG研发中心</a></li>
+<li><a href="https://github.com/unnamed42/hexo-spoiler">GitHub - unnamed42/hexo-spoiler: A spoiler tag for Hexo</a></li>
+</ul>
+<p>另外还有两个类似的插件也很有趣，不过我自己没有尝试过。</p>
+<ul>
+<li><a href="https://github.com/MaoKwen/hexo-black-cover">GitHub - MaoKwen/hexo-black-cover: Black cover of text tag for Hexo</a></li>
+<li><a href="https://github.com/JamesPan/hexo-ruby-character">GitHub - jamespan/hexo-ruby-character: Ruby character tag for Hexo</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1179,92 +1265,6 @@ http:&#x2F;&#x2F;open.trackerlist.xyz:80&#x2F;announce
       <tags>
         <tag>Hexo</tag>
         <tag>Alpha Dust</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo黑科技：你看不清了</title>
-    <url>/2019/01/08/Hexo%E9%BB%91%E7%A7%91%E6%8A%80%EF%BC%9A%E4%BD%A0%E7%9C%8B%E4%B8%8D%E6%B8%85%E4%BA%86/</url>
-    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><p>偶然在一个博客发现Hexo的黑科技，据说你
-  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
-    <span class="spoiler-blur ">撸多了</span>
-  </span>会视物模糊？</p>
-<h1 id="怎么做到的">怎么做到的？</h1>
-<p>实际上这是Hexo的一个有趣的插件实现的。模糊的文字点击即可查看，再次点击则又会模糊。首先来安装插件。</p>
-<h2 id="安装">安装</h2>
-<p>在博客目录下输入</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">yarn</span> <span class="token function">add</span> hexo-spoiler<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>或</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> hexo-spoiler --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>完成安装。</p>
-<h2 id="使用">使用</h2>
-<p>在你写博客的时候，如果想马赛克某段文字，你可以这么使用。</p>
-<pre class="line-numbers language-none"><code class="language-none">&#123;% spoiler 没错，你眼睛花了。 %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>效果嘛就是这样的：</p>
-
-  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
-    <span class="spoiler-blur ">没错，你眼睛花了。</span>
-  </span>
-<h1 id="什么地方可以用">什么地方可以用</h1>
-<ul>
-<li><p>正常文本：
-  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
-    <span class="spoiler-blur ">可以遮蔽</span>
-  </span></p></li>
-<li><p>带格式的文本：</p>
-<ul>
-<li><p>斜体：<em>
-  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
-    <span class="spoiler-blur ">可以遮蔽</span>
-  </span></em></p></li>
-<li><p>粗体：<strong>
-  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
-    <span class="spoiler-blur ">可以遮蔽</span>
-  </span></strong></p></li>
-<li><p>下标：<sub>
-  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
-    <span class="spoiler-blur ">可以遮蔽</span>
-  </span></sub></p></li>
-<li><p>删除线：<del>
-  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
-    <span class="spoiler-blur ">可以遮蔽</span>
-  </span></del></p></li>
-<li><p>下划线：<u>
-  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
-    <span class="spoiler-blur ">可以遮蔽</span>
-  </span></u></p></li>
-<li><p>行内代码：<code>&#123;% spoiler 可以遮蔽 %&#125;</code></p></li>
-<li><p>超链接：<a href="https://www.baidu.com">
-  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
-    <span class="spoiler-blur ">可以遮蔽，不过点我会被驱逐至百度</span>
-  </span></a></p></li>
-<li><p>引用：</p>
-<blockquote>
-
-  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
-    <span class="spoiler-blur ">可以遮蔽</span>
-  </span>
-</blockquote></li>
-</ul></li>
-</ul>
-<p>带格式的文本需要把格式符放在外面，像这样：</p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token bold"><span class="token punctuation">**</span><span class="token content">&#123;% spoiler 把粗体格式的符号放在外面 %&#125;</span><span class="token punctuation">**</span></span>
-<span class="token url">[<span class="token content">&#123;% spoiler 把超链接的符号放在外面 %&#125;</span>](<span class="token url">https://www.baidu.com</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>不知道是不是markdown渲染引擎的缘故，如果格式符放在里面是没有格式效果的。另外，行内公式还无法使用马赛克。</p>
-<p>就是这么简单~目前除了好玩之外也想不到有什么用处了，也许以后可以在出问题的时候把答案遮住？嗯，似乎是个不错的主意。</p>
-<h1 id="参考网页">参考网页</h1>
-<ul>
-<li><a href="http://blog.caoxl.com/2018/08/02/Hexo-Black-Screen/">hexo 黑科技 | Caoxl’s Blog</a></li>
-<li><a href="https://unnamed42.github.io/2016-06-25-hexo-spoiler%E6%8F%92%E4%BB%B6.html">hexo spoiler插件 - BUG研发中心</a></li>
-<li><a href="https://github.com/unnamed42/hexo-spoiler">GitHub - unnamed42/hexo-spoiler: A spoiler tag for Hexo</a></li>
-</ul>
-<p>另外还有两个类似的插件也很有趣，不过我自己没有尝试过。</p>
-<ul>
-<li><a href="https://github.com/MaoKwen/hexo-black-cover">GitHub - MaoKwen/hexo-black-cover: Black cover of text tag for Hexo</a></li>
-<li><a href="https://github.com/JamesPan/hexo-ruby-character">GitHub - jamespan/hexo-ruby-character: Ruby character tag for Hexo</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -3246,72 +3246,6 @@ k2pdfopt myfile.pdf <span class="token comment">#开始转换 PDF 文档</span><
       </tags>
   </entry>
   <entry>
-    <title>不翻墙就能使用Google搜索</title>
-    <url>/2019/01/03/%E4%B8%8D%E7%BF%BB%E5%A2%99%E5%B0%B1%E8%83%BD%E4%BD%BF%E7%94%A8Google%E6%90%9C%E7%B4%A2/</url>
-    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><p><code>注：此方法目前失效中（2019-3-5）</code></p>
-<h1 id="忽然感冒google搜索的原因">忽然感冒Google搜索的原因</h1>
-<p>我一直都是用搜狗搜索作为默认搜索引擎。因为相比百度，搜狗的知乎搜索比较方便，但是搜狗搜索也有一些时候并不能搜出我想要的内容，因此我想换成Google的搜索。遗憾的是，在天朝，目前还无法直接使用Google搜索，而我非常懒，不想自己每次需要使用Google的时候都花一些精力用来翻墙。能不能让Google也变得和搜狗一样，随时搜索不需要翻墙呢？</p>
-<p>办法还是有的，其实很早以前就有了，就是更改hosts。</p>
-<h1 id="关于hosts">关于hosts</h1>
-<blockquote>
-<p>hosts文件（域名解析文件）是一个用于储存计算机网络中各节点信息的计算机文件。这个文件负责将主机名称映射到相应的IP地址。hosts文件通常用于补充或取代网络中DNS的功能。和DNS不同的是，计算机的用户可以直接对hosts文件进行控制。</p>
-<p>hosts文件也可以用于其它情况，例如可以将已知的广告服务器重定向到无广告的机器（通常是该计算机自身的IP地址：127.0.0.1）上来过滤广告。同时也可以通过不下载网络广告，从而减少带宽。使用hosts文件还可以减少对DNS服务器的访问来加快访问速度并减少带宽消耗。</p>
-<p>hosts文件的另一个重要用途就是用于拦截一些恶意网站的请求，从而防止访问欺诈网站或感染一些病毒或恶意软件。但同时，这个文件也可能被病毒或恶意软件所利用来阻止用户更新杀毒软件或访问特定网站。</p>
-<p>在中国大陆，由于防火长城的DNS劫持，有一些网民也借使用hosts文件来强制将特定网站指定到未屏蔽的IP上。但自2018年8月24日起，防火长城开始启用基于SNI检测和TCP连接重置的手段进行封锁。所以修改Hosts绕过封锁的方法，绝大多数网站不再完全适用。</p>
-<p>——维基百科</p>
-</blockquote>
-<h1 id="自动更新hosts">自动更新hosts</h1>
-<p>通过改hosts访问谷歌的方式有效期非常短，因为GFW封锁IP的速度非常快，因此需要时常更新hosts，我找到了一个专门用来更新hosts的软件<code>SwitchHosts!</code>。</p>
-<blockquote>
-<p>SwitchHosts! 是一个管理、切换多个 hosts 方案的工具。</p>
-<p>它是一个免费开源软件。</p>
-<p>——SwitchHosts!官网</p>
-</blockquote>
-<p>下面来介绍一下使用方式。</p>
-<h2 id="下载switchhosts">下载<code>SwitchHosts!</code></h2>
-<p>从<code>SwitchHosts!</code>官网下载最新的软件，根据当前操作系统选择对应的版本。<a href="https://oldj.github.io/SwitchHosts/#cn">点击这里访问官网</a></p>
-<p>软件下载完以后解压即可，不需要安装。</p>
-<h2 id="使用switchhosts">使用<code>SwitchHosts!</code></h2>
-<p>以Windows系统为例，进入解压的目录，<strong>以管理员身份运行</strong>。</p>
-<p>软件界面如下所示。如果是英文界面，可以在设置里修改语言为中文。</p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_01_03_%E4%B8%8D%E7%BF%BB%E5%A2%99%E5%B0%B1%E8%83%BD%E4%BD%BF%E7%94%A8Google%E6%90%9C%E7%B4%A2_SwitchHosts!%E4%B8%BB%E7%95%8C%E9%9D%A2.png" alt="SwitchHosts!主界面.png" /><figcaption aria-hidden="true">SwitchHosts!主界面.png</figcaption>
-</figure>
-<p>软件左侧最上方的<code>系统 Hosts</code>，点击就可以在右边看到当前系统上正在使用的hosts文件内容，下面的<code>my hosts</code>是自己手动添加的IP地址，在这里我们不会使用它；<code>backup</code>里保存的是默认的hosts内容；下面的三个就是我添加的hosts规则。右边的开关打开（绿色）表示将这个规则应用到系统hosts，就是说会把规则里的内容复制到系统的hosts中，如果开关没有打开，那么这个规则是不生效的。接下来我会介绍如何添加规则。</p>
-<p>点击左下角的+号，添加host规则。</p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_01_03_%E4%B8%8D%E7%BF%BB%E5%A2%99%E5%B0%B1%E8%83%BD%E4%BD%BF%E7%94%A8Google%E6%90%9C%E7%B4%A2_%E6%B7%BB%E5%8A%A0host%E8%A7%84%E5%88%99.png" alt="添加host规则.png" /><figcaption aria-hidden="true">添加host规则.png</figcaption>
-</figure>
-<p>我们需要的是远程规则，也就是那些其他人一直在维护的IP列表，我在GitHub上找到了3个可用的hosts表。</p>
-<ul>
-<li><a href="https://github.com/googlehosts/hosts">GitHub - googlehosts/hosts: 镜像：https://coding.net/u/scaffrey/p/hosts/git</a></li>
-<li><a href="https://github.com/lennylxx/ipv6-hosts">GitHub - lennylxx/ipv6-hosts: Fork of https://code.google.com/archive/p/ipv6-hosts/</a></li>
-<li><a href="https://github.com/popcorner/cernet-ipv6-hosts">GitHub - popcorner/cernet-ipv6-hosts: Lightweight IPv6 hosts! Access to Google, YouTube, Facebook, Wikipedia via IPv6 and avoid unnecessary block.</a></li>
-</ul>
-<p>不过要填写的URL地址并不是上面的链接，以第一个连接为例，我们需要从仓库列表里找到hosts文件，然后点击下图中所示的Raw按钮，就会跳转到一个纯文本的页面。</p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_01_03_%E4%B8%8D%E7%BF%BB%E5%A2%99%E5%B0%B1%E8%83%BD%E4%BD%BF%E7%94%A8Google%E6%90%9C%E7%B4%A2_%E8%8E%B7%E5%8F%96URL%E5%9C%B0%E5%9D%80.png" alt="获取URL地址.png" /><figcaption aria-hidden="true">获取URL地址.png</figcaption>
-</figure>
-<p>这时候页面的URL（也就是地址栏里面的网址）就是我们需要填写的URL地址，对于第一个链接，我得到的URL地址是https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/hosts。</p>
-<p>将这个地址填写到添加host规则的URL地址一栏，并且设定一个自动更新的频率，点击确定，就成功添加了。这时只要打开开关，就成功修改hosts文件了。</p>
-<h2 id="刷新dns">刷新DNS</h2>
-<p>修改好了以后需要刷新一下DNS缓存，这里我只介绍Windows的刷新方法。</p>
-<p>打开命令提示符，输入：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ipconfig /flushdns<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>刷新完以后打开浏览器，是不是能够使用Google搜索了呢？</p>
-<p>之后只需要时不时使用<code>SwitchHosts!</code>更新一下hosts文件就可以不翻墙使用Google搜索了！</p>
-<h1 id="参考网页">参考网页</h1>
-<ul>
-<li><a href="http://shaofan.org/google-hosts/">利用SwitchHosts!工具自动更新Google Hosts</a></li>
-<li>如果第一个链接遇到问题，参考老D的博客。<a href="https://laod.cn/hosts/">hosts | 老D博客</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>hosts</tag>
-        <tag>Google</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>优化博客（一）：解决LaTeX无法显示的问题、更换主题</title>
     <url>/2018/09/04/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E8%A7%A3%E5%86%B3LaTeX%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E7%9A%84%E9%97%AE%E9%A2%98%E3%80%81%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/</url>
     <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><p>写博客的时候遇到了一些问题，在本地可以渲染的LaTeX语法，到了网上就无法显示了。就像下面这个样子。</p>
@@ -3377,6 +3311,72 @@ k2pdfopt myfile.pdf <span class="token comment">#开始转换 PDF 文档</span><
         <tag>Git</tag>
         <tag>MathJax</tag>
         <tag>Pandoc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>不翻墙就能使用Google搜索</title>
+    <url>/2019/01/03/%E4%B8%8D%E7%BF%BB%E5%A2%99%E5%B0%B1%E8%83%BD%E4%BD%BF%E7%94%A8Google%E6%90%9C%E7%B4%A2/</url>
+    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><p><code>注：此方法目前失效中（2019-3-5）</code></p>
+<h1 id="忽然感冒google搜索的原因">忽然感冒Google搜索的原因</h1>
+<p>我一直都是用搜狗搜索作为默认搜索引擎。因为相比百度，搜狗的知乎搜索比较方便，但是搜狗搜索也有一些时候并不能搜出我想要的内容，因此我想换成Google的搜索。遗憾的是，在天朝，目前还无法直接使用Google搜索，而我非常懒，不想自己每次需要使用Google的时候都花一些精力用来翻墙。能不能让Google也变得和搜狗一样，随时搜索不需要翻墙呢？</p>
+<p>办法还是有的，其实很早以前就有了，就是更改hosts。</p>
+<h1 id="关于hosts">关于hosts</h1>
+<blockquote>
+<p>hosts文件（域名解析文件）是一个用于储存计算机网络中各节点信息的计算机文件。这个文件负责将主机名称映射到相应的IP地址。hosts文件通常用于补充或取代网络中DNS的功能。和DNS不同的是，计算机的用户可以直接对hosts文件进行控制。</p>
+<p>hosts文件也可以用于其它情况，例如可以将已知的广告服务器重定向到无广告的机器（通常是该计算机自身的IP地址：127.0.0.1）上来过滤广告。同时也可以通过不下载网络广告，从而减少带宽。使用hosts文件还可以减少对DNS服务器的访问来加快访问速度并减少带宽消耗。</p>
+<p>hosts文件的另一个重要用途就是用于拦截一些恶意网站的请求，从而防止访问欺诈网站或感染一些病毒或恶意软件。但同时，这个文件也可能被病毒或恶意软件所利用来阻止用户更新杀毒软件或访问特定网站。</p>
+<p>在中国大陆，由于防火长城的DNS劫持，有一些网民也借使用hosts文件来强制将特定网站指定到未屏蔽的IP上。但自2018年8月24日起，防火长城开始启用基于SNI检测和TCP连接重置的手段进行封锁。所以修改Hosts绕过封锁的方法，绝大多数网站不再完全适用。</p>
+<p>——维基百科</p>
+</blockquote>
+<h1 id="自动更新hosts">自动更新hosts</h1>
+<p>通过改hosts访问谷歌的方式有效期非常短，因为GFW封锁IP的速度非常快，因此需要时常更新hosts，我找到了一个专门用来更新hosts的软件<code>SwitchHosts!</code>。</p>
+<blockquote>
+<p>SwitchHosts! 是一个管理、切换多个 hosts 方案的工具。</p>
+<p>它是一个免费开源软件。</p>
+<p>——SwitchHosts!官网</p>
+</blockquote>
+<p>下面来介绍一下使用方式。</p>
+<h2 id="下载switchhosts">下载<code>SwitchHosts!</code></h2>
+<p>从<code>SwitchHosts!</code>官网下载最新的软件，根据当前操作系统选择对应的版本。<a href="https://oldj.github.io/SwitchHosts/#cn">点击这里访问官网</a></p>
+<p>软件下载完以后解压即可，不需要安装。</p>
+<h2 id="使用switchhosts">使用<code>SwitchHosts!</code></h2>
+<p>以Windows系统为例，进入解压的目录，<strong>以管理员身份运行</strong>。</p>
+<p>软件界面如下所示。如果是英文界面，可以在设置里修改语言为中文。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_01_03_%E4%B8%8D%E7%BF%BB%E5%A2%99%E5%B0%B1%E8%83%BD%E4%BD%BF%E7%94%A8Google%E6%90%9C%E7%B4%A2_SwitchHosts!%E4%B8%BB%E7%95%8C%E9%9D%A2.png" alt="SwitchHosts!主界面.png" /><figcaption aria-hidden="true">SwitchHosts!主界面.png</figcaption>
+</figure>
+<p>软件左侧最上方的<code>系统 Hosts</code>，点击就可以在右边看到当前系统上正在使用的hosts文件内容，下面的<code>my hosts</code>是自己手动添加的IP地址，在这里我们不会使用它；<code>backup</code>里保存的是默认的hosts内容；下面的三个就是我添加的hosts规则。右边的开关打开（绿色）表示将这个规则应用到系统hosts，就是说会把规则里的内容复制到系统的hosts中，如果开关没有打开，那么这个规则是不生效的。接下来我会介绍如何添加规则。</p>
+<p>点击左下角的+号，添加host规则。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_01_03_%E4%B8%8D%E7%BF%BB%E5%A2%99%E5%B0%B1%E8%83%BD%E4%BD%BF%E7%94%A8Google%E6%90%9C%E7%B4%A2_%E6%B7%BB%E5%8A%A0host%E8%A7%84%E5%88%99.png" alt="添加host规则.png" /><figcaption aria-hidden="true">添加host规则.png</figcaption>
+</figure>
+<p>我们需要的是远程规则，也就是那些其他人一直在维护的IP列表，我在GitHub上找到了3个可用的hosts表。</p>
+<ul>
+<li><a href="https://github.com/googlehosts/hosts">GitHub - googlehosts/hosts: 镜像：https://coding.net/u/scaffrey/p/hosts/git</a></li>
+<li><a href="https://github.com/lennylxx/ipv6-hosts">GitHub - lennylxx/ipv6-hosts: Fork of https://code.google.com/archive/p/ipv6-hosts/</a></li>
+<li><a href="https://github.com/popcorner/cernet-ipv6-hosts">GitHub - popcorner/cernet-ipv6-hosts: Lightweight IPv6 hosts! Access to Google, YouTube, Facebook, Wikipedia via IPv6 and avoid unnecessary block.</a></li>
+</ul>
+<p>不过要填写的URL地址并不是上面的链接，以第一个连接为例，我们需要从仓库列表里找到hosts文件，然后点击下图中所示的Raw按钮，就会跳转到一个纯文本的页面。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_01_03_%E4%B8%8D%E7%BF%BB%E5%A2%99%E5%B0%B1%E8%83%BD%E4%BD%BF%E7%94%A8Google%E6%90%9C%E7%B4%A2_%E8%8E%B7%E5%8F%96URL%E5%9C%B0%E5%9D%80.png" alt="获取URL地址.png" /><figcaption aria-hidden="true">获取URL地址.png</figcaption>
+</figure>
+<p>这时候页面的URL（也就是地址栏里面的网址）就是我们需要填写的URL地址，对于第一个链接，我得到的URL地址是https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/hosts。</p>
+<p>将这个地址填写到添加host规则的URL地址一栏，并且设定一个自动更新的频率，点击确定，就成功添加了。这时只要打开开关，就成功修改hosts文件了。</p>
+<h2 id="刷新dns">刷新DNS</h2>
+<p>修改好了以后需要刷新一下DNS缓存，这里我只介绍Windows的刷新方法。</p>
+<p>打开命令提示符，输入：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ipconfig /flushdns<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>刷新完以后打开浏览器，是不是能够使用Google搜索了呢？</p>
+<p>之后只需要时不时使用<code>SwitchHosts!</code>更新一下hosts文件就可以不翻墙使用Google搜索了！</p>
+<h1 id="参考网页">参考网页</h1>
+<ul>
+<li><a href="http://shaofan.org/google-hosts/">利用SwitchHosts!工具自动更新Google Hosts</a></li>
+<li>如果第一个链接遇到问题，参考老D的博客。<a href="https://laod.cn/hosts/">hosts | 老D博客</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>hosts</tag>
+        <tag>Google</tag>
       </tags>
   </entry>
   <entry>
@@ -4684,48 +4684,6 @@ ScriptFile&#x3D;&#x2F;usr&#x2F;share&#x2F;plymouth&#x2F;themes&#x2F;ubuntu-spinn
       </tags>
   </entry>
   <entry>
-    <title>拓扑学（一）：引言</title>
-    <url>/2018/09/03/%E6%8B%93%E6%89%91%E5%AD%A6%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%BC%95%E8%A8%80/</url>
-    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><p>这篇文章是我的学习笔记系列第一篇文章。和传统的学习笔记不同的是，我不只是打算在上面罗列知识点，而是想用自己的语言重新描述课堂上所学到的知识，用自己的思维逻辑来重新理解这些知识。最理想的打算是当我几乎忘记这门课的内容时，能够通过回看自己的文章重新捡起这些内容。当然，这个任务是相当难完成的。而且我事先也预计到，这是一项相当花费脑力和时间的工作。我会尽最大的努力坚持下去。</p>
-<h1 id="引言">引言</h1>
-<p>拓扑学是一门大四才开设的数学专业选修课程。而我既不是大四，也不是数学专业的学生。因此，选修这门课是对我的一个挑战。我将会在几乎没有任何知识铺垫的情况下来学习拓扑学这门课程。如果是正常的情况下，一位到了大四的数学专业学生至少应该学过数学分析、抽象代数等课程。而我在询问老师之后了解到拓扑学需要一部分抽象代数里的知识。并且如果学过微分几何等其他的学科的话，会掌握更多有助于理解拓扑学概念的例子。</p>
-<p>那么什么是拓扑学呢？有人说这是最难学的数学科目，这又是为什么呢？</p>
-<blockquote>
-<p>在数学里，<strong>拓扑学</strong>(英语：topology)，或意译为位相几何学，是一门研究拓扑空间的学科，主要研究空间内，在连续变化(如拉伸或弯曲，但不包括撕开或黏合)下维持不变的性质。</p>
-<p>——维基百科</p>
-</blockquote>
-<p>从简介中看到，拓扑学是一种几何学，俗称橡皮几何学。和一般的几何学不同的是，拓扑学只考虑物体间的位置关系，而不考虑形状，大小。有个很常见的比方，拓扑学是把茶杯和甜甜圈看成同一种东西的学科。</p>
-<p><code>这里缺了一张图</code></p>
-<p>从一些科普文章多多少少了解到的情况来看，拓扑学的一些例子是非常生活化的。但是拓扑学要远比科普文中更抽象，更不具体。它的难，以我的理解，主要是从数学的角度出发。因为拓扑学中的物体有了更大的自由度，不再受到大小、长度、形状等的限制。那么对拓扑学上的同一类物体进行描述就变得更加困难。想象一只鸟从地面上起飞的过程。一般的几何学中认为，鸟的形状在不断变化，那么可以认为不同时刻的鸟是不同的。但是在拓扑学看来，鸟还是那只鸟。那么问题就是，这些形状不相同的物体之间的共同特征到底是什么？如何用数学的语言把它描述出来？就好比之前在数学分析中，如何描述极限这个问题一样，拓扑学的数学语言的建立，闪烁着许多数学家艰辛思考和探索的结晶。</p>
-<blockquote>
-<p>尽管拓扑性质是图形的一种很基本的性质，它也具有很强的几何直观，却很难用简单通俗的语言来准确地描述。它的确切定义是用抽象的语言叙述的。</p>
-<p>——《基础拓扑学讲义》</p>
-</blockquote>
-<p>学习拓扑学，需要思考这样几个问题。</p>
-<h2 id="拓扑学的研究对象是什么">拓扑学的研究对象是什么？</h2>
-<p>我们说拓扑学的研究对象叫做<strong>拓扑空间</strong>。之后也可以看到，在拓扑学中的第一个定义，就定义了什么是拓扑空间。这里我存在一堆疑问，就是为什么我们不先去定义什么是一个拓扑的物体或对象，而是先去定义拓扑空间呢？数学上的空间又是什么东西呢？和我们日常生活中所说的空间有什么不同吗？</p>
-<p>拓扑空间相对于一般的距离空间来说，没有了长度、夹角、距离，也就是度量的概念。拓扑学在现代的作用越来越大，可能就与拓扑弱化了距离，而导致拓扑空间的概念比距离空间更加抽象、更加宽泛、更加普适有关。</p>
-<p>拓扑学有很多子领域。建立并研究拓扑的基础，并研究拓扑空间的性质，以及与拓扑空间相关的概念的拓扑学称为<strong>点集拓扑学</strong>。点击拓扑学的英文名称不是point set topology，而是general topology。又被称为一般拓扑学，是拓扑学内大多数分支的基础。</p>
-<h2 id="什么是连续变形">什么是连续变形？</h2>
-<p>这个问题是老师提出来的。所以从我们的角度来看，会有些突兀，因为这并不像我们想要提出的问题。那么为什么要提出这样的问题呢？我们再来看一遍拓扑学的简介。拓扑学研究几何图形或者空间在<strong>连续</strong>改变形状后还能保持不变的一些性质。有一个加粗的词语就是“连续”，所以我们必须严格给出连续的定义，用数学语言准确描述什么是连续，正如我们在数学分析中定义连续性那样。从某种程度上可以这么说，“连续性”是拓扑学中最基本，最重要的概念之一。</p>
-<h2 id="如何对拓扑空间分类">如何对拓扑空间分类？</h2>
-<p>这个可以说是拓扑学的基本问题。所谓分类，实际上是分集合上的拓扑结构。你会发现，基本上数学里的任何分支学科都绕不开集合。在集合上添加运算和代数结构，就是代数的方向；添加点与点的空间位置关系，就是分析的方向。</p>
-<p>比如说我有两个拓扑对象，那么怎么说明它们是否是一样的呢？乍看之下，很简单的问题，要想准确的找出来共同特征，貌似还没有那么轻松。也就是说，我们甚至很难轻松说出两个东西是否一样。在拓扑学中，引进了“同胚”的概念。这个就类似一一映射。如何说明两把椅子是一样的呢？如果我能够在两把椅子之间建立一种一一映射，那么我就可以说这两把椅子是一样的。这个把戏在集合里就已经用过了。对于有限集来说，元素更多的集合当然更大，但是到了无限集，比如自然数集和整数集之间是否也能比较大小呢？哪个集合更大呢？通过在自然数集和整数集上建立一一映射，我们就可以说自然数集和整数集是一样大的。在还没有定义“同胚”之前，我猜想它也是类似的一种手段。</p>
-<p>比如说我想证明整个教室里的椅子都是一样的。理论上来我们可以在椅子之间两两互相建立一一映射。如果聪明一点，可以在第一把椅子和第二把椅子之间建立映射，第二，把椅子和第三把椅子之间建立映射，……，最后一把椅子和第一把椅子之间建立映射。形成一个映射的环，也能说明整个教室的椅子都一样。但是拓扑空间实在是太多了，这种技巧几乎是不可能实现的。对于拓扑空间的分类，实际上一个非常难的问题。</p>
-<h2 id="拓扑学的分支">拓扑学的分支</h2>
-<p>在拓扑学下有几个分支。除了之前提到的点集拓扑学，还有代数拓扑学与微分拓扑学等。</p>
-<ul>
-<li>代数拓扑学。如果我在点集拓扑学的集合上，添加代数结构，使得能用抽象代数里的工具来研究拓扑空间，就成了代数拓扑。（用<strong>万有方式</strong>添加代数结构，意思是这种代数结构应该对所有 的拓扑空间都适用）</li>
-<li>微分拓扑学。这里的微分两个字，更多是指工具和手段。简单来说就是在点集拓扑学上加上微分的结构，使得能用微分的手段来研究拓扑空间。之前提到拓扑学和微分几何的差别，导致不能用微分等工具应用于拓扑学，这里是如何将微分重新加入进来，暂时不得而知了。</li>
-</ul>
-<p>面向本科大四学生开设的拓扑学课程由于时间有限，大概会涉及点集拓扑学和代数拓扑学的部分内容。微分拓扑的内容不做涉及。</p>
-]]></content>
-      <tags>
-        <tag>数学</tag>
-        <tag>拓扑学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>将博客迁移到另一台电脑</title>
     <url>/2018/08/21/%E5%B0%86%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E5%8F%A6%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91/</url>
     <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><p><code>注：为了避免发生问题，本篇教程只适用于依照我之前的教程搭建的博客。</code></p>
@@ -4857,6 +4815,48 @@ ScriptFile&#x3D;&#x2F;usr&#x2F;share&#x2F;plymouth&#x2F;themes&#x2F;ubuntu-spinn
         <tag>Git</tag>
         <tag>Node.js</tag>
         <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拓扑学（一）：引言</title>
+    <url>/2018/09/03/%E6%8B%93%E6%89%91%E5%AD%A6%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%BC%95%E8%A8%80/</url>
+    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><p>这篇文章是我的学习笔记系列第一篇文章。和传统的学习笔记不同的是，我不只是打算在上面罗列知识点，而是想用自己的语言重新描述课堂上所学到的知识，用自己的思维逻辑来重新理解这些知识。最理想的打算是当我几乎忘记这门课的内容时，能够通过回看自己的文章重新捡起这些内容。当然，这个任务是相当难完成的。而且我事先也预计到，这是一项相当花费脑力和时间的工作。我会尽最大的努力坚持下去。</p>
+<h1 id="引言">引言</h1>
+<p>拓扑学是一门大四才开设的数学专业选修课程。而我既不是大四，也不是数学专业的学生。因此，选修这门课是对我的一个挑战。我将会在几乎没有任何知识铺垫的情况下来学习拓扑学这门课程。如果是正常的情况下，一位到了大四的数学专业学生至少应该学过数学分析、抽象代数等课程。而我在询问老师之后了解到拓扑学需要一部分抽象代数里的知识。并且如果学过微分几何等其他的学科的话，会掌握更多有助于理解拓扑学概念的例子。</p>
+<p>那么什么是拓扑学呢？有人说这是最难学的数学科目，这又是为什么呢？</p>
+<blockquote>
+<p>在数学里，<strong>拓扑学</strong>(英语：topology)，或意译为位相几何学，是一门研究拓扑空间的学科，主要研究空间内，在连续变化(如拉伸或弯曲，但不包括撕开或黏合)下维持不变的性质。</p>
+<p>——维基百科</p>
+</blockquote>
+<p>从简介中看到，拓扑学是一种几何学，俗称橡皮几何学。和一般的几何学不同的是，拓扑学只考虑物体间的位置关系，而不考虑形状，大小。有个很常见的比方，拓扑学是把茶杯和甜甜圈看成同一种东西的学科。</p>
+<p><code>这里缺了一张图</code></p>
+<p>从一些科普文章多多少少了解到的情况来看，拓扑学的一些例子是非常生活化的。但是拓扑学要远比科普文中更抽象，更不具体。它的难，以我的理解，主要是从数学的角度出发。因为拓扑学中的物体有了更大的自由度，不再受到大小、长度、形状等的限制。那么对拓扑学上的同一类物体进行描述就变得更加困难。想象一只鸟从地面上起飞的过程。一般的几何学中认为，鸟的形状在不断变化，那么可以认为不同时刻的鸟是不同的。但是在拓扑学看来，鸟还是那只鸟。那么问题就是，这些形状不相同的物体之间的共同特征到底是什么？如何用数学的语言把它描述出来？就好比之前在数学分析中，如何描述极限这个问题一样，拓扑学的数学语言的建立，闪烁着许多数学家艰辛思考和探索的结晶。</p>
+<blockquote>
+<p>尽管拓扑性质是图形的一种很基本的性质，它也具有很强的几何直观，却很难用简单通俗的语言来准确地描述。它的确切定义是用抽象的语言叙述的。</p>
+<p>——《基础拓扑学讲义》</p>
+</blockquote>
+<p>学习拓扑学，需要思考这样几个问题。</p>
+<h2 id="拓扑学的研究对象是什么">拓扑学的研究对象是什么？</h2>
+<p>我们说拓扑学的研究对象叫做<strong>拓扑空间</strong>。之后也可以看到，在拓扑学中的第一个定义，就定义了什么是拓扑空间。这里我存在一堆疑问，就是为什么我们不先去定义什么是一个拓扑的物体或对象，而是先去定义拓扑空间呢？数学上的空间又是什么东西呢？和我们日常生活中所说的空间有什么不同吗？</p>
+<p>拓扑空间相对于一般的距离空间来说，没有了长度、夹角、距离，也就是度量的概念。拓扑学在现代的作用越来越大，可能就与拓扑弱化了距离，而导致拓扑空间的概念比距离空间更加抽象、更加宽泛、更加普适有关。</p>
+<p>拓扑学有很多子领域。建立并研究拓扑的基础，并研究拓扑空间的性质，以及与拓扑空间相关的概念的拓扑学称为<strong>点集拓扑学</strong>。点击拓扑学的英文名称不是point set topology，而是general topology。又被称为一般拓扑学，是拓扑学内大多数分支的基础。</p>
+<h2 id="什么是连续变形">什么是连续变形？</h2>
+<p>这个问题是老师提出来的。所以从我们的角度来看，会有些突兀，因为这并不像我们想要提出的问题。那么为什么要提出这样的问题呢？我们再来看一遍拓扑学的简介。拓扑学研究几何图形或者空间在<strong>连续</strong>改变形状后还能保持不变的一些性质。有一个加粗的词语就是“连续”，所以我们必须严格给出连续的定义，用数学语言准确描述什么是连续，正如我们在数学分析中定义连续性那样。从某种程度上可以这么说，“连续性”是拓扑学中最基本，最重要的概念之一。</p>
+<h2 id="如何对拓扑空间分类">如何对拓扑空间分类？</h2>
+<p>这个可以说是拓扑学的基本问题。所谓分类，实际上是分集合上的拓扑结构。你会发现，基本上数学里的任何分支学科都绕不开集合。在集合上添加运算和代数结构，就是代数的方向；添加点与点的空间位置关系，就是分析的方向。</p>
+<p>比如说我有两个拓扑对象，那么怎么说明它们是否是一样的呢？乍看之下，很简单的问题，要想准确的找出来共同特征，貌似还没有那么轻松。也就是说，我们甚至很难轻松说出两个东西是否一样。在拓扑学中，引进了“同胚”的概念。这个就类似一一映射。如何说明两把椅子是一样的呢？如果我能够在两把椅子之间建立一种一一映射，那么我就可以说这两把椅子是一样的。这个把戏在集合里就已经用过了。对于有限集来说，元素更多的集合当然更大，但是到了无限集，比如自然数集和整数集之间是否也能比较大小呢？哪个集合更大呢？通过在自然数集和整数集上建立一一映射，我们就可以说自然数集和整数集是一样大的。在还没有定义“同胚”之前，我猜想它也是类似的一种手段。</p>
+<p>比如说我想证明整个教室里的椅子都是一样的。理论上来我们可以在椅子之间两两互相建立一一映射。如果聪明一点，可以在第一把椅子和第二把椅子之间建立映射，第二，把椅子和第三把椅子之间建立映射，……，最后一把椅子和第一把椅子之间建立映射。形成一个映射的环，也能说明整个教室的椅子都一样。但是拓扑空间实在是太多了，这种技巧几乎是不可能实现的。对于拓扑空间的分类，实际上一个非常难的问题。</p>
+<h2 id="拓扑学的分支">拓扑学的分支</h2>
+<p>在拓扑学下有几个分支。除了之前提到的点集拓扑学，还有代数拓扑学与微分拓扑学等。</p>
+<ul>
+<li>代数拓扑学。如果我在点集拓扑学的集合上，添加代数结构，使得能用抽象代数里的工具来研究拓扑空间，就成了代数拓扑。（用<strong>万有方式</strong>添加代数结构，意思是这种代数结构应该对所有 的拓扑空间都适用）</li>
+<li>微分拓扑学。这里的微分两个字，更多是指工具和手段。简单来说就是在点集拓扑学上加上微分的结构，使得能用微分的手段来研究拓扑空间。之前提到拓扑学和微分几何的差别，导致不能用微分等工具应用于拓扑学，这里是如何将微分重新加入进来，暂时不得而知了。</li>
+</ul>
+<p>面向本科大四学生开设的拓扑学课程由于时间有限，大概会涉及点集拓扑学和代数拓扑学的部分内容。微分拓扑的内容不做涉及。</p>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>拓扑学</tag>
       </tags>
   </entry>
   <entry>
@@ -5326,6 +5326,82 @@ ansq <span class="token operator">=</span> <span class="token function">q</span>
       </tags>
   </entry>
   <entry>
+    <title>电影下载网站整理</title>
+    <url>/2019/07/11/%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="音范丝">音范丝</h1>
+<p>链接：<a href="https://www.yinfans.me">https://www.yinfans.me</a></p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E9%9F%B3%E8%8C%83%E4%B8%9D%E4%B8%BB%E9%A1%B5.png" alt="音范丝主页.png" /><figcaption aria-hidden="true">音范丝主页.png</figcaption>
+</figure>
+<h1 id="五号站">五号站</h1>
+<p>原来的电影首发站。</p>
+<p>链接：<a href="http://www.wuhaozhan.net/movie/list/">http://www.wuhaozhan.net/movie/list/</a></p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E4%BA%94%E5%8F%B7%E7%AB%99%E4%B8%BB%E9%A1%B5.png" alt="五号站主页.png" /><figcaption aria-hidden="true">五号站主页.png</figcaption>
+</figure>
+<h1 id="蓝光电影网">蓝光电影网</h1>
+<p>链接：<a href="http://www.languangdy.com">http://www.languangdy.com</a></p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E8%93%9D%E5%85%89%E7%94%B5%E5%BD%B1%E7%BD%91%E4%B8%BB%E9%A1%B5.png" alt="蓝光电影网主页.png" /><figcaption aria-hidden="true">蓝光电影网主页.png</figcaption>
+</figure>
+<h1 id="蓝光网">蓝光网</h1>
+<p>链接：<a href="http://www.languang.co">http://www.languang.co</a></p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E8%93%9D%E5%85%89%E7%BD%91%E4%B8%BB%E9%A1%B5.png" alt="蓝光网主页.png" /><figcaption aria-hidden="true">蓝光网主页.png</figcaption>
+</figure>
+<h1 id="中国高清网">中国高清网</h1>
+<p>链接：<a href="http://gaoqing.la">http://gaoqing.la</a></p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E4%B8%AD%E5%9B%BD%E9%AB%98%E6%B8%85%E7%BD%91%E4%B8%BB%E9%A1%B5.png" alt="中国高清网主页.png" /><figcaption aria-hidden="true">中国高清网主页.png</figcaption>
+</figure>
+<h1 id="高清电台">高清电台</h1>
+<p>链接：<a href="https://gaoqing.fm">https://gaoqing.fm</a></p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E9%AB%98%E6%B8%85%E7%94%B5%E5%8F%B0%E4%B8%BB%E9%A1%B5.png" alt="高清电台主页.png" /><figcaption aria-hidden="true">高清电台主页.png</figcaption>
+</figure>
+<h1 id="v电影网">6v电影网</h1>
+<p>链接：<a href="http://www.6vhao.tv">http://www.6vhao.tv</a></p>
+<p>备用链接：<a href="http://www.dy131.net">http://www.dy131.net</a></p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_6v%E7%94%B5%E5%BD%B1%E7%BD%91%E4%B8%BB%E9%A1%B5.png" alt="6v电影网主页.png" /><figcaption aria-hidden="true">6v电影网主页.png</figcaption>
+</figure>
+<h1 id="电影天堂">电影天堂</h1>
+<p>链接：<a href="https://www.dytt8.net">https://www.dytt8.net</a></p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E7%94%B5%E5%BD%B1%E5%A4%A9%E5%A0%82%E4%B8%BB%E9%A1%B5.png" alt="电影天堂主页.png" /><figcaption aria-hidden="true">电影天堂主页.png</figcaption>
+</figure>
+<h1 id="rarbg">RARBG</h1>
+<p>链接：<a href="https://rarbgprx.org/torrents.php">https://rarbgprx.org/torrents.php</a></p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_RARBG%E4%B8%BB%E9%A1%B5.png" alt="RARBG主页.png" /><figcaption aria-hidden="true">RARBG主页.png</figcaption>
+</figure>
+<h1 id="优质电影网">优质电影网</h1>
+<p>链接：<a href="http://www.youzhidy.com">http://www.youzhidy.com</a></p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E4%BC%98%E8%B4%A8%E7%94%B5%E5%BD%B1%E7%BD%91%E4%B8%BB%E9%A1%B5.png" alt="优质电影网主页.png" /><figcaption aria-hidden="true">优质电影网主页.png</figcaption>
+</figure>
+<h1 id="爱高清">爱高清</h1>
+<p>链接：<a href="http://ihd.me/">http://ihd.me/</a></p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E7%88%B1%E9%AB%98%E6%B8%85%E4%B8%BB%E9%A1%B5.png" alt="爱高清主页.png" /><figcaption aria-hidden="true">爱高清主页.png</figcaption>
+</figure>
+<h1 id="片库">片库</h1>
+<p>链接：<a href="https://www.pianku.tv/">https://www.pianku.tv/</a></p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E7%89%87%E5%BA%93%E4%B8%BB%E9%A1%B5.png" alt="片库主页.png" /><figcaption aria-hidden="true">片库主页.png</figcaption>
+</figure>
+<h1 id="哔嘀影视">哔嘀影视</h1>
+<p>链接：<a href="https://www.bde4.com/">https://www.bde4.com/</a></p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E5%93%94%E5%98%80%E5%BD%B1%E8%A7%86%E4%B8%BB%E9%A1%B5.png" alt="哔嘀影视主页.png" /><figcaption aria-hidden="true">哔嘀影视主页.png</figcaption>
+</figure>
+]]></content>
+      <tags>
+        <tag>电影</tag>
+        <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>李宏毅机器学习笔记</title>
     <url>/2020/12/16/%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="课程简介">课程简介</h1>
@@ -5483,82 +5559,6 @@ L = \sum_n \left(\hat y^n - \left(b + \sum w_i x_i\right)\right)^2 + \lambda \su
       </tags>
   </entry>
   <entry>
-    <title>电影下载网站整理</title>
-    <url>/2019/07/11/%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><h1 id="音范丝">音范丝</h1>
-<p>链接：<a href="https://www.yinfans.me">https://www.yinfans.me</a></p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E9%9F%B3%E8%8C%83%E4%B8%9D%E4%B8%BB%E9%A1%B5.png" alt="音范丝主页.png" /><figcaption aria-hidden="true">音范丝主页.png</figcaption>
-</figure>
-<h1 id="五号站">五号站</h1>
-<p>原来的电影首发站。</p>
-<p>链接：<a href="http://www.wuhaozhan.net/movie/list/">http://www.wuhaozhan.net/movie/list/</a></p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E4%BA%94%E5%8F%B7%E7%AB%99%E4%B8%BB%E9%A1%B5.png" alt="五号站主页.png" /><figcaption aria-hidden="true">五号站主页.png</figcaption>
-</figure>
-<h1 id="蓝光电影网">蓝光电影网</h1>
-<p>链接：<a href="http://www.languangdy.com">http://www.languangdy.com</a></p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E8%93%9D%E5%85%89%E7%94%B5%E5%BD%B1%E7%BD%91%E4%B8%BB%E9%A1%B5.png" alt="蓝光电影网主页.png" /><figcaption aria-hidden="true">蓝光电影网主页.png</figcaption>
-</figure>
-<h1 id="蓝光网">蓝光网</h1>
-<p>链接：<a href="http://www.languang.co">http://www.languang.co</a></p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E8%93%9D%E5%85%89%E7%BD%91%E4%B8%BB%E9%A1%B5.png" alt="蓝光网主页.png" /><figcaption aria-hidden="true">蓝光网主页.png</figcaption>
-</figure>
-<h1 id="中国高清网">中国高清网</h1>
-<p>链接：<a href="http://gaoqing.la">http://gaoqing.la</a></p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E4%B8%AD%E5%9B%BD%E9%AB%98%E6%B8%85%E7%BD%91%E4%B8%BB%E9%A1%B5.png" alt="中国高清网主页.png" /><figcaption aria-hidden="true">中国高清网主页.png</figcaption>
-</figure>
-<h1 id="高清电台">高清电台</h1>
-<p>链接：<a href="https://gaoqing.fm">https://gaoqing.fm</a></p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E9%AB%98%E6%B8%85%E7%94%B5%E5%8F%B0%E4%B8%BB%E9%A1%B5.png" alt="高清电台主页.png" /><figcaption aria-hidden="true">高清电台主页.png</figcaption>
-</figure>
-<h1 id="v电影网">6v电影网</h1>
-<p>链接：<a href="http://www.6vhao.tv">http://www.6vhao.tv</a></p>
-<p>备用链接：<a href="http://www.dy131.net">http://www.dy131.net</a></p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_6v%E7%94%B5%E5%BD%B1%E7%BD%91%E4%B8%BB%E9%A1%B5.png" alt="6v电影网主页.png" /><figcaption aria-hidden="true">6v电影网主页.png</figcaption>
-</figure>
-<h1 id="电影天堂">电影天堂</h1>
-<p>链接：<a href="https://www.dytt8.net">https://www.dytt8.net</a></p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E7%94%B5%E5%BD%B1%E5%A4%A9%E5%A0%82%E4%B8%BB%E9%A1%B5.png" alt="电影天堂主页.png" /><figcaption aria-hidden="true">电影天堂主页.png</figcaption>
-</figure>
-<h1 id="rarbg">RARBG</h1>
-<p>链接：<a href="https://rarbgprx.org/torrents.php">https://rarbgprx.org/torrents.php</a></p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_RARBG%E4%B8%BB%E9%A1%B5.png" alt="RARBG主页.png" /><figcaption aria-hidden="true">RARBG主页.png</figcaption>
-</figure>
-<h1 id="优质电影网">优质电影网</h1>
-<p>链接：<a href="http://www.youzhidy.com">http://www.youzhidy.com</a></p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E4%BC%98%E8%B4%A8%E7%94%B5%E5%BD%B1%E7%BD%91%E4%B8%BB%E9%A1%B5.png" alt="优质电影网主页.png" /><figcaption aria-hidden="true">优质电影网主页.png</figcaption>
-</figure>
-<h1 id="爱高清">爱高清</h1>
-<p>链接：<a href="http://ihd.me/">http://ihd.me/</a></p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E7%88%B1%E9%AB%98%E6%B8%85%E4%B8%BB%E9%A1%B5.png" alt="爱高清主页.png" /><figcaption aria-hidden="true">爱高清主页.png</figcaption>
-</figure>
-<h1 id="片库">片库</h1>
-<p>链接：<a href="https://www.pianku.tv/">https://www.pianku.tv/</a></p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E7%89%87%E5%BA%93%E4%B8%BB%E9%A1%B5.png" alt="片库主页.png" /><figcaption aria-hidden="true">片库主页.png</figcaption>
-</figure>
-<h1 id="哔嘀影视">哔嘀影视</h1>
-<p>链接：<a href="https://www.bde4.com/">https://www.bde4.com/</a></p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_07_11_%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86_%E5%93%94%E5%98%80%E5%BD%B1%E8%A7%86%E4%B8%BB%E9%A1%B5.png" alt="哔嘀影视主页.png" /><figcaption aria-hidden="true">哔嘀影视主页.png</figcaption>
-</figure>
-]]></content>
-      <tags>
-        <tag>电影</tag>
-        <tag>网站</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>自然码口诀</title>
     <url>/2020/08/05/%E8%87%AA%E7%84%B6%E7%A0%81%E5%8F%A3%E8%AF%80/</url>
     <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><figure>
@@ -5573,64 +5573,6 @@ L = \sum_n \left(\hat y^n - \left(b + \sum w_i x_i\right)\right)^2 + \lambda \su
       <tags>
         <tag>双拼</tag>
         <tag>自然码</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决Chrome浏览器弹出“请停用以开发者模式运行的扩展程序”的问题</title>
-    <url>/2019/05/08/%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><div class="note warning"><p>此方法对于Chrome 75已经失效</p>
-</div>
-<h1 id="问题">问题</h1>
-<p>自从自己从本地导入了一个Chrome浏览器的插件之后，每次打开Chrome就会弹出这样的提示，非常麻烦。</p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F.png" alt="请停用以开发者模式运行的扩展程序.png" /><figcaption aria-hidden="true">请停用以开发者模式运行的扩展程序.png</figcaption>
-</figure>
-<p>下面来说说我尝试过可行的解决办法。</p>
-<h1 id="步骤">步骤</h1>
-<ol type="1">
-<li><p>找到Chrome浏览器的安装位置。可以从快捷方式的属性里找到安装目录。</p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95.png" alt="安装目录.png" /><figcaption aria-hidden="true">安装目录.png</figcaption>
-</figure></li>
-<li><p>在上图标出的数字文件夹中找到<code>chrome.dll</code>，然后最小化这个窗口。</p></li>
-<li><p>前往<a href="https://x64dbg.com/">x64dbg官网</a>下载x64dbg这个软件，下载完成后在压缩包的<code>release</code>目录下找到<code>x96dbg.exe</code>，打开，然后选择对应位数的操作系统，比如我是64位操作系统，就选择x64dbg，如果是32位就选择x32dbg。</p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_x64dbg.png" alt="x64dbg.png" /><figcaption aria-hidden="true">x64dbg.png</figcaption>
-</figure></li>
-<li><p>将<code>chrome.dll</code>拖入x64dbg，出现两个弹窗，将黑色命令行弹窗最小化，然后连续点击<code>运行到用户代码</code>按钮，直至窗口标题处的模块变成chrome.dll。</p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E8%BF%90%E8%A1%8C%E5%88%B0%E7%94%A8%E6%88%B7%E4%BB%A3%E7%A0%81.png" alt="运行到用户代码.png" /><figcaption aria-hidden="true">运行到用户代码.png</figcaption>
-</figure></li>
-<li><p>在主面板右键依次选择<code>搜索→当前模块→字符串</code>。</p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E6%90%9C%E7%B4%A2%E5%BD%93%E5%89%8D%E6%A8%A1%E5%9D%97%E5%AD%97%E7%AC%A6%E4%B8%B2.png" alt="搜索当前模块字符串.png" /><figcaption aria-hidden="true">搜索当前模块字符串.png</figcaption>
-</figure></li>
-<li><p>然后会打开一个搜索界面，等待进度条加载完毕，搜索</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">ExtensionDeveloperModeWarning<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E6%90%9C%E7%B4%A2.png" alt="搜索.png" /><figcaption aria-hidden="true">搜索.png</figcaption>
-</figure></li>
-<li><p>会搜到2条结果，双击第一个，跳转到反汇编界面，往上翻一点，找到<code>cmp eax, 2</code>或者<code>cmp eax, 3</code>。</p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E8%B7%B3%E8%BD%AC%E5%88%B0%E5%8F%8D%E6%B1%87%E7%BC%96%E7%95%8C%E9%9D%A2.png" alt="跳转到反汇编界面.png" /><figcaption aria-hidden="true">跳转到反汇编界面.png</figcaption>
-</figure></li>
-<li><p>双击刚才找到的命令打开编辑页面，修改成<code>cmp eax,9</code>或者<code>cmp eax, 0x9</code>，然后点击确定。（注意只需要点击一次确定即可，点击确定后它还是会继续弹出其它行的编辑界面，此时直接关闭对话框即可）</p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E4%BF%AE%E6%94%B9%E6%B1%87%E7%BC%96.png" alt="修改汇编.png" /><figcaption aria-hidden="true">修改汇编.png</figcaption>
-</figure></li>
-<li><p><code>Ctrl+P</code>导出修改过的dll文件（点击<code>修补文件</code>按钮就是导出dll文件），选择某个导出位置（比如桌面，注意名称得是<code>chrome.dll</code>）。</p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E5%AF%BC%E5%87%BA.png" alt="导出.png" /><figcaption aria-hidden="true">导出.png</figcaption>
-</figure></li>
-<li><p>最后把我们制作好的dll文件替换掉原来目录下的<code>chrome.dll</code>，重启Chrome浏览器，问题解决！</p></li>
-</ol>
-<h1 id="参考网页">参考网页</h1>
-<ul>
-<li><a href="https://zhuanlan.zhihu.com/p/58111436">解决谷歌浏览器【请停用以开发者模式运行的扩展程序】 - 知乎</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Chrome</tag>
       </tags>
   </entry>
   <entry>
@@ -5825,6 +5767,64 @@ L = \sum_n \left(\hat y^n - \left(b + \sum w_i x_i\right)\right)^2 + \lambda \su
 ]]></content>
       <tags>
         <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决Chrome浏览器弹出“请停用以开发者模式运行的扩展程序”的问题</title>
+    <url>/2019/05/08/%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><div class="note warning"><p>此方法对于Chrome 75已经失效</p>
+</div>
+<h1 id="问题">问题</h1>
+<p>自从自己从本地导入了一个Chrome浏览器的插件之后，每次打开Chrome就会弹出这样的提示，非常麻烦。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F.png" alt="请停用以开发者模式运行的扩展程序.png" /><figcaption aria-hidden="true">请停用以开发者模式运行的扩展程序.png</figcaption>
+</figure>
+<p>下面来说说我尝试过可行的解决办法。</p>
+<h1 id="步骤">步骤</h1>
+<ol type="1">
+<li><p>找到Chrome浏览器的安装位置。可以从快捷方式的属性里找到安装目录。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95.png" alt="安装目录.png" /><figcaption aria-hidden="true">安装目录.png</figcaption>
+</figure></li>
+<li><p>在上图标出的数字文件夹中找到<code>chrome.dll</code>，然后最小化这个窗口。</p></li>
+<li><p>前往<a href="https://x64dbg.com/">x64dbg官网</a>下载x64dbg这个软件，下载完成后在压缩包的<code>release</code>目录下找到<code>x96dbg.exe</code>，打开，然后选择对应位数的操作系统，比如我是64位操作系统，就选择x64dbg，如果是32位就选择x32dbg。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_x64dbg.png" alt="x64dbg.png" /><figcaption aria-hidden="true">x64dbg.png</figcaption>
+</figure></li>
+<li><p>将<code>chrome.dll</code>拖入x64dbg，出现两个弹窗，将黑色命令行弹窗最小化，然后连续点击<code>运行到用户代码</code>按钮，直至窗口标题处的模块变成chrome.dll。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E8%BF%90%E8%A1%8C%E5%88%B0%E7%94%A8%E6%88%B7%E4%BB%A3%E7%A0%81.png" alt="运行到用户代码.png" /><figcaption aria-hidden="true">运行到用户代码.png</figcaption>
+</figure></li>
+<li><p>在主面板右键依次选择<code>搜索→当前模块→字符串</code>。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E6%90%9C%E7%B4%A2%E5%BD%93%E5%89%8D%E6%A8%A1%E5%9D%97%E5%AD%97%E7%AC%A6%E4%B8%B2.png" alt="搜索当前模块字符串.png" /><figcaption aria-hidden="true">搜索当前模块字符串.png</figcaption>
+</figure></li>
+<li><p>然后会打开一个搜索界面，等待进度条加载完毕，搜索</p>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">ExtensionDeveloperModeWarning<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E6%90%9C%E7%B4%A2.png" alt="搜索.png" /><figcaption aria-hidden="true">搜索.png</figcaption>
+</figure></li>
+<li><p>会搜到2条结果，双击第一个，跳转到反汇编界面，往上翻一点，找到<code>cmp eax, 2</code>或者<code>cmp eax, 3</code>。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E8%B7%B3%E8%BD%AC%E5%88%B0%E5%8F%8D%E6%B1%87%E7%BC%96%E7%95%8C%E9%9D%A2.png" alt="跳转到反汇编界面.png" /><figcaption aria-hidden="true">跳转到反汇编界面.png</figcaption>
+</figure></li>
+<li><p>双击刚才找到的命令打开编辑页面，修改成<code>cmp eax,9</code>或者<code>cmp eax, 0x9</code>，然后点击确定。（注意只需要点击一次确定即可，点击确定后它还是会继续弹出其它行的编辑界面，此时直接关闭对话框即可）</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E4%BF%AE%E6%94%B9%E6%B1%87%E7%BC%96.png" alt="修改汇编.png" /><figcaption aria-hidden="true">修改汇编.png</figcaption>
+</figure></li>
+<li><p><code>Ctrl+P</code>导出修改过的dll文件（点击<code>修补文件</code>按钮就是导出dll文件），选择某个导出位置（比如桌面，注意名称得是<code>chrome.dll</code>）。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_05_08_%E8%A7%A3%E5%86%B3Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%B9%E5%87%BA%E2%80%9C%E8%AF%B7%E5%81%9C%E7%94%A8%E4%BB%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9A%84%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98_%E5%AF%BC%E5%87%BA.png" alt="导出.png" /><figcaption aria-hidden="true">导出.png</figcaption>
+</figure></li>
+<li><p>最后把我们制作好的dll文件替换掉原来目录下的<code>chrome.dll</code>，重启Chrome浏览器，问题解决！</p></li>
+</ol>
+<h1 id="参考网页">参考网页</h1>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/58111436">解决谷歌浏览器【请停用以开发者模式运行的扩展程序】 - 知乎</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Chrome</tag>
       </tags>
   </entry>
   <entry>
