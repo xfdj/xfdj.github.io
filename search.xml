@@ -15415,4 +15415,84 @@ TexMobject<span class="token punctuation">(</span><span class="token string">"\\
         <tag>Manim</tag>
       </tags>
   </entry>
+  <entry>
+    <title>优化博客（二十）：实现Gitee Pages自动更新</title>
+    <url>/2021/07/12/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%E5%8D%81%EF%BC%89%EF%BC%9A%E5%AE%9E%E7%8E%B0Gitee-Pages%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0/</url>
+    <content><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><p>自从将博客部署到码云（也就是Gitee）上之后，每次更新博客都需要手动前往Gitee Pages的管理网页点一下上面的更新按钮，实在是比较麻烦。网上也有一部分解决方法，不过要么要软件，要么是从GitHub上把博客同步过来，都不太适合我，我想找一种不需要外来软件和“曲线救国”的部署方式，随后我瞄准了Hexo本身的Scripts脚本功能，经过了很长时间的摸索，我终于找到了自动更新的方法。</p>
+<p>之前使用过脚本实现新建文章后自动打开Typora的功能，不过那个时候是直接参考了现成的实现方法，代码也是照抄别人的，当时对代码的具体内容一知半解。后来简单学习了一下JavaScript之后，了解了代码的功能，分清了JavaScript和Node.js的关系。于是我产生了一个设想：能不能使用JavaScript模仿手动操作浏览器的方式，自动点击网页的更新按钮呢？</p>
+<p>这其中最困难的部分就是找到一个自动化操作浏览器的包，之前搜索资料的时候发现了一些用于做自动化测试的包，比如Selenium、Helium、Puppeteer，这里面的一些包在Python中也有，我之前也尝试编写了一个使用Helium的Python程序用来自动化操作浏览器，功能是实现了，不过Helium的API有些简单，有时候按钮会被网页弹出的广告遮住，这时候程序就会失效，而且必须手动执行这个Python程序，后来就放弃了。</p>
+<p>之后我发现了一个不错的工具：<a href="https://playwright.dev/">Playwright</a>。这是由微软公司2020年初发布的新一代自动化测试工具。它的优势在于：</p>
+<ul>
+<li>Playwright通过开发者工具与浏览器交互，安装简洁，不需要安装各种Driver。</li>
+<li>Playwright几乎支持所有语言，通过调用内置浏览器所以启动速度更快。</li>
+<li>Playwright基于Websocket（双向通讯）可自动获取浏览器实际情况。</li>
+<li>Playwright为自动等待。
+<ul>
+<li>等待元素出现（定位元素时，自动等待30s，等待时间可以自定义，单位毫秒）</li>
+<li>等待事件发生</li>
+</ul></li>
+<li><strong>Playwright支持自动录制并生成代码（杀手级功能！）</strong></li>
+</ul>
+<p>看到最后一项优点的时候，我直接心动了。随后我找到了使用它的方式。</p>
+<h1 id="使用playwright">使用Playwright</h1>
+<h2 id="安装">安装</h2>
+<p>在博客目录下打开命令行，执行</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> i playwright<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>安装Playwright。</p>
+<p>安装完成后使用自动录制功能先录制一份登录脚本。做这一步的目的是获取登录后的Cookies和其它登录信息，Playwright支持保存这些信息以供下次使用。这样就不用每次都登录网页了。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npx playwright codegen --save-storage<span class="token operator">=</span>auth.json https://gitee.com/xfdj_dragon/xfdj_dragon/pages<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这条命令会打开我的Gitee Pages管理页面，并记录下我之后在页面上的所有操作，你可以改成自己的地址，<code>--save-storage=auth.json</code>会在浏览器退出之后将Cookies和localStorage里的信息保存到auth.json中。执行这条命令后，一个浏览器页面会打开，并加载管理页面，此时还是未登录的状态，我这里的操作是登录我的码云账号，登录完成之后回到管理页面，就可以关掉浏览器了，此时目录下会多出一个<code>auth.json</code>文件。</p>
+<p>下一步，在<code>scripts</code>目录下新建一个文件<code>refresh.js</code>。内容如下：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 导入Playwright包</span>
+<span class="token keyword">const</span> <span class="token punctuation">&#123;</span> chromium <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'playwright'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 自己实现的等待功能</span>
+<span class="token keyword">function</span> <span class="token function">wait</span><span class="token punctuation">(</span><span class="token parameter">ms</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token operator">=></span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> ms<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Hexo 3</span>
+hexo<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'deployAfter'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> browser <span class="token operator">=</span> <span class="token keyword">await</span> chromium<span class="token punctuation">.</span><span class="token function">launch</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+      headless<span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> context <span class="token operator">=</span> <span class="token keyword">await</span> browser<span class="token punctuation">.</span><span class="token function">newContext</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+      storageState<span class="token operator">:</span> <span class="token string">'auth.json'</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Open new page</span>
+    <span class="token keyword">const</span> page <span class="token operator">=</span> <span class="token keyword">await</span> context<span class="token punctuation">.</span><span class="token function">newPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Go to https://gitee.com/xfdj_dragon/xfdj_dragon/pages</span>
+    <span class="token keyword">await</span> page<span class="token punctuation">.</span><span class="token function">goto</span><span class="token punctuation">(</span><span class="token string">'https://gitee.com/xfdj_dragon/xfdj_dragon/pages'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Click text=更新</span>
+    <span class="token keyword">await</span> page<span class="token punctuation">.</span><span class="token function">waitForSelector</span><span class="token punctuation">(</span><span class="token string">'#pages-branch > div.button.orange.redeploy-button.ui.update_deploy'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    page<span class="token punctuation">.</span><span class="token function">once</span><span class="token punctuation">(</span><span class="token string">'dialog'</span><span class="token punctuation">,</span> <span class="token parameter">dialog</span> <span class="token operator">=></span> dialog<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> page<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token string">'text=更新'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> page<span class="token punctuation">.</span><span class="token function">waitForSelector</span><span class="token punctuation">(</span><span class="token string">'#pages_deploying'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Gitee Pages服务正在部署...'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> <span class="token function">wait</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> page<span class="token punctuation">.</span><span class="token function">waitForSelector</span><span class="token punctuation">(</span><span class="token string">'body > div.site-content > div.ui.container > div > div.pages_message.d-flex-center > div.pages-form-body.padding-0 > p > span'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>timeout<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'已开启 Gitee Pages 服务，网站地址： https://xfdj_dragon.gitee.io'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// ---------------------</span>
+    <span class="token keyword">await</span> context<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> browser<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这里面的大部分操作也是使用Playwright的录制功能保存下来的，修改了一些地方，稍微解释一下。</p>
+<p>第10行是Hexo提供的接口，作用是在deploy完成后执行后面的函数。</p>
+<p>第13行的headless由false改为了true，这是在我调试完成之后为了运行的时候不弹出浏览器窗口设置的。</p>
+<p>第27行是修改的内容，自动录制的功能默认会忽略弹出窗口的点击，因此手动把这里设置成dialog.accept()，这样模拟点击更新按钮之后弹出的确认窗口就可以自动点击确定了。</p>
+<p>29行之后的内容是为了确认按钮已经被点击并且博客成功更新完成。</p>
+<p>好了，之后只要执行<code>hexo d</code>之后，Hexo就会自动运行这个脚本，完成自动化更新博客页面的操作了。</p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+        <tag>码云</tag>
+        <tag>Node.js</tag>
+      </tags>
+  </entry>
 </search>
