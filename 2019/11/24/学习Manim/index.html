@@ -23,12 +23,12 @@
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="什么是Manim？ Manim是Youtube上的UP主3Blue1Brown用来做跟数学和物理有关的动态视频所使用的动画引擎。可以用来制作一些漂亮的动画，比如可视化数学证明、将数学公式的推导动画化、绘制动态的2D图和3D图、做机械结构的动画、甚至制作乐谱和钢琴弹奏的动画。  那么Manim是如何做出这些动画的呢？我们来看看Manim的5个组成部分。   1. Python。不用多说，这是Mani">
+<meta name="description" content="什么是Manim？ Manim是Youtube上的UP主3Blue1Brown用来做跟数学和物理有关的动态视频所使用的动画引擎。可以用来制作一些漂亮的动画，比如可视化数学证明、将数学公式的推导动画化、绘制动态的2D图和3D图、做机械结构的动画、甚至制作乐谱和钢琴弹奏的动画。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习Manim">
 <meta property="og:url" content="http://example.com/2019/11/24/%E5%AD%A6%E4%B9%A0Manim/index.html">
 <meta property="og:site_name" content="兴趣使然的博客">
-<meta property="og:description" content="什么是Manim？ Manim是Youtube上的UP主3Blue1Brown用来做跟数学和物理有关的动态视频所使用的动画引擎。可以用来制作一些漂亮的动画，比如可视化数学证明、将数学公式的推导动画化、绘制动态的2D图和3D图、做机械结构的动画、甚至制作乐谱和钢琴弹奏的动画。  那么Manim是如何做出这些动画的呢？我们来看看Manim的5个组成部分。   1. Python。不用多说，这是Mani">
+<meta property="og:description" content="什么是Manim？ Manim是Youtube上的UP主3Blue1Brown用来做跟数学和物理有关的动态视频所使用的动画引擎。可以用来制作一些漂亮的动画，比如可视化数学证明、将数学公式的推导动画化、绘制动态的2D图和3D图、做机械结构的动画、甚至制作乐谱和钢琴弹奏的动画。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_MiKTeX%E5%AE%89%E8%A3%85%E7%95%8C%E9%9D%A21.png">
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_MiKTeX%E5%AE%89%E8%A3%85%E7%95%8C%E9%9D%A22.png">
@@ -124,7 +124,7 @@ p.spoiler {
   color: black;
   background-color: black;
   text-shadow: none;
-}</style></head>
+}</style><script src="/assets/js/DPlayer.min.js"></script></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -321,14 +321,14 @@ p.spoiler {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>73k</span>
+      <span>75k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2:01</span>
+      <span>2:05</span>
     </span>
 </div>
 
@@ -339,7 +339,7 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-        <script src="/assets/js/DPlayer.min.js"> </script><h1 id="什么是manim">什么是Manim？</h1>
+        <h1 id="什么是manim">什么是Manim？</h1>
 <p>Manim是Youtube上的UP主3Blue1Brown用来做跟数学和物理有关的动态视频所使用的动画引擎。可以用来制作一些漂亮的动画，比如可视化数学证明、将数学公式的推导动画化、绘制动态的2D图和3D图、做机械结构的动画、甚至制作乐谱和钢琴弹奏的动画。</p>
 <p>那么Manim是如何做出这些动画的呢？我们来看看Manim的5个组成部分。</p>
 <ol type="1">
@@ -461,7 +461,7 @@ p.spoiler {
 <p>下面从<a target="_blank" rel="noopener" href="https://github.com/3b1b/manim/blob/master/example_scenes.py">这个网址</a>获取<code>example_scenes.py</code>文件，保存到电脑上，然后在命令行（虚拟环境）中打开文件所在的目录，输入下面的命令：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">manim example_scenes.py SquareToCircle -pl<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>暂时不用管这是什么意思，如果运行成功，会在当前目录下生成一个<code>videos</code>文件夹，进去找到<code>SquareToCircle.mp4</code>这个视频，播放一下，如果出现和下面的视频一样的动画，就说明Cairo能正常使用。</p>
-<div id="dplayer3" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer3 = new DPlayer({"element":document.getElementById("dplayer3"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_SquareToCircle.mp4"}});</script>
+<div id="dplayer3" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer3"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_SquareToCircle.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>接下来输入下面的命令检查LaTeX：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">manim example_scenes.py WriteStuff -pl<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>如果出现了类似下面的对话框要求你安装一些文件，点击Install安装就行了。</p>
@@ -477,7 +477,7 @@ p.spoiler {
 <img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_Change%20Package%20Repository2.png" alt="Change Package Repository2.png" /><figcaption aria-hidden="true">Change Package Repository2.png</figcaption>
 </figure>
 <p>运行完之后，同样找到<code>WriteStuff.mp4</code>，播放一下，如果出现和下面一样的动画，就说明LaTeX正常。</p>
-<div id="dplayer4" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer4 = new DPlayer({"element":document.getElementById("dplayer4"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_WriteStuff.mp4"}});</script>
+<div id="dplayer4" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer4"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_WriteStuff.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>最后来测试一下中文，把下面的代码保存到一个名为<code>test_Chinese.py</code>的文件中。先不管它的意思。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
 
@@ -501,7 +501,7 @@ p.spoiler {
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">manim test_Chinese.py test_cn -pl<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>如果出现了形如<code>Exception: Xelatex error converting to xdv.</code>的错误，先把 <code>manimlib/constants.py</code> 中的 <code>MEDIA_DIR = "./media"</code> 改成 <code>MEDIA_DIR = os.path.join(os.getcwd(), "media")</code> 再进行尝试。</p>
 <p>如果找到了下面的动画，说明中文也能正常显示出来了。</p>
-<div id="dplayer5" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer5 = new DPlayer({"element":document.getElementById("dplayer5"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_test_cn.mp4"}});</script>
+<div id="dplayer5" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer5"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_test_cn.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>如果你活着到达了这里，恭喜你，安装成功了！</p>
 <h2 id="可选使用jupyter-notebook编辑">（可选）使用Jupyter Notebook编辑</h2>
 <p>使用pip安装<code>manim-notebook</code>或<code>jupyter-manim</code>。</p>
@@ -544,7 +544,7 @@ p.spoiler {
 <p>格式就是manim+文件名+你要输出动画的类名+参数。</p>
 <p>我们现在可以解释一下<code>-pl</code>是什么意思了。其中<code>p</code>表示preview，意思是输出完成后自动播放，<code>l</code>意思是low quality，在这里表示输出视频为480p、15fps，默认视频长宽比为16：9。之后会更详细的介绍更多渲染的选项。</p>
 <p>等待输出完成你就可以看到效果了。</p>
-<div id="dplayer6" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer6 = new DPlayer({"element":document.getElementById("dplayer6"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_OpeningManimExample.mp4"}});</script>
+<div id="dplayer6" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer6"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_OpeningManimExample.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>新建一个文件<code>basic_elements.py</code>，我们来编写第一个动画。打开文件，输入如下内容：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> manimlib<span class="token punctuation">.</span>imports <span class="token keyword">import</span> <span class="token operator">*</span>
 
@@ -599,7 +599,7 @@ p.spoiler {
 <p>我们来导出一下：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">manim animations_and_pauses.py WriteText -pl<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>会得到下面的视频：</p>
-<div id="dplayer7" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer7 = new DPlayer({"element":document.getElementById("dplayer7"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_WriteText.mp4"}});</script>
+<div id="dplayer7" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer7"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_WriteText.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>我们接下来学习把对象从屏幕移除，在代码最后加入下面的语句：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">WriteText</span><span class="token punctuation">(</span>Scene<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">construct</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -662,7 +662,7 @@ p.spoiler {
 
 <span class="token keyword">class</span> <span class="token class-name">SpinInFromNothing</span><span class="token punctuation">(</span>GrowFromCenter<span class="token punctuation">)</span><span class="token punctuation">:</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>可以尝试一下哪些可以用在text上哪些不行。我自己尝试的效果在下面，有些函数可能用法不对，之后再补充。</p>
-<div id="dplayer8" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer8 = new DPlayer({"element":document.getElementById("dplayer8"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_testAnimations.mp4"}});</script>
+<div id="dplayer8" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer8"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_testAnimations.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <h2 id="位置旋转和字体">位置、旋转和字体</h2>
 <p>我们现在学习除了文字之外的第一种对象——点。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Positions</span><span class="token punctuation">(</span>Scene<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -1605,7 +1605,7 @@ COLOR_MAP <span class="token operator">=</span> <span class="token punctuation">
         self<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>注意看第7行<code>Transform()</code>的使用方式，和<code>Write()</code>类似，需要把函数放在<code>self.play()</code>里面，因为这是个动画。<code>Transform()</code>的第一个参数是我们要进行变换的对象，第二个参数是要变换成的目标对象。</p>
 <p>我们来渲染看一看。</p>
-<div id="dplayer9" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer9 = new DPlayer({"element":document.getElementById("dplayer9"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_TransformationText1V1.mp4"}});</script>
+<div id="dplayer9" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer9"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_TransformationText1V1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>另一种变换的方式是使用<code>ReplacementTransform()</code>，它和<code>Transform()</code>的区别呢，我们通过下面的两段代码来说明：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">WhatIsTransform</span><span class="token punctuation">(</span>Scene<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">construct</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -1643,7 +1643,7 @@ COLOR_MAP <span class="token operator">=</span> <span class="token punctuation">
         self<span class="token punctuation">.</span>play<span class="token punctuation">(</span>FadeOut<span class="token punctuation">(</span>t3<span class="token punctuation">)</span><span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>上面有两个类，分别用<code>Transform()</code>和<code>ReplacementTransform()</code>来实现变换操作，渲染一下你可以发现两者没有任何区别。也就是说，同一种效果可以用两种不同的方法编写。</p>
-<div id="dplayer10" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer10 = new DPlayer({"element":document.getElementById("dplayer10"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_WhatIsTransform.mp4"}});</script>
+<div id="dplayer10" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer10"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_WhatIsTransform.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>那么它们的不同体现在什么地方呢？</p>
 <p>来看一下代码：</p>
 <p>用<code>Transform()</code>的类生成的动画第10行，第13行，第16行，变换的对象都是<code>t1</code>。也就是说在执行了第10行之后，<code>t1</code>的内容就由字母A变成了字母B，执行了第13行之后，<code>t1</code>的内容由字母B变成了字母C。这两个过程中，<code>t2</code>和<code>t3</code>里保存的字母没有任何变化，所以最后第16行的淡出操作的参数是内容已经变成字母C的对象<code>t1</code>。换种方式说，就是使用<code>Transform()</code>的时候，第二个参数<code>t2</code>和<code>t3</code>都只是<code>t1</code>变换的目标，<code>t1</code>会把自己的形状变成目标的样子，而这两个目标<code>t2</code>和<code>t3</code>甚至都没有出现在屏幕上，你看见的只是<code>t1</code>的变形过程。</p>
@@ -1685,7 +1685,7 @@ COLOR_MAP <span class="token operator">=</span> <span class="token punctuation">
         <span class="token punctuation">)</span> <span class="token comment"># 把公式的第0部分的拷贝变为第7和第10部分</span>
         self<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>上面是一段微分的等式。效果如下：</p>
-<div id="dplayer11" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer11 = new DPlayer({"element":document.getElementById("dplayer11"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_CopyTextV1.mp4"}});</script>
+<div id="dplayer11" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer11"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_CopyTextV1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>如果要变换的公式的形状是一样的，那么就不会有变形的效果，只会有移动的效果（只要开始和结束的两个对象位置不同就会有移动效果）。而21、22、23、27、28行出现了<code>.copy()</code>方法，这个方法用于生成一份该对象的拷贝，这样原来的对象就不会受影响了。</p>
 <p>如果要变换的部分比较多，我们当然也可以使用诸如列表解析式、<code>zip()</code>等高级函数、for循环、<code>*</code>参数传递之类的方式，来简化重复代码的书写。</p>
 <p>这里贴出几个练习，尝试着渲染一下看看结果，并且试着理解每段代码的含义，别害怕，并没有那么难，如果很难看明白代码，就去看看渲染结果，然后反推代码的意思。当然，你也可以有一些批判性的想法，因为有些代码看上去并没有那么好懂，因此我们也不一定要模仿，就当拓展一下思路，自己写的代码以自己容易读懂为准。</p>
@@ -2013,11 +2013,11 @@ COLOR_MAP <span class="token operator">=</span> <span class="token punctuation">
         	<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>效果是这样的：</p>
-<div id="dplayer12" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer12 = new DPlayer({"element":document.getElementById("dplayer12"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_MoveBraces.mp4"}});</script>
+<div id="dplayer12" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer12"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_MoveBraces.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>我们反推一下，主要就是第10~13行，观察第10行我们发现<code>Brace(Mobject, direction, [buff])</code>第一个参数就是括号要括的对象，第二个是括号的方位，第三个自然就是和对象之间的间隔了。至于<code>UP</code>和<code>SMALL_BUFF</code>都是一些常数。</p>
 <p>第12行的<code>.get_text()</code>方法可以在括号上添加文字，也就是<code>TextMobject</code>。所以如果要显示公式的话，就要加上<code>$</code>。不过这个方法应该生成出的文字就跟括号没啥关系了，对括号做的操作应该都不会影响到文字，所以如果要让它们一起动，必须给文字也设置动画才行。</p>
 <p>来看另一种标记的对象：<code>SurroundingRectangle()</code>。顾名思义，就是一个能把对象包围的框框。</p>
-<div id="dplayer13" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer13 = new DPlayer({"element":document.getElementById("dplayer13"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_MoveFrameBox.mp4"}});</script>
+<div id="dplayer13" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer13"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_MoveFrameBox.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">MoveFrameBox</span><span class="token punctuation">(</span>Scene<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">construct</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         text<span class="token operator">=</span>TexMobject<span class="token punctuation">(</span>
@@ -2038,7 +2038,7 @@ COLOR_MAP <span class="token operator">=</span> <span class="token punctuation">
 <p><code>SurroundingRectangle(Mobject, [buff])</code>在学了大括号之后，你应该猜得出这两个参数的含义了吧。</p>
 <p>框框没有了<code>.get_text()</code>方法怎么办？用普通的文字或者公式对象结合<code>.next_to()</code>方法来使用就好了。</p>
 <p>下一个对象是箭头：<code>Arrow()</code>。来看下面的代码，学习怎么定义一个箭头：</p>
-<div id="dplayer14" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer14 = new DPlayer({"element":document.getElementById("dplayer14"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_Arrow1.mp4"}});</script>
+<div id="dplayer14" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer14"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_Arrow1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Arrow1</span><span class="token punctuation">(</span>Scene<span class="token punctuation">)</span><span class="token punctuation">:</span>
 	<span class="token keyword">def</span> <span class="token function">construct</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
 		step1 <span class="token operator">=</span> TextMobject<span class="token punctuation">(</span><span class="token string">"Step 1"</span><span class="token punctuation">)</span>
@@ -2237,7 +2237,7 @@ COLOR_MAP <span class="token operator">=</span> <span class="token punctuation">
 <p>渲染：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">manim 2D_and_3D_graphs.py Plot1 -pl<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>显示效果如下：</p>
-<div id="dplayer15" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer15 = new DPlayer({"element":document.getElementById("dplayer15"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_Plot1%E9%94%99%E8%AF%AF.mp4"}});</script>
+<div id="dplayer15" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer15"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_Plot1%E9%94%99%E8%AF%AF.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>可以发现视频中图像有些错误，现在我们来修正它。</p>
 <p>我们可以发现，坐标轴下方的数字刻度并没有小数，并且数字也并没有在我们指定的位置（指定数字位于x轴的上方和y轴的右方）。而从<code>GraphScene</code>类中的<code>setup_axes</code>方法中可以看出，坐标轴是由位于<code>manimlib/mobject/number_liine.py</code>中的<code>NumberLine</code>类绘制的。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">NumberLine</span><span class="token punctuation">(</span>Line<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -2314,7 +2314,7 @@ COLOR_MAP <span class="token operator">=</span> <span class="token punctuation">
         <span class="token string">"y_label_decimal"</span><span class="token punctuation">:</span> <span class="token number">0</span>
     <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>保存后重新渲染一遍刚才的类，结果如下所示，坐标轴如我们所希望的一样显示了。</p>
-<div id="dplayer16" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer16 = new DPlayer({"element":document.getElementById("dplayer16"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_Plot1%E6%AD%A3%E7%A1%AE.mp4"}});</script>
+<div id="dplayer16" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer16"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_Plot1%E6%AD%A3%E7%A1%AE.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>类中剩余CONFIG的意思留给你自己弄清楚其中的含义了，别担心，这并不复杂，只要自己尝试着修改一下值，看看结果，就能很轻松地猜出它们的意思了。</p>
 <p>下面列出一些有用的CONFIG选项以及它们的作用：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">CONFIG <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
@@ -2358,7 +2358,7 @@ COLOR_MAP <span class="token operator">=</span> <span class="token punctuation">
 <p>一般来说，<span class="math inline">\(\theta\)</span>的取值范围是<span class="math inline">\([0, 2\pi)=[0, 360^{\circ})\)</span>，<span class="math inline">\(\varphi\)</span>的取值范围是<span class="math inline">\([0, \pi]=[0, 180^{\circ}]\)</span>，<span class="math inline">\(r\)</span>的取值范围是<span class="math inline">\([0, +\infty)\)</span>。</p>
 <p>第四个参数<span class="math inline">\(\gamma\)</span>表示看向坐标系时，你的头的旋转角度，取值范围是<span class="math inline">\([0, 2\pi)=[0, 360^{\circ})\)</span>。</p>
 <p>渲染结果如下：</p>
-<div id="dplayer17" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer17 = new DPlayer({"element":document.getElementById("dplayer17"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_CameraPosition1.mp4"}});</script>
+<div id="dplayer17" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer17"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_CameraPosition1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>如果想要移动你的头，可以使用<code>move_camera</code>方法，用法如下面的例子所示：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">CameraPosition2</span><span class="token punctuation">(</span>ThreeDScene<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">construct</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -2368,7 +2368,7 @@ COLOR_MAP <span class="token operator">=</span> <span class="token punctuation">
         self<span class="token punctuation">.</span>move_camera<span class="token punctuation">(</span>phi<span class="token operator">=</span><span class="token number">30</span> <span class="token operator">*</span> DEGREES<span class="token punctuation">,</span> theta<span class="token operator">=</span><span class="token operator">-</span><span class="token number">45</span> <span class="token operator">*</span> DEGREES<span class="token punctuation">,</span> run_time<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>渲染结果如下：</p>
-<div id="dplayer18" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer18 = new DPlayer({"element":document.getElementById("dplayer18"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_CameraPosition2.mp4"}});</script>
+<div id="dplayer18" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer18"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_CameraPosition2.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>如果要持续沿着z轴旋转可以使用<code>begin_ambient_camera_rotation</code>和<code>stop_ambient_camera_rotation</code>方法。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">CameraPosition3</span><span class="token punctuation">(</span>ThreeDScene<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">construct</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -2381,7 +2381,7 @@ COLOR_MAP <span class="token operator">=</span> <span class="token punctuation">
         self<span class="token punctuation">.</span>stop_ambient_camera_rotation<span class="token punctuation">(</span><span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>渲染结果如下：</p>
-<div id="dplayer19" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer19 = new DPlayer({"element":document.getElementById("dplayer19"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_CameraPosition3.mp4"}});</script>
+<div id="dplayer19" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer19"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_CameraPosition3.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>空间中的参数曲线可以表现为如下的形式： <span class="math display">\[
 f(u)=(x(u), y(u), z(u))
 \]</span> 如果想要在3D空间中画一条参数曲线，可以使用<code>ParametricFunction</code>类。</p>
@@ -2412,7 +2412,7 @@ f(u)=(x(u), y(u), z(u))
 <p><code>ParametricFunction</code>接受一个lambda表达式形式的参数曲线，<code>t_min</code>和<code>t_max</code>分别代表参数的取值范围。</p>
 <p>第22行的<code>rate_func</code>是对动画速率的控制，<code>there_and_back</code>表示将play的内容正放再倒放，实际上这是一个定义在<code>manimlib/utils/rate_functions.py</code>中的一个函数，除此之外还有许多其它的函数，比如<code>linear</code>、<code>wiggle</code>等，分别代表了不同的动画效果（或者说速率控制）。</p>
 <p>渲染结果如下：</p>
-<div id="dplayer20" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer20 = new DPlayer({"element":document.getElementById("dplayer20"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_ParametricCurve1.mp4"}});</script>
+<div id="dplayer20" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer20"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_ParametricCurve1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>如果仔细观察你可以发现，实际上这条红色的参数曲线完全在坐标轴之前，而不是一部分在前，一部分在后，和坐标轴互有遮挡。要想正确显示，需要在<code>ParametricCurve1</code>的基础上，将曲线的<code>set_shade_in_3d</code>设置为True，如下所示：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">ParametricCurve2</span><span class="token punctuation">(</span>ThreeDScene<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">construct</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -2441,7 +2441,7 @@ f(u)=(x(u), y(u), z(u))
                   run_time<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>同时我也让curve1的颜色变暗一点，线粗一点方便观察。</p>
-<div id="dplayer21" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer21 = new DPlayer({"element":document.getElementById("dplayer21"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_ParametricCurve2.mp4"}});</script>
+<div id="dplayer21" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer21"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_ParametricCurve2.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>可以看出有了一定的交叉感，不过还是和实际的覆盖关系有区别。</p>
 <p>曲线用<code>ParametricFunction</code>，曲面用另一个类，叫<code>ParametricSurface</code>。下面是一个例子。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">SurfacesAnimations</span><span class="token punctuation">(</span>ThreeDScene<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -2525,7 +2525,7 @@ f(u)=(x(u), y(u), z(u))
 f(u, v)=(x(u,v), y(u,v), z(u,v))
 \]</span> <code>v_min</code>、<code>v_max</code>、<code>u_min</code>、<code>u_max</code>用来控制参数方程的定义域，<code>resolution</code>用来控制曲面方格的密度，而<code>fade</code>用来控制曲面的透明度。</p>
 <p>效果如下：</p>
-<div id="dplayer22" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer22 = new DPlayer({"element":document.getElementById("dplayer22"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_SurfacesAnimations.mp4"}});</script>
+<div id="dplayer22" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer22"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_SurfacesAnimations.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>如果想要在空间中插入文字，可以像下面的例子一样操作：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Text3D</span><span class="token punctuation">(</span>ThreeDScene<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">construct</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -2565,7 +2565,7 @@ f(u, v)=(x(u,v), y(u,v), z(u,v))
 
         self<span class="token punctuation">.</span>play<span class="token punctuation">(</span>LaggedStartMap<span class="token punctuation">(</span>ShowCreation<span class="token punctuation">,</span> sphere<span class="token punctuation">)</span><span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<div id="dplayer23" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer23 = new DPlayer({"element":document.getElementById("dplayer23"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_Text3D2.mp4"}});</script>
+<div id="dplayer23" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer23"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_Text3D2.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <h2 id="常见问题">常见问题</h2>
 <h3 id="如何管理一组对象">如何管理一组对象</h3>
 <p>要管理一组对象，可以使用<code>VGroup</code>类的<code>arrange</code>方法。举个例子：</p>
@@ -2589,7 +2589,7 @@ f(u, v)=(x(u,v), y(u,v), z(u,v))
 
         self<span class="token punctuation">.</span>play<span class="token punctuation">(</span>text_group<span class="token punctuation">.</span>arrange<span class="token punctuation">,</span> RIGHT<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token string">"buff"</span><span class="token punctuation">:</span> <span class="token number">0.4</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<div id="dplayer24" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer24 = new DPlayer({"element":document.getElementById("dplayer24"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_ArrangeObjects.mp4"}});</script>
+<div id="dplayer24" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer24"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_ArrangeObjects.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <h3 id="如何缩放或者移动摄影机视角">如何缩放或者移动摄影机视角</h3>
 <p>要做到这一点，需要继承一个类<code>MovingCameraScene</code>，之后通过<code>self.camera_frame</code>来调整。</p>
 <p>举个例子。</p>
@@ -2626,7 +2626,7 @@ f(u, v)=(x(u,v), y(u,v), z(u,v))
         self<span class="token punctuation">.</span>play<span class="token punctuation">(</span>Restore<span class="token punctuation">(</span>self<span class="token punctuation">.</span>camera_frame<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
         self<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<div id="dplayer25" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer25 = new DPlayer({"element":document.getElementById("dplayer25"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_ChangePositionAndSizeCamera.mp4"}});</script>
+<div id="dplayer25" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer25"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_ChangePositionAndSizeCamera.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>如果要在其它特定的场景（指一些<code>Scene</code>的派生类，比如<code>GraphScene</code>）中变更视角，除了需要同时继承该类和<code>MovingCameraScene</code>类之外，还需要自己定义一个<code>setup</code>方法，否则会报错。举个例子。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">ChangePositionAndSizeCameraInAnotherScene</span><span class="token punctuation">(</span>GraphScene<span class="token punctuation">,</span> MovingCameraScene<span class="token punctuation">)</span><span class="token punctuation">:</span>
     CONFIG <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
@@ -2657,7 +2657,7 @@ f(u, v)=(x(u,v), y(u,v), z(u,v))
 
         self<span class="token punctuation">.</span>play<span class="token punctuation">(</span>self<span class="token punctuation">.</span>camera_frame<span class="token punctuation">.</span>move_to<span class="token punctuation">,</span> dot_at_end_grap<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<div id="dplayer26" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer26 = new DPlayer({"element":document.getElementById("dplayer26"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_ChangePositionAndSizeCameraInAnotherScene.mp4"}});</script>
+<div id="dplayer26" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer26"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_ChangePositionAndSizeCameraInAnotherScene.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <h3 id="如何可视化线性变换">如何可视化线性变换</h3>
 <p>实现给线性空间应用一个线性变换的动画需要<code>LinearTransformationScene</code>。其中有几个主要用到的方法，分别是<code>apply_matrix</code>、<code>add_vector</code>和<code>add_transformable_mobject</code>。下面给出一个例子，其中的CONFIG包含了几乎所有你可以修改的参数。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">LinearTransformation</span><span class="token punctuation">(</span>LinearTransformationScene<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -2696,7 +2696,7 @@ f(u, v)=(x(u,v), y(u,v), z(u,v))
         self<span class="token punctuation">.</span>apply_matrix<span class="token punctuation">(</span>matrix<span class="token punctuation">)</span>
 
         self<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<div id="dplayer27" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer27 = new DPlayer({"element":document.getElementById("dplayer27"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_LinearTransformation.mp4"}});</script>
+<div id="dplayer27" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer27"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_LinearTransformation.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <h3 id="如何清除屏幕上的所有对象">如何清除屏幕上的所有对象</h3>
 <p>屏幕上的所有对象都保存在<code>self.mobjects</code>中，因此可以采用如下的方法来清除：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">RemoveAllObjectsInScreen</span><span class="token punctuation">(</span>Scene<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -2712,7 +2712,7 @@ f(u, v)=(x(u,v), y(u,v), z(u,v))
                   <span class="token punctuation">)</span>
 
         self<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<div id="dplayer28" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer28 = new DPlayer({"element":document.getElementById("dplayer28"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_RemoveAllObjectsInScreen.mp4"}});</script>
+<div id="dplayer28" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer28"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_RemoveAllObjectsInScreen.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <h3 id="如何实现放大镜效果">如何实现放大镜效果</h3>
 <p>需要继承一个新的类<code>ZoomedScene</code>，不多说直接给一个例子：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">ZoomedSceneExample</span><span class="token punctuation">(</span>ZoomedScene<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -2805,7 +2805,7 @@ f(u, v)=(x(u,v), y(u,v), z(u,v))
         <span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这一段代码比较复杂，还涉及到了一些陌生的概念，可以不用急着搞懂，先看看效果：</p>
-<div id="dplayer29" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer29 = new DPlayer({"element":document.getElementById("dplayer29"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_ZoomedSceneExample.mp4"}});</script>
+<div id="dplayer29" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer29"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_ZoomedSceneExample.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <h3 id="如何用点集来绘制图像">如何用点集来绘制图像</h3>
 <p>之前我们学习了如何用函数来绘制图像，不过知道如何通过点集来绘制图像也很有必要。</p>
 <p>点集可以直接在.py文件中声明，但建议从另一个文件导入，最常用的文件有.dat或者.csv文件。</p>
@@ -2842,7 +2842,7 @@ f(u, v)=(x(u,v), y(u,v), z(u,v))
 <p>导入.csv文件可以使用<code>csv</code>模块。</p>
 <p>第10行的<code>coords_to_point</code>用来将屏幕坐标转化为图像坐标。</p>
 <p>使用<code>VMobject</code>类可以绘制通过点的线。其中<code>set_points_as_corners</code>绘制的是折线，<code>set_points_smoothly</code>绘制的是平滑的曲线。</p>
-<div id="dplayer30" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer30 = new DPlayer({"element":document.getElementById("dplayer30"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_GraphFromData.mp4"}});</script>
+<div id="dplayer30" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer30"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_11_24_%E5%AD%A6%E4%B9%A0Manim_GraphFromData.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <p>当然，使用<code>Scene</code>也能这样做，区别就是坐标轴使用的是屏幕坐标。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">CustomGraph</span><span class="token punctuation">(</span>Scene<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">construct</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -3033,7 +3033,7 @@ TexMobject<span class="token punctuation">(</span><span class="token string">"\\
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">334k</span>
+    <span title="站点总字数">337k</span>
   </span>
 </div>
 

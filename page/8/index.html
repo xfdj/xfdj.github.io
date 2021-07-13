@@ -293,24 +293,11 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          偶然在一个博客发现Hexo的黑科技，据说你 撸多了 会视物模糊？
-
-怎么做到的？
-实际上这是Hexo的一个有趣的插件实现的。模糊的文字点击即可查看，再次点击则又会模糊。首先来安装插件。
-
-安装
-在博客目录下输入
-
-yarn add hexo-spoiler
-
-或
-
-npm install hexo-spoiler --save
-
-完成安装。
-
-使用
-在你写博客的时候，如果想马赛克某段文字，你可以这
+          <p>偶然在一个博客发现Hexo的黑科技，据说你
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">撸多了</span>
+  </span>会视物模糊？</p>
+<h1 id="怎么做到的">怎么做到的？</h1>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/01/08/Hexo%E9%BB%91%E7%A7%91%E6%8A%80%EF%BC%9A%E4%BD%A0%E7%9C%8B%E4%B8%8D%E6%B8%85%E4%BA%86/#more" rel="contents">
@@ -402,12 +389,8 @@ npm install hexo-spoiler --save
     
     
     <div class="post-body" itemprop="articleBody">
-          每次新建博客，输入hexo new命令后，都要到source/_posts目录下打开创建的md文件，时间一长吧，就有点烦了。能不能每次输入完命令之后，就自动打开创建好的文件呢？别说，还真能，而且比想象中还要简单。
-
-其实一开始我还想自己写个小程序把Hexo命令和打开文件的命令结合起来，创建博客的时候就运行这个程序。不过我在其它博客上找到了一个更方便的解决方案。
-
-原理
-其实这个原理并不复杂，也不需
+          <p>每次新建博客，输入<code>hexo new</code>命令后，都要到<code>source/_posts</code>目录下打开创建的md文件，时间一长吧，就有点烦了。能不能每次输入完命令之后，就自动打开创建好的文件呢？别说，还真能，而且比想象中还要简单。</p>
+<p>其实一开始我还想自己写个小程序把Hexo命令和打开文件的命令结合起来，创建博客的时候就运行这个程序。不过我在其它博客上找到了一个更方便的解决方案。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/01/08/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%8D%81%EF%BC%89%EF%BC%9A%E6%96%B0%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7/#more" rel="contents">
@@ -499,10 +482,8 @@ npm install hexo-spoiler --save
     
     
     <div class="post-body" itemprop="articleBody">
-          注：此方法目前失效中（2019-3-5）
-
-忽然感冒Google搜索的原因
-我一直都是用搜狗搜索作为默认搜索引擎。因为相比百度，搜狗的知乎搜索比较方便，但是搜狗搜索也有一些时候并不能搜出我想要的内容，因此我想换成Google的搜索。遗憾的是，在天朝，目前还无法直接使用Google搜索，而我非常懒，不想自己每次需要使用Google的时候都花一些精力用来翻墙。能不能让Google也变得和搜狗一样，随时
+          <p><code>注：此方法目前失效中（2019-3-5）</code></p>
+<h1 id="忽然感冒google搜索的原因">忽然感冒Google搜索的原因</h1>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/01/03/%E4%B8%8D%E7%BF%BB%E5%A2%99%E5%B0%B1%E8%83%BD%E4%BD%BF%E7%94%A8Google%E6%90%9C%E7%B4%A2/#more" rel="contents">
@@ -594,18 +575,8 @@ npm install hexo-spoiler --save
     
     
     <div class="post-body" itemprop="articleBody">
-          我搭建起现在看到的博客，也是在网上搜索了很多教程，对比着一步步搭建出来的。原本以为一旦建好就万事大吉，后来发生的事情告诉我，我还是太年轻了。
-
-七牛云图床出现的问题
-博客的图片我参照着网上的大部分教程，存储在了七牛云上。
-
-不过最近重新查看我的博客时，却发现图片全都打不开了。
-
-图片显示不出来.png然后我去七牛云的对象存储里查看，发现我的图片都在，就是博客里无法显示。
-
-为什么会这样呢？
-
-原因
+          <p>我搭建起现在看到的博客，也是在网上搜索了很多教程，对比着一步步搭建出来的。原本以为一旦建好就万事大吉，后来发生的事情告诉我，我还是太年轻了。</p>
+<h1 id="七牛云图床出现的问题">七牛云图床出现的问题</h1>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/12/06/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B9%9D%EF%BC%89%EF%BC%9A%E4%B8%83%E7%89%9B%E4%BA%91%E7%9A%84%E5%9B%BE%E5%BA%8A%E4%B9%8B%E6%AE%87/#more" rel="contents">
@@ -697,14 +668,8 @@ npm install hexo-spoiler --save
     
     
     <div class="post-body" itemprop="articleBody">
-          现在的NexT主题已经把之前许多的第三方插件都整合进来，只要修改配置就能方便地调整许多功能。就连动画的效果都可以更改。
-
-NexT默认的四个样式都有载入动画，而且都是可以修改的，NexT本身就提供了众多候选动画。下面就来说说怎么修改NexT的动画效果。
-
-打开主题配置文件_config.yml。找到下面的内容。
-
-# Use velocity to animate everything.
-moti
+          <p>现在的NexT主题已经把之前许多的第三方插件都整合进来，只要修改配置就能方便地调整许多功能。就连动画的效果都可以更改。</p>
+<p>NexT默认的四个样式都有载入动画，而且都是可以修改的，NexT本身就提供了众多候选动画。下面就来说说怎么修改NexT的动画效果。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/10/07/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%85%AB%EF%BC%89%EF%BC%9A%E8%B0%83%E6%95%B4%E5%8A%A8%E7%94%BB/#more" rel="contents">
@@ -796,22 +761,8 @@ moti
     
     
     <div class="post-body" itemprop="articleBody">
-          要问我为啥需要一只看板娘？因为萌啊~
-
-看板娘的GitHub主页点此进入。
-
-安装
-安装模块：
-
-yarn add hexo-helper-live2d
-
-配置
-向Hexo的_config.yml站点配置文件或主题的_config.yml文件添加如下配置：
-
-# Live2D
-## https://github.com/EYHN/hexo-helper-live2d
-live2d:
-  enabl
+          <p>要问我为啥需要一只看板娘？因为萌啊~</p>
+<p>看板娘的GitHub主页<a target="_blank" rel="noopener" href="https://github.com/EYHN/hexo-helper-live2d">点此进入</a>。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/10/06/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%83%EF%BC%89%EF%BC%9A%E6%94%BE%E4%B8%80%E5%8F%AA%E7%9C%8B%E6%9D%BF%E5%A8%98/#more" rel="contents">
@@ -903,14 +854,8 @@ live2d:
     
     
     <div class="post-body" itemprop="articleBody">
-          本文基于NexT主题。
-
-NexT主题默认图片是不能预览的，需要在浏览器的新标签页打开查看原图。
-
-在NexT主题的配置文件里发现NexT主题使用一个叫做theme-next-fancybox3的模块实现图片预览功能。以下是配置文件相应的片段：
-
-# Fancybox. There is support for old version 2 and new version 3.
-# Please, 
+          <p><code>本文基于NexT主题。</code></p>
+<p>NexT主题默认图片是不能预览的，需要在浏览器的新标签页打开查看原图。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/10/05/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%85%AD%EF%BC%89%EF%BC%9A%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E9%A2%84%E8%A7%88/#more" rel="contents">
@@ -1002,11 +947,8 @@ NexT主题默认图片是不能预览的，需要在浏览器的新标签页打�
     
     
     <div class="post-body" itemprop="articleBody">
-          纯粹是因为闲得慌，才想要添加字数统计的功能hhh。
-
-在网上搜索了许多文章，大部分是安装hexo-wordcount，然后在主题配置下手写配置。个人不太喜欢这种折腾得很复杂的方式，因为一不小心就忘记之前自己是怎么操作的了，改回去也不方便，最后就是对更新的支持比较弱。
-
-在浏览了NexT的_config.yml配置文件之后，我发现8.2.2版本的NexT默认支持的是Hexo Word Counter
+          <p>纯粹是因为闲得慌，才想要添加字数统计的功能hhh。</p>
+<p>在网上搜索了许多文章，大部分是安装<code>hexo-wordcount</code>，然后在主题配置下手写配置。个人不太喜欢这种折腾得很复杂的方式，因为一不小心就忘记之前自己是怎么操作的了，改回去也不方便，最后就是对更新的支持比较弱。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/10/04/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%94%EF%BC%89%EF%BC%9A%E5%AE%9E%E7%8E%B0%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/#more" rel="contents">
@@ -1098,14 +1040,9 @@ NexT主题默认图片是不能预览的，需要在浏览器的新标签页打�
     
     
     <div class="post-body" itemprop="articleBody">
-          此方法对于 NexT 7.6.0 以上版本已失效。新的实现方法请查看“优化博客（十六）”。
-
-NexT主题默认在首页显示全文，这样翻阅浏览文章很不方便，好在NexT提供了显示摘要的方法，修改起来也很简单。
-
-默认全文显示效果.png修改主题配置文件
-打开NexT的主题配置文件_config.yml（注意不是博客根目录下的那个）。找到auto_excerpt，可以看到它默认是关闭的
-
-默认关闭自动摘
+          <div class="note warning"><p>此方法对于 NexT 7.6.0 以上版本已失效。新的实现方法请查看“优化博客（十六）”。</p>
+</div>
+<p>NexT主题默认在首页显示全文，这样翻阅浏览文章很不方便，好在NexT提供了显示摘要的方法，修改起来也很简单。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/10/02/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%9B%9B%EF%BC%89%EF%BC%9A%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81/#more" rel="contents">
@@ -1197,13 +1134,8 @@ NexT主题默认在首页显示全文，这样翻阅浏览文章很不方便，�
     
     
     <div class="post-body" itemprop="articleBody">
-          随着文章的增加，搜索功能也变得越来越重要，不过搜索功能一般是需要数据库支持的，所以WordPress一类动态博客默认都支持搜索，但是Hexo等静态博客由于没有后端数据库，所以添加搜索需要花一点心思。
-
-本地搜索，是指通过插件生成序列化数据，前端调用脚本处理数据，返回搜索结果。看不懂没关系，因为我也不懂因为只需要安装一个插件就完事了。
-
-注：本方法基于NexT主题。
-
-安装hexo-generato
+          <p>随着文章的增加，搜索功能也变得越来越重要，不过搜索功能一般是需要数据库支持的，所以WordPress一类动态博客默认都支持搜索，但是Hexo等静态博客由于没有后端数据库，所以添加搜索需要花一点心思。</p>
+<p>本地搜索，是指通过插件生成序列化数据，前端调用脚本处理数据，返回搜索结果。看不懂没关系，<del>因为我也不懂</del>因为只需要安装一个插件就完事了。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/10/02/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/#more" rel="contents">
@@ -1254,7 +1186,7 @@ NexT主题默认在首页显示全文，这样翻阅浏览文章很不方便，�
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">334k</span>
+    <span title="站点总字数">337k</span>
   </span>
 </div>
 

@@ -23,12 +23,12 @@
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="任何容量网络的最大流的流量是唯一确定的，但是可行的最大流不唯一。  假设一个容量网络\(G&#x3D;(V, E)\)。源点\(V_s\)，汇点\(V_t\)，弧\( \in E\)。\(c(u, v)\)表示弧\(\)的容量，\(r(u, v) \geq 0\)表示弧\(\)的单位流量费用。要求一个最大流\(f\)，使得\(f\)的总费用\(r(f)&#x3D;\sum_{">
+<meta name="description" content="任何容量网络的最大流的流量是唯一确定的，但是可行的最大流不唯一。 假设一个容量网络\(G&#x3D;(V, E)\)。源点\(V_s\)，汇点\(V_t\)，弧\(&lt;u, v&gt; \in E\)。\(c(u, v)\)表示弧\(&lt;u, v&gt;\)的容量，\(r(u, v) \geq 0\)表示弧\(&lt;u, v&gt;\)的单位流量费用。要求一个最大流\(f\)，使得\(f\)的总">
 <meta property="og:type" content="article">
 <meta property="og:title" content="最小费用最大流简介">
 <meta property="og:url" content="http://example.com/2021/07/11/%E6%9C%80%E5%B0%8F%E8%B4%B9%E7%94%A8%E6%9C%80%E5%A4%A7%E6%B5%81%E7%AE%80%E4%BB%8B/index.html">
 <meta property="og:site_name" content="兴趣使然的博客">
-<meta property="og:description" content="任何容量网络的最大流的流量是唯一确定的，但是可行的最大流不唯一。  假设一个容量网络\(G&#x3D;(V, E)\)。源点\(V_s\)，汇点\(V_t\)，弧\( \in E\)。\(c(u, v)\)表示弧\(\)的容量，\(r(u, v) \geq 0\)表示弧\(\)的单位流量费用。要求一个最大流\(f\)，使得\(f\)的总费用\(r(f)&#x3D;\sum_{">
+<meta property="og:description" content="任何容量网络的最大流的流量是唯一确定的，但是可行的最大流不唯一。 假设一个容量网络\(G&#x3D;(V, E)\)。源点\(V_s\)，汇点\(V_t\)，弧\(&lt;u, v&gt; \in E\)。\(c(u, v)\)表示弧\(&lt;u, v&gt;\)的容量，\(r(u, v) \geq 0\)表示弧\(&lt;u, v&gt;\)的单位流量费用。要求一个最大流\(f\)，使得\(f\)的总">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-11T02:52:55.000Z">
 <meta property="article:modified_time" content="2021-07-11T09:38:16.020Z">
@@ -293,7 +293,7 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-        <script src="/assets/js/DPlayer.min.js"> </script><p>任何容量网络的最大流的流量是唯一确定的，但是可行的最大流不唯一。</p>
+        <p>任何容量网络的最大流的流量是唯一确定的，但是可行的最大流不唯一。</p>
 <p>假设一个容量网络<span class="math inline">\(G=(V, E)\)</span>。源点<span class="math inline">\(V_s\)</span>，汇点<span class="math inline">\(V_t\)</span>，弧<span class="math inline">\(&lt;u, v&gt; \in E\)</span>。<span class="math inline">\(c(u, v)\)</span>表示弧<span class="math inline">\(&lt;u, v&gt;\)</span>的容量，<span class="math inline">\(r(u, v) \geq 0\)</span>表示弧<span class="math inline">\(&lt;u, v&gt;\)</span>的单位流量费用。要求一个最大流<span class="math inline">\(f\)</span>，使得<span class="math inline">\(f\)</span>的总费用<span class="math inline">\(r(f)=\sum_{&lt;u, v&gt; \in E}f(u, v) \times r(u, v)\)</span>最少，称为<strong>最小费用最大流</strong>。</p>
 <p>寻找最大流的方法是从某个可行流<span class="math inline">\(f\)</span>出发，找到关于<span class="math inline">\(f\)</span>的一条增广路<span class="math inline">\(P\)</span>，沿着<span class="math inline">\(P\)</span>调整<span class="math inline">\(f\)</span>，如此反复直到不存在增广路为止。</p>
 <p>现在要寻找最小费用最大流，首先考察当沿着一条增广路<span class="math inline">\(P\)</span>，以改进量<span class="math inline">\(\alpha=1\)</span>调整可行流<span class="math inline">\(f\)</span>，得到新的可行流<span class="math inline">\(f&#39;\)</span>（显然<span class="math inline">\(|f&#39;|=|f|+1\)</span>）后，<span class="math inline">\(r(f&#39;)\)</span>比<span class="math inline">\(r(f)\)</span>增加了多少？ <span class="math display">\[
@@ -504,7 +504,7 @@ ansq <span class="token operator">=</span> <span class="token function">q</span>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">334k</span>
+    <span title="站点总字数">337k</span>
   </span>
 </div>
 

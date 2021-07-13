@@ -23,12 +23,12 @@
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="自从将博客部署到码云（也就是Gitee）上之后，每次更新博客都需要手动前往Gitee Pages的管理网页点一下上面的更新按钮，实在是比较麻烦。网上也有一部分解决方法，不过要么要软件，要么是从GitHub上把博客同步过来，都不太适合我，我想找一种不需要外来软件和“曲线救国”的部署方式，随后我瞄准了Hexo本身的Scripts脚本功能，经过了很长时间的摸索，我终于找到了自动更新的方法。  之前使用过">
+<meta name="description" content="自从将博客部署到码云（也就是Gitee）上之后，每次更新博客都需要手动前往Gitee Pages的管理网页点一下上面的更新按钮，实在是比较麻烦。网上也有一部分解决方法，不过要么要软件，要么是从GitHub上把博客同步过来，都不太适合我，我想找一种不需要外来软件和“曲线救国”的部署方式，随后我瞄准了Hexo本身的Scripts脚本功能，经过了很长时间的摸索，我终于找到了自动更新的方法。 之前使用过">
 <meta property="og:type" content="article">
 <meta property="og:title" content="优化博客（二十）：实现Gitee Pages自动更新">
 <meta property="og:url" content="http://example.com/2021/07/12/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%E5%8D%81%EF%BC%89%EF%BC%9A%E5%AE%9E%E7%8E%B0Gitee-Pages%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0/index.html">
 <meta property="og:site_name" content="兴趣使然的博客">
-<meta property="og:description" content="自从将博客部署到码云（也就是Gitee）上之后，每次更新博客都需要手动前往Gitee Pages的管理网页点一下上面的更新按钮，实在是比较麻烦。网上也有一部分解决方法，不过要么要软件，要么是从GitHub上把博客同步过来，都不太适合我，我想找一种不需要外来软件和“曲线救国”的部署方式，随后我瞄准了Hexo本身的Scripts脚本功能，经过了很长时间的摸索，我终于找到了自动更新的方法。  之前使用过">
+<meta property="og:description" content="自从将博客部署到码云（也就是Gitee）上之后，每次更新博客都需要手动前往Gitee Pages的管理网页点一下上面的更新按钮，实在是比较麻烦。网上也有一部分解决方法，不过要么要软件，要么是从GitHub上把博客同步过来，都不太适合我，我想找一种不需要外来软件和“曲线救国”的部署方式，随后我瞄准了Hexo本身的Scripts脚本功能，经过了很长时间的摸索，我终于找到了自动更新的方法。 之前使用过">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-12T14:23:34.000Z">
 <meta property="article:modified_time" content="2021-07-12T15:07:41.053Z">
@@ -295,7 +295,7 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-        <script src="/assets/js/DPlayer.min.js"> </script><p>自从将博客部署到码云（也就是Gitee）上之后，每次更新博客都需要手动前往Gitee Pages的管理网页点一下上面的更新按钮，实在是比较麻烦。网上也有一部分解决方法，不过要么要软件，要么是从GitHub上把博客同步过来，都不太适合我，我想找一种不需要外来软件和“曲线救国”的部署方式，随后我瞄准了Hexo本身的Scripts脚本功能，经过了很长时间的摸索，我终于找到了自动更新的方法。</p>
+        <p>自从将博客部署到码云（也就是Gitee）上之后，每次更新博客都需要手动前往Gitee Pages的管理网页点一下上面的更新按钮，实在是比较麻烦。网上也有一部分解决方法，不过要么要软件，要么是从GitHub上把博客同步过来，都不太适合我，我想找一种不需要外来软件和“曲线救国”的部署方式，随后我瞄准了Hexo本身的Scripts脚本功能，经过了很长时间的摸索，我终于找到了自动更新的方法。</p>
 <p>之前使用过脚本实现新建文章后自动打开Typora的功能，不过那个时候是直接参考了现成的实现方法，代码也是照抄别人的，当时对代码的具体内容一知半解。后来简单学习了一下JavaScript之后，了解了代码的功能，分清了JavaScript和Node.js的关系。于是我产生了一个设想：能不能使用JavaScript模仿手动操作浏览器的方式，自动点击网页的更新按钮呢？</p>
 <p>这其中最困难的部分就是找到一个自动化操作浏览器的包，之前搜索资料的时候发现了一些用于做自动化测试的包，比如Selenium、Helium、Puppeteer，这里面的一些包在Python中也有，我之前也尝试编写了一个使用Helium的Python程序用来自动化操作浏览器，功能是实现了，不过Helium的API有些简单，有时候按钮会被网页弹出的广告遮住，这时候程序就会失效，而且必须手动执行这个Python程序，后来就放弃了。</p>
 <p>之后我发现了一个不错的工具：<a target="_blank" rel="noopener" href="https://playwright.dev/">Playwright</a>。这是由微软公司2020年初发布的新一代自动化测试工具。它的优势在于：</p>
@@ -426,7 +426,7 @@ hexo<span class="token punctuation">.</span><span class="token function">on</spa
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">334k</span>
+    <span title="站点总字数">337k</span>
   </span>
 </div>
 

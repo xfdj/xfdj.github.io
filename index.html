@@ -287,9 +287,8 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          自从将博客部署到码云（也就是Gitee）上之后，每次更新博客都需要手动前往Gitee Pages的管理网页点一下上面的更新按钮，实在是比较麻烦。网上也有一部分解决方法，不过要么要软件，要么是从GitHub上把博客同步过来，都不太适合我，我想找一种不需要外来软件和“曲线救国”的部署方式，随后我瞄准了Hexo本身的Scripts脚本功能，经过了很长时间的摸索，我终于找到了自动更新的方法。
-
-之前使用过
+          <p>自从将博客部署到码云（也就是Gitee）上之后，每次更新博客都需要手动前往Gitee Pages的管理网页点一下上面的更新按钮，实在是比较麻烦。网上也有一部分解决方法，不过要么要软件，要么是从GitHub上把博客同步过来，都不太适合我，我想找一种不需要外来软件和“曲线救国”的部署方式，随后我瞄准了Hexo本身的Scripts脚本功能，经过了很长时间的摸索，我终于找到了自动更新的方法。</p>
+<p>之前使用过脚本实现新建文章后自动打开Typora的功能，不过那个时候是直接参考了现成的实现方法，代码也是照抄别人的，当时对代码的具体内容一知半解。后来简单学习了一下JavaScript之后，了解了代码的功能，分清了JavaScript和Node.js的关系。于是我产生了一个设想：能不能使用JavaScript模仿手动操作浏览器的方式，自动点击网页的更新按钮呢？</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/07/12/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%E5%8D%81%EF%BC%89%EF%BC%9A%E5%AE%9E%E7%8E%B0Gitee-Pages%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0/#more" rel="contents">
@@ -375,9 +374,8 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          任何容量网络的最大流的流量是唯一确定的，但是可行的最大流不唯一。
-
-假设一个容量网络\(G=(V, E)\)。源点\(V_s\)，汇点\(V_t\)，弧\(<u, v> \in E\)。\(c(u, v)\)表示弧\(<u, v>\)的容量，\(r(u, v) \geq 0\)表示弧\(<u, v>\)的单位流量费用。要求一个最大流\(f\)，使得\(f\)的总费用\(r(f)=\sum_{<u,
+          <p>任何容量网络的最大流的流量是唯一确定的，但是可行的最大流不唯一。</p>
+<p>假设一个容量网络<span class="math inline">\(G=(V, E)\)</span>。源点<span class="math inline">\(V_s\)</span>，汇点<span class="math inline">\(V_t\)</span>，弧<span class="math inline">\(&lt;u, v&gt; \in E\)</span>。<span class="math inline">\(c(u, v)\)</span>表示弧<span class="math inline">\(&lt;u, v&gt;\)</span>的容量，<span class="math inline">\(r(u, v) \geq 0\)</span>表示弧<span class="math inline">\(&lt;u, v&gt;\)</span>的单位流量费用。要求一个最大流<span class="math inline">\(f\)</span>，使得<span class="math inline">\(f\)</span>的总费用<span class="math inline">\(r(f)=\sum_{&lt;u, v&gt; \in E}f(u, v) \times r(u, v)\)</span>最少，称为<strong>最小费用最大流</strong>。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/07/11/%E6%9C%80%E5%B0%8F%E8%B4%B9%E7%94%A8%E6%9C%80%E5%A4%A7%E6%B5%81%E7%AE%80%E4%BB%8B/#more" rel="contents">
@@ -469,21 +467,8 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          什么是Docker
-Docker为什么出现
-产品开发到上线需要两套环境。环境配置十分麻烦。每一个机器都要部署环境，费时费力。
-
-项目能不能带上环境安装？
-
-使用Docker。
-
-Docker核心思想是隔离，打包装箱（logo），每个“箱子”是互相隔离的。
-
-官网：https://www.docker.com/
-
-文档：https://docs.docker.com/
-
-仓库：https://hub
+          <h1 id="什么是docker">什么是Docker</h1>
+<h2 id="docker为什么出现">Docker为什么出现</h2>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/05/20/Docker%E7%AC%94%E8%AE%B0/#more" rel="contents">
@@ -575,26 +560,8 @@ Docker核心思想是隔离，打包装箱（logo），每个“箱子”是互�
     
     
     <div class="post-body" itemprop="articleBody">
-          有的没的
-前端四要素
-
- * 逻辑 * 判断
-    * 循环
-   
-   
- * 事件 * 浏览器事件：window、document
-    * DOM事件：增、删、遍历、修改节点元素内容
-    * jQuery
-   
-   
- * 视图 * HTML
-    * CSS * Bootstrap可视化布局
-      
-      
-   
-   
- * 通信 * Ajax * xhr
-
+          <h1 id="有的没的">有的没的</h1>
+<p>前端四要素</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/05/14/Vue%E7%AC%94%E8%AE%B0/#more" rel="contents">
@@ -686,16 +653,8 @@ Docker核心思想是隔离，打包装箱（logo），每个“箱子”是互�
     
     
     <div class="post-body" itemprop="articleBody">
-          JavaScript（行为）：是一种弱类型脚本语言，其源代码不需要经过编译，而是由浏览器解释运行，用于控制网页的行为。
-
-ECMAScript是JavaScript的一个标准。最新版本为ES6。但是大部分浏览器支持的版本为ES5。导致开发环境和线上环境版本不一致。
-
-快速入门
-引入JavaScript
- * 内部标签
-   
-   <!-- script标签内，写JavaScript代码 -->
-
+          <p>JavaScript（行为）：是一种弱类型脚本语言，其源代码不需要经过编译，而是由浏览器解释运行，用于控制网页的行为。</p>
+<p>ECMAScript是JavaScript的一个标准。最新版本为ES6。但是大部分浏览器支持的版本为ES5。导致开发环境和线上环境版本不一致。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/05/12/JavaScript%E7%AC%94%E8%AE%B0/#more" rel="contents">
@@ -787,25 +746,8 @@ ECMAScript是JavaScript的一个标准。最新版本为ES6。但是大部分浏
     
     
     <div class="post-body" itemprop="articleBody">
-          CSS简单介绍
-HTML+CSS+JavaScript
-
-结构+表现+交互
-
-骨头+皮+肌肉
-
-如何学习
- 1. CSS是什么
- 2. CSS怎么用（快速入门）
- 3. CSS选择器（重点+难点）
- 4. 美化网页（文字，阴影，超链接，列表，渐变……）
- 5. 盒子模型
- 6. 浮动
- 7. 定位
- 8. 网页动画（特效效果）
-
-什么是CSS
-Cascading Style Sheet 层叠样式表
+          <h1 id="css简单介绍">CSS简单介绍</h1>
+<p>HTML+CSS+JavaScript</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/05/05/CSS%E7%AC%94%E8%AE%B0/#more" rel="contents">
@@ -897,9 +839,8 @@ Cascading Style Sheet 层叠样式表
     
     
     <div class="post-body" itemprop="articleBody">
-          tmux快捷键速查
-会话
-快捷键功能命令Ctrl+b d分离当前会话tmux detachCtrl+b D选择要分离的会话Ctrl+b s列出所有会话用于选择并切换tmux ls/tmux list-sessionCtrl+b $重命名当前会话tmux rename-session -t <current-session> <new-name>Ctrl+b ?显示快捷键帮助文档Ctrl+b :进入
+          <h1 id="tmux快捷键速查">tmux快捷键速查</h1>
+<h2 id="会话">会话</h2>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/04/28/tmux%E7%AC%94%E8%AE%B0/#more" rel="contents">
@@ -991,17 +932,8 @@ Cascading Style Sheet 层叠样式表
     
     
     <div class="post-body" itemprop="articleBody">
-          初识HTML
-HTML：超文本标记语言（Hyper Text Markup Language）。超文本包括：文字、图片、音频、视频、动画等。
-
-<!DOCTYPE html>
-<html lang="en">
-<!-- 网页头部 -->
-<head>
-    <meta charset="UTF-8">
-    <title>我的第一个网页</title>
-</head>
-<!-- 主体部分 --
+          <h1 id="初识html">初识HTML</h1>
+<p>HTML：超文本标记语言（Hyper Text Markup Language）。超文本包括：文字、图片、音频、视频、动画等。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/04/24/HTML%E7%AC%94%E8%AE%B0/#more" rel="contents">
@@ -1093,18 +1025,16 @@ HTML：超文本标记语言（Hyper Text Markup Language）。超文本包括�
     
     
     <div class="post-body" itemprop="articleBody">
-          使用signal.Notify
-func main() {
-    sigs := make(chan os.Signal)
+          <h2 id="使用signal.notify">使用signal.Notify</h2>
+<pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    sigs <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">chan</span> os<span class="token punctuation">.</span>Signal<span class="token punctuation">)</span>
     
-    // signal.Notify(sigs, os.Interrupt)
-    signal.Notify(sigs, syscall.SIGINT)
+    <span class="token comment">// signal.Notify(sigs, os.Interrupt)</span>
+    signal<span class="token punctuation">.</span><span class="token function">Notify</span><span class="token punctuation">(</span>sigs<span class="token punctuation">,</span> syscall<span class="token punctuation">.</span>SIGINT<span class="token punctuation">)</span>
     
-    sig := <-sigs
-    fmt.Println(sig)
-}
-
-使用si
+    sig <span class="token operator">:=</span> <span class="token operator">&lt;-</span>sigs
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>sig<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/04/23/Golang%E7%A8%8B%E5%BA%8F%E6%8E%A5%E6%94%B6%E7%BB%88%E6%AD%A2%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%96%B9%E5%BC%8F/#more" rel="contents">
@@ -1196,17 +1126,10 @@ func main() {
     
     
     <div class="post-body" itemprop="articleBody">
-          MATLAB工具箱
-MATLAB工具箱.png工具箱内容位于APP菜单栏内。
-
-MATLAB数值变量
-数值变量
-MATLAB各种数据类型都以矩阵的形式存在，矩阵是MATLAB最基本的数据对象，并且矩阵的运算都是定义在复数域上的。
-
-数值类型
- * 有符号整型：int8、int16、int32、int64
- * 无符号整型：uint8、uint16、uint32、uint64
- * 单精度浮点型：s
+          <h1 id="matlab工具箱">MATLAB工具箱</h1>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2021_03_20_MATLAB%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8_MATLAB%E5%B7%A5%E5%85%B7%E7%AE%B1.png" alt="MATLAB工具箱.png"><figcaption aria-hidden="true">MATLAB工具箱.png</figcaption>
+</figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/20/MATLAB%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#more" rel="contents">
@@ -1257,7 +1180,7 @@ MATLAB各种数据类型都以矩阵的形式存在，矩阵是MATLAB最基本�
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">334k</span>
+    <span title="站点总字数">337k</span>
   </span>
 </div>
 
