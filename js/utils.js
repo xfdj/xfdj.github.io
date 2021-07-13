@@ -275,10 +275,21 @@ NexT.utils = {
           targets  : document.scrollingElement,
           duration : 500,
           easing   : 'linear',
-          scrollTop: offset + 10
+          scrollTop: offset + 10,
+          complete : () => {
+            history.pushState(null, document.title, element.href);
+          }
         });
       });
       return target;
+    });
+  },
+
+  registerPostReward: function() {
+    const button = document.querySelector('.reward-container button');
+    if (!button) return;
+    button.addEventListener('click', () => {
+      document.querySelector('.post-reward').classList.toggle('active');
     });
   },
 

@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 <meta name="description" content="文章要认认真真写鸭">
 <meta property="og:type" content="website">
 <meta property="og:title" content="兴趣使然的博客">
@@ -206,6 +206,7 @@ p.spoiler {
 
           </div>
         </div>
+      </div>
     </div>
   </aside>
   <div class="sidebar-dimmer"></div>
@@ -292,9 +293,10 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Ubuntu 18.04的启动效果看起来比较土，所以打算更换Ubuntu的Grub主题和加载动画。在网上查找资料时发现有许多方法都已经过时，所以自己在这里整理出适用于18.04版本的方法。亲测可用。</p>
-<h2 id="更改grub主题">更改Grub主题</h2>
-<p>Grub是Linux的系统启动管理器。如果你的电脑上同时安装了Windows和Linux，可以在Grub里选择你
+          Ubuntu 18.04的启动效果看起来比较土，所以打算更换Ubuntu的Grub主题和加载动画。在网上查找资料时发现有许多方法都已经过时，所以自己在这里整理出适用于18.04版本的方法。亲测可用。
+
+更改Grub主题
+Grub是Linux的系统启动管理器。如果你的电脑上同时安装了Windows和Linux，可以在Grub里选择你要启动的操作系统。Ubuntu 18.04使用的是Grub2作为默认
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/10/01/%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C/#more" rel="contents">
@@ -386,10 +388,14 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><code>部分内容引用自参考参考文章，侵删。</code></p>
-<p>博客的主题更换为NexT之后，还可以进行一些配置。</p>
-<blockquote>
-<p>在 Hexo 中有两份主要的配置文件，其名称都是<code>_config.yml</code>。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主
+          部分内容引用自参考参考文章，侵删。
+
+博客的主题更换为NexT之后，还可以进行一些配置。
+
+在 Hexo 中有两份主要的配置文件，其名称都是_config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。 为了描述方便，在以下说明中，将前者称为站点配置文件， 后者称为主题配置文件。
+
+菜单设置
+开始的时
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/09/07/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9ANexT%E4%B8%BB%E9%A2%98%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/#more" rel="contents">
@@ -481,9 +487,11 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="为什么要使用yarn">为什么要使用Yarn？</h1>
-<p>Node.js自带一个包管理工具npm，不过在我的日常使用（写博客）过程中（比如说要卸载模块的时候），npm出现了一些奇怪的问题，网上也没有查询到解决办法。所以打算尝试使用另外一个包管理工具Yarn看看是否问题能得到解决。</p>
-<figure>
+          为什么要使用Yarn？
+Node.js自带一个包管理工具npm，不过在我的日常使用（写博客）过程中（比如说要卸载模块的时候），npm出现了一些奇怪的问题，网上也没有查询到解决办法。所以打算尝试使用另外一个包管理工具Yarn看看是否问题能得到解决。
+
+npm问题.png什么是Yarn？
+Yarn是Facebook，Google，Exponent和Tilde开发的一款新的JavaScript包管理工具
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/09/05/%E4%BD%BF%E7%94%A8Node-js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Yarn/#more" rel="contents">
@@ -575,8 +583,15 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>写博客的时候遇到了一些问题，在本地可以渲染的LaTeX语法，到了网上就无法显示了。就像下面这个样子。</p>
-<figure>
+          写博客的时候遇到了一些问题，在本地可以渲染的LaTeX语法，到了网上就无法显示了。就像下面这个样子。
+
+本地没问题.png本地渲染正常。
+
+网上有问题.png网上渲染不正常。
+
+网上有通过安装hexo-math包来解决的文章，但是自己尝试后由于npm出了毛病，并没有成功。
+
+网上的数学公式大多是用MathJax（适用于所有浏览器的数学JavaScript显示引擎——MathJax官网）来渲染显示的
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/09/04/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E8%A7%A3%E5%86%B3LaTeX%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E7%9A%84%E9%97%AE%E9%A2%98%E3%80%81%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/#more" rel="contents">
@@ -668,11 +683,13 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>离开了科普的伊甸园，马上就要迎来货真价实的数学了：）</p>
-<h1 id="第一章拓扑空间与连续性">第一章：拓扑空间与连续性</h1>
-<p>之前提到过第一个我们需要定义什么是拓扑空间。</p>
-<ul>
-<li><strong>定义</strong>：设<span class="math inline">\(X\)</span>为非空集合
+          离开了科普的伊甸园，马上就要迎来货真价实的数学了：）
+
+第一章：拓扑空间与连续性
+之前提到过第一个我们需要定义什么是拓扑空间。
+
+ * 定义：设\(X\)为非空集合，\(\tau\)为\(X\)的子集族，如果\(\tau\)满足： 1. \(X, \phi \in \tau\)；
+    2. \(A, B \in \tau, A \cap B \in \tau\)；（\(\tau\)中有限多个成
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/09/03/%E6%8B%93%E6%89%91%E5%AD%A6%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4%E4%B8%8E%E8%BF%9E%E7%BB%AD%E6%80%A7/#more" rel="contents">
@@ -764,7 +781,10 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>这篇文章是我的学习笔记系列第一篇文章。和传统的学习笔记不同的是，我不只是打算在上面罗列知识点，而是想用自己的语言重新描述课堂上所学到的知识，用自己的思维逻辑来重新理解这些知识。最理想的打算是当我几乎忘记这门课的内容时，能够通过回看自己的文章重新捡起这些内容。当然，这个任务是相当难完成的。而且我事先也预计到，这是一项相当花费脑力和时间的工作。我会尽最大的努力坚持下去。</p>
+          这篇文章是我的学习笔记系列第一篇文章。和传统的学习笔记不同的是，我不只是打算在上面罗列知识点，而是想用自己的语言重新描述课堂上所学到的知识，用自己的思维逻辑来重新理解这些知识。最理想的打算是当我几乎忘记这门课的内容时，能够通过回看自己的文章重新捡起这些内容。当然，这个任务是相当难完成的。而且我事先也预计到，这是一项相当花费脑力和时间的工作。我会尽最大的努力坚持下去。
+
+引言
+拓扑学是一门大四才开设
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/09/03/%E6%8B%93%E6%89%91%E5%AD%A6%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%BC%95%E8%A8%80/#more" rel="contents">
@@ -856,9 +876,14 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><code>注：为了避免发生问题，本篇教程只适用于依照我之前的教程搭建的博客。</code></p>
-<h1 id="迁移博客的原因">迁移博客的原因</h1>
-<p>需要重装电脑，所以博客的迁移自然成了一个问题。由于Hexo的配置以及文章均保存在本地，所以暂时没办法像其他在线博客平台一样随时撰文发布。要想在新的电脑上继续更新原来的博客，就需要进行迁移。</p>
+          注：为了避免发生问题，本篇教程只适用于依照我之前的教程搭建的博客。
+
+迁移博客的原因
+需要重装电脑，所以博客的迁移自然成了一个问题。由于Hexo的配置以及文章均保存在本地，所以暂时没办法像其他在线博客平台一样随时撰文发布。要想在新的电脑上继续更新原来的博客，就需要进行迁移。
+
+迁移博客的要求
+首先，我们想让之前的配置在新的电脑上依然有效，模板、皮肤以及各种其他的设置都能保留下来，而不用重新配置。
+
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/08/21/%E5%B0%86%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E5%8F%A6%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91/#more" rel="contents">
@@ -950,11 +975,16 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="我为什么需要一个博客">我为什么需要一个博客</h1>
-<p>这个博客的诞生，源于我一直以来的一个想法。</p>
-<p>在童年没有什么特殊要求的时候，我使用QQ空间记录日志。</p>
-<p>上了大学以后，由于课程的要求，我开通了CSDN的账号撰写技术博客。</p>
-<p>这两段经历告诉了我使用<strong>第三方博客工具存在的限制</strong>：</p>
+          我为什么需要一个博客
+这个博客的诞生，源于我一直以来的一个想法。
+
+在童年没有什么特殊要求的时候，我使用QQ空间记录日志。
+
+上了大学以后，由于课程的要求，我开通了CSDN的账号撰写技术博客。
+
+这两段经历告诉了我使用第三方博客工具存在的限制：
+
+ 1. 如Word一般混乱的排版规则（QQ空间）。QQ空间的文章可以选择纯文本编辑或者HTML，像我这样平凡的小朋友肯定是选择纯文本编辑的，字号、字体、
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/07/27/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2/#more" rel="contents">
@@ -1046,8 +1076,7 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>My first test article.</p>
-
+          My first test article.
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/07/26/test/#more" rel="contents">
@@ -1139,7 +1168,9 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+
+Quic
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/07/26/hello-world/#more" rel="contents">
@@ -1209,7 +1240,7 @@ p.spoiler {
 <script src="/js/third-party/search/local-search.js"></script>
 
 
-  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.9.3/dist/mermaid.min.js","integrity":"sha256-OyJHvRcZHaRR6Ig73ppxF4QXk8HzvfgTprRWkulCkfY="}}</script>
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.11.0/dist/mermaid.min.js","integrity":"sha256-sVAx+v/Q7v0Q2xm5vN7h5ccSna6gaLREhG9sF8pKT6I="}}</script>
   <script src="/js/third-party/tags/mermaid.js"></script>
 
   <script class="next-config" data-name="nprogress" type="application/json">{"enable":true,"spinner":true}</script>
@@ -1222,7 +1253,7 @@ p.spoiler {
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js","integrity":"sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 

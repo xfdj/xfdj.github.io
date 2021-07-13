@@ -22,13 +22,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="随着文章的增加，搜索功能也变得越来越重要，不过搜索功能一般是需要数据库支持的，所以WordPress一类动态博客默认都支持搜索，但是Hexo等静态博客由于没有后端数据库，所以添加搜索需要花一点心思。 本地搜索，是指通过插件生成序列化数据，前端调用脚本处理数据，返回搜索结果。看不懂没关系，因为我也不懂因为只需要安装一个插件就完事了。">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="随着文章的增加，搜索功能也变得越来越重要，不过搜索功能一般是需要数据库支持的，所以WordPress一类动态博客默认都支持搜索，但是Hexo等静态博客由于没有后端数据库，所以添加搜索需要花一点心思。  本地搜索，是指通过插件生成序列化数据，前端调用脚本处理数据，返回搜索结果。看不懂没关系，因为我也不懂因为只需要安装一个插件就完事了。  注：本方法基于NexT主题。  安装hexo-generato">
 <meta property="og:type" content="article">
 <meta property="og:title" content="优化博客（三）：添加本地搜索功能">
 <meta property="og:url" content="http://example.com/2018/10/02/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/index.html">
 <meta property="og:site_name" content="兴趣使然的博客">
-<meta property="og:description" content="随着文章的增加，搜索功能也变得越来越重要，不过搜索功能一般是需要数据库支持的，所以WordPress一类动态博客默认都支持搜索，但是Hexo等静态博客由于没有后端数据库，所以添加搜索需要花一点心思。 本地搜索，是指通过插件生成序列化数据，前端调用脚本处理数据，返回搜索结果。看不懂没关系，因为我也不懂因为只需要安装一个插件就完事了。">
+<meta property="og:description" content="随着文章的增加，搜索功能也变得越来越重要，不过搜索功能一般是需要数据库支持的，所以WordPress一类动态博客默认都支持搜索，但是Hexo等静态博客由于没有后端数据库，所以添加搜索需要花一点心思。  本地搜索，是指通过插件生成序列化数据，前端调用脚本处理数据，返回搜索结果。看不懂没关系，因为我也不懂因为只需要安装一个插件就完事了。  注：本方法基于NexT主题。  安装hexo-generato">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_10_02_%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD_%E6%90%9C%E7%B4%A2%E7%95%8C%E9%9D%A2.png">
 <meta property="article:published_time" content="2018-10-02T03:11:08.000Z">
@@ -214,6 +214,7 @@ p.spoiler {
 
           </div>
         </div>
+      </div>
     </div>
   </aside>
   <div class="sidebar-dimmer"></div>
@@ -397,7 +398,7 @@ p.spoiler {
 <script src="/js/third-party/search/local-search.js"></script>
 
 
-  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.9.3/dist/mermaid.min.js","integrity":"sha256-OyJHvRcZHaRR6Ig73ppxF4QXk8HzvfgTprRWkulCkfY="}}</script>
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.11.0/dist/mermaid.min.js","integrity":"sha256-sVAx+v/Q7v0Q2xm5vN7h5ccSna6gaLREhG9sF8pKT6I="}}</script>
   <script src="/js/third-party/tags/mermaid.js"></script>
 
   <script class="next-config" data-name="nprogress" type="application/json">{"enable":true,"spinner":true}</script>
@@ -410,7 +411,7 @@ p.spoiler {
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js","integrity":"sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 

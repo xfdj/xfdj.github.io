@@ -22,13 +22,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="什么是Docker Docker为什么出现 产品开发到上线需要两套环境。环境配置十分麻烦。每一个机器都要部署环境，费时费力。 项目能不能带上环境安装？ 使用Docker。 Docker核心思想是隔离，打包装箱（logo），每个“箱子”是互相隔">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="什么是Docker Docker为什么出现 产品开发到上线需要两套环境。环境配置十分麻烦。每一个机器都要部署环境，费时费力。  项目能不能带上环境安装？  使用Docker。  Docker核心思想是隔离，打包装箱（logo），每个“箱子”是互相隔离的。  官网：https:&#x2F;&#x2F;www.docker.com&#x2F;  文档：https:&#x2F;&#x2F;docs.docker.com&#x2F;  仓库：https:&#x2F;&#x2F;hub">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker笔记">
 <meta property="og:url" content="http://example.com/2021/05/20/Docker%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="兴趣使然的博客">
-<meta property="og:description" content="什么是Docker Docker为什么出现 产品开发到上线需要两套环境。环境配置十分麻烦。每一个机器都要部署环境，费时费力。 项目能不能带上环境安装？ 使用Docker。 Docker核心思想是隔离，打包装箱（logo），每个“箱子”是互相隔">
+<meta property="og:description" content="什么是Docker Docker为什么出现 产品开发到上线需要两套环境。环境配置十分麻烦。每一个机器都要部署环境，费时费力。  项目能不能带上环境安装？  使用Docker。  Docker核心思想是隔离，打包装箱（logo），每个“箱子”是互相隔离的。  官网：https:&#x2F;&#x2F;www.docker.com&#x2F;  文档：https:&#x2F;&#x2F;docs.docker.com&#x2F;  仓库：https:&#x2F;&#x2F;hub">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2021_05_20_Docker%E7%AC%94%E8%AE%B0_Docker%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84.svg">
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2021_05_20_Docker%E7%AC%94%E8%AE%B0_Docker%20Command%20Diagram.png">
@@ -213,6 +213,7 @@ p.spoiler {
 
           </div>
         </div>
+      </div>
     </div>
   </aside>
   <div class="sidebar-dimmer"></div>
@@ -799,7 +800,7 @@ docker run -dP --name tomcat-net-02 --net mynet tomcat<span aria-hidden="true" c
 <script src="/js/third-party/search/local-search.js"></script>
 
 
-  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.9.3/dist/mermaid.min.js","integrity":"sha256-OyJHvRcZHaRR6Ig73ppxF4QXk8HzvfgTprRWkulCkfY="}}</script>
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.11.0/dist/mermaid.min.js","integrity":"sha256-sVAx+v/Q7v0Q2xm5vN7h5ccSna6gaLREhG9sF8pKT6I="}}</script>
   <script src="/js/third-party/tags/mermaid.js"></script>
 
   <script class="next-config" data-name="nprogress" type="application/json">{"enable":true,"spinner":true}</script>
@@ -812,7 +813,7 @@ docker run -dP --name tomcat-net-02 --net mynet tomcat<span aria-hidden="true" c
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-mml-chtml.js","integrity":"sha256-ncNI9OXOS5Ek4tzVYiOMmN/KKCPZ6V0Cpv2P/zHntiA="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
