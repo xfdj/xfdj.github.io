@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.7.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInUp","post_header":"fadeInUp","post_body":"fadeInUp","coll_header":"fadeInUp","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 <meta name="description" content="课程简介 什么是机器学习？">
 <meta property="og:type" content="article">
 <meta property="og:title" content="李宏毅机器学习笔记">
@@ -37,8 +37,18 @@
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A91.png">
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_%E9%9A%90%E8%97%8F%E5%9B%A0%E7%B4%A0.png">
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_%E6%AD%A3%E5%88%99%E5%8C%96.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Estimator.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_%E5%81%8F%E5%B7%AE%E5%92%8C%E6%96%B9%E5%B7%AE.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Variance.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Bias%20Vs.%20Variance.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Cross%20Validation.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_N-fold%20Cross%20Validation.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Review-Gradient%20Descent.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Stochastic%20Gradient%20Descent.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Feature%20Scaling.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_%E6%A0%87%E5%87%86%E5%8C%96.png">
 <meta property="article:published_time" content="2020-12-16T12:38:17.000Z">
-<meta property="article:modified_time" content="2021-03-15T12:29:27.657Z">
+<meta property="article:modified_time" content="2021-07-15T08:39:14.571Z">
 <meta property="article:author" content="想飞的鸡">
 <meta property="article:tag" content="机器学习">
 <meta name="twitter:card" content="summary">
@@ -186,7 +196,7 @@ p.spoiler {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">课程简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.1.</span> <span class="nav-text">什么是机器学习？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E6%83%B3%E6%89%BE%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">你想找什么样的函数？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E5%91%8A%E8%AF%89%E6%9C%BA%E5%99%A8%E4%BD%A0%E6%83%B3%E6%89%BE%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">怎么告诉机器你想找什么样的函数？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E6%80%8E%E4%B9%88%E6%89%BE%E5%87%BA%E4%BD%A0%E6%83%B3%E8%A6%81%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text">机器怎么找出你想要的函数？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%B2%BF%E7%A0%94%E7%A9%B6"><span class="nav-number">1.5.</span> <span class="nav-text">前沿研究</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E5%BD%92"><span class="nav-number">2.</span> <span class="nav-text">回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E5%BD%92%E5%8F%AF%E4%BB%A5%E5%81%9A%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text">回归可以做什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E6%B5%8B%E5%AE%9D%E5%8F%AF%E6%A2%A6%E8%BF%9B%E5%8C%96%E5%90%8E%E7%9A%84cp%E5%80%BC"><span class="nav-number">2.2.</span> <span class="nav-text">预测宝可梦进化后的CP值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E8%A7%A3%E8%BF%99%E4%B8%AA%E9%97%AE%E9%A2%98"><span class="nav-number">2.2.1.</span> <span class="nav-text">怎么解这个问题？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C%E5%A6%82%E4%BD%95%E5%91%A2"><span class="nav-number">2.2.2.</span> <span class="nav-text">结果如何呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%81%9A%E5%BE%97%E6%9B%B4%E5%A5%BD%E5%91%A2"><span class="nav-number">2.2.3.</span> <span class="nav-text">如何做得更好呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%87%E6%8B%9F%E5%90%88"><span class="nav-number">2.2.4.</span> <span class="nav-text">过拟合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-number">2.2.5.</span> <span class="nav-text">正则化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E9%A1%B5"><span class="nav-number">3.</span> <span class="nav-text">参考网页</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">课程简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.1.</span> <span class="nav-text">什么是机器学习？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E6%83%B3%E6%89%BE%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">你想找什么样的函数？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E5%91%8A%E8%AF%89%E6%9C%BA%E5%99%A8%E4%BD%A0%E6%83%B3%E6%89%BE%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">怎么告诉机器你想找什么样的函数？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E6%80%8E%E4%B9%88%E6%89%BE%E5%87%BA%E4%BD%A0%E6%83%B3%E8%A6%81%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text">机器怎么找出你想要的函数？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%B2%BF%E7%A0%94%E7%A9%B6"><span class="nav-number">1.5.</span> <span class="nav-text">前沿研究</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E5%BD%92"><span class="nav-number">2.</span> <span class="nav-text">回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E5%BD%92%E5%8F%AF%E4%BB%A5%E5%81%9A%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text">回归可以做什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E6%B5%8B%E5%AE%9D%E5%8F%AF%E6%A2%A6%E8%BF%9B%E5%8C%96%E5%90%8E%E7%9A%84cp%E5%80%BC"><span class="nav-number">2.2.</span> <span class="nav-text">预测宝可梦进化后的CP值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E8%A7%A3%E8%BF%99%E4%B8%AA%E9%97%AE%E9%A2%98"><span class="nav-number">2.2.1.</span> <span class="nav-text">怎么解这个问题？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C%E5%A6%82%E4%BD%95%E5%91%A2"><span class="nav-number">2.2.2.</span> <span class="nav-text">结果如何呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%81%9A%E5%BE%97%E6%9B%B4%E5%A5%BD%E5%91%A2"><span class="nav-number">2.2.3.</span> <span class="nav-text">如何做得更好呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%87%E6%8B%9F%E5%90%88"><span class="nav-number">2.2.4.</span> <span class="nav-text">过拟合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-number">2.2.5.</span> <span class="nav-text">正则化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">3.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D"><span class="nav-number">4.</span> <span class="nav-text">梯度下降</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E9%A1%B5"><span class="nav-number">5.</span> <span class="nav-text">参考网页</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -199,15 +209,13 @@ p.spoiler {
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+        <a href="/archives/">
           <span class="site-state-item-count">90</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
+          <a href="/tags/">
         <span class="site-state-item-count">62</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
@@ -279,7 +287,7 @@ p.spoiler {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-15 20:29:27" itemprop="dateModified" datetime="2021-03-15T20:29:27+08:00">2021-03-15</time>
+        <time title="修改时间：2021-07-15 16:39:14" itemprop="dateModified" datetime="2021-07-15T16:39:14+08:00">2021-07-15</time>
       </span>
 
   
@@ -288,14 +296,14 @@ p.spoiler {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.3k</span>
+      <span>8.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>6 分钟</span>
+      <span>14 分钟</span>
     </span>
 </div>
 
@@ -449,7 +457,153 @@ L = \sum_n \left(\hat y^n - \left(b + \sum w_i x_i\right)\right)^2 + \lambda \su
 </figure>
 <p>正则化项可能会使得训练结果变差，但是可能会使得测试结果变好。不过太平滑也不行。</p>
 <p>多平滑合适呢？要调整<span class="math inline">\(\lambda\)</span>的值来找到合适的模型。</p>
-<p>正则化项是不需要考虑偏移量的，因为偏移量不影响函数的平滑程度。</p>
+<p>正则化项是不需要考虑偏移量（bias）的，因为偏移量不影响函数的平滑程度。</p>
+<h1 id="基本概念">基本概念</h1>
+<p>模型越复杂，在测试集上的表现不一定更好，意思是误差不一定越低。</p>
+<p>那么误差都来自什么地方呢？偏差（bias）和方差（variance）。</p>
+<p>为什么要了解误差都来自什么地方呢？因为如果你知道误差的来源，就可以挑选适当的方法来改进你的模型。</p>
+<p>假设说我们要对宝可梦进化后的CP值做一个估测，也就是说我们要找一个估计量（estimator），一个函数，输入一个宝可梦，可以输出它的CP值，游戏里面实际使用的函数<span class="math inline">\(\hat f\)</span>的具体细节我们是不知道的。<span class="math inline">\(\hat f\)</span>表示理想模型，<span class="math inline">\(f^*\)</span>表示我们从训练数据中学习到的模型，<span class="math inline">\(f^*\)</span>是<span class="math inline">\(\hat f\)</span>的估计值。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Estimator.png" alt="Estimator.png" /><figcaption aria-hidden="true">Estimator.png</figcaption>
+</figure>
+<p>我们找到的<span class="math inline">\(f^*\)</span>一般是不等于<span class="math inline">\(\hat f\)</span>的，<span class="math inline">\(f^*\)</span>会和<span class="math inline">\(\hat f\)</span>有一段“距离”。这段距离可能来自于偏差，也有可能来自于方差。一个估计量的偏差和方差指的是什么呢？</p>
+<p>先来看一个概率论里面的例子。考虑一个随机变量<span class="math inline">\(x\)</span>，<span class="math inline">\(x\)</span>的期望值是<span class="math inline">\(\mu\)</span>，方差是<span class="math inline">\(\sigma^2\)</span>。现在来估计<span class="math inline">\(x\)</span>的期望值<span class="math inline">\(\mu\)</span>，方法是采<span class="math inline">\(N\)</span>个样本<span class="math inline">\(x_1, x_2, \dots, x_N\)</span>，令<span class="math inline">\(\bar x\)</span>等于<span class="math inline">\(x_i\)</span>的均值</p>
+<p><span class="math display">\[
+\bar x=\frac{1}{N}\sum_{i=1}^N x_i
+\]</span></p>
+<p>容易发现<span class="math inline">\(\bar x \neq \mu\)</span>，但是<span class="math inline">\(\bar x\)</span>的期望值<span class="math inline">\(E[\bar x]\)</span>等于<span class="math inline">\(\mu\)</span>。 <span class="math display">\[
+E[\bar x]=E\left[\frac{1}{N}\sum_{i=1}^N x_i\right]=\frac{1}{N}\sum_{i=1}^N E[x]=\mu
+\]</span> 这时我们称<span class="math inline">\(\mu\)</span>的估计<span class="math inline">\(\bar x\)</span>是无偏的。</p>
+<p>这个时候<span class="math inline">\(\bar x\)</span>的方差 <span class="math display">\[
+Var[\bar x] = \frac{\sigma^2}{N}
+\]</span> 当<span class="math inline">\(N\)</span>越大的时候<span class="math inline">\(\bar x\)</span>的方差越小。</p>
+<p>如果要估计<span class="math inline">\(\sigma^2\)</span>怎么办呢？一样可以采取刚才的方式。 <span class="math display">\[
+s^2=\frac 1 N \sum_{i=1}^{N}(x_i-\bar x)^2
+\]</span> 这个时候<span class="math inline">\(s^2\)</span>是对<span class="math inline">\(\sigma^2\)</span>的估计，但是这个估计是一个有偏估计。因为<span class="math inline">\(s^2\)</span>的期望不等于<span class="math inline">\(\sigma^2\)</span>。 <span class="math display">\[
+E[s^2]=\frac{N-1}{N}\sigma^2\neq\sigma^2
+\]</span> 随着<span class="math inline">\(N\)</span>的增大，<span class="math inline">\(s^2\)</span>和<span class="math inline">\(\sigma^2\)</span>的差距会逐渐变小。</p>
+<p>回到<span class="math inline">\(f^*\)</span>的问题中来。回归中的误差也来自于这两件事，偏差和方差。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_%E5%81%8F%E5%B7%AE%E5%92%8C%E6%96%B9%E5%B7%AE.png" alt="偏差和方差.png" /><figcaption aria-hidden="true">偏差和方差.png</figcaption>
+</figure>
+<p>虽然<span class="math inline">\(f^*\)</span>只有一个，但是也是隐含了偏差和方差在里面，这个偏差和方差是训练样本带来的。假设有很多组不同的训练样本，就可以训练出很多不同的<span class="math inline">\(f^*\)</span>。使用不同模型得到的<span class="math inline">\(f^*\)</span>会有一些不同。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Variance.png" alt="Variance.png" /><figcaption aria-hidden="true">Variance.png</figcaption>
+</figure>
+<p>我们先来看方差。对于比较简单的模型来说，方差会比较小，而对于复杂的模型来说，方差会比较大。</p>
+<p>为什么比较复杂的模型散布得比较开呢？因为比较简单的模型不容易受到样本数据的影响。</p>
+<p>当我们使用复杂的模型的时候，虽然每一次的方差会很大，但是所有模型的平均值会很接近最终的理想模型。</p>
+<p>当模型越来越复杂的时候，偏差会减小，方差会增大。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Bias%20Vs.%20Variance.png" alt="Bias Vs. Variance.png" /><figcaption aria-hidden="true">Bias Vs. Variance.png</figcaption>
+</figure>
+<p>如果误差来自于方差的话，那么这种情况就是过拟合；如果误差来自于偏差的话，那么这种情况就是欠拟合。</p>
+<p>如何处理偏差大的情况呢？</p>
+<p>首先如何知道自己是偏差大的情况？如果你的模型没有办法很好地你和训练数据的话，你的偏差就很大，这种时候就是欠拟合。但是如果你的模型训练数据拟合得很好，但是测试数据误差很大，那么你很可能方差很大，这种时候就是过拟合。</p>
+<p>当你知道自己的偏差很大的时候，你就需要重新设计你的模型，因为理想模型可能根本不在你的模型范围里面。可以做的事情包括：在输入中增加更多的特征，或者使用更复杂的模型。偏差很大的时候就没有必要去收集更多的数据了。</p>
+<p>如何处理方差大的情况呢？</p>
+<p>当你的模型方差很大的时候，其中一个办法就是增加你的数据。但是不见得现实。还有一种方法是自己制造假的数据，根据自己对问题的理解。正则化也是一种方法，但是有可能会使偏差变大，所以要调节正则化的权重，在平滑度和小偏差之间达到一种平衡。</p>
+<p>在模型的选择过程中，经常需要在偏差和方差之间找一个平衡。有时候在你手上的测试集表现很好的模型，不一定在实际的测试集上表现很好，所以不要一味选择在你手上的测试集表现最好的模型。</p>
+<p>正确的做法是交叉验证（Cross Validation）。把训练集再细分成训练集和验证集，在新的训练集上训练模型，然后在验证集上选择模型，选择在验证集表现最好的模型之后，用全部的训练集再训练最好的模型，然后在测试集上验证。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Cross%20Validation.png" alt="Cross Validation.png" /><figcaption aria-hidden="true">Cross Validation.png</figcaption>
+</figure>
+<p>如果担心分出来的验证集也有偏差怎么办？可以使用N折交叉验证（N-fold Cross Validation）。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_N-fold%20Cross%20Validation.png" alt="N-fold Cross Validation.png" /><figcaption aria-hidden="true">N-fold Cross Validation.png</figcaption>
+</figure>
+<h1 id="梯度下降">梯度下降</h1>
+<p>来复习一下之前提到过的梯度下降。我们需要解决如下的优化问题。 <span class="math display">\[
+\theta^*=\arg\min_\theta L(\theta)
+\]</span> 损失函数<span class="math inline">\(L(\theta)\)</span>可以看作函数的函数，它的输入是一个函数，或者是可以代表函数的参数。它可以评价一个函数“有多坏”。我们需要找到使得<span class="math inline">\(L(\theta)\)</span>最小的参数<span class="math inline">\(\theta^*\)</span>。下面来回忆一下梯度下降是怎么做的。</p>
+<p>假设<span class="math inline">\(\theta\)</span>包含两个分量<span class="math inline">\(\theta_1, \theta_2\)</span>。</p>
+<p>首先随机初始化<span class="math inline">\(\theta\)</span>的值。 <span class="math display">\[
+\theta^0=\begin{bmatrix}
+\theta^0_1  \\
+\theta^0_2
+\end{bmatrix}
+\]</span> 之后如下更新： <span class="math display">\[
+\begin{bmatrix}
+\theta^1_1 \\
+\theta^1_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+\theta^0_1 \\
+\theta^0_2
+\end{bmatrix}
+- \eta
+\begin{bmatrix}
+\frac{\partial L(\theta^0)}{\partial \theta_1} \\
+\frac{\partial L(\theta^0)}{\partial \theta_2}
+\end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\begin{bmatrix}
+\theta^2_1 \\
+\theta^2_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+\theta^1_1 \\
+\theta^1_2
+\end{bmatrix}
+- \eta
+\begin{bmatrix}
+\frac{\partial L(\theta^1)}{\partial \theta_1} \\
+\frac{\partial L(\theta^1)}{\partial \theta_2}
+\end{bmatrix}
+\]</span></p>
+<p>其中偏导数的部分可以写成 <span class="math display">\[
+\nabla L(\theta)=\begin{bmatrix}
+\frac{\partial L(\theta)}{\partial \theta_1} \\
+\frac{\partial L(\theta)}{\partial \theta_2}
+\end{bmatrix}
+\]</span> 这样更新部分可以写成 <span class="math display">\[
+\theta^{t+1} = \theta^t - \eta \nabla L(\theta^t)
+\]</span> 可以把梯度方向理解成损失函数的等高线的法线方向。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Review-Gradient%20Descent.png" alt="Review-Gradient Descent.png" /><figcaption aria-hidden="true">Review-Gradient Descent.png</figcaption>
+</figure>
+<p>梯度下降有几个小提示。</p>
+<ul>
+<li><p>小心调整学习率<span class="math inline">\(\eta\)</span>。如果学习率太大，损失函数可能会越更新越大，如果学习率太小，损失函数可能会下降得很慢。只有刚刚好的学习率，才有可能得到一个好的结果。所以应该要把损失函数的变化图画出来，根据前几步的图像调整学习率，要确定损失函数能够稳定地下降。</p>
+<p>有一些自动的办法可以帮我们调整学习率。最简单的一个想法是学习率会随着参数的更新越来越小。因为刚开始离最低点比较远，步子要迈得大一点，等到离最低点很近的时候，步子要迈小一点。</p>
+<p>但是这样子还不够，还有一种想法是给每一个参数不同的学习率。这其中一个最简单最容易实现的叫做Adagrad。它的思想是将每一个参数的学习率除以该参数之前所有微分的均方根（RMS）。</p>
+<p>假设一般的梯度下降是 <span class="math display">\[
+\theta^{t+1}=\theta^t-\eta^t\frac{\partial L(\theta^t)}{\partial \theta^t}
+\]</span> 这里假设<span class="math inline">\(\eta^t=\frac{\eta}{\sqrt{t+1}}\)</span></p>
+<p>Adagard则是 <span class="math display">\[
+\theta^{t+1}=\theta^t-\frac{\eta^t}{\sigma^t}\frac{\partial L(\theta^t)}{\partial \theta^t}
+\]</span> 这里的<span class="math inline">\(\sigma^t\)</span>是<span class="math inline">\(\theta\)</span>之前微分的均方根。这个值对每一个参数都是不一样的。 <span class="math display">\[
+\sigma^t=\sqrt{\frac{1}{t+1}\sum^t_{i=0}\left(\frac{\partial L(\theta^i)}{\partial \theta^i}\right)^2}
+\]</span> 化简一下可以变成 <span class="math display">\[
+\theta^{t+1}=\theta^t-\frac{\eta}{\sqrt{\sum^t_{i=1}\left(\frac{\partial L(\theta^i)}{\partial \theta^i}\right)^2}}\frac{\partial L(\theta^i)}{\partial \theta^i}
+\]</span> 当然自适应地调整学习率有一系列的方法，如果没有什么需求，可以使用Adam。</p></li>
+<li><p>最好的步长和一次微分成正比，和二次微分成反比。Adagrad神奇的地方在于它的步长正好正比于一次微分，反比于二次微分。分母的一坨东西想要代表的是二次微分。Adagrad想做的事情是在不直接计算出二次微分的情况下，能不能想办法估计一下二次微分的大小，并且Adagrad只需要一次微分的值。所以这个分母的值可以理解成一种“反差”的大小，如果二次微分比较小，那么在局部最低点附近的一次微分的值也比较小，那采样出来的几个一次微分的值求平方和开根号也比较小，反之亦然，所以分母从某种程度上代表了二次微分值的大小。</p></li>
+<li><p>随机梯度下降。修改损失函数的表达，从 <span class="math display">\[
+L=\sum_n\left(\hat y^n - \left( b+\sum w_i x^n_i\right)\right)^2
+\]</span> 到随机取一个样本<span class="math inline">\(x^n\)</span> <span class="math display">\[
+L^n=\left(\hat y^n - \left( b+\sum w_i x^n_i\right)\right)^2
+\]</span> 从算所有训练数据的损失到只算一个训练数据的损失。</p>
+<p>也就是从 <span class="math display">\[
+\theta^{t+1} = \theta^t - \eta \nabla L(\theta^t)
+\]</span> 到 <span class="math display">\[
+\theta^{t+1} = \theta^t - \eta \nabla L^n(\theta^t)
+\]</span> <img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Stochastic%20Gradient%20Descent.png" alt="Stochastic Gradient Descent.png" /></p>
+<p>随机梯度下降好在哪里呢？原始的梯度下降走的方向很稳，但是走一步的计算量很大，而随机梯度下降虽然一步的方向不是很正确，但是计算速度快，走完一个批次之后的结果可能比原始的梯度下降要好。</p></li>
+<li><p>特征缩放。主要思想是希望不同的特征，有相同的范围。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Feature%20Scaling.png" alt="Feature Scaling.png" /><figcaption aria-hidden="true">Feature Scaling.png</figcaption>
+</figure>
+<p>为什么要这么做呢？感觉其实这和给每个参数不同的学习率有异曲同工之妙。</p>
+<p>其中一种特征缩放的方式就是标准化。让所有特征的均值都是0，方差都是1。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_%E6%A0%87%E5%87%86%E5%8C%96.png" alt="标准化.png" /><figcaption aria-hidden="true">标准化.png</figcaption>
+</figure></li>
+</ul>
+<p>梯度下降有效的根本原因是因为泰勒展开。所以理论上，根据泰勒展开，可以把损失函数用二次微分近似，但是这样产生的运算（Hessian matrix等等）是无法承受的。</p>
+<p>梯度下降的一个弊端是它可能会卡在局部最优解或者鞍点等微分是0的地方，也有可能会在一个类似高原的地方更新缓慢。</p>
 <h1 id="参考网页">参考网页</h1>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av94519857">李宏毅2020机器学习深度学习(完整版)国语_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</a></li>
@@ -511,7 +665,7 @@ L = \sum_n \left(\hat y^n - \left(b + \sum w_i x_i\right)\right)^2 + \lambda \su
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">337k</span>
+    <span title="站点总字数">341k</span>
   </span>
 </div>
 
@@ -530,7 +684,7 @@ L = \sum_n \left(\hat y^n - \left(b + \sum w_i x_i\right)\right)^2 + \lambda \su
 <script src="/js/third-party/search/local-search.js"></script>
 
 
-  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.11.0/dist/mermaid.min.js","integrity":"sha256-sVAx+v/Q7v0Q2xm5vN7h5ccSna6gaLREhG9sF8pKT6I="}}</script>
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.11.2/dist/mermaid.min.js","integrity":"sha256-lBK8/r0PCT3qtPtIvDcaT+20nHioFbzRGg36kOJ+wz4="}}</script>
   <script src="/js/third-party/tags/mermaid.js"></script>
 
   <script class="next-config" data-name="nprogress" type="application/json">{"enable":true,"spinner":true}</script>
