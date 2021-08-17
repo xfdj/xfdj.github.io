@@ -31,7 +31,7 @@
 <meta property="og:description" content="在星际争霸（AlphaStar）和围棋（AlphaGO）游戏中，强化学习已取得了举世瞩目的成功。 而这些成功背后的核心则是用于求解马尔可夫决策过程（MDP）的贝尔曼最优性方程（Bellman Optimality Equation）。 可以说，贝尔曼方程在强化学习（RL）中无处不在，了解此方程的数学基础对于理解 RL 算法的工作原理必不可少。它是由美国应用数学家理查德·贝尔曼（Richard B">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-29T01:10:51.000Z">
-<meta property="article:modified_time" content="2021-08-17T03:05:24.523Z">
+<meta property="article:modified_time" content="2021-08-17T05:33:55.859Z">
 <meta property="article:author" content="想飞的鸡">
 <meta property="article:tag" content="转载">
 <meta property="article:tag" content="数学">
@@ -180,7 +180,7 @@ p.spoiler {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E5%B0%86%E6%B6%89%E5%8F%8A%E5%88%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"><span class="nav-number">1.</span> <span class="nav-text">本文将涉及到的数学符号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86"><span class="nav-number">2.</span> <span class="nav-text">预备知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%90%86%E8%A7%A3%E8%B4%9D%E5%B0%94%E6%9B%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%87%A0%E5%A4%A7%E8%A6%81%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">理解贝尔曼方程的几大要点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%8A%A8%E7%82%B9%E9%97%AE%E9%A2%98"><span class="nav-number">3.1.</span> <span class="nav-text">1. 不动点问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4"><span class="nav-number">3.2.</span> <span class="nav-text">2. 度量空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%AF%E8%A5%BF%E5%BA%8F%E5%88%97"><span class="nav-number">3.3.</span> <span class="nav-text">3. 柯西序列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8C%E5%A4%87%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4"><span class="nav-number">3.4.</span> <span class="nav-text">4. 完备度量空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%8B%E7%BC%A9%E6%98%A0%E5%83%8F"><span class="nav-number">3.5.</span> <span class="nav-text">5. 压缩映像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%B4%E6%8B%BF%E8%B5%AB%E4%B8%8D%E5%8A%A8%E7%82%B9%E5%AE%9A%E7%90%86"><span class="nav-number">3.6.</span> <span class="nav-text">6. 巴拿赫不动点定理</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E5%B0%86%E6%B6%89%E5%8F%8A%E5%88%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"><span class="nav-number">1.</span> <span class="nav-text">本文将涉及到的数学符号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86"><span class="nav-number">2.</span> <span class="nav-text">预备知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%90%86%E8%A7%A3%E8%B4%9D%E5%B0%94%E6%9B%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%87%A0%E5%A4%A7%E8%A6%81%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">理解贝尔曼方程的几大要点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%8A%A8%E7%82%B9%E9%97%AE%E9%A2%98"><span class="nav-number">3.1.</span> <span class="nav-text">1. 不动点问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4"><span class="nav-number">3.2.</span> <span class="nav-text">2. 度量空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%AF%E8%A5%BF%E5%BA%8F%E5%88%97"><span class="nav-number">3.3.</span> <span class="nav-text">3. 柯西序列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8C%E5%A4%87%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4"><span class="nav-number">3.4.</span> <span class="nav-text">4. 完备度量空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%8B%E7%BC%A9%E6%98%A0%E5%83%8F"><span class="nav-number">3.5.</span> <span class="nav-text">5. 压缩映像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%B4%E6%8B%BF%E8%B5%AB%E4%B8%8D%E5%8A%A8%E7%82%B9%E5%AE%9A%E7%90%86"><span class="nav-number">3.6.</span> <span class="nav-text">6. 巴拿赫不动点定理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E5%88%B0%E8%B4%9D%E5%B0%94%E6%9B%BC%E6%9C%80%E4%BC%98%E6%80%A7%E6%96%B9%E7%A8%8B"><span class="nav-number">4.</span> <span class="nav-text">回到贝尔曼最优性方程</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -271,7 +271,7 @@ p.spoiler {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-17 11:05:24" itemprop="dateModified" datetime="2021-08-17T11:05:24+08:00">2021-08-17</time>
+        <time title="修改时间：2021-08-17 13:33:55" itemprop="dateModified" datetime="2021-08-17T13:33:55+08:00">2021-08-17</time>
       </span>
 
   
@@ -280,14 +280,14 @@ p.spoiler {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>6.6k</span>
+      <span>9.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>11 分钟</span>
+      <span>15 分钟</span>
     </span>
 </div>
 
@@ -457,6 +457,50 @@ d\left(x_{m}, x_{n}\right) &amp; \leq d\left(f^{m}\left(x_{o}\right), f^{m-1}\le
 &amp;\leq \frac{\gamma^{n}}{(1-\gamma)} d\left(f\left(x_{o}\right), x_{o}\right)
 \end{aligned}
 \]</span> 现在，通过选择一个足够大的<span class="math inline">\(n\)</span>，我们可以使上式的右边小于任何正实数<span class="math inline">\(\varepsilon\)</span>。因此，序列序列<span class="math inline">\((x_1,x_2,x_3 \dots x_n)\)</span>是柯西序列，并且存在最优的<span class="math inline">\(x^*\in X\)</span>。 这就证明了巴拿赫不动点定理。</p>
+<h1 id="回到贝尔曼最优性方程">回到贝尔曼最优性方程</h1>
+<p>对于值函数<span class="math inline">\(v(s)\)</span>，我们定义一个新的算子，即最优贝尔曼算子<span class="math inline">\(B\)</span>，它接受一个值函数并返回一个新的值函数。 具体地，我们将此算子定义如下：</p>
+<p><span class="math display">\[
+B v(s)=\max _{a} R_{s}^{a}+\gamma \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a} v\left(s^{\prime}\right)
+\]</span></p>
+<center>
+贝尔曼算子
+</center>
+<p>可以很容易地观察到，<span class="math inline">\(B\)</span>是一个递归算子。 因此，对初始值函数重复运用此算子将生成一系列值函数。 如果我们可以证明<span class="math inline">\(B\)</span>确实是某个度量空间<span class="math inline">\((X,d)\)</span>上的压缩映射，那么根据巴拿赫不动点定理，我们可以得出结论，最优贝尔曼算子的重复应用最终将导出唯一的最优值函数函数，通过值函数可以得到最优策略。 因此，我们的工作现在都简化为证明<span class="math inline">\(B\)</span>是压缩映射。 首先，让我们定义度量空间如下：</p>
+<p>度量空间<span class="math inline">\((X,d)\)</span>：集合X是值函数的取值空间，定义如下：</p>
+<p><span class="math display">\[
+X : v \in \mathbb{R}^{|\mathbb{S}|}
+\]</span> <span class="math inline">\(X\)</span>的定义，表示值函数在所有状态上的取值，故是实数集的笛卡尔积。</p>
+<p>对此度量空间，我们使用的L-无穷范数定义如下：</p>
+<p><span class="math display">\[
+||X||_{\infty}=\max _{i \in[0,|X|]} |X_{i}|
+\]</span></p>
+<center>
+L-无穷范数
+</center>
+<p>根据此度量空间范数的定义，两个值函数之间的距离等于两个值函数向量各方向绝对值之差的最大值。 同样，对于有限奖励的有限MDP，值函数将始终在实数空间中。 因此，此有限空间是完备的。</p>
+<p>定理：贝尔曼算子<span class="math inline">\(B\)</span>是有限空间<span class="math inline">\((X, L_\infty)\)</span>上的压缩映射</p>
+<p>证明：假设<span class="math inline">\(v_1\)</span>和<span class="math inline">\(v_2\)</span>是两个值函数。 则：</p>
+<p><span class="math display">\[
+\begin{aligned}
+||B v_{1}(s)-B v_{2}(s)|| &amp;=\left\| \max _{a}\left(R_{s}^{a}+\gamma \sum_{s^{\prime}} P_{s s^{\prime}}^{a} v_{1}\left(s^{\prime}\right)\right)-\max _{a^{\prime}}\left(R_{s}^{a^{\prime}}+\gamma \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a^{\prime}} v_{2}\left(s^{\prime}\right)\right) \right\| \\
+&amp; \leq\left\|\max _{a}\left(R_{s}^{a}+\gamma \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a} v_{1}\left(s^{\prime}\right)-R_{s}^{a}+\gamma \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a} v_{2}\left(s^{\prime}\right)\right)\right\| \\
+&amp; \leq \gamma \left\| \max _{a}\sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a}\left(v_{1}\left(s^{\prime}\right)-v_{2}\left(s^{\prime}\right)\right) \right\|\\
+&amp; \leq \gamma \max _{a, s^{\prime}} \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a}\left(v_{1}\left(s^{\prime}\right)-v_{2}\left(s^{\prime}\right)\right) \\
+&amp; \leq \gamma\left\|v_{1}\left(s^{\prime}\right)-v_{2}\left(s^{\prime}\right)\right\| \max _{a, s^{\prime}} \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a} \\
+&amp; \leq \gamma\left\|v_{1}\left(s^{\prime}\right)-v_{2}\left(s^{\prime}\right)\right\|
+\end{aligned}
+\]</span> 在上面的第二步中，我们通过用<span class="math inline">\(a\)</span>代替第二个值函数中的<span class="math inline">\(a&#39;\)</span>来引入不等式。这是因为通过将最优动作<span class="math inline">\(a\)</span>替换为其他动作<span class="math inline">\(a&#39;\)</span>，我们降低了其总价值，从而引入了不等式。</p>
+<p>在上面的第四步中，我们通过在状态空间<span class="math inline">\(s&#39;\)</span>上取最大值来移除L-无穷范数（回想一下在前面我们关于值函数的L-无穷范数的定义）</p>
+<p>在最后一步中，因为概率和始终为1，我们消去了求和号。</p>
+<p>最后，在贝尔曼最优性方程中，由于<span class="math inline">\(\gamma\in[0,1)\)</span>（现在暂时忽略<span class="math inline">\(\gamma=1\)</span>的可能性），因此贝尔曼算子是压缩映射。</p>
+<p>现在我们知道：</p>
+<ul>
+<li><span class="math inline">\((X, L_\infty)\)</span>是一个完备的度量空间</li>
+<li>贝尔曼算子<span class="math inline">\(B\)</span>是压缩映射</li>
+</ul>
+<p>因此，根据巴拿赫不动点定理，我们得出结论，对每个MDP，存在唯一的最优值函数<span class="math inline">\(v_*\)</span>，使用这个值函数，我们可以得到最优策略<span class="math inline">\(\pi^*\)</span>。</p>
+<p>因此证明，对于任何有限的MDP，都存在一个最优策略<span class="math inline">\(\pi^*\)</span>，不差于其他所有可能的策略<span class="math inline">\(\pi\)</span>。</p>
+<p>那么，问题来了，如何找到这种最优的策略和值函数呢？一种方法就是在随机初始值函数上重复运用贝尔曼算子以获得最佳函数。但是，这在计算上非常耗时，此法经常是完全不可行的。因此，我们要使用诸如值和策略迭代之类的迭代方法或诸如Q-Learning或SARSA之类的时间差分方法。有关更多信息，请参阅作者的博客（https://towardsdatascience.com/reinforcement-learning-temporal-difference-sarsa-q-learning-expected-sarsa-on-python-9fecfda7467e）或者github（https://github.com/TimeTraveller-San/RL_from_scratch）。</p>
 
     </div>
 
@@ -515,7 +559,7 @@ d\left(x_{m}, x_{n}\right) &amp; \leq d\left(f^{m}\left(x_{o}\right), f^{m-1}\le
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">339k</span>
+    <span title="站点总字数">341k</span>
   </span>
 </div>
 

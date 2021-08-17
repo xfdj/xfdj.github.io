@@ -9272,6 +9272,50 @@ d\left(x_{m}, x_{n}\right) &amp; \leq d\left(f^{m}\left(x_{o}\right), f^{m-1}\le
 &amp;\leq \frac{\gamma^{n}}{(1-\gamma)} d\left(f\left(x_{o}\right), x_{o}\right)
 \end{aligned}
 \]</span> 现在，通过选择一个足够大的<span class="math inline">\(n\)</span>，我们可以使上式的右边小于任何正实数<span class="math inline">\(\varepsilon\)</span>。因此，序列序列<span class="math inline">\((x_1,x_2,x_3 \dots x_n)\)</span>是柯西序列，并且存在最优的<span class="math inline">\(x^*\in X\)</span>。 这就证明了巴拿赫不动点定理。</p>
+<h1 id="回到贝尔曼最优性方程">回到贝尔曼最优性方程</h1>
+<p>对于值函数<span class="math inline">\(v(s)\)</span>，我们定义一个新的算子，即最优贝尔曼算子<span class="math inline">\(B\)</span>，它接受一个值函数并返回一个新的值函数。 具体地，我们将此算子定义如下：</p>
+<p><span class="math display">\[
+B v(s)=\max _{a} R_{s}^{a}+\gamma \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a} v\left(s^{\prime}\right)
+\]</span></p>
+<center>
+贝尔曼算子
+</center>
+<p>可以很容易地观察到，<span class="math inline">\(B\)</span>是一个递归算子。 因此，对初始值函数重复运用此算子将生成一系列值函数。 如果我们可以证明<span class="math inline">\(B\)</span>确实是某个度量空间<span class="math inline">\((X,d)\)</span>上的压缩映射，那么根据巴拿赫不动点定理，我们可以得出结论，最优贝尔曼算子的重复应用最终将导出唯一的最优值函数函数，通过值函数可以得到最优策略。 因此，我们的工作现在都简化为证明<span class="math inline">\(B\)</span>是压缩映射。 首先，让我们定义度量空间如下：</p>
+<p>度量空间<span class="math inline">\((X,d)\)</span>：集合X是值函数的取值空间，定义如下：</p>
+<p><span class="math display">\[
+X : v \in \mathbb{R}^{|\mathbb{S}|}
+\]</span> <span class="math inline">\(X\)</span>的定义，表示值函数在所有状态上的取值，故是实数集的笛卡尔积。</p>
+<p>对此度量空间，我们使用的L-无穷范数定义如下：</p>
+<p><span class="math display">\[
+||X||_{\infty}=\max _{i \in[0,|X|]} |X_{i}|
+\]</span></p>
+<center>
+L-无穷范数
+</center>
+<p>根据此度量空间范数的定义，两个值函数之间的距离等于两个值函数向量各方向绝对值之差的最大值。 同样，对于有限奖励的有限MDP，值函数将始终在实数空间中。 因此，此有限空间是完备的。</p>
+<p>定理：贝尔曼算子<span class="math inline">\(B\)</span>是有限空间<span class="math inline">\((X, L_\infty)\)</span>上的压缩映射</p>
+<p>证明：假设<span class="math inline">\(v_1\)</span>和<span class="math inline">\(v_2\)</span>是两个值函数。 则：</p>
+<p><span class="math display">\[
+\begin{aligned}
+||B v_{1}(s)-B v_{2}(s)|| &amp;=\left\| \max _{a}\left(R_{s}^{a}+\gamma \sum_{s^{\prime}} P_{s s^{\prime}}^{a} v_{1}\left(s^{\prime}\right)\right)-\max _{a^{\prime}}\left(R_{s}^{a^{\prime}}+\gamma \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a^{\prime}} v_{2}\left(s^{\prime}\right)\right) \right\| \\
+&amp; \leq\left\|\max _{a}\left(R_{s}^{a}+\gamma \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a} v_{1}\left(s^{\prime}\right)-R_{s}^{a}+\gamma \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a} v_{2}\left(s^{\prime}\right)\right)\right\| \\
+&amp; \leq \gamma \left\| \max _{a}\sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a}\left(v_{1}\left(s^{\prime}\right)-v_{2}\left(s^{\prime}\right)\right) \right\|\\
+&amp; \leq \gamma \max _{a, s^{\prime}} \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a}\left(v_{1}\left(s^{\prime}\right)-v_{2}\left(s^{\prime}\right)\right) \\
+&amp; \leq \gamma\left\|v_{1}\left(s^{\prime}\right)-v_{2}\left(s^{\prime}\right)\right\| \max _{a, s^{\prime}} \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a} \\
+&amp; \leq \gamma\left\|v_{1}\left(s^{\prime}\right)-v_{2}\left(s^{\prime}\right)\right\|
+\end{aligned}
+\]</span> 在上面的第二步中，我们通过用<span class="math inline">\(a\)</span>代替第二个值函数中的<span class="math inline">\(a&#39;\)</span>来引入不等式。这是因为通过将最优动作<span class="math inline">\(a\)</span>替换为其他动作<span class="math inline">\(a&#39;\)</span>，我们降低了其总价值，从而引入了不等式。</p>
+<p>在上面的第四步中，我们通过在状态空间<span class="math inline">\(s&#39;\)</span>上取最大值来移除L-无穷范数（回想一下在前面我们关于值函数的L-无穷范数的定义）</p>
+<p>在最后一步中，因为概率和始终为1，我们消去了求和号。</p>
+<p>最后，在贝尔曼最优性方程中，由于<span class="math inline">\(\gamma\in[0,1)\)</span>（现在暂时忽略<span class="math inline">\(\gamma=1\)</span>的可能性），因此贝尔曼算子是压缩映射。</p>
+<p>现在我们知道：</p>
+<ul>
+<li><span class="math inline">\((X, L_\infty)\)</span>是一个完备的度量空间</li>
+<li>贝尔曼算子<span class="math inline">\(B\)</span>是压缩映射</li>
+</ul>
+<p>因此，根据巴拿赫不动点定理，我们得出结论，对每个MDP，存在唯一的最优值函数<span class="math inline">\(v_*\)</span>，使用这个值函数，我们可以得到最优策略<span class="math inline">\(\pi^*\)</span>。</p>
+<p>因此证明，对于任何有限的MDP，都存在一个最优策略<span class="math inline">\(\pi^*\)</span>，不差于其他所有可能的策略<span class="math inline">\(\pi\)</span>。</p>
+<p>那么，问题来了，如何找到这种最优的策略和值函数呢？一种方法就是在随机初始值函数上重复运用贝尔曼算子以获得最佳函数。但是，这在计算上非常耗时，此法经常是完全不可行的。因此，我们要使用诸如值和策略迭代之类的迭代方法或诸如Q-Learning或SARSA之类的时间差分方法。有关更多信息，请参阅作者的博客（https://towardsdatascience.com/reinforcement-learning-temporal-difference-sarsa-q-learning-expected-sarsa-on-python-9fecfda7467e）或者github（https://github.com/TimeTraveller-San/RL_from_scratch）。</p>
 ]]></content>
       <tags>
         <tag>转载</tag>
