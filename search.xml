@@ -9316,6 +9316,12 @@ L-无穷范数
 <p>因此，根据巴拿赫不动点定理，我们得出结论，对每个MDP，存在唯一的最优值函数<span class="math inline">\(v_*\)</span>，使用这个值函数，我们可以得到最优策略<span class="math inline">\(\pi^*\)</span>。</p>
 <p>因此证明，对于任何有限的MDP，都存在一个最优策略<span class="math inline">\(\pi^*\)</span>，不差于其他所有可能的策略<span class="math inline">\(\pi\)</span>。</p>
 <p>那么，问题来了，如何找到这种最优的策略和值函数呢？一种方法就是在随机初始值函数上重复运用贝尔曼算子以获得最佳函数。但是，这在计算上非常耗时，此法经常是完全不可行的。因此，我们要使用诸如值和策略迭代之类的迭代方法或诸如Q-Learning或SARSA之类的时间差分方法。有关更多信息，请参阅作者的博客（https://towardsdatascience.com/reinforcement-learning-temporal-difference-sarsa-q-learning-expected-sarsa-on-python-9fecfda7467e）或者github（https://github.com/TimeTraveller-San/RL_from_scratch）。</p>
+<h1 id="总结">总结</h1>
+<p>我们了解了一些基本的数学工具，例如度量空间，完备度量空间，柯西序列，压缩映射和巴拿赫不动点定理。 基于这些数学工具，我们在数学上证明了用于求解 MDP 的贝尔曼最优方程的唯一性和最优性。</p>
+<h1 id="转载自">转载自</h1>
+<ul>
+<li>[强化学习中无处不在的贝尔曼最优性方程，背后的数学原理知多少？ | 雷锋网](</li>
+</ul>
 ]]></content>
       <tags>
         <tag>转载</tag>
