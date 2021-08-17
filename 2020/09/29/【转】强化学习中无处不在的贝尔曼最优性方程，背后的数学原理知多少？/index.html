@@ -31,7 +31,7 @@
 <meta property="og:description" content="在星际争霸（AlphaStar）和围棋（AlphaGO）游戏中，强化学习已取得了举世瞩目的成功。 而这些成功背后的核心则是用于求解马尔可夫决策过程（MDP）的贝尔曼最优性方程（Bellman Optimality Equation）。 可以说，贝尔曼方程在强化学习（RL）中无处不在，了解此方程的数学基础对于理解 RL 算法的工作原理必不可少。它是由美国应用数学家理查德·贝尔曼（Richard B">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-29T01:10:51.000Z">
-<meta property="article:modified_time" content="2021-08-17T03:02:17.540Z">
+<meta property="article:modified_time" content="2021-08-17T03:05:24.523Z">
 <meta property="article:author" content="想飞的鸡">
 <meta property="article:tag" content="转载">
 <meta property="article:tag" content="数学">
@@ -180,7 +180,7 @@ p.spoiler {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E5%B0%86%E6%B6%89%E5%8F%8A%E5%88%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"><span class="nav-number">1.</span> <span class="nav-text">本文将涉及到的数学符号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86"><span class="nav-number">2.</span> <span class="nav-text">预备知识</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E5%B0%86%E6%B6%89%E5%8F%8A%E5%88%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"><span class="nav-number">1.</span> <span class="nav-text">本文将涉及到的数学符号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86"><span class="nav-number">2.</span> <span class="nav-text">预备知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%90%86%E8%A7%A3%E8%B4%9D%E5%B0%94%E6%9B%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%87%A0%E5%A4%A7%E8%A6%81%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">理解贝尔曼方程的几大要点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%8A%A8%E7%82%B9%E9%97%AE%E9%A2%98"><span class="nav-number">3.1.</span> <span class="nav-text">1. 不动点问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4"><span class="nav-number">3.2.</span> <span class="nav-text">2. 度量空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%AF%E8%A5%BF%E5%BA%8F%E5%88%97"><span class="nav-number">3.3.</span> <span class="nav-text">3. 柯西序列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8C%E5%A4%87%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4"><span class="nav-number">3.4.</span> <span class="nav-text">4. 完备度量空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%8B%E7%BC%A9%E6%98%A0%E5%83%8F"><span class="nav-number">3.5.</span> <span class="nav-text">5. 压缩映像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%B4%E6%8B%BF%E8%B5%AB%E4%B8%8D%E5%8A%A8%E7%82%B9%E5%AE%9A%E7%90%86"><span class="nav-number">3.6.</span> <span class="nav-text">6. 巴拿赫不动点定理</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -271,7 +271,7 @@ p.spoiler {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-17 11:02:17" itemprop="dateModified" datetime="2021-08-17T11:02:17+08:00">2021-08-17</time>
+        <time title="修改时间：2021-08-17 11:05:24" itemprop="dateModified" datetime="2021-08-17T11:05:24+08:00">2021-08-17</time>
       </span>
 
   
@@ -280,14 +280,14 @@ p.spoiler {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>882</span>
+      <span>6.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>11 分钟</span>
     </span>
 </div>
 
@@ -329,6 +329,134 @@ v_{*}(s)=\max _{a} R_{s}^{a}+\gamma \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a}
 <li><p>线性代数</p></li>
 <li><p>向量求导</p></li>
 </ul>
+<h1 id="理解贝尔曼方程的几大要点">理解贝尔曼方程的几大要点</h1>
+<p>如果你对 RL 和 MDP 略有研究，想必你一定会遇到过此类说法：“对于每个MDP，总有至少一个策略优于或等于所有其他策略。”</p>
+<p>在Sutton和Barto的经典教科书中以及David Silver的系列讲座中读到或听到这些说法时似乎非常直观，不证自明。但是，我们必得更深入地研究并以更具体的（当然，你懂得，作者意思是数学上的具体，而非常识上的直观）方式理解为何这么说。因此，在本文中，我将在数学上证明以下定理：</p>
+<blockquote>
+<p>对于任何有限的MDP，都存在一个最佳策略<span class="math inline">\(\pi^*\)</span>，满足其他所有可能的策略<span class="math inline">\(\pi\)</span>都不会比这个策略更好。</p>
+</blockquote>
+<p>在寻找最佳策略之前，我们需要先了解一下策略的顺序。即什么时候我们认为一项策略（<span class="math inline">\(\pi_1\)</span>）比另一项策略（<span class="math inline">\(\pi_2\)</span>）好？</p>
+<p>如果对于状态空间中的每个状态，使用<span class="math inline">\(\pi_1\)</span>派生的值函数在此状态的值都大于或等于使用<span class="math inline">\(\pi_2\)</span>派生的值函数在此状态的值，则可以说策略<span class="math inline">\(\pi_1\)</span>优于策略<span class="math inline">\(\pi_2\)</span>。数学上，可以这样写： <span class="math display">\[
+\pi_{1} \geq \pi_{2} \text { if } v_{\pi_{1}}(s) \geq v_{\pi_{2}}(s) \forall s \in S
+\]</span></p>
+<center>
+策略间的比较
+</center>
+<p>既然我们已经知道如何比较策略，接下来我们需要证明始终存在一个比所有其他策略都更好的策略。 我们将使用巴拿赫不动点定理证明这一点，方法是证明贝尔曼最优算子是对带有L-无穷范数度量的实数完备度量空间上的闭映射。 为此，我们首先说说不动点问题以及关于柯西序列的完整度量空间。</p>
+<p>上一段听起来很吓人，但是一旦我们理解了每个基本术语的含义，它将变得非常容易和直观。 所以别怕！我们接下来将一个一个地讨论上段标粗体的术语。 让我们克服我们的恐惧，以一种自下而上的方法，学习每个概念：</p>
+<h2 id="不动点问题">1. 不动点问题</h2>
+<p>我相信我们大多数人都熟悉方程求根问题。 我们求使函数<span class="math inline">\(f(x) = 0\)</span>的点<span class="math inline">\(x\)</span>。 在不动点问题中，我们则求解使得<span class="math inline">\(f(x) = x\)</span>的点<span class="math inline">\(x\)</span>。</p>
+<p>顾名思义，点<span class="math inline">\(x\)</span>是一个不动点，就是说即使在其上应用函数<span class="math inline">\(f(x)\)</span>，它的值也不会改变。 通过构造另一个函数<span class="math inline">\(g(x) = f(x)-x = 0\)</span>，不动点问题可以转化为方程求根的问题。</p>
+<p>实际上，方程求根问题也可以转换回求不动点问题。 但是（在特定情况下）解决不动点问题更容易，这使得不动点问题变得非常有趣和有用（节省了计算开销）。</p>
+<p>要解决不动点问题，随机选择一个<span class="math inline">\(x\)</span>的作为起始值，并无限次重复应用<span class="math inline">\(f(x)\)</span>。 如果“函数是收敛的”，那么你将找到不动点问题的解。</p>
+<p>从数学上讲，这很简单，让我们先介绍一个符号： <span class="math display">\[
+\begin{aligned}
+&amp;f^{n}(x): \text { apply the function } f() \text { n times on } x\\
+&amp;\text { example, } f^{2}(x)=f(f(x))
+\end{aligned}
+\]</span> 记号<span class="math inline">\(f^n(x)\)</span>表示在<span class="math inline">\(x\)</span>点上连续应用<span class="math inline">\(n\)</span>次函数。</p>
+<p>现在，如果函数是收敛的，那么它必须收敛到某个值，比方说，<span class="math inline">\(x^*\)</span>。 下面论证则是要说明这个值<span class="math inline">\(x^*\)</span>确实是不动点问题的解：</p>
+<p>让我们选择一任意值<span class="math inline">\(x_0\)</span>并在其上无限次应用函数<span class="math inline">\(f(.)\)</span>以获得<span class="math inline">\(x^*\)</span>，然后使用它来解决不动点问题，如下图所示： <span class="math display">\[
+\begin{aligned}
+\operatorname{let}, x^{*} &amp;=\lim_{n \rightarrow \infty} f^{n}\left(x_{o}\right) \\
+f\left(x^{*}\right) &amp;=f\left(\lim_{n \rightarrow \infty} f^{n}\left(x_{o}\right)\right) \\
+&amp;=\lim_{n \rightarrow \infty} f\left(f^{n}\left(x_{o}\right)\right) \\
+&amp;=\lim_{n \rightarrow \infty} f^{n+1}\left(x_{o}\right) \\
+&amp;=x^{*}
+\end{aligned}
+\]</span></p>
+<center>
+求解不动点问题
+</center>
+<p>这背后的直觉很简单，如果某个函数在某个点收敛，那么该函数在那个收敛点的值就是收敛点本身。 因此，这个收敛点就是不动点。</p>
+<p>也可以通过以下代码从经验上观察到函数收敛到不动点，代码链接如下：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://gist.github.com/TimeTraveller-San/8e37399d4740928a258f395413bde2e7/raw/c48fecd50fa29634eea144917f92787c3ccd7bf3/Fixed%20point%20problem.ipynb">https://gist.github.com/TimeTraveller-San/8e37399d4740928a258f395413bde2e7/raw/c48fecd50fa29634eea144917f92787c3ccd7bf3/Fixed%20point%20problem.ipynb</a></li>
+</ul>
+<h2 id="度量空间">2. 度量空间</h2>
+<p>度量空间只是一个在其上定义了度量的集合，度量则是定义了集合中任何两个元素之间的距离。 例如，欧几里德空间是度量空间，其距离定义为欧几里德距离。 因此，度量空间<span class="math inline">\(M\)</span>可表示为<span class="math inline">\((X, d)\)</span>，其中<span class="math inline">\(X\)</span>是集合，<span class="math inline">\(d\)</span>是某种度量。 一个度量<span class="math inline">\(d\)</span>必须满足以下四条性质：</p>
+<ul>
+<li><p>单位性：<span class="math inline">\(d(x,x) = 0\)</span></p></li>
+<li><p>非负性：<span class="math inline">\(d(x, y) &gt;0\)</span></p></li>
+<li><p>对称性：<span class="math inline">\(d(x,y) = d(y,x)\)</span></p></li>
+<li><p>三角不等式：<span class="math inline">\(d(x,z) ≤ d(x,y)+d(y,x)\)</span></p></li>
+</ul>
+<h2 id="柯西序列">3. 柯西序列</h2>
+<p>对于度量空间<span class="math inline">\((X,d)\)</span>，集合<span class="math inline">\(X\)</span>中的元素组成的序列<span class="math inline">\((x_1,x_2,x_3 \dots x_n)\)</span>是柯西序列， 如果对于任意正实数<span class="math inline">\(\varepsilon\)</span>，存在一个整数<span class="math inline">\(N\)</span>，使得以下等式成立：</p>
+<p><span class="math display">\[
+d\left(x_{a}, x_{b}\right)&lt;\varepsilon ; a, b&gt;N
+\]</span></p>
+<center>
+柯西序列
+</center>
+<p>这里的数学解释有点小复杂，还不够直观（然而实际定义就是这样的）。 用简单的话说，度量空间元素组成的序列如果在某个点收敛（它们无限接近于某个点），这个序列就是柯西序列。</p>
+<h2 id="完备度量空间">4. 完备度量空间</h2>
+<p>如果由集合<span class="math inline">\(X\)</span>中元素组成的每个可能的柯西序列都收敛到集合<span class="math inline">\(X\)</span>中的元素，则度量空间<span class="math inline">\((X, d)\)</span>是完备的。 也就是说，由集合元素组成的每个柯西序列的极限所对应元素也属于该集合， 这也是为什么它被称为“完备”的原因。</p>
+<h2 id="压缩映像">5. 压缩映像</h2>
+<p>在度量空间<span class="math inline">\((X, d)\)</span>的元素上定义的函数（算子或映射）是一个压缩映像（或压缩子），如果存在某个常数<span class="math inline">\(\gamma\in[0,1)\)</span>，使得对于度量空间中任意两个元素<span class="math inline">\(x_1\)</span>和<span class="math inline">\(x_2\)</span>，满足以下条件：</p>
+<p><span class="math display">\[
+d\left(f\left(x_{1}\right), f\left(x_{2}\right)\right) \leq \gamma d\left(x_{1}, x_{2}\right)
+\]</span></p>
+<center>
+压缩映像
+</center>
+<p>这也就意味着在将元素<span class="math inline">\(x_1\)</span>和<span class="math inline">\(x_2\)</span>上应用了映射<span class="math inline">\(f(.)\)</span>之后，它们彼此之间的距离至少在小于1的一个乘数因子<span class="math inline">\(\gamma\)</span>意义下更接近 。而且，该常数的最小值被称为Lipschitz常数（这是生成对抗网络的重要常数）。 另外，如果<span class="math inline">\(\gamma=1\)</span>，则映射不再是压缩映射，而是短映射。 直观上来说，在应用压缩映射后，元素之间序列值会越来越接近。</p>
+<h2 id="巴拿赫不动点定理">6. 巴拿赫不动点定理</h2>
+<p>此定理是我们证明的灵魂。非正式地讲，这个定理是说，对于一个完整的度量空间，将压缩映射一遍又一遍地应用到集合的元素上，我们最终将得到唯一的一个最优值。我们知道：</p>
+<ul>
+<li>压缩映射将集合中元素聚集到一起。</li>
+<li>不停地运用这个压缩映射，我们会得到一个柯西序列。</li>
+<li>完备度量空间中的柯西序列始终会收敛到自身中的一个值。</li>
+</ul>
+<p>形式上，该定理可以表述为：</p>
+<blockquote>
+<p>令<span class="math inline">\((X, d)\)</span>是一个完备的度量空间，函数<span class="math inline">\(f: X\to X\)</span>是一个压缩映射，则<span class="math inline">\(f\)</span>具有唯一一个不动点<span class="math inline">\(x^*\in X\)</span>（即，<span class="math inline">\(f(x^*)=x^*\)</span>），使得序列<span class="math inline">\(f(f(f(…f(x))))\)</span>收敛至<span class="math inline">\(x^*\)</span>。</p>
+</blockquote>
+<p>现在，为了数学上证明这一点，我们需要证明<span class="math inline">\(x^*\)</span>的唯一性和存在性。</p>
+<p>唯一性： 我们将通过反证法证明这一点。我们假设收敛值不是唯一的，并且<span class="math inline">\(x_1^*\)</span>和<span class="math inline">\(x_2^*\)</span>是压缩映射序列收敛的两个值，那么我们会有：</p>
+<p><span class="math display">\[
+d\left(f\left(x_{1}^{*}\right), f\left(x_{2}^{*}\right)\right)=d\left(x_{1}^{*}, x_{2}^{*}\right)\tag{1}
+\]</span> <span class="math inline">\(x_1^*\)</span>和<span class="math inline">\(x_2^*\)</span>是最优值，压缩映射已在这两点收敛，距离不再会变。此外，注意到<span class="math inline">\(f\)</span>是压缩映射，因此必须具有以下性质：</p>
+<p><span class="math display">\[
+d\left(f\left(x_{1}^{*}\right), f\left(x_{2}^{*}\right)\right) \leq \gamma d\left(x_{1}^{*}, x_{2}^{*}\right)\tag{2}
+\]</span> 现在，由于<span class="math inline">\(\gamma\in[0,1)\)</span>，无法同时满足等式(1)和(2)，导出矛盾（因为此处假定两点距离大于零）。 因此，我们的假设是错误的，<span class="math inline">\(x^*\)</span>必是唯一的。</p>
+<p>存在性 现在我们已经证明<span class="math inline">\(x^*\)</span>是唯一的，我们还需要证明<span class="math inline">\(x^*\)</span>存在。 令<span class="math inline">\((x_1,x_2,x_3 \dots x_n)\)</span>为重复应用压缩映射所形成的序列。</p>
+<p><span class="math display">\[
+x_{n}=f^{n}(x)
+\]</span></p>
+<center>
+重复应用压缩映射所形成的序列的通项
+</center>
+<p>如果我们假设序列<span class="math inline">\((x_1,x_2,x_3 \dots x_n)\)</span>是柯西序列，我们知道该序列将收敛到某个点，例如，<span class="math inline">\(x^*\)</span>。 而且，由于度量空间是完整的，所以该收敛点<span class="math inline">\(x^*\)</span>属于度量空间<span class="math inline">\((X,d)\)</span>。 现在，我们只需要证明此序列是柯西序列即可。 我们取序列中<span class="math inline">\(x_n\)</span>和<span class="math inline">\(x_m\)</span>中两个元素，使得<span class="math inline">\(m &gt;&gt; n\)</span>，并使得<span class="math inline">\(m\)</span>足够大，然后通过重复应用度量<span class="math inline">\(d\)</span>的三角不等式性质来证明此序列是柯西序列， 我们有：</p>
+<p><span class="math display">\[
+\begin{aligned}
+d\left(x_{m}, x_{n}\right) &amp; \leq d\left(x_{m}, x_{m-1}\right)+d\left(x_{m-1}, x_{n}\right) \\
+&amp; \leq d\left(x_{m}, x_{m-1}\right)+d\left(x_{m-1}, x_{m-2}\right)+d\left(x_{m-2}, x_{n}\right) \\
+&amp; \leq d\left(x_{m}, x_{m-1}\right)+\ldots+d\left(x_{n+1}, x_{n}\right) \\
+&amp; \leq d\left(f^{m}\left(x_{o}\right), f^{m-1}\left(x_{o}\right)\right)+\ldots+d\left(f^{n+1}\left(x_{o}\right), f^{n}\left(x_{o}\right)\right)
+\end{aligned}
+\]</span></p>
+<center>
+展开度量d上的三角不等式
+</center>
+<p>现在，由于<span class="math inline">\(f\)</span>是压缩映射，我们知道：</p>
+<p><span class="math display">\[
+d\left(f^{n}\left(x_{1}\right), f^{n}\left(x_{2}\right)\right) \leq \gamma d\left(f^{n-1}\left(x_{1}\right), f^{n-1}\left(x_{2}\right)\right) \ldots . \leq \gamma^{n-1} d\left(f\left(x_{1}\right), f\left(x_{2}\right)\right) \leq \gamma^{n} d\left(x_{1}, x_{2}\right)
+\]</span></p>
+<center>
+重复运用压缩映射不等式
+</center>
+<p>我们可进一步将<span class="math inline">\(d(x_m, x_n)\)</span>化为如下形式 ：</p>
+<p><span class="math display">\[
+\begin{aligned}
+d\left(x_{m}, x_{n}\right) &amp; \leq d\left(f^{m}\left(x_{o}\right), f^{m-1}\left(x_{o}\right)\right)+\ldots+d\left(f^{n+1}\left(x_{o}\right), f^{n}\left(x_{o}\right)\right) \\
+&amp; \leq \gamma^{m-1} d\left(f\left(x_{o}\right), x_{o}\right)+\ldots+\gamma^{n} d\left(f\left(x_{o}\right), x_{o}\right) \\
+&amp; \leq d\left(f\left(x_{o}\right), x_{o}\right) \sum_{i=n}^{m-1} \gamma^{i} \\
+&amp; \leq \gamma^{n} d\left(f\left(x_{o}\right), x_{o}\right) \sum_{i=0}^{m-n-1} \gamma^{i}\\
+&amp;\leq \gamma^{n} d\left(f\left(x_{o}\right), x_{o}\right) \sum_{i=0}^{\infty} \gamma^{i} \quad(\mathrm{m}-\mathrm{n}-1 \text { is very large })\\
+&amp;\leq \frac{\gamma^{n}}{(1-\gamma)} d\left(f\left(x_{o}\right), x_{o}\right)
+\end{aligned}
+\]</span> 现在，通过选择一个足够大的<span class="math inline">\(n\)</span>，我们可以使上式的右边小于任何正实数<span class="math inline">\(\varepsilon\)</span>。因此，序列序列<span class="math inline">\((x_1,x_2,x_3 \dots x_n)\)</span>是柯西序列，并且存在最优的<span class="math inline">\(x^*\in X\)</span>。 这就证明了巴拿赫不动点定理。</p>
 
     </div>
 
@@ -387,7 +515,7 @@ v_{*}(s)=\max _{a} R_{s}^{a}+\gamma \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a}
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">333k</span>
+    <span title="站点总字数">339k</span>
   </span>
 </div>
 
