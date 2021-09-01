@@ -10214,6 +10214,9 @@ XY ORIG_PATH -<span class="token operator">></span> <span class="token environme
 <li><code>git remote show &lt;remote-name&gt;</code>：查看关于某一远程仓库的更多信息。</li>
 <li><code>git remote rename &lt;old-name&gt; &lt;new-name&gt;</code>：重命名远程仓库。远程分支的名称也会随之改变。</li>
 <li><code>git remote rm &lt;remote-name&gt;</code>：删除某个远程仓库地址。</li>
+<li><code>git remote set-url [--push] &lt;name&gt; &lt;newurl&gt; [&lt;oldurl&gt;]</code>：更改远程仓库的URL。将远程仓库<name>的匹配正则表达式 <oldurl>（如果没有给出<oldurl>，则默认为第一个URL）的第一个URL设置为<newurl>。如果<oldurl>不匹配任何URL，就会发生错误，什么也不会更改。使用 <code>--push</code> 操作 push URL 而不是 fetch URL。</li>
+<li><code>git remote set-url --add [--push] &lt;name&gt; &lt;newurl&gt;</code>：不更改现有 URL，而是添加新的 URL。</li>
+<li><code>git remote set-url --delete [--push] &lt;name&gt; &lt;url&gt;</code>：对于remote <name>，删除远程仓库 <name> 所有匹配正则表达式 <url> 的URL。试图删除所有的 fetch URL 会产生错误。</li>
 </ul>
 <h2 id="git-ls-remote">git ls-remote</h2>
 <p>引用是对远程仓库的引用（指针），包括分支、标签等等。</p>
