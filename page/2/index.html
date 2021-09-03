@@ -185,7 +185,7 @@ p.spoiler {
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">91</span>
+          <span class="site-state-item-count">92</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -229,6 +229,107 @@ p.spoiler {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/23/Golang%E7%A8%8B%E5%BA%8F%E6%8E%A5%E6%94%B6%E7%BB%88%E6%AD%A2%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%96%B9%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="想飞的鸡">
+      <meta itemprop="description" content="文章要认认真真写鸭">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="兴趣使然的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/23/Golang%E7%A8%8B%E5%BA%8F%E6%8E%A5%E6%94%B6%E7%BB%88%E6%AD%A2%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%96%B9%E5%BC%8F/" class="post-title-link" itemprop="url">Golang程序接收终止信号的方式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-23 16:59:15" itemprop="dateCreated datePublished" datetime="2021-04-23T16:59:15+08:00">2021-04-23</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-03 15:51:36" itemprop="dateModified" datetime="2021-09-03T15:51:36+08:00">2021-09-03</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>644</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="使用signal.notify">使用signal.Notify</h2>
+<pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    sigs <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">chan</span> os<span class="token punctuation">.</span>Signal<span class="token punctuation">)</span>
+    
+    <span class="token comment">// signal.Notify(sigs, os.Interrupt)</span>
+    signal<span class="token punctuation">.</span><span class="token function">Notify</span><span class="token punctuation">(</span>sigs<span class="token punctuation">,</span> syscall<span class="token punctuation">.</span>SIGINT<span class="token punctuation">)</span>
+    
+    sig <span class="token operator">:=</span> <span class="token operator">&lt;-</span>sigs
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>sig<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/23/Golang%E7%A8%8B%E5%BA%8F%E6%8E%A5%E6%94%B6%E7%BB%88%E6%AD%A2%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%96%B9%E5%BC%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/20/MATLAB%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -260,7 +361,7 @@ p.spoiler {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-03 15:21:17" itemprop="dateModified" datetime="2021-09-03T15:21:17+08:00">2021-09-03</time>
+        <time title="修改时间：2021-09-03 15:51:36" itemprop="dateModified" datetime="2021-09-03T15:51:36+08:00">2021-09-03</time>
       </span>
 
   
@@ -355,7 +456,7 @@ p.spoiler {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-03 15:21:17" itemprop="dateModified" datetime="2021-09-03T15:21:17+08:00">2021-09-03</time>
+        <time title="修改时间：2021-09-03 15:51:37" itemprop="dateModified" datetime="2021-09-03T15:51:37+08:00">2021-09-03</time>
       </span>
 
   
@@ -451,7 +552,7 @@ p.spoiler {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-03 15:21:17" itemprop="dateModified" datetime="2021-09-03T15:21:17+08:00">2021-09-03</time>
+        <time title="修改时间：2021-09-03 15:51:37" itemprop="dateModified" datetime="2021-09-03T15:51:37+08:00">2021-09-03</time>
       </span>
 
   
@@ -544,7 +645,7 @@ p.spoiler {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-03 15:21:17" itemprop="dateModified" datetime="2021-09-03T15:21:17+08:00">2021-09-03</time>
+        <time title="修改时间：2021-09-03 15:51:37" itemprop="dateModified" datetime="2021-09-03T15:51:37+08:00">2021-09-03</time>
       </span>
 
   
@@ -637,7 +738,7 @@ p.spoiler {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-03 15:21:17" itemprop="dateModified" datetime="2021-09-03T15:21:17+08:00">2021-09-03</time>
+        <time title="修改时间：2021-09-03 15:51:36" itemprop="dateModified" datetime="2021-09-03T15:51:36+08:00">2021-09-03</time>
       </span>
 
   
@@ -730,7 +831,7 @@ p.spoiler {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-03 15:21:17" itemprop="dateModified" datetime="2021-09-03T15:21:17+08:00">2021-09-03</time>
+        <time title="修改时间：2021-09-03 15:51:36" itemprop="dateModified" datetime="2021-09-03T15:51:36+08:00">2021-09-03</time>
       </span>
 
   
@@ -823,7 +924,7 @@ p.spoiler {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-03 15:21:17" itemprop="dateModified" datetime="2021-09-03T15:21:17+08:00">2021-09-03</time>
+        <time title="修改时间：2021-09-03 15:51:37" itemprop="dateModified" datetime="2021-09-03T15:51:37+08:00">2021-09-03</time>
       </span>
 
   
@@ -931,7 +1032,7 @@ p.spoiler {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-03 15:21:17" itemprop="dateModified" datetime="2021-09-03T15:21:17+08:00">2021-09-03</time>
+        <time title="修改时间：2021-09-03 15:51:37" itemprop="dateModified" datetime="2021-09-03T15:51:37+08:00">2021-09-03</time>
       </span>
 
   
@@ -1024,7 +1125,7 @@ p.spoiler {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-03 15:21:17" itemprop="dateModified" datetime="2021-09-03T15:21:17+08:00">2021-09-03</time>
+        <time title="修改时间：2021-09-03 15:51:37" itemprop="dateModified" datetime="2021-09-03T15:51:37+08:00">2021-09-03</time>
       </span>
 
   
@@ -1082,99 +1183,6 @@ p.spoiler {
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/15/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8E%9F%E5%88%99/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="想飞的鸡">
-      <meta itemprop="description" content="文章要认认真真写鸭">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="兴趣使然的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/09/15/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8E%9F%E5%88%99/" class="post-title-link" itemprop="url">设计模式的原则</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-09-15 08:44:39" itemprop="dateCreated datePublished" datetime="2020-09-15T08:44:39+08:00">2020-09-15</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-03 15:21:17" itemprop="dateModified" datetime="2021-09-03T15:21:17+08:00">2021-09-03</time>
-      </span>
-
-  
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>4.4k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>7 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="为什么会有设计模式">为什么会有设计模式？</h1>
-<p>在软件设计过程中，会有一些不断重复发生的问题。针对这些问题，计算机前辈们总结出了一系列的解决方案和套路，这就是设计模式的来源。设计模式，是一套被反复使用的代码设计经验的总结。它具有一定的普遍性，可以反复使用。其目的是为了提高代码的可重用性、可读性和可靠性。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/09/15/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8E%9F%E5%88%99/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1200,7 +1208,7 @@ p.spoiler {
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">340k</span>
+    <span title="站点总字数">343k</span>
   </span>
 </div>
 
