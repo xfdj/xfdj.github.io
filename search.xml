@@ -9412,7 +9412,168 @@ hexo deploy       <span class="token comment"># 部署</span><span aria-hidden="
   <entry>
     <title>李宏毅机器学习笔记</title>
     <url>/2020/12/16/%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="课程简介">课程简介</h1>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<p>李宏毅机器学习课程从2016年秋到2021年春有很多不同的版本，讲授的内容不完全一样。每个版本都有一些变化，增添一些学术上新的发展，删去一些比较旧的技术。下面想整理一下每个学期讲授知识点的差异。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Learning%20Map%202017%20Spring.png" alt="Learning Map 2017 Spring.png" /><figcaption aria-hidden="true">Learning Map 2017 Spring.png</figcaption>
+</figure>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Learning%20Map%202020%20Spring.jpg" alt="Learning Map 2020 Spring.jpg" /><figcaption aria-hidden="true">Learning Map 2020 Spring.jpg</figcaption>
+</figure>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Learning%20Map%202021%20Spring.png" alt="2020_12_16_李宏毅机器学习笔记_Learning Map 2021 Spring" /><figcaption aria-hidden="true">2020_12_16_李宏毅机器学习笔记_Learning Map 2021 Spring</figcaption>
+</figure>
+<table>
+<thead>
+<tr class="header">
+<th>知识点</th>
+<th>ML2019春</th>
+<th>ML2020春</th>
+<th>ML2021春</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>深度学习</td>
+<td>√</td>
+<td></td>
+<td>√</td>
+</tr>
+<tr class="even">
+<td>回归</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr class="odd">
+<td>分类</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr class="even">
+<td>CNN</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr class="odd">
+<td>自注意力</td>
+<td></td>
+<td></td>
+<td>√</td>
+</tr>
+<tr class="even">
+<td>RNN</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>集成学习</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Transformer</td>
+<td>√</td>
+<td></td>
+<td>√</td>
+</tr>
+<tr class="odd">
+<td>可解释性AI</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr class="even">
+<td>对抗恶意攻击</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr class="odd">
+<td>网络压缩</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr class="even">
+<td>Seq2Seq</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>无监督学习</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>异常检测</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr class="odd">
+<td>GAN</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr class="even">
+<td>自监督学习</td>
+<td></td>
+<td></td>
+<td>√</td>
+</tr>
+<tr class="odd">
+<td>域适应</td>
+<td></td>
+<td></td>
+<td>√</td>
+</tr>
+<tr class="even">
+<td>半监督学习</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>迁移学习</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>终身学习</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr class="odd">
+<td>强化学习</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr class="even">
+<td>量子机器学习</td>
+<td></td>
+<td></td>
+<td>√</td>
+</tr>
+<tr class="odd">
+<td>元学习</td>
+<td>√</td>
+<td></td>
+<td>√</td>
+</tr>
+</tbody>
+</table>
+<h1 id="课程简介">课程简介</h1>
 <h2 id="什么是机器学习">什么是机器学习？</h2>
 <p>机器学习就是自动找函数。</p>
 <p>对于语音识别，机器学习要找的函数的输入是一段音频，输出是音频对应的文本。</p>
@@ -9701,7 +9862,12 @@ L^n=\left(\hat y^n - \left( b+\sum w_i x^n_i\right)\right)^2
 </figure></li>
 </ul>
 <p>梯度下降有效的根本原因是因为泰勒展开。所以理论上，根据泰勒展开，可以把损失函数用二次微分近似，但是这样产生的运算（Hessian matrix等等）是无法承受的。</p>
-<p>梯度下降的一个弊端是它可能会卡在局部最优解或者鞍点等微分是0的地方，也有可能会在一个类似高原的地方更新缓慢。</p>
+<p>多变量泰勒展开的近似 <span class="math display">\[
+\begin{eqnarray}
+h(x, y) &amp; = &amp; h(x_0, y_0)+\frac{\partial h(x_0, y_0)}{\partial x}(x-x_0)+\frac{\partial h(x_0, y_0)}{\partial y}(y-y_0) + ...\\
+&amp; \approx &amp; h(x_0, y_0)+\frac{\partial h(x_0, y_0)}{\partial x}(x-x_0)+\frac{\partial h(x_0, y_0)}{\partial y}(y-y_0)
+\end{eqnarray}
+\]</span> 梯度下降的一个弊端是它可能会卡在局部最优解或者鞍点等微分是0的地方，也有可能会在一个类似高原的地方更新缓慢。</p>
 <h1 id="参考网页">参考网页</h1>
 <ul>
 <li><a href="https://www.bilibili.com/video/av94519857">李宏毅2020机器学习深度学习(完整版)国语_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</a></li>
