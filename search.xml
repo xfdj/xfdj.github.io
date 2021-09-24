@@ -4985,6 +4985,7 @@ ScriptFile&#x3D;&#x2F;usr&#x2F;share&#x2F;plymouth&#x2F;themes&#x2F;ubuntu-spinn
       <tags>
         <tag>数学</tag>
         <tag>拓扑学</tag>
+        <tag>填坑中</tag>
       </tags>
   </entry>
   <entry>
@@ -9875,6 +9876,7 @@ h(x, y) &amp; = &amp; h(x_0, y_0)+\frac{\partial h(x_0, y_0)}{\partial x}(x-x_0)
 </ul>
 ]]></content>
       <tags>
+        <tag>填坑中</tag>
         <tag>机器学习</tag>
       </tags>
   </entry>
@@ -15911,6 +15913,7 @@ TexMobject<span class="token punctuation">(</span><span class="token string">"\\
 </ul>
 ]]></content>
       <tags>
+        <tag>填坑中</tag>
         <tag>Manim</tag>
       </tags>
   </entry>
