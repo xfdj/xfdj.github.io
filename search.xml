@@ -4,17 +4,16 @@
     <title>BT提速方法：添加自定义Tracker</title>
     <url>/2019/07/18/BT%E6%8F%90%E9%80%9F%E6%96%B9%E6%B3%95%EF%BC%9A%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89Tracker/</url>
     <content><![CDATA[<h1 id="tracker网址">Tracker网址</h1>
-<ul>
-<li><a href="https://trackerslist.com/#/zh">XIU2/TrackersListCollection</a></li>
-<li><a href="https://github.com/ngosang/trackerslist">ngosang/trackerslist: Updated list of public BitTorrent trackers</a></li>
+<ol type="1">
+<li><a href="https://trackerslist.com/#/zh">XIU2/TrackersListCollection</a>：包括了2、3、4、5、6、7、8</li>
+<li><a href="https://ngosang.github.io/trackerslist/">ngosang/trackerslist | trackerslist</a></li>
 <li><a href="https://github.com/DeSireFire/animeTrackerList">DeSireFire/animeTrackerList: 动漫磁性链接加速方案（animeTrackerList）</a></li>
-<li><a href="https://dns.icoa.cn/tracker/">BT Tracker 服务器地址大全与常用 BT 软件下载地址 Tracker List - DNS.iCoA.CN</a></li>
 <li><a href="https://newtrackon.com/list">Stable Trackers List - newTrackon</a></li>
-<li><a href="https://torrents.io/tracker-list/">Torrent Tracker List for 2019 - Torrents</a></li>
-<li><a href="http://github.itzmx.com/1265578519/OpenTracker/master/tracker.txt">github.itzmx.com/1265578519/OpenTracker/master/tracker.txt</a></li>
-<li><a href="https://torrenttrackerss.com/torrent-tracker-list/">Torrent Trackers List February 2020 (85+ Working Trackers)</a></li>
-<li><a href="http://www.torrenttrackerlist.com/torrent-tracker-list">Torrent Tracker List February 2020 (160+ Trackers) to Increase Download Speed</a></li>
-</ul>
+<li><a href="https://raw.githubusercontent.com/1265578519/OpenTracker/master/tracker.txt">https://raw.githubusercontent.com/1265578519/OpenTracker/master/tracker.txt</a></li>
+<li><a href="http://www.torrenttrackerlist.com/torrent-tracker-list">Torrent Tracker List to Increase Download Speed</a></li>
+<li><a href="https://tinytorrent.net/best-torrent-tracker-list-updated/">Torrent Tracker List 100% Working Trackers For Torrents</a></li>
+<li><a href="https://www.yaozuopan.top/index.php/archives/1014/">中国可用的 BT Tracker 服务器列表，每24小时自动更新 - 小小编程</a></li>
+</ol>
 <h1 id="问题">问题</h1>
 <p>BT下载的一个常用工具是迅雷，不过迅雷有它的局限性，比如一些
   <span class="spoiler" onclick="this.classList.toggle('spoiler')">
