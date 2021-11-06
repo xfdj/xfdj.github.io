@@ -10638,6 +10638,7 @@ git: <span class="token string">'update-git-for-windows'</span> is not a <span c
 <li><a href="https://murphypei.github.io/blog/2018/09/git-delete-submodule">Git删除子模块和远程分支 | 拾荒志</a></li>
 <li><a href="https://www.jianshu.com/p/ed0cb6c75e25">[Git] 如何优雅的删除子模块(submodule)或修改Submodule URL - 简书</a></li>
 <li><a href="https://www.jianshu.com/p/c3aac5024877">[解决]git-ssh: connect to host github.com port 22: Connection timed out - 简书</a></li>
+<li><a href="https://docs.github.com/cn/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">在 HTTPS 端口使用 SSH - GitHub Docs</a></li>
 </ul>
 ]]></content>
       <tags>
