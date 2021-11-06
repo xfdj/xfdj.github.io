@@ -9938,9 +9938,14 @@ h(x, y) &amp; = &amp; h(x_0, y_0)+\frac{\partial h(x_0, y_0)}{\partial x}(x-x_0)
 <li><code>.lineNumber</code>：设为true可在结果前默认加上行号。等价于<code>git grep -n</code>。</li>
 <li><code>.column</code>：设为true可显示每行第一个匹配的列号。等价于<code>git grep --column</code>。</li>
 </ul></li>
+<li><code>http</code> 或 <code>https</code>
+<ul>
+<li><code>.proxy socks5://127.0.0.1:10808</code>：让Git全局使用代理连接。代理协议可以使用http或socks5。可用于解决GitHub连接超时的问题。</li>
+<li><code>.https://github.com.proxy http://127.0.0.1:10809</code>：只代理GitHub，其它保持不变。</li>
+</ul></li>
 </ul></li>
 <li><p><code>git config --list</code>：列出当前Git可以找到的所有设置。某些设置会列出多次，是因为Git从不同文件中读取相同的设置，Git会使用最后一个设置的值。</p></li>
-<li><p><code>git config &lt;keyname&gt;</code>：查看Git当前某个键的值。比如<code>git config user.name</code>。</p></li>
+<li><p><code>git config [--get] [--global/--system] &lt;keyname&gt;</code>：查看Git当前某个键的值。比如<code>git config user.name</code>。</p></li>
 <li><p><code>git help config</code>：列出所有可用选项。</p></li>
 <li><p><code>git config --unset [--global/--system] &lt;keyname&gt;</code>：重置某个键为默认值。</p></li>
 </ul>
@@ -10639,6 +10644,8 @@ git: <span class="token string">'update-git-for-windows'</span> is not a <span c
 <li><a href="https://www.jianshu.com/p/ed0cb6c75e25">[Git] 如何优雅的删除子模块(submodule)或修改Submodule URL - 简书</a></li>
 <li><a href="https://www.jianshu.com/p/c3aac5024877">[解决]git-ssh: connect to host github.com port 22: Connection timed out - 简书</a></li>
 <li><a href="https://docs.github.com/cn/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">在 HTTPS 端口使用 SSH - GitHub Docs</a></li>
+<li><a href="https://igghelper.com/helper/?p=152">使用V2ray对Git进行加速 – iGG Helper</a></li>
+<li><a href="https://www.jianshu.com/p/b9047a59ffc9">Windows git和cmd代理设置 - 简书</a></li>
 </ul>
 ]]></content>
       <tags>

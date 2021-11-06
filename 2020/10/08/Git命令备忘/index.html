@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_10_08_Git%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98_reset-mixed.png">
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_10_08_Git%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98_reset-hard.png">
 <meta property="article:published_time" content="2020-10-08T01:59:24.000Z">
-<meta property="article:modified_time" content="2021-11-06T03:01:21.462Z">
+<meta property="article:modified_time" content="2021-11-06T03:12:28.250Z">
 <meta property="article:author" content="想飞的鸡">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
@@ -271,7 +271,7 @@ p.spoiler {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-11-06 11:01:21" itemprop="dateModified" datetime="2021-11-06T11:01:21+08:00">2021-11-06</time>
+        <time title="修改时间：2021-11-06 11:12:28" itemprop="dateModified" datetime="2021-11-06T11:12:28+08:00">2021-11-06</time>
       </span>
 
   
@@ -280,14 +280,14 @@ p.spoiler {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>19k</span>
+      <span>20k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>32 分钟</span>
+      <span>33 分钟</span>
     </span>
 </div>
 
@@ -353,9 +353,14 @@ p.spoiler {
 <li><code>.lineNumber</code>：设为true可在结果前默认加上行号。等价于<code>git grep -n</code>。</li>
 <li><code>.column</code>：设为true可显示每行第一个匹配的列号。等价于<code>git grep --column</code>。</li>
 </ul></li>
+<li><code>http</code> 或 <code>https</code>
+<ul>
+<li><code>.proxy socks5://127.0.0.1:10808</code>：让Git全局使用代理连接。代理协议可以使用http或socks5。可用于解决GitHub连接超时的问题。</li>
+<li><code>.https://github.com.proxy http://127.0.0.1:10809</code>：只代理GitHub，其它保持不变。</li>
+</ul></li>
 </ul></li>
 <li><p><code>git config --list</code>：列出当前Git可以找到的所有设置。某些设置会列出多次，是因为Git从不同文件中读取相同的设置，Git会使用最后一个设置的值。</p></li>
-<li><p><code>git config &lt;keyname&gt;</code>：查看Git当前某个键的值。比如<code>git config user.name</code>。</p></li>
+<li><p><code>git config [--get] [--global/--system] &lt;keyname&gt;</code>：查看Git当前某个键的值。比如<code>git config user.name</code>。</p></li>
 <li><p><code>git help config</code>：列出所有可用选项。</p></li>
 <li><p><code>git config --unset [--global/--system] &lt;keyname&gt;</code>：重置某个键为默认值。</p></li>
 </ul>
@@ -1054,6 +1059,8 @@ git: <span class="token string">'update-git-for-windows'</span> is not a <span c
 <li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/ed0cb6c75e25">[Git] 如何优雅的删除子模块(submodule)或修改Submodule URL - 简书</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c3aac5024877">[解决]git-ssh: connect to host github.com port 22: Connection timed out - 简书</a></li>
 <li><a target="_blank" rel="noopener" href="https://docs.github.com/cn/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">在 HTTPS 端口使用 SSH - GitHub Docs</a></li>
+<li><a target="_blank" rel="noopener" href="https://igghelper.com/helper/?p=152">使用V2ray对Git进行加速 – iGG Helper</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b9047a59ffc9">Windows git和cmd代理设置 - 简书</a></li>
 </ul>
 
     </div>
