@@ -10633,10 +10633,11 @@ git: <span class="token string">'update-git-for-windows'</span> is not a <span c
 <li><a href="https://www.cnblogs.com/lookphp/p/5799533.html">git merge –squash介绍 - LookPHP - 博客园</a></li>
 <li><a href="https://www.zybuluo.com/longj/note/1198186">使用 git merge --squash 让你的分支合并更加简洁 - 作业部落 Cmd Markdown 编辑阅读器</a></li>
 <li><a href="https://stackoverflow.com/questions/25576415/what-is-the-precise-meaning-of-ours-and-theirs-in-git">merge - What is the precise meaning of "ours" and "theirs" in git? - Stack Overflow</a></li>
-<li>https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html</li>
+<li><a href="https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">tbaggery - A Note About Git Commit Messages</a></li>
 <li><a href="https://blog.csdn.net/RedaTao/article/details/104398408">windows更新git版本， git版本升级_RedaTao的博客-CSDN博客_windows更新git版本</a></li>
 <li><a href="https://murphypei.github.io/blog/2018/09/git-delete-submodule">Git删除子模块和远程分支 | 拾荒志</a></li>
 <li><a href="https://www.jianshu.com/p/ed0cb6c75e25">[Git] 如何优雅的删除子模块(submodule)或修改Submodule URL - 简书</a></li>
+<li><a href="https://www.jianshu.com/p/c3aac5024877">[解决]git-ssh: connect to host github.com port 22: Connection timed out - 简书</a></li>
 </ul>
 ]]></content>
       <tags>
