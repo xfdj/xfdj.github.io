@@ -2353,6 +2353,7 @@ end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 <li><code>:w</code>：保存文件
 <ul>
 <li><code>:w FILENAME</code>：将文件保存为FILENAME。</li>
+<li><code>:w !sudo tee %</code>：强制保存只有root用户才有权限操作的文件。<code>!</code>表示执行外部命令，<code>tee</code>表示把数据重定向到给定文件和屏幕上，<code>%</code>在执行外部命令时会扩展成当前文件名。这样就可以在忘记使用sudo启动vim时保存只读文件了。</li>
 </ul></li>
 <li><code>:s</code>：替换命令
 <ul>
@@ -2403,6 +2404,7 @@ end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 <h1 id="配置文件">配置文件</h1>
 <ul>
 <li><code>~/.config/nvim/init.vim</code>相当于<code>~/.vimrc</code>。</li>
+<li><code>cmap w!! w !sudo tee &gt; /dev/null %</code>：将强制保存只读文件的命令映射成<code>:w!!</code>。其中<code>&gt; /dev/null</code>的作用为显式地丢掉标准输出的内容。</li>
 </ul>
 <h1 id="参考网页">参考网页</h1>
 <ul>
