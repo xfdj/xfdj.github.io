@@ -2409,6 +2409,7 @@ end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 <h1 id="参考网页">参考网页</h1>
 <ul>
 <li><a href="https://blog.csdn.net/ballack_linux/article/details/71036072">vim之函数跳转功能_ballack_linux的专栏-CSDN博客_vim 函数跳转</a></li>
+<li><a href="https://vimjc.com/">vim教程网</a></li>
 </ul>
 ]]></content>
       <tags>
@@ -4541,6 +4542,28 @@ hexo<span class="token punctuation">.</span><span class="token function">on</spa
       </tags>
   </entry>
   <entry>
+    <title>如何在Hexo的博文中引用自己的文章</title>
+    <url>/2020/05/12/%E5%A6%82%E4%BD%95%E5%9C%A8Hexo%E7%9A%84%E5%8D%9A%E6%96%87%E4%B8%AD%E5%BC%95%E7%94%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<p>我之前写的文章中有引用到自己的另一篇文章，当时我的解决方法是链接引用，比如这样：<code>[搭建一个免费博客](https://xfdj.github.io/2018/07/27/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2/)</code>。事情在我将博客部署到Gitee上之后出现了问题。当我点击这个链接的时候，打开的不是Gitee上的文章，而是GitHub上的文章。这样肯定是不行的。</p>
+<p>查阅了网上资料后，我了解到Hexo提供了一个叫作<code>post_link</code>的标签语法来专门对内部博文进行引用。它的格式如下：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% post_link 文件名(不要后缀) 文章别名(可选) %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>其中文件名指的是Markdown文件的文件名，例如你的博客中有一篇文件名为<code>HelloWorld.md</code>的博文，那你就可以使用</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% post_link HelloWorld %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>来引用。Hexo会自动将这篇博文的标题显示在文章中，并带上正确的链接。当然，你也可以给链接使用一个另外的名字，比如“我的HelloWorld”：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% post_link HelloWorld 我的HelloWorld %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>文件名这一项是可以带上目录名的，比如<code>HelloWorld.md</code>这个文件放在<code>_posts/hello</code>这个目录，那你引用的时候需要跟上目录名，否则会引用不到。</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% post_link hello/HelloWorld %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="参考网页">参考网页</h1>
+<ul>
+<li><a href="https://www.mls-tech.info/hexo/hexo-use-internal-link/">如何在Hexo的博文中引用自己的文章 | 梅老师的个人博客</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>修改Ubuntu 18.04的启动效果</title>
     <url>/2018/10/01/%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C/</url>
     <content><![CDATA[<p>Ubuntu 18.04的启动效果看起来比较土，所以打算更换Ubuntu的Grub主题和加载动画。在网上查找资料时发现有许多方法都已经过时，所以自己在这里整理出适用于18.04版本的方法。亲测可用。</p>
@@ -4667,28 +4690,6 @@ ScriptFile&#x3D;&#x2F;usr&#x2F;share&#x2F;plymouth&#x2F;themes&#x2F;ubuntu-spinn
         <tag>Grub</tag>
         <tag>Plymouth</tag>
         <tag>Gnome</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在Hexo的博文中引用自己的文章</title>
-    <url>/2020/05/12/%E5%A6%82%E4%BD%95%E5%9C%A8Hexo%E7%9A%84%E5%8D%9A%E6%96%87%E4%B8%AD%E5%BC%95%E7%94%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<p>我之前写的文章中有引用到自己的另一篇文章，当时我的解决方法是链接引用，比如这样：<code>[搭建一个免费博客](https://xfdj.github.io/2018/07/27/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2/)</code>。事情在我将博客部署到Gitee上之后出现了问题。当我点击这个链接的时候，打开的不是Gitee上的文章，而是GitHub上的文章。这样肯定是不行的。</p>
-<p>查阅了网上资料后，我了解到Hexo提供了一个叫作<code>post_link</code>的标签语法来专门对内部博文进行引用。它的格式如下：</p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% post_link 文件名(不要后缀) 文章别名(可选) %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>其中文件名指的是Markdown文件的文件名，例如你的博客中有一篇文件名为<code>HelloWorld.md</code>的博文，那你就可以使用</p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% post_link HelloWorld %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>来引用。Hexo会自动将这篇博文的标题显示在文章中，并带上正确的链接。当然，你也可以给链接使用一个另外的名字，比如“我的HelloWorld”：</p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% post_link HelloWorld 我的HelloWorld %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>文件名这一项是可以带上目录名的，比如<code>HelloWorld.md</code>这个文件放在<code>_posts/hello</code>这个目录，那你引用的时候需要跟上目录名，否则会引用不到。</p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% post_link hello/HelloWorld %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h1 id="参考网页">参考网页</h1>
-<ul>
-<li><a href="https://www.mls-tech.info/hexo/hexo-use-internal-link/">如何在Hexo的博文中引用自己的文章 | 梅老师的个人博客</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
