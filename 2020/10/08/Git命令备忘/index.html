@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_10_08_Git%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98_reset-mixed.png">
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_10_08_Git%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98_reset-hard.png">
 <meta property="article:published_time" content="2020-10-08T01:59:24.000Z">
-<meta property="article:modified_time" content="2021-12-19T15:08:08.080Z">
+<meta property="article:modified_time" content="2021-12-28T15:19:25.290Z">
 <meta property="article:author" content="想飞的鸡">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
@@ -271,7 +271,7 @@ p.spoiler {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-12-19 23:08:08" itemprop="dateModified" datetime="2021-12-19T23:08:08+08:00">2021-12-19</time>
+      <time title="修改时间：2021-12-28 23:19:25" itemprop="dateModified" datetime="2021-12-28T23:19:25+08:00">2021-12-28</time>
     </span>
 
   
@@ -597,6 +597,7 @@ XY ORIG_PATH -<span class="token operator">></span> <span class="token environme
 <p>用于从Git的暂存区和工作目录中移除文件。与<code>git add</code>类似，它会暂存下一次提交的文件删除工作。</p>
 <ul>
 <li><code>git rm --cached &lt;file&gt;</code>：只删除暂存区中的文件，但保留工作目录中的文件。</li>
+<li><code>git rm -r &lt;path&gt;</code>：当给出前导目录名称时，允许递归删除。</li>
 </ul>
 <h2 id="git-mv">git mv</h2>
 <p>可以移动文件或对文件重命名。相当于对旧文件执行<code>git rm</code>，对新文件执行<code>git add</code>。</p>
