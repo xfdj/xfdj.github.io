@@ -4152,38 +4152,6 @@ warning: LF will be replaced by CRLF <span class="token keyword">in</span> XXXXX
       </tags>
   </entry>
   <entry>
-    <title>优化博客（十二）：在博客里播放视频</title>
-    <url>/2019/02/18/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%8D%81%E4%BA%8C%EF%BC%89%EF%BC%9A%E5%9C%A8%E5%8D%9A%E5%AE%A2%E9%87%8C%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91/</url>
-    <content><![CDATA[<p>学习C4D的时候渲染了一个视频，想放在博客上，不过Markdown只能放链接，而我想直接在文章里观看视频。所以上网搜索了一下解决方案。</p>
-<p>网上的解决方法有两种：</p>
-<ol type="1">
-<li>使用HTML的语法直接嵌入视频。Markdown兼容HTML的语法，所以可以直接在Markdown文档中使用HTML来嵌入播放窗口。不过貌似视频窗口的大小无法自适应屏幕宽度（没有尝试过）。</li>
-<li>通过Hexo的插件来插入视频。这里需要用到一个插件：<code>hexo-tag-dplayer</code>。下面就来尝试一下如何通过这个插件嵌入视频。</li>
-</ol>
-<h1 id="操作步骤">操作步骤</h1>
-<p>首先安装插件。</p>
-<p>在博客目录下打开命令提示符，用下面的命令安装插件。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">yarn</span> <span class="token function">add</span> hexo-tag-dplayer<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>也可以使用<code>npm</code>安装。</p>
-<p>安装成功之后，在文档中想要嵌入视频的地方添加标签：</p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% dplayer "url=视频地址" ... %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>在省略的位置可以添加更多选项，比如自动播放、循环什么的，可以去<code>hexo-tag-dplayer</code>插件的网址查看更多细节，网址链接我放在了参考网页。效果就像下面这样。</p>
-<h1 id="demo">Demo</h1>
-<div id="dplayer2" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer2 = new DPlayer({"element":document.getElementById("dplayer2"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_02_18_C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8817%EF%BC%89%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AB%8B%E4%BD%93%E5%9C%B0%E7%90%83_%E5%9C%B0%E7%90%83.mp4"}});</script><!-- dplayer used1 -->
-<h1 id="参考网页">参考网页</h1>
-<ul>
-<li><a href="https://github.com/MoePlayer/hexo-tag-dplayer">MoePlayer/hexo-tag-dplayer: Embed dplayer in Hexo posts/pages</a></li>
-<li><a href="https://diygod.me/best-players-in-hexo/">可能是目前最好用的两个 Hexo 播放器插件 | Hi，DIYgod</a></li>
-<li><a href="http://blog.yusank.space/HexoMedia.html/">Hexo 博客添加视频和音乐 | Yusank's blog</a></li>
-<li><a href="https://www.jianshu.com/p/8e1cf1ca131b">hexo 插入视频和音乐播放器 - 简书</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>优化博客（十五）：实现hexo server自动刷新</title>
     <url>/2020/05/02/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%8D%81%E4%BA%94%EF%BC%89%EF%BC%9A%E5%AE%9E%E7%8E%B0hexo-server%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0/</url>
     <content><![CDATA[<p>众所周知，<code>hexo server</code>这个命令可以在本地预览博客，不过它并不会进行自动刷新，因此不方便实时查看更改结果，经网上查找资料得知，有一个插件<a href="https://github.com/hexojs/hexo-browsersync">hexo-browsersync</a>或许可以解决这个问题。这篇文章就来验证一下它的效果。</p>
@@ -4259,6 +4227,38 @@ C --&gt;|Two| E[Result 2]
         <tag>Hexo</tag>
         <tag>Mermaid</tag>
         <tag>NexT</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>优化博客（十二）：在博客里播放视频</title>
+    <url>/2019/02/18/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%8D%81%E4%BA%8C%EF%BC%89%EF%BC%9A%E5%9C%A8%E5%8D%9A%E5%AE%A2%E9%87%8C%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91/</url>
+    <content><![CDATA[<p>学习C4D的时候渲染了一个视频，想放在博客上，不过Markdown只能放链接，而我想直接在文章里观看视频。所以上网搜索了一下解决方案。</p>
+<p>网上的解决方法有两种：</p>
+<ol type="1">
+<li>使用HTML的语法直接嵌入视频。Markdown兼容HTML的语法，所以可以直接在Markdown文档中使用HTML来嵌入播放窗口。不过貌似视频窗口的大小无法自适应屏幕宽度（没有尝试过）。</li>
+<li>通过Hexo的插件来插入视频。这里需要用到一个插件：<code>hexo-tag-dplayer</code>。下面就来尝试一下如何通过这个插件嵌入视频。</li>
+</ol>
+<h1 id="操作步骤">操作步骤</h1>
+<p>首先安装插件。</p>
+<p>在博客目录下打开命令提示符，用下面的命令安装插件。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">yarn</span> <span class="token function">add</span> hexo-tag-dplayer<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>也可以使用<code>npm</code>安装。</p>
+<p>安装成功之后，在文档中想要嵌入视频的地方添加标签：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% dplayer "url=视频地址" ... %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在省略的位置可以添加更多选项，比如自动播放、循环什么的，可以去<code>hexo-tag-dplayer</code>插件的网址查看更多细节，网址链接我放在了参考网页。效果就像下面这样。</p>
+<h1 id="demo">Demo</h1>
+<div id="dplayer2" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer2 = new DPlayer({"element":document.getElementById("dplayer2"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_02_18_C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8817%EF%BC%89%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AB%8B%E4%BD%93%E5%9C%B0%E7%90%83_%E5%9C%B0%E7%90%83.mp4"}});</script><!-- dplayer used1 -->
+<h1 id="参考网页">参考网页</h1>
+<ul>
+<li><a href="https://github.com/MoePlayer/hexo-tag-dplayer">MoePlayer/hexo-tag-dplayer: Embed dplayer in Hexo posts/pages</a></li>
+<li><a href="https://diygod.me/best-players-in-hexo/">可能是目前最好用的两个 Hexo 播放器插件 | Hi，DIYgod</a></li>
+<li><a href="http://blog.yusank.space/HexoMedia.html/">Hexo 博客添加视频和音乐 | Yusank's blog</a></li>
+<li><a href="https://www.jianshu.com/p/8e1cf1ca131b">hexo 插入视频和音乐播放器 - 简书</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
         <tag>博客</tag>
       </tags>
   </entry>
