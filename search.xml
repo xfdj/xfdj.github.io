@@ -3465,6 +3465,30 @@ k2pdfopt myfile.pdf <span class="token comment">#开始转换 PDF 文档</span><
 <p>如果有安装另一款包管理工具Yarn，也可以运行</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> <span class="token function">add</span> hexo-generator-searchdb<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>效果是相同的。</p>
+<h1 id="修改博客配置文件">修改博客配置文件</h1>
+<p>进入博客所在目录打开<code>_config.yml</code>。添加如下代码。</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">search</span><span class="token punctuation">:</span>
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> search.xml
+  <span class="token key atrule">field</span><span class="token punctuation">:</span> post
+  <span class="token key atrule">content</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">format</span><span class="token punctuation">:</span> html<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>参数说明：</p>
+<ul>
+<li>path：文件路径。默认为<code>search.xml</code>，如果将扩展名改为<code>.json</code>，则输出格式为JSON，否则使用XML格式。</li>
+<li>field：指定搜索范围。可选：
+<ul>
+<li>post（默认）：只覆盖博客中已发布的所有文章；</li>
+<li>page：只覆盖博客中所有页面；</li>
+<li>all：覆盖博客中所有页面和已发布的文章。</li>
+</ul></li>
+<li>content：是否包含每一篇文章的内容。若为<code>false</code>则只会根据文章标题和元数据进行搜索，默认为<code>true</code>。</li>
+<li>format：页面内容的形式。可选：
+<ul>
+<li>html（默认）：原始html字符串被缩小；</li>
+<li>striptags：原始html字符串被缩小，并删除所有标签。</li>
+<li>raw：每个页面的Markdown文本。</li>
+</ul></li>
+</ul>
 <h1 id="修改主题配置文件">修改主题配置文件</h1>
 <p>进入NexT主题所在的目录（我这里的目录是<code>themes/next</code>）打开<code>_config.yml</code>。找到<code>local_search</code>，把<code>enable: false</code>改为<code>enable: true</code>，保存退出。</p>
 <p>最后更新一下博客，搜索按钮就出现啦。</p>
