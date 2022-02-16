@@ -2229,8 +2229,8 @@ end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 <li><code>.</code>：重复上次的修改。</li>
 <li><code>i</code>：在光标之前进入插入模式。</li>
 <li><code>I</code>：在该行的第一个非空字符之前进入插入模式。等价于<code>^i</code>。</li>
-<li><code>a</code>：在光标之后进入插入模式。等价于<code>$a</code>。</li>
-<li><code>A</code>：在行尾进入插入模式。</li>
+<li><code>a</code>：在光标之后进入插入模式。</li>
+<li><code>A</code>：在行尾进入插入模式。等价于<code>$a</code>。</li>
 <li><code>o</code>：在光标下方添加一行，并进入插入模式。</li>
 <li><code>O</code>：在光标下方添加一行，并进入插入模式。</li>
 <li><code>r</code>：替换光标处的字符，比如键入<code>rx</code>将光标处的字符替换为x，键入<code>rb</code>将光标处的字符替换为b。</li>
@@ -2680,29 +2680,6 @@ end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2018/07/26/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>mdx、mdd与css之间的关系</title>
     <url>/2020/12/18/mdx%E3%80%81mdd%E4%B8%8Ecss%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
     <content><![CDATA[<blockquote>
@@ -2732,6 +2709,29 @@ end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
     <url>/2018/07/26/test/</url>
     <content><![CDATA[<p>My first test article.</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2018/07/26/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+      </tags>
   </entry>
   <entry>
     <title>tmux笔记</title>
@@ -3507,6 +3507,88 @@ k2pdfopt myfile.pdf <span class="token comment">#开始转换 PDF 文档</span><
       </tags>
   </entry>
   <entry>
+    <title>优化博客（二十一）：加密博客文章</title>
+    <url>/2021/09/02/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%E5%8D%81%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8A%A0%E5%AF%86%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="背景">背景</h1>
+<p>有时候需要写一些私密博客，输入密码才可以查看。在WordPress之类的动态博客上很好实现，因为网站有服务器可以处理加密请求。Hexo是一个静态博客框架，为了解决这个需求，需要安装一个插件：hexo-blog-encrypt。</p>
+<h1 id="安装">安装</h1>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-blog-encrypt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="快速使用">快速使用</h1>
+<p>单独对某篇文章使用，可以将password字段加到文章的front matter，如下：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> Hello world
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-01-01 14:00:00</span>
+<span class="token key atrule">password</span><span class="token punctuation">:</span> hello
+<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="高级设置">高级设置</h1>
+<h2 id="文章">文章</h2>
+<p>如果想修改显示的方式，可以将下面的一些字段加入文章的front matter。</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> Hello world
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-01-01 14:00:00</span>
+<span class="token key atrule">password</span><span class="token punctuation">:</span> hello
+<span class="token key atrule">abstract</span><span class="token punctuation">:</span> 加密后首页显示的摘要
+<span class="token key atrule">message</span><span class="token punctuation">:</span> 密码框的提示信息
+<span class="token key atrule">wrong_pass_message</span><span class="token punctuation">:</span> 输入错误密码弹出的提示信息
+<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="全局">全局</h2>
+<p>还可以在博客配置文件<code>_config.yml</code>中设置全局配置。这里可以修改默认的摘要信息、提示信息，还可以配置要加密的标签。</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">encrypt</span><span class="token punctuation">:</span>
+  <span class="token key atrule">abstract</span><span class="token punctuation">:</span> 加密文章，请输入密码查看
+  <span class="token key atrule">message</span><span class="token punctuation">:</span> 请输入密码查看文章内容
+  <span class="token key atrule">tags</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token punctuation">&#123;</span><span class="token key atrule">name</span><span class="token punctuation">:</span> 加密标签A<span class="token punctuation">,</span> <span class="token key atrule">password</span><span class="token punctuation">:</span> passwordA<span class="token punctuation">&#125;</span>
+    <span class="token punctuation">-</span> <span class="token punctuation">&#123;</span><span class="token key atrule">name</span><span class="token punctuation">:</span> 加密标签B<span class="token punctuation">,</span> <span class="token key atrule">password</span><span class="token punctuation">:</span> passwordB<span class="token punctuation">&#125;</span>
+  <span class="token key atrule">wrong_pass_message</span><span class="token punctuation">:</span> 密码错误<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>对某篇文章禁用标签加密，可以在文章的front matter将password设置为<code>""</code>。</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> 一篇文章
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-01-01 14:00:00</span>
+<span class="token key atrule">tags</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> 加密标签A
+<span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token string">""</span>
+<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="配置优先级">配置优先级</h2>
+<p>文章的front matter &gt; <code>_config.yml</code> &gt; 默认配置</p>
+<h2 id="禁用log">禁用log</h2>
+<p>如果你想要禁止使用 log，你可以在 <code>_config.yml</code> 中增加一个 silent 属性，并将其设置为 true。</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">encrypt</span><span class="token punctuation">:</span>
+  <span class="token key atrule">silent</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="主题">主题</h2>
+<p>可以在front matter或<code>_config.yml</code>使用theme属性来指定密码框的主题样式。</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> 一篇文章
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-01-01 14:00:00</span>
+<span class="token key atrule">password</span><span class="token punctuation">:</span> hello
+<span class="token key atrule">theme</span><span class="token punctuation">:</span> xray
+<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>或</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">encrypt</span><span class="token punctuation">:</span>
+  <span class="token key atrule">theme</span><span class="token punctuation">:</span> xray<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>可供选择的主题有：</p>
+<ul>
+<li>default</li>
+<li>blink</li>
+<li>shrink</li>
+<li>flip</li>
+<li>up</li>
+<li>surge</li>
+<li>wave</li>
+<li>xray</li>
+</ul>
+<h1 id="参考网页">参考网页</h1>
+<ul>
+<li><a href="https://ednovas.xyz/2021/05/03/hexoencrypt/">Hexo 博客加密插件 | EdNovas 的小站</a></li>
+<li><a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt/ReadMe.zh.md at master · D0n9X1n/hexo-blog-encrypt</a></li>
+<li><a href="https://blog.fullstackpentest.com/how-to-crack-hexo-simple-encrypted-blog.html">如何破解并访问Hexo Blog已加密的文章 | Full Stack Pentest</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>优化博客（九）：七牛云的图床之殇</title>
     <url>/2018/12/06/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B9%9D%EF%BC%89%EF%BC%9A%E4%B8%83%E7%89%9B%E4%BA%91%E7%9A%84%E5%9B%BE%E5%BA%8A%E4%B9%8B%E6%AE%87/</url>
     <content><![CDATA[<p>我搭建起现在看到的博客，也是在网上搜索了很多教程，对比着一步步搭建出来的。原本以为一旦建好就万事大吉，后来发生的事情告诉我，我还是太年轻了。</p>
@@ -3639,88 +3721,6 @@ k2pdfopt myfile.pdf <span class="token comment">#开始转换 PDF 文档</span><
         <tag>Hexo</tag>
         <tag>博客</tag>
         <tag>图床</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>优化博客（二十一）：加密博客文章</title>
-    <url>/2021/09/02/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%E5%8D%81%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8A%A0%E5%AF%86%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="背景">背景</h1>
-<p>有时候需要写一些私密博客，输入密码才可以查看。在WordPress之类的动态博客上很好实现，因为网站有服务器可以处理加密请求。Hexo是一个静态博客框架，为了解决这个需求，需要安装一个插件：hexo-blog-encrypt。</p>
-<h1 id="安装">安装</h1>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-blog-encrypt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h1 id="快速使用">快速使用</h1>
-<p>单独对某篇文章使用，可以将password字段加到文章的front matter，如下：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
-<span class="token key atrule">title</span><span class="token punctuation">:</span> Hello world
-<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-01-01 14:00:00</span>
-<span class="token key atrule">password</span><span class="token punctuation">:</span> hello
-<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="高级设置">高级设置</h1>
-<h2 id="文章">文章</h2>
-<p>如果想修改显示的方式，可以将下面的一些字段加入文章的front matter。</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
-<span class="token key atrule">title</span><span class="token punctuation">:</span> Hello world
-<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-01-01 14:00:00</span>
-<span class="token key atrule">password</span><span class="token punctuation">:</span> hello
-<span class="token key atrule">abstract</span><span class="token punctuation">:</span> 加密后首页显示的摘要
-<span class="token key atrule">message</span><span class="token punctuation">:</span> 密码框的提示信息
-<span class="token key atrule">wrong_pass_message</span><span class="token punctuation">:</span> 输入错误密码弹出的提示信息
-<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="全局">全局</h2>
-<p>还可以在博客配置文件<code>_config.yml</code>中设置全局配置。这里可以修改默认的摘要信息、提示信息，还可以配置要加密的标签。</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">encrypt</span><span class="token punctuation">:</span>
-  <span class="token key atrule">abstract</span><span class="token punctuation">:</span> 加密文章，请输入密码查看
-  <span class="token key atrule">message</span><span class="token punctuation">:</span> 请输入密码查看文章内容
-  <span class="token key atrule">tags</span><span class="token punctuation">:</span>
-    <span class="token punctuation">-</span> <span class="token punctuation">&#123;</span><span class="token key atrule">name</span><span class="token punctuation">:</span> 加密标签A<span class="token punctuation">,</span> <span class="token key atrule">password</span><span class="token punctuation">:</span> passwordA<span class="token punctuation">&#125;</span>
-    <span class="token punctuation">-</span> <span class="token punctuation">&#123;</span><span class="token key atrule">name</span><span class="token punctuation">:</span> 加密标签B<span class="token punctuation">,</span> <span class="token key atrule">password</span><span class="token punctuation">:</span> passwordB<span class="token punctuation">&#125;</span>
-  <span class="token key atrule">wrong_pass_message</span><span class="token punctuation">:</span> 密码错误<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>对某篇文章禁用标签加密，可以在文章的front matter将password设置为<code>""</code>。</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
-<span class="token key atrule">title</span><span class="token punctuation">:</span> 一篇文章
-<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-01-01 14:00:00</span>
-<span class="token key atrule">tags</span><span class="token punctuation">:</span>
-    <span class="token punctuation">-</span> 加密标签A
-<span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token string">""</span>
-<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="配置优先级">配置优先级</h2>
-<p>文章的front matter &gt; <code>_config.yml</code> &gt; 默认配置</p>
-<h2 id="禁用log">禁用log</h2>
-<p>如果你想要禁止使用 log，你可以在 <code>_config.yml</code> 中增加一个 silent 属性，并将其设置为 true。</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">encrypt</span><span class="token punctuation">:</span>
-  <span class="token key atrule">silent</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h2 id="主题">主题</h2>
-<p>可以在front matter或<code>_config.yml</code>使用theme属性来指定密码框的主题样式。</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
-<span class="token key atrule">title</span><span class="token punctuation">:</span> 一篇文章
-<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-01-01 14:00:00</span>
-<span class="token key atrule">password</span><span class="token punctuation">:</span> hello
-<span class="token key atrule">theme</span><span class="token punctuation">:</span> xray
-<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>或</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">encrypt</span><span class="token punctuation">:</span>
-  <span class="token key atrule">theme</span><span class="token punctuation">:</span> xray<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>可供选择的主题有：</p>
-<ul>
-<li>default</li>
-<li>blink</li>
-<li>shrink</li>
-<li>flip</li>
-<li>up</li>
-<li>surge</li>
-<li>wave</li>
-<li>xray</li>
-</ul>
-<h1 id="参考网页">参考网页</h1>
-<ul>
-<li><a href="https://ednovas.xyz/2021/05/03/hexoencrypt/">Hexo 博客加密插件 | EdNovas 的小站</a></li>
-<li><a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt/ReadMe.zh.md at master · D0n9X1n/hexo-blog-encrypt</a></li>
-<li><a href="https://blog.fullstackpentest.com/how-to-crack-hexo-simple-encrypted-blog.html">如何破解并访问Hexo Blog已加密的文章 | Full Stack Pentest</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -4152,6 +4152,38 @@ warning: LF will be replaced by CRLF <span class="token keyword">in</span> XXXXX
       </tags>
   </entry>
   <entry>
+    <title>优化博客（十二）：在博客里播放视频</title>
+    <url>/2019/02/18/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%8D%81%E4%BA%8C%EF%BC%89%EF%BC%9A%E5%9C%A8%E5%8D%9A%E5%AE%A2%E9%87%8C%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91/</url>
+    <content><![CDATA[<p>学习C4D的时候渲染了一个视频，想放在博客上，不过Markdown只能放链接，而我想直接在文章里观看视频。所以上网搜索了一下解决方案。</p>
+<p>网上的解决方法有两种：</p>
+<ol type="1">
+<li>使用HTML的语法直接嵌入视频。Markdown兼容HTML的语法，所以可以直接在Markdown文档中使用HTML来嵌入播放窗口。不过貌似视频窗口的大小无法自适应屏幕宽度（没有尝试过）。</li>
+<li>通过Hexo的插件来插入视频。这里需要用到一个插件：<code>hexo-tag-dplayer</code>。下面就来尝试一下如何通过这个插件嵌入视频。</li>
+</ol>
+<h1 id="操作步骤">操作步骤</h1>
+<p>首先安装插件。</p>
+<p>在博客目录下打开命令提示符，用下面的命令安装插件。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">yarn</span> <span class="token function">add</span> hexo-tag-dplayer<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>也可以使用<code>npm</code>安装。</p>
+<p>安装成功之后，在文档中想要嵌入视频的地方添加标签：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% dplayer "url=视频地址" ... %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在省略的位置可以添加更多选项，比如自动播放、循环什么的，可以去<code>hexo-tag-dplayer</code>插件的网址查看更多细节，网址链接我放在了参考网页。效果就像下面这样。</p>
+<h1 id="demo">Demo</h1>
+<div id="dplayer2" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer2 = new DPlayer({"element":document.getElementById("dplayer2"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_02_18_C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8817%EF%BC%89%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AB%8B%E4%BD%93%E5%9C%B0%E7%90%83_%E5%9C%B0%E7%90%83.mp4"}});</script><!-- dplayer used1 -->
+<h1 id="参考网页">参考网页</h1>
+<ul>
+<li><a href="https://github.com/MoePlayer/hexo-tag-dplayer">MoePlayer/hexo-tag-dplayer: Embed dplayer in Hexo posts/pages</a></li>
+<li><a href="https://diygod.me/best-players-in-hexo/">可能是目前最好用的两个 Hexo 播放器插件 | Hi，DIYgod</a></li>
+<li><a href="http://blog.yusank.space/HexoMedia.html/">Hexo 博客添加视频和音乐 | Yusank's blog</a></li>
+<li><a href="https://www.jianshu.com/p/8e1cf1ca131b">hexo 插入视频和音乐播放器 - 简书</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>优化博客（十五）：实现hexo server自动刷新</title>
     <url>/2020/05/02/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%8D%81%E4%BA%94%EF%BC%89%EF%BC%9A%E5%AE%9E%E7%8E%B0hexo-server%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0/</url>
     <content><![CDATA[<p>众所周知，<code>hexo server</code>这个命令可以在本地预览博客，不过它并不会进行自动刷新，因此不方便实时查看更改结果，经网上查找资料得知，有一个插件<a href="https://github.com/hexojs/hexo-browsersync">hexo-browsersync</a>或许可以解决这个问题。这篇文章就来验证一下它的效果。</p>
@@ -4227,38 +4259,6 @@ C --&gt;|Two| E[Result 2]
         <tag>Hexo</tag>
         <tag>Mermaid</tag>
         <tag>NexT</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>优化博客（十二）：在博客里播放视频</title>
-    <url>/2019/02/18/%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%8D%81%E4%BA%8C%EF%BC%89%EF%BC%9A%E5%9C%A8%E5%8D%9A%E5%AE%A2%E9%87%8C%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91/</url>
-    <content><![CDATA[<p>学习C4D的时候渲染了一个视频，想放在博客上，不过Markdown只能放链接，而我想直接在文章里观看视频。所以上网搜索了一下解决方案。</p>
-<p>网上的解决方法有两种：</p>
-<ol type="1">
-<li>使用HTML的语法直接嵌入视频。Markdown兼容HTML的语法，所以可以直接在Markdown文档中使用HTML来嵌入播放窗口。不过貌似视频窗口的大小无法自适应屏幕宽度（没有尝试过）。</li>
-<li>通过Hexo的插件来插入视频。这里需要用到一个插件：<code>hexo-tag-dplayer</code>。下面就来尝试一下如何通过这个插件嵌入视频。</li>
-</ol>
-<h1 id="操作步骤">操作步骤</h1>
-<p>首先安装插件。</p>
-<p>在博客目录下打开命令提示符，用下面的命令安装插件。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">yarn</span> <span class="token function">add</span> hexo-tag-dplayer<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>也可以使用<code>npm</code>安装。</p>
-<p>安装成功之后，在文档中想要嵌入视频的地方添加标签：</p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&#123;% dplayer "url=视频地址" ... %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>在省略的位置可以添加更多选项，比如自动播放、循环什么的，可以去<code>hexo-tag-dplayer</code>插件的网址查看更多细节，网址链接我放在了参考网页。效果就像下面这样。</p>
-<h1 id="demo">Demo</h1>
-<div id="dplayer2" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer2 = new DPlayer({"element":document.getElementById("dplayer2"),"video":{"url":"https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2019_02_18_C4D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8817%EF%BC%89%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AB%8B%E4%BD%93%E5%9C%B0%E7%90%83_%E5%9C%B0%E7%90%83.mp4"}});</script><!-- dplayer used1 -->
-<h1 id="参考网页">参考网页</h1>
-<ul>
-<li><a href="https://github.com/MoePlayer/hexo-tag-dplayer">MoePlayer/hexo-tag-dplayer: Embed dplayer in Hexo posts/pages</a></li>
-<li><a href="https://diygod.me/best-players-in-hexo/">可能是目前最好用的两个 Hexo 播放器插件 | Hi，DIYgod</a></li>
-<li><a href="http://blog.yusank.space/HexoMedia.html/">Hexo 博客添加视频和音乐 | Yusank's blog</a></li>
-<li><a href="https://www.jianshu.com/p/8e1cf1ca131b">hexo 插入视频和音乐播放器 - 简书</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
         <tag>博客</tag>
       </tags>
   </entry>
