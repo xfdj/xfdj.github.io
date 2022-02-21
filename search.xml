@@ -9867,7 +9867,8 @@ E[s^2]=\frac{N-1}{N}\sigma^2\neq\sigma^2
 \sigma^t=\sqrt{\frac{1}{t+1}\sum^t_{i=0}\left(\frac{\partial L(\theta^i)}{\partial \theta^i}\right)^2}
 \]</span> 化简一下可以变成 <span class="math display">\[
 \theta^{t+1}=\theta^t-\frac{\eta}{\sqrt{\sum^t_{i=1}\left(\frac{\partial L(\theta^i)}{\partial \theta^i}\right)^2}}\frac{\partial L(\theta^i)}{\partial \theta^i}
-\]</span> 当然自适应地调整学习率有一系列的方法，如果没有什么需求，可以使用Adam。</p></li>
+\]</span> 这样就不需要把学习率的时间依赖显式地写出来了，直接除以根号下微分的平方和就行。</p>
+<p>当然自适应地调整学习率有一系列的方法，如果没有什么需求，可以使用Adam。</p></li>
 <li><p>最好的步长和一次微分成正比，和二次微分成反比。Adagrad神奇的地方在于它的步长正好正比于一次微分，反比于二次微分。分母的一坨东西想要代表的是二次微分。Adagrad想做的事情是在不直接计算出二次微分的情况下，能不能想办法估计一下二次微分的大小，并且Adagrad只需要一次微分的值。所以这个分母的值可以理解成一种“反差”的大小，如果二次微分比较小，那么在局部最低点附近的一次微分的值也比较小，那采样出来的几个一次微分的值求平方和开根号也比较小，反之亦然，所以分母从某种程度上代表了二次微分值的大小。</p></li>
 <li><p>随机梯度下降。修改损失函数的表达，从 <span class="math display">\[
 L=\sum_n\left(\hat y^n - \left( b+\sum w_i x^n_i\right)\right)^2
