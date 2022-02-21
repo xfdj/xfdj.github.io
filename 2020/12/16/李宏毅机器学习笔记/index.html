@@ -47,11 +47,13 @@
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Cross%20Validation.png">
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_N-fold%20Cross%20Validation.png">
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Review-Gradient%20Descent.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_learning%20rate.png">
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Stochastic%20Gradient%20Descent.png">
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Feature%20Scaling.png">
 <meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_%E6%A0%87%E5%87%86%E5%8C%96.png">
+<meta property="og:image" content="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_More%20Limitation%20of%20Gradient%20Descent.png">
 <meta property="article:published_time" content="2020-12-16T12:38:17.000Z">
-<meta property="article:modified_time" content="2022-02-21T09:18:18.192Z">
+<meta property="article:modified_time" content="2022-02-21T15:47:37.919Z">
 <meta property="article:author" content="想飞的鸡">
 <meta property="article:tag" content="填坑中">
 <meta property="article:tag" content="机器学习">
@@ -290,7 +292,7 @@ p.spoiler {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-21 17:18:18" itemprop="dateModified" datetime="2022-02-21T17:18:18+08:00">2022-02-21</time>
+      <time title="修改时间：2022-02-21 23:47:37" itemprop="dateModified" datetime="2022-02-21T23:47:37+08:00">2022-02-21</time>
     </span>
 
   
@@ -299,7 +301,7 @@ p.spoiler {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>8.9k</span>
+      <span>9.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -729,10 +731,14 @@ E[s^2]=\frac{N-1}{N}\sigma^2\neq\sigma^2
 <figure>
 <img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Review-Gradient%20Descent.png" alt="Review-Gradient Descent.png" /><figcaption aria-hidden="true">Review-Gradient Descent.png</figcaption>
 </figure>
-<p>梯度下降有几个小提示。</p>
+<p>梯度下降有几个小技巧。</p>
 <ul>
-<li><p>小心调整学习率<span class="math inline">\(\eta\)</span>。如果学习率太大，损失函数可能会越更新越大，如果学习率太小，损失函数可能会下降得很慢。只有刚刚好的学习率，才有可能得到一个好的结果。所以应该要把损失函数的变化图画出来，根据前几步的图像调整学习率，要确定损失函数能够稳定地下降。</p>
-<p>有一些自动的办法可以帮我们调整学习率。最简单的一个想法是学习率会随着参数的更新越来越小。因为刚开始离最低点比较远，步子要迈得大一点，等到离最低点很近的时候，步子要迈小一点。</p>
+<li><p>小心调整学习率<span class="math inline">\(\eta\)</span>。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_learning%20rate.png" alt="learning rate.png" /><figcaption aria-hidden="true">learning rate.png</figcaption>
+</figure>
+<p>当参数很多的时候，没有办法像左边一样可视化，这时候右边的图（损失函数的值随着参数的更新而变化的图像）就很重要，一个好的习惯是每次都绘制出这张图。当学习率太小的时候损失函数会下降得很慢，当学习率太大的时候损失函数可能一开始会下降得很快，但是到一定程度的时候会停止下降，或者一开始就往上增长。所以学习率需要根据右边的图小心调整。只有刚刚好的学习率，才有可能得到一个好的结果。可以根据参数更新前几步的图像调整学习率，以确定损失函数能够稳定地下降。</p>
+<p>有一些自动的办法可以帮我们调整学习率。最简单的一个想法是学习率会随着参数的更新越来越小。因为刚开始离最低点比较远，步子要迈得大一点，也就是使用大一点的学习率，等到离最低点很近的时候，步子要迈小一点，也就是使用小一点的学习率。</p>
 <p>但是这样子还不够，还有一种想法是给每一个参数不同的学习率。这其中一个最简单最容易实现的叫做Adagrad。它的思想是将每一个参数的学习率除以该参数之前所有微分的均方根（RMS）。</p>
 <p>假设一般的梯度下降是 <span class="math display">\[
 \theta^{t+1}=\theta^t-\eta^t\frac{\partial L(\theta^t)}{\partial \theta^t}
@@ -742,14 +748,15 @@ E[s^2]=\frac{N-1}{N}\sigma^2\neq\sigma^2
 \]</span> 这里的<span class="math inline">\(\sigma^t\)</span>是<span class="math inline">\(\theta\)</span>之前微分的均方根。这个值对每一个参数都是不一样的。 <span class="math display">\[
 \sigma^t=\sqrt{\frac{1}{t+1}\sum^t_{i=0}\left(\frac{\partial L(\theta^i)}{\partial \theta^i}\right)^2}
 \]</span> 化简一下可以变成 <span class="math display">\[
-\theta^{t+1}=\theta^t-\frac{\eta}{\sqrt{\sum^t_{i=1}\left(\frac{\partial L(\theta^i)}{\partial \theta^i}\right)^2}}\frac{\partial L(\theta^i)}{\partial \theta^i}
+\theta^{t+1}=\theta^t-\frac{\eta}{\sqrt{\sum^t_{i=1}\left(\frac{\partial L(\theta^i)}{\partial \theta^i}\right)^2}}\frac{\partial L(\theta^t)}{\partial \theta^t}
 \]</span> 这样就不需要把学习率的时间依赖显式地写出来了，直接除以根号下微分的平方和就行。</p>
-<p>当然自适应地调整学习率有一系列的方法，如果没有什么需求，可以使用Adam。</p></li>
-<li><p>最好的步长和一次微分成正比，和二次微分成反比。Adagrad神奇的地方在于它的步长正好正比于一次微分，反比于二次微分。分母的一坨东西想要代表的是二次微分。Adagrad想做的事情是在不直接计算出二次微分的情况下，能不能想办法估计一下二次微分的大小，并且Adagrad只需要一次微分的值。所以这个分母的值可以理解成一种“反差”的大小，如果二次微分比较小，那么在局部最低点附近的一次微分的值也比较小，那采样出来的几个一次微分的值求平方和开根号也比较小，反之亦然，所以分母从某种程度上代表了二次微分值的大小。</p></li>
-<li><p>随机梯度下降。修改损失函数的表达，从 <span class="math display">\[
-L=\sum_n\left(\hat y^n - \left( b+\sum w_i x^n_i\right)\right)^2
+<p>当然自适应地调整学习率有一系列的方法，Adagrad只是里面最简单的一种。如果没有什么需求，可以使用Adam。</p>
+<p>最好的步长和一次微分成正比，和二次微分成反比。Adagrad神奇的地方在于它的步长正好正比于一次微分，反比于二次微分。分母的一坨东西想要代表的是二次微分。Adagrad想做的事情是在不直接计算出二次微分的情况下，能不能想办法估计一下二次微分的大小，并且Adagrad只需要一次微分的值。所以这个分母的值可以理解成一种“反差”的大小，如果二次微分比较小，那么在局部最低点附近的一次微分的值也比较小，那采样出来的几个一次微分的值求平方和开根号也比较小，反之亦然，所以分母从某种程度上代表了二次微分值的大小。</p></li>
+<li><p>随机梯度下降。</p>
+<p>修改损失函数的表达，从 <span class="math display">\[
+L=\sum_n\left(\hat y^n - \left( b+\sum_i w_i x^n_i\right)\right)^2
 \]</span> 到随机取一个样本<span class="math inline">\(x^n\)</span> <span class="math display">\[
-L^n=\left(\hat y^n - \left( b+\sum w_i x^n_i\right)\right)^2
+L^n=\left(\hat y^n - \left( b+\sum_i w_i x^n_i\right)\right)^2
 \]</span> 从算所有训练数据的损失到只算一个训练数据的损失。</p>
 <p>也就是从 <span class="math display">\[
 \theta^{t+1} = \theta^t - \eta \nabla L(\theta^t)
@@ -757,11 +764,12 @@ L^n=\left(\hat y^n - \left( b+\sum w_i x^n_i\right)\right)^2
 \theta^{t+1} = \theta^t - \eta \nabla L^n(\theta^t)
 \]</span> <img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Stochastic%20Gradient%20Descent.png" alt="Stochastic Gradient Descent.png" /></p>
 <p>随机梯度下降好在哪里呢？原始的梯度下降走的方向很稳，但是走一步的计算量很大，而随机梯度下降虽然一步的方向不是很正确，但是计算速度快，走完一个批次之后的结果可能比原始的梯度下降要好。</p></li>
-<li><p>特征缩放。主要思想是希望不同的特征，有相同的范围。</p>
+<li><p>特征缩放。</p>
+<p>主要思想是希望不同的特征，有相同的范围。</p>
 <figure>
 <img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Feature%20Scaling.png" alt="Feature Scaling.png" /><figcaption aria-hidden="true">Feature Scaling.png</figcaption>
 </figure>
-<p>为什么要这么做呢？感觉其实这和给每个参数不同的学习率有异曲同工之妙。</p>
+<p>为什么要这么做呢？感觉其实这和给每个参数不同的学习率有异曲同工之妙。特征缩放可以让梯度下降的方向更加接近目标点的方向，提高更新效率。</p>
 <p>其中一种特征缩放的方式就是标准化。让所有特征的均值都是0，方差都是1。</p>
 <figure>
 <img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_%E6%A0%87%E5%87%86%E5%8C%96.png" alt="标准化.png" /><figcaption aria-hidden="true">标准化.png</figcaption>
@@ -773,7 +781,8 @@ L^n=\left(\hat y^n - \left( b+\sum w_i x^n_i\right)\right)^2
 h(x, y) &amp; = &amp; h(x_0, y_0)+\frac{\partial h(x_0, y_0)}{\partial x}(x-x_0)+\frac{\partial h(x_0, y_0)}{\partial y}(y-y_0) + ...\\
 &amp; \approx &amp; h(x_0, y_0)+\frac{\partial h(x_0, y_0)}{\partial x}(x-x_0)+\frac{\partial h(x_0, y_0)}{\partial y}(y-y_0)
 \end{eqnarray}
-\]</span> 梯度下降的一个弊端是它可能会卡在局部最优解或者鞍点等微分是0的地方，也有可能会在一个类似高原的地方更新缓慢。</p>
+\]</span> <img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_More%20Limitation%20of%20Gradient%20Descent.png" alt="More Limitation of Gradient Descent.png" /></p>
+<p>梯度下降的一个弊端是它可能会卡在局部最优解或者鞍点等微分是0的地方，也有可能会在一个类似高原的地方更新缓慢。</p>
 <h1 id="参考网页">参考网页</h1>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av94519857">李宏毅2020机器学习深度学习(完整版)国语_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</a></li>
