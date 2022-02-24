@@ -31,7 +31,7 @@
 <meta property="og:description" content="Mermaid 简介 Mermaid 是一个用于画流程图、状态图、时序图、甘特图的库，使用 JS 进行本地渲染，广泛集成于许多 Markdown 编辑器中。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-14T14:16:30.000Z">
-<meta property="article:modified_time" content="2022-02-21T15:47:37.911Z">
+<meta property="article:modified_time" content="2022-02-24T09:19:02.483Z">
 <meta property="article:author" content="想飞的鸡">
 <meta property="article:tag" content="Markdown">
 <meta property="article:tag" content="Mermaid">
@@ -269,7 +269,7 @@ p.spoiler {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-21 23:47:37" itemprop="dateModified" datetime="2022-02-21T23:47:37+08:00">2022-02-21</time>
+      <time title="修改时间：2022-02-24 17:19:02" itemprop="dateModified" datetime="2022-02-24T17:19:02+08:00">2022-02-24</time>
     </span>
 
   
@@ -278,7 +278,7 @@ p.spoiler {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.5k</span>
+      <span>1.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -314,104 +314,142 @@ p.spoiler {
 <p>示例：</p>
 <pre class="line-numbers language-none"><code class="language-none">graph TB &#x2F;&#x2F; 从上往下
 start --&gt; stop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph TB
-start --&gt; stop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph TB
+start --&gt; stop
+</pre>
 <h3 id="结点形状">结点形状</h3>
 <h4 id="默认结点矩形">默认结点（矩形）</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph TB 
 id<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph TB
-id<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph TB
+id
+</pre>
 <h4 id="带文字说明的结点">带文字说明的结点</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph TB
 id[text]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph TB
-id[text]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph TB
+id[text]
+</pre>
 <h4 id="圆角结点">圆角结点</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph TB
 id(text)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph TB
-id(text)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph TB
+id(text)
+</pre>
 <h4 id="圆形结点">圆形结点</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph TB
 id((text))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph TB
-id((text))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph TB
+id((text))
+</pre>
 <h4 id="飘带结点">飘带结点</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph TB
 id&gt;text]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph TB
-id&gt;text]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph TB
+id&gt;text]
+</pre>
 <h4 id="菱形结点">菱形结点</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph TB
 id&#123;text&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph TB
-id&#123;text&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph TB
+id{text}
+</pre>
 <h4 id="六边形结点">六边形结点</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph LR
 id&#123;&#123;text&#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
-id&#123;&#123;text&#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph LR
+id
+</pre>
 <h4 id="平行四边形结点">平行四边形结点</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph TB
 id1[&#x2F;text1&#x2F;]
 id2[\text2\]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph TB
+<pre class="mermaid">
+graph TB
 id1[&#x2F;text1&#x2F;]
-id2[\text2\]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+id2[\text2\]
+</pre>
 <h4 id="梯形结点">梯形结点</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph TB
 id1[&#x2F;text1\]
 id2[\text2&#x2F;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph TB
+<pre class="mermaid">
+graph TB
 id1[&#x2F;text1\]
-id2[\text2&#x2F;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+id2[\text2&#x2F;]
+</pre>
 <h3 id="连线">连线</h3>
 <h4 id="箭头">箭头</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph LR
 A --&gt; B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
-A --&gt; B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph LR
+A --&gt; B
+</pre>
 <h4 id="直线">直线</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph LR
 A --- B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
-A --- B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph LR
+A --- B
+</pre>
 <h4 id="带文字的直线">带文字的直线</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph LR
 A -- text --- B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
-A -- text --- B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph LR
+A -- text --- B
+</pre>
 <p>或者</p>
 <pre class="line-numbers language-none"><code class="language-none">graph LR
 A ---|text| B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
-A ---|text| B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph LR
+A ---|text| B
+</pre>
 <h4 id="带文字的箭头">带文字的箭头</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph LR
 A -- text --&gt; B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
-A -- text --&gt; B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph LR
+A -- text --&gt; B
+</pre>
 <p>或者</p>
 <pre class="line-numbers language-none"><code class="language-none">graph LR
 A --&gt;|text| B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
-A --&gt;|text| B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph LR
+A --&gt;|text| B
+</pre>
 <h4 id="虚线">虚线</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph LR
 A -.-&gt; B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
-A -.-&gt; B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph LR
+A -.-&gt; B
+</pre>
 <h4 id="粗箭头可能没用">粗箭头（可能没用）</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph LR
 A &#x3D;&#x3D;&gt; B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
-A &#x3D;&#x3D;&gt; B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph LR
+A &#x3D;&#x3D;&gt; B
+</pre>
 <h4 id="带文字的粗箭头">带文字的粗箭头</h4>
 <pre class="line-numbers language-none"><code class="language-none">graph LR
 A &#x3D;&#x3D; text &#x3D;&#x3D;&gt; B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
-A &#x3D;&#x3D; text &#x3D;&#x3D;&gt; B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="mermaid">
+graph LR
+A &#x3D;&#x3D; text &#x3D;&#x3D;&gt; B
+</pre>
 <h3 id="子图">子图</h3>
 <pre class="line-numbers language-none"><code class="language-none">graph TB
 c1--&gt;a2
@@ -424,7 +462,8 @@ end
 subgraph three
 c1--&gt;c2
 end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph TB
+<pre class="mermaid">
+graph TB
 c1--&gt;a2
 subgraph one
 a1--&gt;a2
@@ -434,7 +473,8 @@ b1--&gt;b2
 end
 subgraph three
 c1--&gt;c2
-end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+end
+</pre>
 <h1 id="参考网页">参考网页</h1>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/#/flowchart">Flowchart - mermaid - Markdownish syntax for generating flowcharts, sequence diagrams, class diagrams, gantt charts and git graphs.</a></li>
@@ -496,7 +536,7 @@ end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">345k</span>
+    <span title="站点总字数">346k</span>
   </span>
 </div>
 
