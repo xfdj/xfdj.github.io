@@ -2935,7 +2935,7 @@ hr {
 .posts-expand .post-eof {
   display: none;
 }
-.posts-expand .post-block:not(:first-child) {
+.posts-expand .post-block:not(:first-of-type) {
   margin-top: 120px;
 }
 .posts-expand .post-header {
@@ -3047,7 +3047,7 @@ hr {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #6f4bff;
+  background: #ffffcf;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);

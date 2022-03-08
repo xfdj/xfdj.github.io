@@ -11865,7 +11865,7 @@ w^*, b^* &amp; = &amp; \arg \min_{w, b} L(w, b) \\
 <p>首先，随机选取一个初始的参数值<span class="math inline">\(w^0, b^0\)</span>。</p>
 <p>在选取位置计算损失函数对参数的梯度。 <span class="math display">\[
 \left.\frac{\partial L}{\partial w}\right|_{w=w^0, b=b^0}, \left.\frac{\partial L}{\partial b}\right|_{w=w^0, b=b^0} \\
-\nabla L = \left[\begin{matrix}
+\grad L = \left[\begin{matrix}
 \frac{\partial L}{\partial w} \\
 \frac{\partial L}{\partial b}
 \end{matrix}\right]_{gradient}
@@ -12010,12 +12010,12 @@ E[s^2]=\frac{N-1}{N}\sigma^2\neq\sigma^2
 \end{bmatrix}
 \]</span></p>
 <p>其中偏导数的部分可以写成 <span class="math display">\[
-\nabla L(\theta)=\begin{bmatrix}
+\grad L(\theta)=\begin{bmatrix}
 \frac{\partial L(\theta)}{\partial \theta_1} \\
 \frac{\partial L(\theta)}{\partial \theta_2}
 \end{bmatrix}
 \]</span> 这样更新部分可以写成 <span class="math display">\[
-\theta^{t+1} = \theta^t - \eta \nabla L(\theta^t)
+\theta^{t+1} = \theta^t - \eta \grad L(\theta^t)
 \]</span> 可以把梯度方向理解成损失函数的等高线的法线方向。</p>
 <figure>
 <img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Review-Gradient%20Descent.png" alt="Review-Gradient Descent.png" /><figcaption aria-hidden="true">Review-Gradient Descent.png</figcaption>
@@ -12048,9 +12048,9 @@ L=\sum_n\left(\hat y^n - \left( b+\sum_i w_i x^n_i\right)\right)^2
 L^n=\left(\hat y^n - \left( b+\sum_i w_i x^n_i\right)\right)^2
 \]</span> 从算所有训练数据的损失到只算一个训练数据的损失。</p>
 <p>也就是从 <span class="math display">\[
-\theta^{t+1} = \theta^t - \eta \nabla L(\theta^t)
+\theta^{t+1} = \theta^t - \eta \grad L(\theta^t)
 \]</span> 到 <span class="math display">\[
-\theta^{t+1} = \theta^t - \eta \nabla L^n(\theta^t)
+\theta^{t+1} = \theta^t - \eta \grad L^n(\theta^t)
 \]</span> <img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Stochastic%20Gradient%20Descent.png" alt="Stochastic Gradient Descent.png" /></p>
 <p>随机梯度下降好在哪里呢？原始的梯度下降走的方向很稳，但是走一步的计算量很大，而随机梯度下降虽然一步的方向不是很正确，但是计算速度快，走完一个批次之后的结果可能比原始的梯度下降要好。</p></li>
 <li><p>特征缩放。</p>
@@ -12085,7 +12085,7 @@ h(x, y) &amp; = &amp; h(x_0, y_0)+\frac{\partial h(x_0, y_0)}{\partial x}(x-x_0)
 <p>一些会用到的符号：</p>
 <ul>
 <li><span class="math inline">\(\theta_t\)</span>：在<span class="math inline">\(t\)</span>时刻的模型参数</li>
-<li><span class="math inline">\(\nabla L(\theta_t)\)</span>或<span class="math inline">\(g(t)\)</span>：<span class="math inline">\(t\)</span>时刻损失函数的梯度，用于计算<span class="math inline">\(\theta_{t+1}\)</span></li>
+<li><span class="math inline">\(\grad L(\theta_t)\)</span>或<span class="math inline">\(g(t)\)</span>：<span class="math inline">\(t\)</span>时刻损失函数的梯度，用于计算<span class="math inline">\(\theta_{t+1}\)</span></li>
 <li><span class="math inline">\(m_{t+1}\)</span>：从0时刻到<span class="math inline">\(t\)</span>时刻积累的动量，用于计算<span class="math inline">\(\theta_{t+1}\)</span></li>
 </ul>
 <p>深度学习里的优化指的是什么？</p>
@@ -12158,8 +12158,8 @@ v_t &amp; = &amp; \beta_2 v_{t-1} + (1-\beta_2) (g_{t-1})^2
 <p>为什么自适应学习率的优化器都是在2014年左右提出来的？之后提出来的基本都打不过Adam和SGDM。</p>
 <p>Adam VS SGDM</p>
 <ul>
-<li>Adam：训练得快，泛化差距大，不稳定</li>
-<li>SGDM：稳定，泛化差距小，收敛性更好（？）</li>
+<li>Adam：训练偏快，不稳定，泛化差距大，有可能不收敛</li>
+<li>SGDM：训练偏慢，稳定，泛化差距小，收敛性更好</li>
 </ul>
 <p>能不能把Adam和SGDM结合起来？这种事情早就有人想过了。</p>
 <ul>
@@ -12276,13 +12276,150 @@ v_t &amp; = &amp; \beta_2 v_{t-1} + (1-\beta_2) (g_{t-1})^2  \\
 <ul>
 <li><p>SGDM <span class="math display">\[
 \begin{eqnarray}
-\theta_t &amp;=&amp; \theta_{t-1} - \eta m_t \\
-m_t &amp;=&amp; \beta_1 m_{t-1} + (1 - \beta_1) g_{t-1} \\
+\theta_t &amp;=&amp; \theta_{t-1} - m_t \\
+&amp;=&amp; \theta_{t-1} - \lambda {\color{Red} m_{t-1}} - \eta \grad L( \theta_{t-1}) \\
+m_t &amp;=&amp; \lambda m_{t-1} + \eta \grad L( \theta_{t-1}) \\
 \end{eqnarray}
 \]</span></p></li>
-<li><p>展望未来</p></li>
+<li><p>往前看一步 <span class="math display">\[
+\begin{eqnarray}
+\theta_t &amp;=&amp; \theta_{t-1} - m_t \\
+m_t &amp;=&amp; \lambda m_{t-1} + \eta \grad L( \theta_{t-1} - \lambda m_{t-1}) \\
+\end{eqnarray}
+\]</span></p></li>
+<li><p>NAG <span class="math display">\[
+\begin{eqnarray}
+\text{Let } \theta_t&#39; &amp;=&amp; \theta_t - \lambda m_t \\
+&amp;=&amp; \theta_{t-1} - m_t - \lambda m_t \\
+&amp;=&amp; \theta_{t-1} - \lambda m_t - \lambda m_{t-1} - \eta \grad L( \theta_{t-1} - \lambda m_{t-1}) \\
+&amp;=&amp; \theta_{t-1}^\prime - \lambda {\color{Red} m_t} - \eta \grad L( \theta_{t-1}&#39;) \\
+m_t &amp;=&amp; \lambda m_{t-1} + \eta \grad L( \theta_{t-1}&#39;) \\
+\end{eqnarray}
+\]</span></p></li>
+</ul>
+<p>不需要维护重复的模型参数。同时也可以发现NAG与SGDM的区别在于标红部分。</p></li>
+<li><p>Nadam（Dozat, ICLR workshop’16）：把NAG的思想用到了Adam上。 <span class="math display">\[
+\begin{eqnarray}
+\theta_t &amp;=&amp; \theta_{t-1} - \frac{\eta}{\sqrt{\hat v_t}+\varepsilon}\hat m_t \\
+\hat m_t &amp;=&amp; \frac{\beta_1 {\color{Red} m_t}}{1-{\color{Red}\beta_1^{t+1}}} + \frac{(1-\beta_1)g_{t-1}}{1-\beta_1^t} \\
+\end{eqnarray}
+\]</span></p>
+<ul>
+<li>Adam <span class="math display">\[
+\begin{eqnarray}
+\hat m_t &amp;=&amp; \frac{1}{1-\beta_1^t}(\beta_1 m_{t-1} + (1-\beta_1)g_{t-1}) \\
+&amp;=&amp; \frac{\beta_1 {\color{Red}m_{t-1}}}{1-{\color{Red}\beta_1^t}} + \frac{(1-\beta_1)g_{t-1}}{1-\beta_1^t} \\
+\end{eqnarray}
+\]</span></li>
 </ul></li>
 </ul>
+<h2 id="一个关于l2正则化的思考">一个关于L2正则化的思考</h2>
+<p>L2正则化后的损失函数可以这么表示： <span class="math display">\[
+L_{l_2}(\theta) = L(\theta) + \frac{1}{2} \gamma \|\theta\|^2
+\]</span> 考虑L2正则化的SGD可以如下表示：</p>
+<ul>
+<li>SGD <span class="math display">\[
+\begin{eqnarray}
+\theta_t &amp;=&amp; \theta_{t-1} - \grad L_{l_2}(\theta_{t-1}) \\
+&amp;=&amp; \theta_{t-1} - \grad L(\theta_{t-1}) - \gamma \theta_{t-1} \\
+\end{eqnarray}
+\]</span></li>
+</ul>
+<p>不过SGDM和Adam如果考虑L2正则化的话，会遇到一个问题，就是需不需要把正则化项放入<span class="math inline">\(m\)</span>或者<span class="math inline">\(v\)</span>里？怎么做效果更好？</p>
+<ul>
+<li><p>SGDM <span class="math display">\[
+\begin{eqnarray}
+\theta_t &amp;=&amp; \theta_{t-1} - \lambda m_{t-1} - \eta (\grad L (\theta_{t-1}) + \gamma \theta_{t-1}) \\
+m_t &amp;=&amp; \lambda m_{t-1} + \eta(\grad L(\theta_{t-1}) + \gamma \theta_{t-1})\\
+\text {Or } m_t &amp;=&amp; \lambda m_{t-1} + \eta\grad L(\theta_{t-1}) \\
+\end{eqnarray}
+\]</span></p></li>
+<li><p>Adam <span class="math display">\[
+\begin{eqnarray}
+m_t &amp;=&amp; \lambda m_{t-1} + \eta(\grad L(\theta_{t-1}) + \gamma \theta_{t-1}) \\
+\text {Or } m_t &amp;=&amp; \lambda m_{t-1} + \eta\grad L(\theta_{t-1}) \\
+\hline
+v_t &amp;=&amp; \beta_2 v_{t-1} + (1-\beta_2)(\grad L(\theta_{t-1}) + \gamma \theta_{t-1})^2 \\
+\text {Or } v_t &amp;=&amp; \beta_2 v_{t-1} + (1-\beta_2)(\grad L(\theta_{t-1}))^2 \\
+\end{eqnarray}
+\]</span></p></li>
+<li><p>AdamW &amp; SGDW with momentum（Loshchilov, arXiv’17）：不把正则项放入<span class="math inline">\(m\)</span>或者<span class="math inline">\(v\)</span>里比较好。在17年之前的正则化实现是把正则项加入了<span class="math inline">\(m\)</span>或者<span class="math inline">\(v\)</span>里，称为L2正则化（L2 regularization）；17年提出的这个则被称为权重衰减（weight decay）。</p>
+<ul>
+<li><p>SGDWM <span class="math display">\[
+\begin{eqnarray}
+\theta_t &amp;=&amp; \theta_{t-1} - m_t -  \gamma \theta_{t-1} \\
+m_t &amp;=&amp; \lambda m_{t-1} + \eta\grad L(\theta_{t-1}) \\
+\end{eqnarray}
+\]</span></p></li>
+<li><p>AdamW，有实际应用，比较重要需要记得的优化器。 <span class="math display">\[
+\begin{eqnarray}
+m_t &amp;=&amp; \beta_1 m_{t-1} + (1-\beta_1)\grad L(\theta_{t-1}) \\
+v_t &amp;=&amp; \beta_2 v_{t-1} + (1-\beta_2)(\grad L(\theta_{t-1}))^2 \\
+\theta_t &amp;=&amp; \theta_{t-1} - \eta\left(\frac{1}{\sqrt{\hat v_t}+\varepsilon}\hat m_t - \gamma \theta_{t-1}\right)
+\end{eqnarray}
+\]</span></p></li>
+</ul></li>
+</ul>
+<h2 id="对优化器有帮助的一些技巧">对优化器有帮助的一些技巧</h2>
+<p>一些增加随机性的方法：</p>
+<ul>
+<li><p>Shuffling</p></li>
+<li><p>Dropout</p></li>
+<li><p>Gradient noise（Neelakantan, et al., arXiv’15） <span class="math display">\[
+\begin{eqnarray}
+g_{t, i} &amp;=&amp; g_{t, i} + N(0, \sigma_t^2) \\
+\sigma_t &amp;=&amp; \frac{c}{(1+t)^\gamma} \\
+\end{eqnarray}
+\]</span></p></li>
+</ul>
+<p>这几个技巧都是在做类似的事情，即鼓励模型多探索，增加随机性，期望得到比较好的结果。</p>
+<p>与学习率调整有关的方法：</p>
+<ul>
+<li><p>Warm-up</p></li>
+<li><p>Curriculum learning（Bengio, et al., ICML’09）</p>
+<p>先用简单数据训练模型（比如规范的数据），然后用困难的数据训练。可能可以提升泛化能力。</p></li>
+<li><p>Fine-tuning（站在巨人的肩膀上）</p></li>
+</ul>
+<p>这几个方法提示我们对模型的训练有耐心。</p>
+<ul>
+<li>Normalization</li>
+<li>Regularization</li>
+</ul>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Normalization%20and%20Regularization.png" alt="Normalization and Regularization.png" /><figcaption aria-hidden="true">Normalization and Regularization.png</figcaption>
+</figure>
+<h2 id="小结">小结</h2>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2020_12_16_%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_What%20we%20learned%20today.png" alt="What we learned today.png" /><figcaption aria-hidden="true">What we learned today.png</figcaption>
+</figure>
+<p>一些建议：</p>
+<table>
+<thead>
+<tr class="header">
+<th>SGDM</th>
+<th>Adam</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>计算机视觉（图像分类、分割、对象检测）</td>
+<td>自然语言处理（机器问答、机器翻译、概括）</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>语音合成</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>GAN</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>强化学习</td>
+</tr>
+</tbody>
+</table>
+<p>有没有万能的优化器？没有！</p>
 <h1 id="参考网页">参考网页</h1>
 <ul>
 <li><a href="https://www.bilibili.com/video/av94519857">李宏毅2020机器学习深度学习(完整版)国语_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</a></li>
