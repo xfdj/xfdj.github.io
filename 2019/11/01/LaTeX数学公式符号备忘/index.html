@@ -31,7 +31,7 @@
 <meta property="og:description" content="这里收录一些常用的数学公式和符号的\(\LaTeX\)表示，需要的一些新的符号也会继续更新。 字体">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-11-01T06:26:33.000Z">
-<meta property="article:modified_time" content="2022-03-08T15:57:28.102Z">
+<meta property="article:modified_time" content="2022-03-11T02:43:34.885Z">
 <meta property="article:author" content="想飞的鸡">
 <meta property="article:tag" content="LaTeX">
 <meta name="twitter:card" content="summary">
@@ -179,7 +179,7 @@ p.spoiler {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E4%BD%93"><span class="nav-number">1.</span> <span class="nav-text">字体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D"><span class="nav-number">2.</span> <span class="nav-text">希腊字母</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%A0%87"><span class="nav-number">3.</span> <span class="nav-text">上下标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E9%A1%B5"><span class="nav-number">4.</span> <span class="nav-text">参考网页</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E4%BD%93"><span class="nav-number">1.</span> <span class="nav-text">字体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%8C%E4%BC%AF%E6%9D%A5%E5%AD%97%E6%AF%8D"><span class="nav-number">2.</span> <span class="nav-text">希伯来字母</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D"><span class="nav-number">3.</span> <span class="nav-text">希腊字母</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%A0%87"><span class="nav-number">4.</span> <span class="nav-text">上下标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E9%A1%B5"><span class="nav-number">5.</span> <span class="nav-text">参考网页</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -273,7 +273,7 @@ p.spoiler {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-08 23:57:28" itemprop="dateModified" datetime="2022-03-08T23:57:28+08:00">2022-03-08</time>
+      <time title="修改时间：2022-03-11 10:43:34" itemprop="dateModified" datetime="2022-03-11T10:43:34+08:00">2022-03-11</time>
     </span>
 
   
@@ -282,14 +282,14 @@ p.spoiler {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.1k</span>
+      <span>3.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
+      <span>6 分钟</span>
     </span>
 </div>
 
@@ -318,15 +318,15 @@ p.spoiler {
 \mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\\
 \mathrm{abcdefghijklmnopqrstuvwxyz}\\
 \]</span></p></li>
-<li><p>意大利体（italic）</p>
-<p>比数学斜体稍微窄一些。</p>
+<li><p>斜体（italic）</p>
+<p>比数学斜体稍微窄一些。拉丁字母默认字体。</p>
 <pre class="line-numbers language-latex" data-language="latex"><code class="language-latex"><span class="token function selector">\mathit</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><span class="math display">\[
 \mathit{0123456789}\\
 \mathit{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\\
 \mathit{abcdefghijklmnopqrstuvwxyz}\\
 \]</span></p></li>
-<li><p>书法体（calligraphic）</p>
+<li><p>手写体（calligraphic）</p>
 <p>有时候用大写字母来表示一些集合。</p>
 <pre class="line-numbers language-latex" data-language="latex"><code class="language-latex"><span class="token function selector">\mathcal</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><span class="math display">\[
@@ -342,6 +342,13 @@ p.spoiler {
 \mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\\
 \mathbf{abcdefghijklmnopqrstuvwxyz}\\
 \]</span></p></li>
+<li><p>粗体希腊字母（boldface greek）</p>
+<pre class="line-numbers language-latex" data-language="latex"><code class="language-latex"><span class="token function selector">\boldsymbol</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><span class="math display">\[
+\boldsymbol{\mathrm{A} \mathrm{B} \Gamma \Delta \mathrm{E} \mathrm{Z} \mathrm{H} \Theta \mathrm{I} \mathrm{K} \Lambda \mathrm{M} \mathrm{N} \Xi \mathrm{O} \Pi \mathrm{P} \Sigma \mathrm{T} \Upsilon \Phi \mathrm{X} \Psi \Omega} \\
+\boldsymbol{\alpha \beta \gamma \delta \epsilon \zeta \eta \theta \iota \kappa \lambda \mu \nu \xi \omicron \pi \rho \sigma \tau \upsilon \phi \chi \psi \omega} \\
+\boldsymbol{\varepsilon \digamma \varkappa \varpi \varrho \varsigma \vartheta \varphi} \\
+\]</span></p></li>
 <li><p>黑板粗体（blackboard bold）</p>
 <p>有时用来代表一些特殊的集合，比如实数集<span class="math inline">\(\mathbb R\)</span>。</p>
 <pre class="line-numbers language-latex" data-language="latex"><code class="language-latex"><span class="token function selector">\mathbb</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -350,7 +357,7 @@ p.spoiler {
 \mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\\
 \mathbb{abcdefghijklmnopqrstuvwxyz}\\
 \]</span></p></li>
-<li><p>哥特体（fraktur）</p>
+<li><p>哥特体/德文尖角体（fraktur）</p>
 <pre class="line-numbers language-latex" data-language="latex"><code class="language-latex"><span class="token function selector">\mathfrak</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><span class="math display">\[
 \mathfrak{0123456789}\\
@@ -379,6 +386,11 @@ p.spoiler {
 \mathscr{abcdefghijklmnopqrstuvwxyz}\\
 \]</span></p></li>
 </ul>
+<h1 id="希伯来字母">希伯来字母</h1>
+<pre class="line-numbers language-latex" data-language="latex"><code class="language-latex"><span class="token function selector">\aleph</span> <span class="token function selector">\beth</span> <span class="token function selector">\gimel</span> <span class="token function selector">\daleth</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><span class="math display">\[
+\aleph\ \beth\ \gimel\ \daleth
+\]</span></p>
 <h1 id="希腊字母">希腊字母</h1>
 <div class="note info"><p>需要注意的是，那些对应了大写英文字母的大写希腊字母是没有办法用名称打出来的，比如<span class="math inline">\(\Alpha\)</span>，对于这些字母，可以用罗马体的英文字母代替。</p>
 </div>
@@ -399,16 +411,16 @@ p.spoiler {
 <td><span class="math inline">\(\mathrm B\ \beta\)</span></td>
 </tr>
 <tr class="odd">
-<td>\Gamma \gamma</td>
-<td><span class="math inline">\(\Gamma\ \gamma\)</span></td>
+<td>\Gamma \varGamma \gamma \digamma</td>
+<td><span class="math inline">\(\Gamma\ \varGamma\ \gamma\ \digamma\)</span></td>
 </tr>
 <tr class="even">
-<td>\Delta \delta</td>
-<td><span class="math inline">\(\Delta\ \delta\)</span></td>
+<td>\Delta \varDelta \delta</td>
+<td><span class="math inline">\(\Delta\ \varDelta\ \delta\)</span></td>
 </tr>
 <tr class="odd">
-<td>\mathrm E \epsilon</td>
-<td><span class="math inline">\(\mathrm E\ \epsilon\)</span></td>
+<td>\mathrm E \epsilon \varepsilon</td>
+<td><span class="math inline">\(\mathrm E\ \epsilon\ \varepsilon\)</span></td>
 </tr>
 <tr class="even">
 <td>\mathrm Z \zeta</td>
@@ -420,7 +432,7 @@ p.spoiler {
 </tr>
 <tr class="even">
 <td>\Theta \theta \vartheta</td>
-<td><span class="math inline">\(\Theta\ \theta\ \vartheta\)</span></td>
+<td><span class="math inline">\(\Theta\ \varTheta\ \theta\ \vartheta\)</span></td>
 </tr>
 <tr class="odd">
 <td>\mathrm I \iota</td>
@@ -431,8 +443,8 @@ p.spoiler {
 <td><span class="math inline">\(\mathrm K\ \kappa\ \varkappa\)</span></td>
 </tr>
 <tr class="odd">
-<td>\Lambda \lambda</td>
-<td><span class="math inline">\(\Lambda\ \lambda\)</span></td>
+<td>\Lambda \varLambda \lambda</td>
+<td><span class="math inline">\(\Lambda\ \varLambda\ \lambda\)</span></td>
 </tr>
 <tr class="even">
 <td>\mathrm M \mu</td>
@@ -443,36 +455,36 @@ p.spoiler {
 <td><span class="math inline">\(\mathrm N\ \nu\)</span></td>
 </tr>
 <tr class="even">
-<td>\Xi \xi</td>
-<td><span class="math inline">\(\Xi\ \xi\)</span></td>
+<td>\Xi \varXi \xi</td>
+<td><span class="math inline">\(\Xi\ \varXi\ \xi\)</span></td>
 </tr>
 <tr class="odd">
 <td>\mathrm O \omicron</td>
 <td><span class="math inline">\(\mathrm O\ \omicron\)</span></td>
 </tr>
 <tr class="even">
-<td>\Pi \pi \varpi</td>
-<td><span class="math inline">\(\Pi\ \pi\)</span> <span class="math inline">\(\varpi\)</span></td>
+<td>\Pi \varPi \pi \varpi</td>
+<td><span class="math inline">\(\Pi\ \varPi\ \pi\ \varpi\)</span></td>
 </tr>
 <tr class="odd">
 <td>\mathrm P \rho \varrho</td>
 <td><span class="math inline">\(\mathrm P\ \rho\ \varrho\)</span></td>
 </tr>
 <tr class="even">
-<td>\Sigma \sigma \varsigma</td>
-<td><span class="math inline">\(\Sigma\ \sigma\)</span> <span class="math inline">\(\varsigma\)</span></td>
+<td>\Sigma \varSigma \sigma \varsigma</td>
+<td><span class="math inline">\(\Sigma\ \varSigma\ \sigma\ \varsigma\)</span></td>
 </tr>
 <tr class="odd">
 <td>\mathrm T \tau</td>
 <td><span class="math inline">\(\mathrm T\ \tau\)</span></td>
 </tr>
 <tr class="even">
-<td>\Upsilon \upsilon</td>
-<td><span class="math inline">\(\Upsilon\ \upsilon\)</span></td>
+<td>\Upsilon \varUpsilon \upsilon</td>
+<td><span class="math inline">\(\Upsilon\ \varUpsilon\ \upsilon\)</span></td>
 </tr>
 <tr class="odd">
-<td>\Phi \phi \varphi</td>
-<td><span class="math inline">\(\Phi\ \phi\ \varphi\)</span></td>
+<td>\Phi \varPhi \phi \varphi</td>
+<td><span class="math inline">\(\Phi\ \varPhi\ \phi\ \varphi\)</span></td>
 </tr>
 <tr class="even">
 <td>\mathrm X \chi</td>
@@ -483,8 +495,8 @@ p.spoiler {
 <td><span class="math inline">\(\Psi\ \psi\)</span></td>
 </tr>
 <tr class="even">
-<td>\Omega \omega</td>
-<td><span class="math inline">\(\Omega\ \omega\)</span></td>
+<td>\Omega \varOmega \omega</td>
+<td><span class="math inline">\(\Omega\ \varOmega\ \omega\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -502,8 +514,8 @@ p.spoiler {
 </thead>
 <tbody>
 <tr class="odd">
-<td>{}^a_b\!x^c_d</td>
-<td><span class="math inline">\({}^a_b\!x^c_d\)</span></td>
+<td>{}^a_bx^c_d</td>
+<td><span class="math inline">\({}^a_bx^c_d\)</span></td>
 </tr>
 <tr class="even">
 <td>\bar{a}</td>
@@ -653,7 +665,7 @@ p.spoiler {
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">352k</span>
+    <span title="站点总字数">356k</span>
   </span>
 </div>
 
