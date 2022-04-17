@@ -2883,7 +2883,12 @@ hr {
 }
 @media (max-width: 767px) {
   .site-nav {
-    padding: 10px 10px 0;
+    padding: 0 10px 0;
+  }
+}
+@media (max-width: 767px) {
+  .main-menu {
+    padding-top: 10px;
   }
 }
 .menu {
@@ -3048,7 +3053,7 @@ hr {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ff8587;
+  background: #c6e8cc;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
