@@ -11618,6 +11618,803 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
       </tags>
   </entry>
   <entry>
+    <title>矩阵微积分公式速查</title>
+    <url>/2020/08/16/%E7%9F%A9%E9%98%B5%E5%BE%AE%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F%E9%80%9F%E6%9F%A5/</url>
+    <content><![CDATA[<h1 id="向量求导">向量求导</h1>
+<h2 id="向量对标量求导">向量对标量求导</h2>
+<p>记向量<span class="math inline">\(\mathbf y: \mathbb R \to \mathbb R^m\)</span> <span class="math display">\[
+\mathbf y=\left[\begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_m \end{array}\right]=\left[\begin{array}{c} f_1(x) \\ f_2(x) \\ \vdots \\ f_m(x) \end{array}\right]
+\]</span> 则向量<span class="math inline">\(\mathbf y\)</span>关于标量<span class="math inline">\(x\)</span>的导数<span class="math inline">\(\frac{\partial \mathbf y}{\partial x}\)</span>有 <span class="math display">\[
+\frac{\partial \mathbf{y}}{\partial x}=\left[\begin{array}{c}
+\frac{\partial y_{1}}{\partial x} \\
+\frac{\partial y_{2}}{\partial x} \\
+\vdots \\
+\frac{\partial y_{m}}{\partial x}
+\end{array}\right]
+\]</span> 这个导数也被称为向量<span class="math inline">\(\mathbf y\)</span>的<strong>切向量</strong>。比如，速度向量是位移向量的切向量，加速度向量是速度向量的切向量。</p>
+<h2 id="标量对向量求导">标量对向量求导</h2>
+<p>对标量<span class="math inline">\(y \in \mathbb R\)</span>和向量<span class="math inline">\(\mathbf x \in \mathbb R^n\)</span> <span class="math display">\[
+\mathbf x=\left[\begin{array}{c}x_1\\x_2\\\vdots\\x_n\end{array}\right], y = f(\mathbf x)=f(x_1, x_2, \cdots, x_n)
+\]</span> 则标量<span class="math inline">\(y\)</span>对向量<span class="math inline">\(\mathbf x\)</span>的导数<span class="math inline">\(\frac{\partial y}{\partial \mathbf x}\)</span> <span class="math display">\[
+\frac{\partial y}{\partial \mathbf{x}}=\left[\begin{array}{llll}
+\frac{\partial y}{\partial x_{1}} &amp; \frac{\partial y}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{n}}
+\end{array}\right]
+\]</span> 一个标量场<span class="math inline">\(y\)</span>在<span class="math inline">\(\mathbb R^n\)</span>空间中的<strong>梯度</strong>（gradient）是上述导数的转置。也就是说 <span class="math display">\[
+\nabla y=\left[\begin{array}{c}
+\frac{\partial y}{\partial x_{1}} \\
+\vdots \\
+\frac{\partial y}{\partial x_{n}}
+\end{array}\right]=\left(\frac{\partial y}{\partial \mathbf{x}}\right)^{T}
+\]</span> 标量函数<span class="math inline">\(y=f(\mathbf x)\)</span>在单位向量<span class="math inline">\(\mathbf u\)</span>方向上的<strong>方向导数</strong>可以用梯度来定义 <span class="math display">\[
+\nabla_{\mathbf{u}} y=\nabla y \cdot \mathbf{u}=(\frac{\partial y}{\partial \mathbf x})^T\cdot \mathbf u=\frac{\partial y}{\partial \mathbf x} \mathbf u
+\]</span></p>
+<h2 id="向量对向量求导">向量对向量求导</h2>
+<p>前面两种情况可以看作是向量对向量求导在其中一个是一维向量情况下的特例。</p>
+<p>对向量<span class="math inline">\(\mathbf y \in \mathbb R^m\)</span>和向量<span class="math inline">\(\mathbf x \in \mathbb R^n\)</span>，向量函数<span class="math inline">\(\mathbf y=f(\mathbf x)\)</span> <span class="math display">\[
+\mathbf x=\left[\begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array}\right], \mathbf y=\left[\begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_m \end{array}\right]=\left[\begin{array}{c} f_1(\mathbf x) \\ f_2(\mathbf x) \\ \vdots \\ f_m(\mathbf x) \end{array}\right]=\left[\begin{array}{c} f_1(x_1, x_2, \cdots, x_n) \\ f_2(x_1, x_2, \cdots, x_n) \\ \vdots \\ f_m(x_1, x_2, \cdots, x_n) \end{array}\right]
+\]</span> 则向量<span class="math inline">\(\mathbf y\)</span>对向量<span class="math inline">\(\mathbf x\)</span>的导数<span class="math inline">\(J=\frac{\partial \mathbf y}{\partial \mathbf x}\)</span> <span class="math display">\[
+J=\frac{\partial \mathbf{y}}{\partial \mathbf{x}}=\left[\begin{array}{cccc}
+\frac{\partial y_{1}}{\partial x_{1}} &amp; \frac{\partial y_{1}}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y_{1}}{\partial x_{n}} \\
+\frac{\partial y_{2}}{\partial x_{1}} &amp; \frac{\partial y_{2}}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y_{2}}{\partial x_{n}} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial y_{m}}{\partial x_{1}} &amp; \frac{\partial y_{m}}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y_{m}}{\partial x_{n}}
+\end{array}\right]
+\]</span> 这个导数也被称为<strong>雅可比矩阵</strong>（Jacobian matrix）。</p>
+<p>可以这样记忆这些导数的排列方式。分子的偏微分是根据<span class="math inline">\(\mathbf y\)</span>的形状来排列的，而分母的偏微分是根据<span class="math inline">\(\mathbf x\)</span>的转置的形状来排列的。例如，<span class="math inline">\(\frac{\partial \mathbf y}{\partial x}\)</span>是列向量，而<span class="math inline">\(\frac{\partial y}{\partial \mathbf x}\)</span>是行向量（假设<span class="math inline">\(\mathbf x\)</span>和<span class="math inline">\(\mathbf y\)</span>是列向量，否则将翻转）。这种布局方式也被称为<strong>分子布局</strong>。与之相反的还有分母布局。</p>
+<h1 id="矩阵求导">矩阵求导</h1>
+<h2 id="矩阵对标量求导">矩阵对标量求导</h2>
+<p>记标量<span class="math inline">\(x \in \mathbb R\)</span>，矩阵<span class="math inline">\(Y \in \mathbb R^{m \times n}\)</span>，则矩阵<span class="math inline">\(Y\)</span>对标量<span class="math inline">\(x\)</span>的导数 <span class="math display">\[
+\frac{\partial Y}{\partial x}=\left[\begin{array}{cccc}
+\frac{\partial y_{11}}{\partial x} &amp; \frac{\partial y_{12}}{\partial x} &amp; \cdots &amp; \frac{\partial y_{1 n}}{\partial x} \\
+\frac{\partial y_{21}}{\partial x} &amp; \frac{\partial y_{22}}{\partial x} &amp; \cdots &amp; \frac{\partial y_{2 n}}{\partial x} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial y_{m 1}}{\partial x} &amp; \frac{\partial y_{m 2}}{\partial x} &amp; \cdots &amp; \frac{\partial y_{m n}}{\partial x}
+\end{array}\right]
+\]</span> 和向量类似，得到的矩阵被称为<strong>切矩阵</strong>。</p>
+<h2 id="标量对矩阵求导">标量对矩阵求导</h2>
+<p>记矩阵<span class="math inline">\(X \in \mathbb R^{p \times q}\)</span>，标量<span class="math inline">\(y \in \mathbb R\)</span>，则标量<span class="math inline">\(y\)</span>对矩阵<span class="math inline">\(X\)</span>的导数 <span class="math display">\[
+\frac{\partial y}{\partial X}=\left[\begin{array}{cccc}
+\frac{\partial y}{\partial x_{11}} &amp; \frac{\partial y}{\partial x_{21}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{p 1}} \\
+\frac{\partial y}{\partial x_{12}} &amp; \frac{\partial y}{\partial x_{22}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{p 2}} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial y}{\partial x_{1 q}} &amp; \frac{\partial y}{\partial x_{2 q}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{p q}}
+\end{array}\right]
+\]</span> 矩阵的标量函数的典型例子有矩阵的迹和行列式。在类似的向量演算中，这个导数通常写成如下形式。 <span class="math display">\[
+\nabla_X y(X)=\frac{\partial y(X)}{\partial X}
+\]</span></p>
+<h2 id="标量对向量求二阶导">标量对向量求二阶导</h2>
+<p>记向量<span class="math inline">\(\mathbf x \in \mathbb R^n\)</span>，函数<span class="math inline">\(f:\mathbb R^n \to \mathbb R\)</span>。则<span class="math inline">\(f\)</span>对于<span class="math inline">\(\mathbf x\)</span>的二阶导<span class="math inline">\(H=\frac{\partial ^2 f}{\partial \mathbf x^2}\)</span> <span class="math display">\[
+H=\frac{\partial ^2 f}{\partial \mathbf x^2}=\left[\begin{array}{cccc}
+\frac{\partial^{2} f}{\partial x_{1}^{2}} &amp; \frac{\partial^{2} f}{\partial x_{1} \partial x_{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{1} \partial x_{n}} \\
+\frac{\partial^{2} f}{\partial x_{2} \partial x_{1}} &amp; \frac{\partial^{2} f}{\partial x_{2}^{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{2} \partial x_{n}} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial^{2} f}{\partial x_{n} \partial x_{1}} &amp; \frac{\partial^{2} f}{\partial x_{n} \partial x_{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{n}^{2}}
+\end{array}\right]
+\]</span> 这个矩阵也被称为<strong>海森矩阵</strong>（Hessian matrix）。海森矩阵和雅可比矩阵以及梯度有如下关系： <span class="math display">\[
+H(f(\mathbf x))=J(\nabla f(\mathbf x))=\frac{\partial \left(\frac{\partial f}{\partial \mathbf x}\right)^T}{\partial \mathbf x}
+\]</span></p>
+<h1 id="恒等式">恒等式</h1>
+<h2 id="向量对向量求导-1">向量对向量求导</h2>
+<p>形如<span class="math inline">\(\frac{\partial \mathbf y}{\partial \mathbf x}\)</span></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>条件</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf a}{\partial \mathbf x}=\mathbf 0\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="math inline">\(\frac{\partial \mathbf x}{\partial \mathbf x}=I\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial A \mathbf x}{\partial \mathbf x}=A\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf x^T A}{\partial \mathbf x^T}=A\)</span></td>
+</tr>
+<tr class="odd">
+<td>标量<span class="math inline">\(a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial a\mathbf u}{\partial \mathbf x}=a\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(v=v(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial v \mathbf u}{\partial \mathbf x}=v\frac{\partial \mathbf u}{\partial \mathbf x}+\mathbf u\frac{\partial v}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial A \mathbf u}{\partial \mathbf x}=A\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial (\mathbf u + \mathbf v)}{\partial \mathbf x}=\frac{\partial \mathbf u}{\partial \mathbf x}+\frac{\partial \mathbf v}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf g=\mathbf g(\mathbf u)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \mathbf g}{\partial \mathbf x}=\frac{\partial \mathbf g}{\partial \mathbf u}\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf g=\mathbf g(\mathbf u)\)</span>，向量<span class="math inline">\(\mathbf f=\mathbf f(\mathbf g)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \mathbf f}{\partial \mathbf x}=\frac{\partial \mathbf f}{\partial \mathbf g}\frac{\partial \mathbf g}{\partial \mathbf u}\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="标量对向量求导-1">标量对向量求导</h2>
+<p>形如<span class="math inline">\(\frac{\partial y}{\partial \mathbf x}=(\nabla_{\mathbf x}y)^T\)</span></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>条件</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>标量<span class="math inline">\(a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial a}{\partial \mathbf x}=\mathbf 0^T\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，标量<span class="math inline">\(u=u(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial a u}{\partial \mathbf x}=a\frac{\partial u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(v=v(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial (u+v)}{\partial \mathbf x}=\frac{\partial u}{\partial \mathbf x} + \frac{\partial v}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(v=v(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial u v}{\partial \mathbf x}=u\frac{\partial v}{\partial \mathbf x}+v\frac{\partial u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(g=g(u)\)</span></td>
+<td><span class="math inline">\(\frac{\partial g}{\partial \mathbf x}=\frac{\partial g}{\partial u}\frac{\partial u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(g=g(u)\)</span>，标量<span class="math inline">\(f=f(g)\)</span></td>
+<td><span class="math inline">\(\frac{\partial f}{\partial \mathbf x}=\frac{\partial f}{\partial g}\frac{\partial g}{\partial u}\frac{\partial u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \mathbf u \cdot \mathbf v}{\partial \mathbf x}=\frac{\partial \mathbf u^T \mathbf v}{\partial \mathbf x}=\mathbf u^{T} \frac{\partial \mathbf v}{\partial \mathbf x}+\mathbf v^{T} \frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span>，矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf{x}\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf{u}^T A \mathbf{v}}{\partial \mathbf{x}}=\mathbf{u}^{T} A \frac{\partial \mathbf{v}}{\partial \mathbf{x}}+\mathbf{v}^{T} A^{T} \frac{\partial \mathbf{u}}{\partial \mathbf{x}}\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(\frac{\partial ^2 f}{\partial \mathbf x \partial \mathbf x^T}=H^T\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial(\mathbf{a} \cdot \mathbf{x})}{\partial \mathbf{x}} =\frac{\partial(\mathbf{x} \cdot \mathbf{a})}{\partial \mathbf{x}}=\frac{\partial \mathbf{a}^{T} \mathbf{x}}{\partial \mathbf{x}} =\frac{\partial \mathbf{x}^{T} \mathbf{a}}{\partial \mathbf{x}}=\mathbf a^T\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf b\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf b^T A \mathbf x}{\partial \mathbf x}=\mathbf b^T A\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf x^T A \mathbf x}{\partial \mathbf x}=\mathbf x^T (A+A^T)\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，并且矩阵<span class="math inline">\(A\)</span>是对称矩阵（即<span class="math inline">\(A=A^T\)</span>）</td>
+<td><span class="math inline">\(\frac{\partial \mathbf x^T A \mathbf x}{\partial \mathbf x}=2 \mathbf x^T A\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="math inline">\(\frac{\partial \|\mathbf{x} \|^{2}}{\partial \mathbf{x}}=\frac{\partial \mathbf x \cdot \mathbf x}{\partial \mathbf x}=\frac{\partial \mathbf x^T \mathbf x}{\partial \mathbf x}=2 \mathbf x^T\)</span></td>
+</tr>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial(\mathbf{a} \cdot \mathbf{u})}{\partial \mathbf{x}}=\frac{\partial \mathbf{a}^{T} \mathbf{u}}{\partial \mathbf{x}}=\mathbf{a}^{T} \frac{\partial \mathbf{u}}{\partial \mathbf{x}}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf a, \mathbf b\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf{a}^{T} \mathbf{x} \mathbf{x}^{T} \mathbf{b}}{\partial \mathbf{x}}=\mathbf{x}^{T}\left(\mathbf{a} \mathbf{b}^{T}+\mathbf{b a}^{T}\right)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(A, \mathbf b, C, D, \mathbf e\)</span> 不是向量 <span class="math inline">\(\mathbf x\)</span> 的函数</td>
+<td><span class="math inline">\(\frac{\partial(A \mathbf{x}+\mathbf{b})^T \mathbf{C}(\mathbf{D} \mathbf{x}+\mathbf{e})}{\partial \mathbf{x}}=(\mathbf{D} \mathbf{x}+\mathbf{e})^T \mathbf{C}^TA+(A \mathbf{x}+\mathbf{b})^T \mathbf{C D}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial\|\mathbf{x}-\mathbf{a}\|}{\partial \mathbf{x}}=\frac{(\mathbf{x}-\mathbf{a})^T}{\|\mathbf{x}-\mathbf{a}\|}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="向量对标量求导-1">向量对标量求导</h2>
+<p>形如<span class="math inline">\(\frac{\partial \mathbf y}{\partial x}\)</span></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>条件</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf a\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf{a}}{\partial x}=\mathbf{0}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(a\)</span>不是标量<span class="math inline">\(x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial a \mathbf{u}}{\partial x}=a \frac{\partial \mathbf{u}}{\partial x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial A \mathbf{u}}{\partial x}=A \frac{\partial \mathbf{u}}{\partial x}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \mathbf{u}^T}{\partial x}=\left( \frac{\partial \mathbf{u}}{\partial x}\right)^T\)</span></td>
+</tr>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial(\mathbf{u}+\mathbf{v})}{\partial x}=\frac{\partial \mathbf{u}}{\partial x}+\frac{\partial \mathbf{v}}{\partial x}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial\left(\mathbf{u}^{T} \mathbf{v}\right)}{\partial x}=\left(\frac{\partial \mathbf{u}}{\partial x}\right)^{T} \mathbf{v}+\mathbf{u}^{T} \frac{\partial \mathbf{v}}{\partial x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf g=\mathbf g(\mathbf u)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \mathbf{g}(\mathbf{u})}{\partial x}=\frac{\partial \mathbf{g}(\mathbf{u})}{\partial \mathbf{u}} \frac{\partial \mathbf{u}}{\partial x}\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial(U \mathbf{v})}{\partial x}=\frac{\partial U}{\partial x} \mathbf{v}+U \frac{\partial \mathbf{v}}{\partial x}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="标量对矩阵求导-1">标量对矩阵求导</h2>
+<p>形如<span class="math inline">\(\frac{\partial y}{\partial X}\)</span></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>条件</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial a}{\partial X}=\mathbf{0}^{T}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，标量<span class="math inline">\(u=u(X)\)</span></td>
+<td><span class="math inline">\(\frac{\partial a u}{\partial X}=\quad a \frac{\partial u}{\partial X}\)</span></td>
+</tr>
+<tr class="odd">
+<td>标量<span class="math inline">\(u=u(X)\)</span>，标量<span class="math inline">\(v=v(X)\)</span></td>
+<td><span class="math inline">\(\frac{\partial(u+v)}{\partial X}=\frac{\partial u}{\partial X}+\frac{\partial v}{\partial X}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(u=u(X)\)</span>，标量<span class="math inline">\(v=v(X)\)</span></td>
+<td><span class="math inline">\(\frac{\partial u v}{\partial X}=u \frac{\partial v}{\partial X}+v \frac{\partial u}{\partial X}\)</span></td>
+</tr>
+<tr class="odd">
+<td>标量<span class="math inline">\(u=u(X)\)</span>，标量<span class="math inline">\(g=g(u)\)</span></td>
+<td><span class="math inline">\(\frac{\partial g(u)}{\partial X}=\frac{\partial g(u)}{\partial u} \frac{\partial u}{\partial X}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf a, \mathbf b\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf{a}^{T} X \mathbf{b}}{\partial X}=\mathbf{b a}^T\)</span></td>
+</tr>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf a, \mathbf b\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf{a}^{T} X^T \mathbf{b}}{\partial X}=\mathbf{ab}^T\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf a, \mathbf b, C\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial(X \mathbf{a}+\mathbf{b})^{T} C(X \mathbf{a}+\mathbf{b})}{\partial X}=\left(\left(C+C^{T}\right)(X \mathbf{a}+\mathbf{b}) \mathbf{a}^{T}\right)^T\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf a, \mathbf b, C\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial(X \mathbf{a})^{T} C(X \mathbf{b})}{\partial X}=\left(C X \mathbf{b} \mathbf{a}^{T}+C^T X \mathbf{a} \mathbf{b}^T\right)^{T}\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(X)}{\partial X}=I\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(U=U(X), V=V(X)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(U+V)}{\partial X}=\frac{\partial \operatorname{tr}(U)}{\partial X}+\frac{\partial \operatorname{tr}(V)}{\partial X}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(U=U(X)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(a U)}{\partial X}=a \frac{\partial \operatorname{tr}(U)}{\partial X}\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(A X)}{\partial X}=\frac{\partial \operatorname{tr}(X A)}{\partial X}=A\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(A X^T)}{\partial X}=\frac{\partial \operatorname{tr}(X^T A)}{\partial X}=A^T\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(X^T A X\right)}{\partial X}=X^T\left(A+A^T\right)\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(X^{-1} A\right)}{\partial X}=-X^{-1} AX^{-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A, B\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(AXB)}{\partial X}=\frac{\partial \operatorname{tr}(B A X)}{\partial X}=BA\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A, B, C\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(AXBX^{T} C\right)}{\partial X}=BX^T CA+B^T X^T A^T C^T\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(X^{n}\right)}{\partial X}=n X^{n-1}\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(AX^{n}\right)}{\partial X}=\sum_{i=0}^{n-1} X^{i} AX^{n-i-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(e^{X}\right)}{\partial X}= e^{X}\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(\sin (X))}{\partial X}= \cos (X)\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(\frac{\partial|X|}{\partial X}=|X| X^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \ln |a X|}{\partial X}=X^{-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A, B\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial |AXB|}{\partial X}=|AXB|X^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="math inline">\(\frac{\partial|X^n|}{\partial X}=n|X^n| X^{-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(X^{\dagger}\)</span>表示<span class="math inline">\(X\)</span>的广义逆</td>
+<td><span class="math inline">\(\frac{\partial \ln |X^TX|}{\partial X}=2X^{\dagger}\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="math inline">\(\frac{\partial \ln |X^TX|}{\partial X^\dagger}=-2X\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(X\)</span>是可逆方阵</td>
+<td><span class="math inline">\(\frac{\partial\left|X^T A X\right|}{\partial X}=2\left|X^T A X\right| X^{-1}=2\left|X^T\right||A||X| X^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(X\)</span>不是方阵，矩阵<span class="math inline">\(A\)</span>是对称矩阵</td>
+<td><span class="math inline">\(\frac{\partial\left|X^T A X\right|}{\partial X}= 2\left|X^T A X\right|\left(X^T A^T X\right)^{-1} X^T A^T\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(X\)</span>不是方阵，矩阵<span class="math inline">\(A\)</span>不是对称矩阵</td>
+<td><span class="math inline">\(\frac{\partial\left|X^T A X\right|}{\partial X}= \left|X^T A X\right|\left(\left(X^T A^T X\right)^{-1} X^T A+\left(X^T A^T X\right)^{-1} X^T A^T\right)\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="矩阵对标量求导-1">矩阵对标量求导</h2>
+<p>形如<span class="math inline">\(\frac{\partial Y}{\partial x}\)</span></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>条件</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span>，标量<span class="math inline">\(a\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial a U}{\partial x}=a\frac{\partial U}{\partial x}\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A, B\)</span>不是标量<span class="math inline">\(x\)</span>的函数，矩阵<span class="math inline">\(U=U(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial A U B}{\partial x}=A\frac{\partial U}{\partial x} B\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial (U + V)}{\partial x} = \frac{\partial U}{\partial x}+\frac{\partial V}{\partial x}\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial (U V)}{\partial x} = U \frac{\partial V}{\partial x}+\frac{\partial U}{\partial x} V\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial (U \otimes V)}{\partial x} = U \otimes \frac{\partial V}{\partial x}+\frac{\partial U}{\partial x} \otimes V\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial (U \circ V)}{\partial x} = U \circ \frac{\partial V}{\partial x}+\frac{\partial U}{\partial x} \circ V\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial U^{-1}}{\partial x}=-U^{-1}\frac{\partial U}{\partial x}U^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(U=U(x,y)\)</span></td>
+<td><span class="math inline">\(\frac{\partial^{2} U^{-1}}{\partial x \partial y}=U^{-1}\left(\frac{\partial U}{\partial x} U^{-1} \frac{\partial U}{\partial y}-\frac{\partial^{2} U}{\partial x \partial y}+\frac{\partial U}{\partial y} U^{-1} \frac{\partial U}{\partial x}\right) U^{-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数，<span class="math inline">\(\mathbf g(X)\)</span>是具有标量系数的任意多项式或多项式级数定义的任何矩阵函数（例如<span class="math inline">\(e^X\)</span>，<span class="math inline">\(\sin(X)\)</span>，<span class="math inline">\(\cos(X)\)</span>，<span class="math inline">\(\ln(X)\)</span>等）；<span class="math inline">\(g(x)\)</span>是对应的标量函数，<span class="math inline">\(g&#39;(x)\)</span>是其导数，<span class="math inline">\(\mathbf g&#39;(X)\)</span>是对应的矩阵函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf g(xA)}{\partial x}=A \mathbf g&#39;(xA)=\mathbf g&#39;(xA)A\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial e^{xA}}{\partial x}=Ae^{xA}=e^{xA}A\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="标量对标量求导">标量对标量求导</h2>
+<p>形如<span class="math inline">\(\frac{\partial y}{\partial x}\)</span></p>
+<h3 id="涉及向量">涉及向量</h3>
+<table>
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>条件</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial g(\mathbf u)}{\partial x}=\frac{\partial g(\mathbf u)}{\partial \mathbf u} \frac{\partial \mathbf u}{\partial x}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial (\mathbf u \cdot \mathbf v)}{\partial x}=\mathbf u \cdot \frac{\partial \mathbf v}{\partial x}+\frac{\partial \mathbf u}{\partial x} \cdot \mathbf v\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="涉及矩阵">涉及矩阵</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>条件</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial|U|}{\partial x}=|U| \operatorname{tr}\left(U^{-1} \frac{\partial U}{\partial x}\right)\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \ln|U|}{\partial x}= \operatorname{tr}\left(U^{-1} \frac{\partial U}{\partial x}\right)\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial^{2}|U|}{\partial x^{2}}=|U|\left[\operatorname{tr}\left(U^{-1} \frac{\partial^{2} U}{\partial x^{2}}\right)+\operatorname{tr}^{2}\left(U^{-1} \frac{\partial U}{\partial x}\right)-\operatorname{tr}\left(\left(U^{-1} \frac{\partial U}{\partial x}\right)^{2}\right)\right]\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial g(U)}{\partial x}= \operatorname{tr}\left(\frac{\partial g(U)}{\partial U} \frac{\partial U}{\partial x}\right)\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数，<span class="math inline">\(\mathbf g(X)\)</span>是具有标量系数的任意多项式或多项式级数定义的任何矩阵函数（例如<span class="math inline">\(e^X\)</span>，<span class="math inline">\(\sin(X)\)</span>，<span class="math inline">\(\cos(X)\)</span>，<span class="math inline">\(\ln(X)\)</span>等）；<span class="math inline">\(g(x)\)</span>是对应的标量函数，<span class="math inline">\(g&#39;(x)\)</span>是其导数，<span class="math inline">\(\mathbf g&#39;(X)\)</span>是对应的矩阵函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(\mathbf{g}(x A))}{\partial x}=\operatorname{tr}\left(A \mathbf{g}&#39;(x A)\right)\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(e^{x A})}{\partial x}=\operatorname{tr}\left(A e^{x A}\right)\)</span></td>
+</tr>
+</tbody>
+</table>
+<h1 id="微分">微分</h1>
+<p>直接进行矩阵求导是一件麻烦事，原因在于很多时候，链式法则和乘法法则并不适用，里面混杂着很多转置运算。</p>
+<p>另一种方式由Thomas P. Minka在《Old and New Matrix Algebra Useful for Statistics》中提出。思路是不直接求导，而是先写出矩阵的微分形式，然后利用微分和导数的关系，得出导数。</p>
+<p>我们首先从标量中的微分说起。标量中的微分定义如下：</p>
+<p>设<span class="math inline">\(y=f(x)\)</span>在<span class="math inline">\((a,b)\)</span>有定义，如果对给定的<span class="math inline">\(x \in (a, b)\)</span>，有 <span class="math display">\[
+\Delta y = f(x+\Delta x)-f(x)=A \Delta x + \omicron (\Delta x),(\Delta x \to 0)
+\]</span> 其中<span class="math inline">\(A\)</span>与<span class="math inline">\(\Delta x\)</span>无关，则称<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x\)</span>点可微，并称<span class="math inline">\(A\Delta x\)</span>为函数<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x\)</span>点的微分，记为 <span class="math display">\[
+\mathrm dy=A\Delta x
+\]</span> 由于<span class="math inline">\(\mathrm d x=\Delta x\)</span>，因此<span class="math inline">\(\mathrm dy=A\mathrm dx\)</span>。</p>
+<p>上面的定义可以直接推广到向量中。也就是说，对于满足某些连续性的向量函数<span class="math inline">\(\mathbf y=f(\mathbf x)\)</span>，有 <span class="math display">\[
+\Delta \mathbf y=\mathbf y(\mathbf x+\mathrm d\mathbf x)-\mathbf y(\mathbf x)=A \mathrm d \mathbf x + \omicron(\mathbf x)
+\]</span> 成立。因此也有<span class="math inline">\(\mathrm d \mathbf y=A \mathrm d \mathbf x\)</span>，<span class="math inline">\(A\)</span>就是<span class="math inline">\(\mathbf y\)</span>对<span class="math inline">\(\mathbf x\)</span>的导数，也叫做雅可比矩阵，记为<span class="math inline">\(J_{\mathbf x \to \mathbf y}\)</span>。雅可比矩阵的转置被认为是<span class="math inline">\(\mathbf y\)</span>的梯度，记为<span class="math inline">\(\nabla \mathbf y\)</span>。一般来说，雅可比矩阵用于微积分，而梯度则用于优化。</p>
+<p>因此，涉及矩阵的任何表达式的导数可以通过两个步骤来计算：</p>
+<ol type="1">
+<li>计算微分。</li>
+<li>将结果整理为规范形式。</li>
+</ol>
+<p>表达式的微分可以通过迭代应用以下规则来计算：</p>
+<ul>
+<li><p>常量： <span class="math display">\[
+\mathrm{d} A =0 \text { (for constant } A)
+\]</span></p></li>
+<li><p>数乘： <span class="math display">\[
+\mathrm{d}(a X) =a \mathrm{d} X
+\]</span></p></li>
+<li><p>加减法： <span class="math display">\[
+\mathrm{d}(X \pm Y) =\mathrm{d} X \pm \mathrm{d} Y
+\]</span></p></li>
+<li><p>矩阵乘法： <span class="math display">\[
+\mathrm{d}(X Y) =(\mathrm{d} X) Y+X \mathrm{d} Y
+\]</span></p></li>
+<li><p>排列变换： <span class="math display">\[
+\mathrm{d} X^{\star} =(\mathrm{d} X)^{\star}
+\]</span> 最后的符号<span class="math inline">\(\star\)</span>是指重新排列元素的任何运算符，例如转置、共轭转置和向量化。</p></li>
+<li><p>迹： <span class="math display">\[
+\mathrm{d}(\operatorname{tr}(X)) =\operatorname{tr}(\mathrm{d} X)
+\]</span></p></li>
+<li><p>行列式： <span class="math display">\[
+\begin{eqnarray*}
+\mathrm{d}{|X|} &amp;=&amp; \operatorname{tr}\left(\operatorname{adj}(X) \mathrm{d}X\right) \\
+\mathrm{d}|X| &amp;=&amp; \operatorname{tr}\left(|X|X^{-1} \mathrm{d} X\right)，当X可逆时
+\end{eqnarray*}
+\]</span> <span class="math inline">\(\mathrm d |X|\)</span>的推导比较复杂，首先需要一条引理：</p>
+<p><strong>引理：</strong><span class="math inline">\(\frac{\partial \mathrm d|X|}{\partial x_{ij}}=\operatorname{adj}(X)_{ji}\)</span></p>
+<p>证明：</p>
+<p>令算符<span class="math inline">\(+_{ij}\)</span>表示对矩阵中位置<span class="math inline">\((i, j)\)</span>的元素增加某个量。 <span class="math display">\[
+\begin{eqnarray*}
+\frac{\partial \mathrm d|X|}{\partial x_{ij}} &amp;=&amp; \lim_{\varepsilon \to 0} \frac{|X+_{ij} \varepsilon|-|X|}{\varepsilon} \\
+&amp;=&amp; \lim_{\varepsilon \to 0} \frac{\sum_{\underset{k \neq j}{k=1}}^n x_{ik}(-1)^{i+k}|X_{ik}|+(x_{ij}+\varepsilon)(-1)^{i+j}|X_{ij}|-\sum_{k=1}^n x_{ik}(-1)^{i+k}|X_{ik}|}{\varepsilon} \\
+&amp;=&amp; \lim_{\varepsilon \to 0} \frac{\sum_{k=1}^n x_{ik}(-1)^{i+k}|X_{ik}|+\varepsilon(-1)^{i+j}|X_{ij}|-\sum_{k=1}^n x_{ik}(-1)^{i+k}|X_{ik}|}{\varepsilon} \\
+&amp;=&amp; \lim_{\varepsilon \to 0} (-1)^{i+j}|X_{ij}| \\
+&amp;=&amp; (-1)^{i+j}|X_{ij}| \\
+&amp;=&amp; \operatorname{adj}(X)_{ji}
+\end{eqnarray*}
+\]</span> 根据全微分的性质，<span class="math inline">\(\mathrm d f=\sum_i \frac{\partial f}{\partial x_i} \mathrm dx\)</span>，由此可以推导出<span class="math inline">\(\mathrm d|X|\)</span>： <span class="math display">\[
+\begin{eqnarray*}
+\mathrm d|X| &amp;=&amp; \sum_{i=1}^n \sum_{j=1}^n \frac{\partial |X|}{\partial x_{ij}} \mathrm dx_{ij} \\
+&amp;=&amp; \sum_{i=1}^n \sum_{j=1}^n \operatorname{adj}(X)_{ji} \mathrm dx_{ij} \\
+&amp;=&amp; \operatorname{tr}(\operatorname{adj}(X)\mathrm dX)
+\end{eqnarray*}
+\]</span> 当<span class="math inline">\(X\)</span>可逆时，有<span class="math inline">\(X^{-1}=\frac{\operatorname{adj}(X)}{|X|}\)</span>，因此 <span class="math display">\[
+\begin{eqnarray*}
+\mathrm d|X| &amp;=&amp; \operatorname{tr}(\operatorname{adj}(X)\mathrm dX) \\
+&amp;=&amp; \operatorname{tr}(|X|X^{-1}\mathrm dX) \\
+&amp;=&amp; |X|\operatorname{tr}(X^{-1}\mathrm dX) \\
+\end{eqnarray*}
+\]</span></p></li>
+<li><p>逆： <span class="math display">\[
+\mathrm{d} X^{-1} =-X^{-1}(\mathrm{d} X) X^{-1}
+\]</span> <span class="math inline">\(\mathrm dX^{-1}\)</span>的推导： <span class="math display">\[
+0=\mathrm dI=\mathrm dX^{-1}X=(\mathrm dX^{-1})X+X^{-1}\mathrm dX
+\]</span> 从中可以推导出<span class="math inline">\(\mathrm dX^{-1}\)</span>。</p></li>
+<li><p><a href="#克罗內克积">克罗內克积</a>： <span class="math display">\[
+\mathrm{d}(X \otimes Y)=(\mathrm{d} X) \otimes Y+X \otimes \mathrm{d} Y
+\]</span></p></li>
+<li><p><a href="#哈达玛积">哈达玛积</a>： <span class="math display">\[
+\mathrm{d}(X \circ Y) =(\mathrm{d} X) \circ Y+X \circ \mathrm{d} Y
+\]</span></p></li>
+<li><p>逐元素函数： <span class="math display">\[
+\mathrm d f(X)= f&#39;(X)\circ \mathrm dX
+\]</span> <span class="math inline">\(f(X)=[f(x_{ij})]\)</span>是逐元素标量函数运算，<span class="math inline">\(f&#39;(X)=[f&#39;(x_{ij})]\)</span>是逐元素求导数。例如：</p>
+<p><span class="math inline">\(X=\left[\begin{array}{cc} x_{11} &amp; x_{12} \\ x_{21} &amp; x_{22} \end{array}\right]\)</span>，<span class="math inline">\(\mathrm d \sin (X)=\left[\begin{array}{cc} \cos x_{11} \mathrm d x_{11} &amp; \cos x_{12} \mathrm d x_{12} \\ \cos x_{21} \mathrm d x_{21} &amp; \cos x_{22} \mathrm d x_{22} \end{array}\right]=\cos (X) \circ \mathrm d X\)</span>。</p></li>
+</ul>
+<p>大部分规则的证明可以通过<span class="math inline">\(F(X+\mathrm dX)-F(X)\)</span>并取线性部分得到。比如： <span class="math display">\[
+\begin{eqnarray*}
+F(X, Y)=XY:\\
+&amp; &amp; F(X+\mathrm dX, Y+\mathrm dY)-F(X, Y) \\
+&amp;=&amp; (X+\mathrm dX)(Y+\mathrm dY)-XY \\
+&amp;=&amp; XY+\mathrm dXY+X\mathrm dY+\mathrm dX \mathrm dY - XY\\
+&amp;=&amp; \mathrm dXY+X\mathrm dY+o(\mathrm P)
+\end{eqnarray*}
+\]</span> 利用这些性质，便可以使用链式法则得出一些比较复杂的微分，比如： <span class="math display">\[
+\begin{aligned}
+&amp;\mathrm d(AX+Y)\\
+=&amp;\mathrm d(AX)+\mathrm d(Y)\\
+=&amp;(\mathrm dA)X+A\mathrm dX+\mathrm dY\\
+=&amp;A\mathrm dX+\mathrm dY
+\end{aligned}
+\]</span></p>
+<p>求出微分后，下一步就是将微分整理成下面的六种形式之一。</p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 34%" />
+<col style="width: 34%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>自变量</th>
+<th>标量</th>
+<th>向量</th>
+<th>矩阵</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>标量</td>
+<td><span class="math inline">\(\mathrm dy=a\mathrm dx\)</span></td>
+<td><span class="math inline">\(\mathrm d \mathbf y=\mathbf a\mathrm dx\)</span></td>
+<td><span class="math inline">\(\mathrm dY=A\mathrm dx\)</span></td>
+</tr>
+<tr class="even">
+<td>向量</td>
+<td><span class="math inline">\(\mathrm dy=\mathbf a\mathrm d \mathbf x\)</span></td>
+<td><span class="math inline">\(\mathrm d\mathbf y=A\mathrm d\mathbf x\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>矩阵</td>
+<td><span class="math inline">\(\mathrm dy=tr(A\mathrm dX)\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>其对应的导数如下表</p>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 34%" />
+<col style="width: 34%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>自变量</th>
+<th>标量</th>
+<th>向量</th>
+<th>矩阵</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>标量</td>
+<td><span class="math inline">\(\frac{\mathrm dy}{\mathrm dx}=a\)</span></td>
+<td><span class="math inline">\(\frac{\mathrm d \mathbf y}{\mathbf dx}=\mathbf a\)</span></td>
+<td><span class="math inline">\(\frac{\mathrm dY}{\mathrm dx}=A\)</span></td>
+</tr>
+<tr class="even">
+<td>向量</td>
+<td><span class="math inline">\(\frac{\mathrm dy}{\mathrm d \mathbf x}=\mathbf a\)</span></td>
+<td><span class="math inline">\(\frac{\mathrm d\mathbf y}{\mathrm d\mathbf x}=A\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>矩阵</td>
+<td><span class="math inline">\(\frac{\mathrm dy}{\mathrm dX}=A\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>注意到矩阵<span class="math inline">\(Y\)</span>对矩阵<span class="math inline">\(X\)</span>的导数无法用矩阵来表示，因此通常会转化成<span class="math inline">\(\frac{\mathbf d \operatorname{vec}(Y)}{\mathbf d \operatorname{vec}(X)}\)</span>，如果微分的目的是使导数等于零，则此变换不会影响结果。</p>
+<p>在整理过程中一些特别有用的技巧：</p>
+<ul>
+<li>标量套上迹：<span class="math inline">\(y=\operatorname{tr}(y)\)</span>。</li>
+<li>转置：<span class="math inline">\(\operatorname{tr}\left(A^{T}\right)=\operatorname{tr}(A)\)</span>。</li>
+<li>加减法：<span class="math inline">\(\operatorname{tr}(A \pm B)=\operatorname{tr}(A) \pm \operatorname{tr}(B)\)</span>。</li>
+<li>数乘：<span class="math inline">\(\operatorname{tr}(aA)=a\operatorname{tr}(A)\)</span>。</li>
+<li>矩阵乘法：<span class="math inline">\(\operatorname{tr}(AB)=\operatorname{tr}(BA)\)</span>。</li>
+<li>矩阵乘法、逐元素乘法交换：<span class="math inline">\(\operatorname{tr}\left(A^{T}(B \circ C)\right)=\operatorname{tr}\left((A \circ B)^{T} C\right)\)</span>，其中<span class="math inline">\(A,B,C\)</span>尺寸相同，两侧都等于<span class="math inline">\(\sum_{i, j}a_{ij}b_{ij}c_{ij}\)</span>。</li>
+</ul>
+<p>下面举几个例子：</p>
+<ul>
+<li><p><span class="math display">\[
+\frac{\mathrm d}{\mathrm d \mathbf x}\operatorname{tr}(AXB)=BA
+\]</span></p>
+<p>令<span class="math inline">\(y=tr(AXB)\)</span>，则 <span class="math display">\[
+\mathrm d y=\mathrm d \operatorname{tr}(AXB)=\mathrm d \operatorname{tr}(BAX)=\operatorname{tr}(\mathrm d(BAX))=\operatorname{tr}((BA)\mathrm dX)
+\]</span></p></li>
+<li><p><span class="math display">\[
+\frac{\mathrm d}{\mathrm dX}\operatorname{tr}(AX^TBXC)=CAX^TB+A^TC^TX^TB^T
+\]</span></p>
+<p>因为 <span class="math display">\[
+\begin{eqnarray*}
+\mathrm d \operatorname{tr}(AX^TBXC)&amp;=&amp;\operatorname{tr}(\mathrm d(AX^TBXC))\\
+&amp;=&amp;\operatorname{tr}(\mathrm d(AX^T)BXC+AX^T\mathrm d(BXC)) \\
+&amp;=&amp;\operatorname{tr}(A(\mathrm dX)^TBXC+AX^TB\mathrm dX C) \\
+&amp;=&amp;\operatorname{tr}(A(\mathrm dX)^TBXC)+\operatorname{tr}(AX^TB\mathrm dX C) \\
+&amp;=&amp;\operatorname{tr}(A^TC^TX^TB^T\mathrm dX)+\operatorname{tr}(CAX^TB\mathrm dX) \\
+&amp;=&amp;\operatorname{tr}((A^TC^TX^TB^T+CAX^TB)\mathrm dX) \\
+\end{eqnarray*}
+\]</span></p></li>
+</ul>
+<h2 id="克罗內克积">克罗內克积</h2>
+<p><span class="math display">\[
+A \otimes B=\left[\begin{array}{ccc}
+a_{11} B &amp; \cdots &amp; a_{1 n} B \\
+\vdots &amp; \ddots &amp; \vdots \\
+a_{m 1} B &amp; \cdots &amp; a_{m n} B
+\end{array}\right]
+\]</span></p>
+<p>克罗內克积满足双线性和结合律： <span class="math display">\[
+\begin{eqnarray*}
+A \otimes(B+C)&amp;=&amp;A \otimes B+A \otimes C \quad(\text { if } B \text { and } C \text { have the same size }), \\
+(A+B) \otimes C&amp;=&amp;A \otimes C+B \otimes C \quad(\text { if } A \text { and } B \text { have the same size }), \\
+(k A) \otimes B&amp;=&amp;A \otimes(k B)=k(A \otimes B), \\
+(A \otimes B) \otimes C&amp;=&amp;A \otimes(B \otimes C)
+\end{eqnarray*}
+\]</span> 克罗內克积不满足交换律：通常，<span class="math inline">\(A \otimes B \neq B \otimes A\)</span>。</p>
+<p>克罗內克积满足混合乘积性质：<span class="math inline">\((A \otimes B)(C \otimes D)=AC \otimes BD\)</span>。从中可以推出：<span class="math inline">\((A \otimes B)^{-1}=A^{-1} \otimes B^{-1}\)</span>。</p>
+<p>克罗內克积对转置运算满足分配律：<span class="math inline">\((A \otimes B)^T=A^T \otimes B^T\)</span>。</p>
+<p>克罗內克积对矩阵的迹运算满足：<span class="math inline">\(\operatorname{tr}(A\otimes B)=\operatorname{tr}A \operatorname{tr}B\)</span>。</p>
+<p>克罗內克积对矩阵的行列式运算满足：<span class="math inline">\(\det(A \otimes B)=(\det A)^b(det B)^a\)</span>，其中<span class="math inline">\(a\)</span>为矩阵<span class="math inline">\(A\)</span>的特征值数量，<span class="math inline">\(b\)</span>为矩阵<span class="math inline">\(B\)</span>的特征值数量。</p>
+<p>克罗內克积对矩阵的秩满足：<span class="math inline">\(\operatorname{rank}(A \otimes B)=\operatorname{rank}A \operatorname{rank}B\)</span></p>
+<h2 id="哈达玛积">哈达玛积</h2>
+<p><span class="math display">\[
+(A \circ B)_{i j}=a_{i j}b_{i j}
+\]</span></p>
+<p>说白了就是对应元素相乘。</p>
+<p>哈达玛积满足交换律，结合律和对加法的分配律： <span class="math display">\[
+\begin{eqnarray*}
+A \circ B&amp;=&amp;B \circ A \\
+A \circ(B\circ C)&amp;=&amp;(A \circ B) \circ C \\
+A \circ(B + C) &amp;=&amp; A \circ B + A \circ C
+\end{eqnarray*}
+\]</span></p>
+<h2 id="向量化">向量化</h2>
+<p><span class="math display">\[
+\operatorname{vec}
+(\left[\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \\
+\end{array}\right])
+=
+\left[\begin{array}{c}
+a_{11} \\ a_{21} \\ \vdots \\ a_{m1} \\
+a_{12} \\ a_{22} \\ \vdots \\ a_{m2} \\
+\vdots \\
+a_{1n} \\ a_{2n} \\ \vdots \\ a_{mn}
+\end{array}\right]
+\]</span></p>
+<h1 id="参考网页">参考网页</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Matrix_calculus#Identities_in_differential_form">Matrix calculus - Wikipedia</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/24709748">矩阵求导术（上） - 知乎</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/24863977">矩阵求导术（下） - 知乎</a></li>
+<li><a href="https://tminka.github.io/papers/matrix/minka-matrix.pdf">t.dvi</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>矩阵</tag>
+        <tag>微积分</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>李宏毅机器学习笔记</title>
     <url>/2020/12/16/%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="前言">前言</h1>
@@ -12522,803 +13319,6 @@ f_{\boldsymbol \mu, \Sigma}(x)=\frac{1}{(2\pi)^{D/2}|\Sigma|^{1/2}}\exp\left(-\f
       <tags>
         <tag>填坑中</tag>
         <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>矩阵微积分公式速查</title>
-    <url>/2020/08/16/%E7%9F%A9%E9%98%B5%E5%BE%AE%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F%E9%80%9F%E6%9F%A5/</url>
-    <content><![CDATA[<h1 id="向量求导">向量求导</h1>
-<h2 id="向量对标量求导">向量对标量求导</h2>
-<p>记向量<span class="math inline">\(\mathbf y: \mathbb R \to \mathbb R^m\)</span> <span class="math display">\[
-\mathbf y=\left[\begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_m \end{array}\right]=\left[\begin{array}{c} f_1(x) \\ f_2(x) \\ \vdots \\ f_m(x) \end{array}\right]
-\]</span> 则向量<span class="math inline">\(\mathbf y\)</span>关于标量<span class="math inline">\(x\)</span>的导数<span class="math inline">\(\frac{\partial \mathbf y}{\partial x}\)</span>有 <span class="math display">\[
-\frac{\partial \mathbf{y}}{\partial x}=\left[\begin{array}{c}
-\frac{\partial y_{1}}{\partial x} \\
-\frac{\partial y_{2}}{\partial x} \\
-\vdots \\
-\frac{\partial y_{m}}{\partial x}
-\end{array}\right]
-\]</span> 这个导数也被称为向量<span class="math inline">\(\mathbf y\)</span>的<strong>切向量</strong>。比如，速度向量是位移向量的切向量，加速度向量是速度向量的切向量。</p>
-<h2 id="标量对向量求导">标量对向量求导</h2>
-<p>对标量<span class="math inline">\(y \in \mathbb R\)</span>和向量<span class="math inline">\(\mathbf x \in \mathbb R^n\)</span> <span class="math display">\[
-\mathbf x=\left[\begin{array}{c}x_1\\x_2\\\vdots\\x_n\end{array}\right], y = f(\mathbf x)=f(x_1, x_2, \cdots, x_n)
-\]</span> 则标量<span class="math inline">\(y\)</span>对向量<span class="math inline">\(\mathbf x\)</span>的导数<span class="math inline">\(\frac{\partial y}{\partial \mathbf x}\)</span> <span class="math display">\[
-\frac{\partial y}{\partial \mathbf{x}}=\left[\begin{array}{llll}
-\frac{\partial y}{\partial x_{1}} &amp; \frac{\partial y}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{n}}
-\end{array}\right]
-\]</span> 一个标量场<span class="math inline">\(y\)</span>在<span class="math inline">\(\mathbb R^n\)</span>空间中的<strong>梯度</strong>（gradient）是上述导数的转置。也就是说 <span class="math display">\[
-\nabla y=\left[\begin{array}{c}
-\frac{\partial y}{\partial x_{1}} \\
-\vdots \\
-\frac{\partial y}{\partial x_{n}}
-\end{array}\right]=\left(\frac{\partial y}{\partial \mathbf{x}}\right)^{T}
-\]</span> 标量函数<span class="math inline">\(y=f(\mathbf x)\)</span>在单位向量<span class="math inline">\(\mathbf u\)</span>方向上的<strong>方向导数</strong>可以用梯度来定义 <span class="math display">\[
-\nabla_{\mathbf{u}} y=\nabla y \cdot \mathbf{u}=(\frac{\partial y}{\partial \mathbf x})^T\cdot \mathbf u=\frac{\partial y}{\partial \mathbf x} \mathbf u
-\]</span></p>
-<h2 id="向量对向量求导">向量对向量求导</h2>
-<p>前面两种情况可以看作是向量对向量求导在其中一个是一维向量情况下的特例。</p>
-<p>对向量<span class="math inline">\(\mathbf y \in \mathbb R^m\)</span>和向量<span class="math inline">\(\mathbf x \in \mathbb R^n\)</span>，向量函数<span class="math inline">\(\mathbf y=f(\mathbf x)\)</span> <span class="math display">\[
-\mathbf x=\left[\begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array}\right], \mathbf y=\left[\begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_m \end{array}\right]=\left[\begin{array}{c} f_1(\mathbf x) \\ f_2(\mathbf x) \\ \vdots \\ f_m(\mathbf x) \end{array}\right]=\left[\begin{array}{c} f_1(x_1, x_2, \cdots, x_n) \\ f_2(x_1, x_2, \cdots, x_n) \\ \vdots \\ f_m(x_1, x_2, \cdots, x_n) \end{array}\right]
-\]</span> 则向量<span class="math inline">\(\mathbf y\)</span>对向量<span class="math inline">\(\mathbf x\)</span>的导数<span class="math inline">\(J=\frac{\partial \mathbf y}{\partial \mathbf x}\)</span> <span class="math display">\[
-J=\frac{\partial \mathbf{y}}{\partial \mathbf{x}}=\left[\begin{array}{cccc}
-\frac{\partial y_{1}}{\partial x_{1}} &amp; \frac{\partial y_{1}}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y_{1}}{\partial x_{n}} \\
-\frac{\partial y_{2}}{\partial x_{1}} &amp; \frac{\partial y_{2}}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y_{2}}{\partial x_{n}} \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-\frac{\partial y_{m}}{\partial x_{1}} &amp; \frac{\partial y_{m}}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y_{m}}{\partial x_{n}}
-\end{array}\right]
-\]</span> 这个导数也被称为<strong>雅可比矩阵</strong>（Jacobian matrix）。</p>
-<p>可以这样记忆这些导数的排列方式。分子的偏微分是根据<span class="math inline">\(\mathbf y\)</span>的形状来排列的，而分母的偏微分是根据<span class="math inline">\(\mathbf x\)</span>的转置的形状来排列的。例如，<span class="math inline">\(\frac{\partial \mathbf y}{\partial x}\)</span>是列向量，而<span class="math inline">\(\frac{\partial y}{\partial \mathbf x}\)</span>是行向量（假设<span class="math inline">\(\mathbf x\)</span>和<span class="math inline">\(\mathbf y\)</span>是列向量，否则将翻转）。这种布局方式也被称为<strong>分子布局</strong>。与之相反的还有分母布局。</p>
-<h1 id="矩阵求导">矩阵求导</h1>
-<h2 id="矩阵对标量求导">矩阵对标量求导</h2>
-<p>记标量<span class="math inline">\(x \in \mathbb R\)</span>，矩阵<span class="math inline">\(Y \in \mathbb R^{m \times n}\)</span>，则矩阵<span class="math inline">\(Y\)</span>对标量<span class="math inline">\(x\)</span>的导数 <span class="math display">\[
-\frac{\partial Y}{\partial x}=\left[\begin{array}{cccc}
-\frac{\partial y_{11}}{\partial x} &amp; \frac{\partial y_{12}}{\partial x} &amp; \cdots &amp; \frac{\partial y_{1 n}}{\partial x} \\
-\frac{\partial y_{21}}{\partial x} &amp; \frac{\partial y_{22}}{\partial x} &amp; \cdots &amp; \frac{\partial y_{2 n}}{\partial x} \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-\frac{\partial y_{m 1}}{\partial x} &amp; \frac{\partial y_{m 2}}{\partial x} &amp; \cdots &amp; \frac{\partial y_{m n}}{\partial x}
-\end{array}\right]
-\]</span> 和向量类似，得到的矩阵被称为<strong>切矩阵</strong>。</p>
-<h2 id="标量对矩阵求导">标量对矩阵求导</h2>
-<p>记矩阵<span class="math inline">\(X \in \mathbb R^{p \times q}\)</span>，标量<span class="math inline">\(y \in \mathbb R\)</span>，则标量<span class="math inline">\(y\)</span>对矩阵<span class="math inline">\(X\)</span>的导数 <span class="math display">\[
-\frac{\partial y}{\partial X}=\left[\begin{array}{cccc}
-\frac{\partial y}{\partial x_{11}} &amp; \frac{\partial y}{\partial x_{21}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{p 1}} \\
-\frac{\partial y}{\partial x_{12}} &amp; \frac{\partial y}{\partial x_{22}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{p 2}} \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-\frac{\partial y}{\partial x_{1 q}} &amp; \frac{\partial y}{\partial x_{2 q}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{p q}}
-\end{array}\right]
-\]</span> 矩阵的标量函数的典型例子有矩阵的迹和行列式。在类似的向量演算中，这个导数通常写成如下形式。 <span class="math display">\[
-\nabla_X y(X)=\frac{\partial y(X)}{\partial X}
-\]</span></p>
-<h2 id="标量对向量求二阶导">标量对向量求二阶导</h2>
-<p>记向量<span class="math inline">\(\mathbf x \in \mathbb R^n\)</span>，函数<span class="math inline">\(f:\mathbb R^n \to \mathbb R\)</span>。则<span class="math inline">\(f\)</span>对于<span class="math inline">\(\mathbf x\)</span>的二阶导<span class="math inline">\(H=\frac{\partial ^2 f}{\partial \mathbf x^2}\)</span> <span class="math display">\[
-H=\frac{\partial ^2 f}{\partial \mathbf x^2}=\left[\begin{array}{cccc}
-\frac{\partial^{2} f}{\partial x_{1}^{2}} &amp; \frac{\partial^{2} f}{\partial x_{1} \partial x_{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{1} \partial x_{n}} \\
-\frac{\partial^{2} f}{\partial x_{2} \partial x_{1}} &amp; \frac{\partial^{2} f}{\partial x_{2}^{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{2} \partial x_{n}} \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-\frac{\partial^{2} f}{\partial x_{n} \partial x_{1}} &amp; \frac{\partial^{2} f}{\partial x_{n} \partial x_{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{n}^{2}}
-\end{array}\right]
-\]</span> 这个矩阵也被称为<strong>海森矩阵</strong>（Hessian matrix）。海森矩阵和雅可比矩阵以及梯度有如下关系： <span class="math display">\[
-H(f(\mathbf x))=J(\nabla f(\mathbf x))=\frac{\partial \left(\frac{\partial f}{\partial \mathbf x}\right)^T}{\partial \mathbf x}
-\]</span></p>
-<h1 id="恒等式">恒等式</h1>
-<h2 id="向量对向量求导-1">向量对向量求导</h2>
-<p>形如<span class="math inline">\(\frac{\partial \mathbf y}{\partial \mathbf x}\)</span></p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>条件</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf a}{\partial \mathbf x}=\mathbf 0\)</span></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><span class="math inline">\(\frac{\partial \mathbf x}{\partial \mathbf x}=I\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial A \mathbf x}{\partial \mathbf x}=A\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf x^T A}{\partial \mathbf x^T}=A\)</span></td>
-</tr>
-<tr class="odd">
-<td>标量<span class="math inline">\(a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial a\mathbf u}{\partial \mathbf x}=a\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(v=v(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial v \mathbf u}{\partial \mathbf x}=v\frac{\partial \mathbf u}{\partial \mathbf x}+\mathbf u\frac{\partial v}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial A \mathbf u}{\partial \mathbf x}=A\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial (\mathbf u + \mathbf v)}{\partial \mathbf x}=\frac{\partial \mathbf u}{\partial \mathbf x}+\frac{\partial \mathbf v}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf g=\mathbf g(\mathbf u)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \mathbf g}{\partial \mathbf x}=\frac{\partial \mathbf g}{\partial \mathbf u}\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf g=\mathbf g(\mathbf u)\)</span>，向量<span class="math inline">\(\mathbf f=\mathbf f(\mathbf g)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \mathbf f}{\partial \mathbf x}=\frac{\partial \mathbf f}{\partial \mathbf g}\frac{\partial \mathbf g}{\partial \mathbf u}\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
-</tr>
-</tbody>
-</table>
-<h2 id="标量对向量求导-1">标量对向量求导</h2>
-<p>形如<span class="math inline">\(\frac{\partial y}{\partial \mathbf x}=(\nabla_{\mathbf x}y)^T\)</span></p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>条件</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>标量<span class="math inline">\(a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial a}{\partial \mathbf x}=\mathbf 0^T\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，标量<span class="math inline">\(u=u(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial a u}{\partial \mathbf x}=a\frac{\partial u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="odd">
-<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(v=v(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial (u+v)}{\partial \mathbf x}=\frac{\partial u}{\partial \mathbf x} + \frac{\partial v}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(v=v(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial u v}{\partial \mathbf x}=u\frac{\partial v}{\partial \mathbf x}+v\frac{\partial u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="odd">
-<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(g=g(u)\)</span></td>
-<td><span class="math inline">\(\frac{\partial g}{\partial \mathbf x}=\frac{\partial g}{\partial u}\frac{\partial u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(g=g(u)\)</span>，标量<span class="math inline">\(f=f(g)\)</span></td>
-<td><span class="math inline">\(\frac{\partial f}{\partial \mathbf x}=\frac{\partial f}{\partial g}\frac{\partial g}{\partial u}\frac{\partial u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \mathbf u \cdot \mathbf v}{\partial \mathbf x}=\frac{\partial \mathbf u^T \mathbf v}{\partial \mathbf x}=\mathbf u^{T} \frac{\partial \mathbf v}{\partial \mathbf x}+\mathbf v^{T} \frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span>，矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf{x}\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf{u}^T A \mathbf{v}}{\partial \mathbf{x}}=\mathbf{u}^{T} A \frac{\partial \mathbf{v}}{\partial \mathbf{x}}+\mathbf{v}^{T} A^{T} \frac{\partial \mathbf{u}}{\partial \mathbf{x}}\)</span></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(\frac{\partial ^2 f}{\partial \mathbf x \partial \mathbf x^T}=H^T\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial(\mathbf{a} \cdot \mathbf{x})}{\partial \mathbf{x}} =\frac{\partial(\mathbf{x} \cdot \mathbf{a})}{\partial \mathbf{x}}=\frac{\partial \mathbf{a}^{T} \mathbf{x}}{\partial \mathbf{x}} =\frac{\partial \mathbf{x}^{T} \mathbf{a}}{\partial \mathbf{x}}=\mathbf a^T\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf b\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf b^T A \mathbf x}{\partial \mathbf x}=\mathbf b^T A\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf x^T A \mathbf x}{\partial \mathbf x}=\mathbf x^T (A+A^T)\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，并且矩阵<span class="math inline">\(A\)</span>是对称矩阵（即<span class="math inline">\(A=A^T\)</span>）</td>
-<td><span class="math inline">\(\frac{\partial \mathbf x^T A \mathbf x}{\partial \mathbf x}=2 \mathbf x^T A\)</span></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><span class="math inline">\(\frac{\partial \|\mathbf{x} \|^{2}}{\partial \mathbf{x}}=\frac{\partial \mathbf x \cdot \mathbf x}{\partial \mathbf x}=\frac{\partial \mathbf x^T \mathbf x}{\partial \mathbf x}=2 \mathbf x^T\)</span></td>
-</tr>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial(\mathbf{a} \cdot \mathbf{u})}{\partial \mathbf{x}}=\frac{\partial \mathbf{a}^{T} \mathbf{u}}{\partial \mathbf{x}}=\mathbf{a}^{T} \frac{\partial \mathbf{u}}{\partial \mathbf{x}}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf a, \mathbf b\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf{a}^{T} \mathbf{x} \mathbf{x}^{T} \mathbf{b}}{\partial \mathbf{x}}=\mathbf{x}^{T}\left(\mathbf{a} \mathbf{b}^{T}+\mathbf{b a}^{T}\right)\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(A, \mathbf b, C, D, \mathbf e\)</span> 不是向量 <span class="math inline">\(\mathbf x\)</span> 的函数</td>
-<td><span class="math inline">\(\frac{\partial(A \mathbf{x}+\mathbf{b})^T \mathbf{C}(\mathbf{D} \mathbf{x}+\mathbf{e})}{\partial \mathbf{x}}=(\mathbf{D} \mathbf{x}+\mathbf{e})^T \mathbf{C}^TA+(A \mathbf{x}+\mathbf{b})^T \mathbf{C D}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial\|\mathbf{x}-\mathbf{a}\|}{\partial \mathbf{x}}=\frac{(\mathbf{x}-\mathbf{a})^T}{\|\mathbf{x}-\mathbf{a}\|}\)</span></td>
-</tr>
-</tbody>
-</table>
-<h2 id="向量对标量求导-1">向量对标量求导</h2>
-<p>形如<span class="math inline">\(\frac{\partial \mathbf y}{\partial x}\)</span></p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>条件</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf a\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf{a}}{\partial x}=\mathbf{0}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(a\)</span>不是标量<span class="math inline">\(x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial a \mathbf{u}}{\partial x}=a \frac{\partial \mathbf{u}}{\partial x}\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial A \mathbf{u}}{\partial x}=A \frac{\partial \mathbf{u}}{\partial x}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \mathbf{u}^T}{\partial x}=\left( \frac{\partial \mathbf{u}}{\partial x}\right)^T\)</span></td>
-</tr>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial(\mathbf{u}+\mathbf{v})}{\partial x}=\frac{\partial \mathbf{u}}{\partial x}+\frac{\partial \mathbf{v}}{\partial x}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial\left(\mathbf{u}^{T} \mathbf{v}\right)}{\partial x}=\left(\frac{\partial \mathbf{u}}{\partial x}\right)^{T} \mathbf{v}+\mathbf{u}^{T} \frac{\partial \mathbf{v}}{\partial x}\)</span></td>
-</tr>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf g=\mathbf g(\mathbf u)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \mathbf{g}(\mathbf{u})}{\partial x}=\frac{\partial \mathbf{g}(\mathbf{u})}{\partial \mathbf{u}} \frac{\partial \mathbf{u}}{\partial x}\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial(U \mathbf{v})}{\partial x}=\frac{\partial U}{\partial x} \mathbf{v}+U \frac{\partial \mathbf{v}}{\partial x}\)</span></td>
-</tr>
-</tbody>
-</table>
-<h2 id="标量对矩阵求导-1">标量对矩阵求导</h2>
-<p>形如<span class="math inline">\(\frac{\partial y}{\partial X}\)</span></p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>条件</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial a}{\partial X}=\mathbf{0}^{T}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，标量<span class="math inline">\(u=u(X)\)</span></td>
-<td><span class="math inline">\(\frac{\partial a u}{\partial X}=\quad a \frac{\partial u}{\partial X}\)</span></td>
-</tr>
-<tr class="odd">
-<td>标量<span class="math inline">\(u=u(X)\)</span>，标量<span class="math inline">\(v=v(X)\)</span></td>
-<td><span class="math inline">\(\frac{\partial(u+v)}{\partial X}=\frac{\partial u}{\partial X}+\frac{\partial v}{\partial X}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(u=u(X)\)</span>，标量<span class="math inline">\(v=v(X)\)</span></td>
-<td><span class="math inline">\(\frac{\partial u v}{\partial X}=u \frac{\partial v}{\partial X}+v \frac{\partial u}{\partial X}\)</span></td>
-</tr>
-<tr class="odd">
-<td>标量<span class="math inline">\(u=u(X)\)</span>，标量<span class="math inline">\(g=g(u)\)</span></td>
-<td><span class="math inline">\(\frac{\partial g(u)}{\partial X}=\frac{\partial g(u)}{\partial u} \frac{\partial u}{\partial X}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf a, \mathbf b\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf{a}^{T} X \mathbf{b}}{\partial X}=\mathbf{b a}^T\)</span></td>
-</tr>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf a, \mathbf b\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf{a}^{T} X^T \mathbf{b}}{\partial X}=\mathbf{ab}^T\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\mathbf a, \mathbf b, C\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial(X \mathbf{a}+\mathbf{b})^{T} C(X \mathbf{a}+\mathbf{b})}{\partial X}=\left(\left(C+C^{T}\right)(X \mathbf{a}+\mathbf{b}) \mathbf{a}^{T}\right)^T\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\mathbf a, \mathbf b, C\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial(X \mathbf{a})^{T} C(X \mathbf{b})}{\partial X}=\left(C X \mathbf{b} \mathbf{a}^{T}+C^T X \mathbf{a} \mathbf{b}^T\right)^{T}\)</span></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(X)}{\partial X}=I\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(U=U(X), V=V(X)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(U+V)}{\partial X}=\frac{\partial \operatorname{tr}(U)}{\partial X}+\frac{\partial \operatorname{tr}(V)}{\partial X}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(U=U(X)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(a U)}{\partial X}=a \frac{\partial \operatorname{tr}(U)}{\partial X}\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(A X)}{\partial X}=\frac{\partial \operatorname{tr}(X A)}{\partial X}=A\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(A X^T)}{\partial X}=\frac{\partial \operatorname{tr}(X^T A)}{\partial X}=A^T\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(X^T A X\right)}{\partial X}=X^T\left(A+A^T\right)\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(X^{-1} A\right)}{\partial X}=-X^{-1} AX^{-1}\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A, B\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(AXB)}{\partial X}=\frac{\partial \operatorname{tr}(B A X)}{\partial X}=BA\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A, B, C\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(AXBX^{T} C\right)}{\partial X}=BX^T CA+B^T X^T A^T C^T\)</span></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(X^{n}\right)}{\partial X}=n X^{n-1}\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(AX^{n}\right)}{\partial X}=\sum_{i=0}^{n-1} X^{i} AX^{n-i-1}\)</span></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(e^{X}\right)}{\partial X}= e^{X}\)</span></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(\sin (X))}{\partial X}= \cos (X)\)</span></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(\frac{\partial|X|}{\partial X}=|X| X^{-1}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \ln |a X|}{\partial X}=X^{-1}\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A, B\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial |AXB|}{\partial X}=|AXB|X^{-1}\)</span></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><span class="math inline">\(\frac{\partial|X^n|}{\partial X}=n|X^n| X^{-1}\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(X^{\dagger}\)</span>表示<span class="math inline">\(X\)</span>的广义逆</td>
-<td><span class="math inline">\(\frac{\partial \ln |X^TX|}{\partial X}=2X^{\dagger}\)</span></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><span class="math inline">\(\frac{\partial \ln |X^TX|}{\partial X^\dagger}=-2X\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(X\)</span>是可逆方阵</td>
-<td><span class="math inline">\(\frac{\partial\left|X^T A X\right|}{\partial X}=2\left|X^T A X\right| X^{-1}=2\left|X^T\right||A||X| X^{-1}\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(X\)</span>不是方阵，矩阵<span class="math inline">\(A\)</span>是对称矩阵</td>
-<td><span class="math inline">\(\frac{\partial\left|X^T A X\right|}{\partial X}= 2\left|X^T A X\right|\left(X^T A^T X\right)^{-1} X^T A^T\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(X\)</span>不是方阵，矩阵<span class="math inline">\(A\)</span>不是对称矩阵</td>
-<td><span class="math inline">\(\frac{\partial\left|X^T A X\right|}{\partial X}= \left|X^T A X\right|\left(\left(X^T A^T X\right)^{-1} X^T A+\left(X^T A^T X\right)^{-1} X^T A^T\right)\)</span></td>
-</tr>
-</tbody>
-</table>
-<h2 id="矩阵对标量求导-1">矩阵对标量求导</h2>
-<p>形如<span class="math inline">\(\frac{\partial Y}{\partial x}\)</span></p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>条件</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span>，标量<span class="math inline">\(a\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial a U}{\partial x}=a\frac{\partial U}{\partial x}\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A, B\)</span>不是标量<span class="math inline">\(x\)</span>的函数，矩阵<span class="math inline">\(U=U(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial A U B}{\partial x}=A\frac{\partial U}{\partial x} B\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial (U + V)}{\partial x} = \frac{\partial U}{\partial x}+\frac{\partial V}{\partial x}\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial (U V)}{\partial x} = U \frac{\partial V}{\partial x}+\frac{\partial U}{\partial x} V\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial (U \otimes V)}{\partial x} = U \otimes \frac{\partial V}{\partial x}+\frac{\partial U}{\partial x} \otimes V\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial (U \circ V)}{\partial x} = U \circ \frac{\partial V}{\partial x}+\frac{\partial U}{\partial x} \circ V\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial U^{-1}}{\partial x}=-U^{-1}\frac{\partial U}{\partial x}U^{-1}\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(U=U(x,y)\)</span></td>
-<td><span class="math inline">\(\frac{\partial^{2} U^{-1}}{\partial x \partial y}=U^{-1}\left(\frac{\partial U}{\partial x} U^{-1} \frac{\partial U}{\partial y}-\frac{\partial^{2} U}{\partial x \partial y}+\frac{\partial U}{\partial y} U^{-1} \frac{\partial U}{\partial x}\right) U^{-1}\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数，<span class="math inline">\(\mathbf g(X)\)</span>是具有标量系数的任意多项式或多项式级数定义的任何矩阵函数（例如<span class="math inline">\(e^X\)</span>，<span class="math inline">\(\sin(X)\)</span>，<span class="math inline">\(\cos(X)\)</span>，<span class="math inline">\(\ln(X)\)</span>等）；<span class="math inline">\(g(x)\)</span>是对应的标量函数，<span class="math inline">\(g&#39;(x)\)</span>是其导数，<span class="math inline">\(\mathbf g&#39;(X)\)</span>是对应的矩阵函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf g(xA)}{\partial x}=A \mathbf g&#39;(xA)=\mathbf g&#39;(xA)A\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial e^{xA}}{\partial x}=Ae^{xA}=e^{xA}A\)</span></td>
-</tr>
-</tbody>
-</table>
-<h2 id="标量对标量求导">标量对标量求导</h2>
-<p>形如<span class="math inline">\(\frac{\partial y}{\partial x}\)</span></p>
-<h3 id="涉及向量">涉及向量</h3>
-<table>
-<colgroup>
-<col style="width: 49%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>条件</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial g(\mathbf u)}{\partial x}=\frac{\partial g(\mathbf u)}{\partial \mathbf u} \frac{\partial \mathbf u}{\partial x}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial (\mathbf u \cdot \mathbf v)}{\partial x}=\mathbf u \cdot \frac{\partial \mathbf v}{\partial x}+\frac{\partial \mathbf u}{\partial x} \cdot \mathbf v\)</span></td>
-</tr>
-</tbody>
-</table>
-<h3 id="涉及矩阵">涉及矩阵</h3>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>条件</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial|U|}{\partial x}=|U| \operatorname{tr}\left(U^{-1} \frac{\partial U}{\partial x}\right)\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \ln|U|}{\partial x}= \operatorname{tr}\left(U^{-1} \frac{\partial U}{\partial x}\right)\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial^{2}|U|}{\partial x^{2}}=|U|\left[\operatorname{tr}\left(U^{-1} \frac{\partial^{2} U}{\partial x^{2}}\right)+\operatorname{tr}^{2}\left(U^{-1} \frac{\partial U}{\partial x}\right)-\operatorname{tr}\left(\left(U^{-1} \frac{\partial U}{\partial x}\right)^{2}\right)\right]\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial g(U)}{\partial x}= \operatorname{tr}\left(\frac{\partial g(U)}{\partial U} \frac{\partial U}{\partial x}\right)\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数，<span class="math inline">\(\mathbf g(X)\)</span>是具有标量系数的任意多项式或多项式级数定义的任何矩阵函数（例如<span class="math inline">\(e^X\)</span>，<span class="math inline">\(\sin(X)\)</span>，<span class="math inline">\(\cos(X)\)</span>，<span class="math inline">\(\ln(X)\)</span>等）；<span class="math inline">\(g(x)\)</span>是对应的标量函数，<span class="math inline">\(g&#39;(x)\)</span>是其导数，<span class="math inline">\(\mathbf g&#39;(X)\)</span>是对应的矩阵函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(\mathbf{g}(x A))}{\partial x}=\operatorname{tr}\left(A \mathbf{g}&#39;(x A)\right)\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(e^{x A})}{\partial x}=\operatorname{tr}\left(A e^{x A}\right)\)</span></td>
-</tr>
-</tbody>
-</table>
-<h1 id="微分">微分</h1>
-<p>直接进行矩阵求导是一件麻烦事，原因在于很多时候，链式法则和乘法法则并不适用，里面混杂着很多转置运算。</p>
-<p>另一种方式由Thomas P. Minka在《Old and New Matrix Algebra Useful for Statistics》中提出。思路是不直接求导，而是先写出矩阵的微分形式，然后利用微分和导数的关系，得出导数。</p>
-<p>我们首先从标量中的微分说起。标量中的微分定义如下：</p>
-<p>设<span class="math inline">\(y=f(x)\)</span>在<span class="math inline">\((a,b)\)</span>有定义，如果对给定的<span class="math inline">\(x \in (a, b)\)</span>，有 <span class="math display">\[
-\Delta y = f(x+\Delta x)-f(x)=A \Delta x + \omicron (\Delta x),(\Delta x \to 0)
-\]</span> 其中<span class="math inline">\(A\)</span>与<span class="math inline">\(\Delta x\)</span>无关，则称<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x\)</span>点可微，并称<span class="math inline">\(A\Delta x\)</span>为函数<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x\)</span>点的微分，记为 <span class="math display">\[
-\mathrm dy=A\Delta x
-\]</span> 由于<span class="math inline">\(\mathrm d x=\Delta x\)</span>，因此<span class="math inline">\(\mathrm dy=A\mathrm dx\)</span>。</p>
-<p>上面的定义可以直接推广到向量中。也就是说，对于满足某些连续性的向量函数<span class="math inline">\(\mathbf y=f(\mathbf x)\)</span>，有 <span class="math display">\[
-\Delta \mathbf y=\mathbf y(\mathbf x+\mathrm d\mathbf x)-\mathbf y(\mathbf x)=A \mathrm d \mathbf x + \omicron(\mathbf x)
-\]</span> 成立。因此也有<span class="math inline">\(\mathrm d \mathbf y=A \mathrm d \mathbf x\)</span>，<span class="math inline">\(A\)</span>就是<span class="math inline">\(\mathbf y\)</span>对<span class="math inline">\(\mathbf x\)</span>的导数，也叫做雅可比矩阵，记为<span class="math inline">\(J_{\mathbf x \to \mathbf y}\)</span>。雅可比矩阵的转置被认为是<span class="math inline">\(\mathbf y\)</span>的梯度，记为<span class="math inline">\(\nabla \mathbf y\)</span>。一般来说，雅可比矩阵用于微积分，而梯度则用于优化。</p>
-<p>因此，涉及矩阵的任何表达式的导数可以通过两个步骤来计算：</p>
-<ol type="1">
-<li>计算微分。</li>
-<li>将结果整理为规范形式。</li>
-</ol>
-<p>表达式的微分可以通过迭代应用以下规则来计算：</p>
-<ul>
-<li><p>常量： <span class="math display">\[
-\mathrm{d} A =0 \text { (for constant } A)
-\]</span></p></li>
-<li><p>数乘： <span class="math display">\[
-\mathrm{d}(a X) =a \mathrm{d} X
-\]</span></p></li>
-<li><p>加减法： <span class="math display">\[
-\mathrm{d}(X \pm Y) =\mathrm{d} X \pm \mathrm{d} Y
-\]</span></p></li>
-<li><p>矩阵乘法： <span class="math display">\[
-\mathrm{d}(X Y) =(\mathrm{d} X) Y+X \mathrm{d} Y
-\]</span></p></li>
-<li><p>排列变换： <span class="math display">\[
-\mathrm{d} X^{\star} =(\mathrm{d} X)^{\star}
-\]</span> 最后的符号<span class="math inline">\(\star\)</span>是指重新排列元素的任何运算符，例如转置、共轭转置和向量化。</p></li>
-<li><p>迹： <span class="math display">\[
-\mathrm{d}(\operatorname{tr}(X)) =\operatorname{tr}(\mathrm{d} X)
-\]</span></p></li>
-<li><p>行列式： <span class="math display">\[
-\begin{eqnarray*}
-\mathrm{d}{|X|} &amp;=&amp; \operatorname{tr}\left(\operatorname{adj}(X) \mathrm{d}X\right) \\
-\mathrm{d}|X| &amp;=&amp; \operatorname{tr}\left(|X|X^{-1} \mathrm{d} X\right)，当X可逆时
-\end{eqnarray*}
-\]</span> <span class="math inline">\(\mathrm d |X|\)</span>的推导比较复杂，首先需要一条引理：</p>
-<p><strong>引理：</strong><span class="math inline">\(\frac{\partial \mathrm d|X|}{\partial x_{ij}}=\operatorname{adj}(X)_{ji}\)</span></p>
-<p>证明：</p>
-<p>令算符<span class="math inline">\(+_{ij}\)</span>表示对矩阵中位置<span class="math inline">\((i, j)\)</span>的元素增加某个量。 <span class="math display">\[
-\begin{eqnarray*}
-\frac{\partial \mathrm d|X|}{\partial x_{ij}} &amp;=&amp; \lim_{\varepsilon \to 0} \frac{|X+_{ij} \varepsilon|-|X|}{\varepsilon} \\
-&amp;=&amp; \lim_{\varepsilon \to 0} \frac{\sum_{\underset{k \neq j}{k=1}}^n x_{ik}(-1)^{i+k}|X_{ik}|+(x_{ij}+\varepsilon)(-1)^{i+j}|X_{ij}|-\sum_{k=1}^n x_{ik}(-1)^{i+k}|X_{ik}|}{\varepsilon} \\
-&amp;=&amp; \lim_{\varepsilon \to 0} \frac{\sum_{k=1}^n x_{ik}(-1)^{i+k}|X_{ik}|+\varepsilon(-1)^{i+j}|X_{ij}|-\sum_{k=1}^n x_{ik}(-1)^{i+k}|X_{ik}|}{\varepsilon} \\
-&amp;=&amp; \lim_{\varepsilon \to 0} (-1)^{i+j}|X_{ij}| \\
-&amp;=&amp; (-1)^{i+j}|X_{ij}| \\
-&amp;=&amp; \operatorname{adj}(X)_{ji}
-\end{eqnarray*}
-\]</span> 根据全微分的性质，<span class="math inline">\(\mathrm d f=\sum_i \frac{\partial f}{\partial x_i} \mathrm dx\)</span>，由此可以推导出<span class="math inline">\(\mathrm d|X|\)</span>： <span class="math display">\[
-\begin{eqnarray*}
-\mathrm d|X| &amp;=&amp; \sum_{i=1}^n \sum_{j=1}^n \frac{\partial |X|}{\partial x_{ij}} \mathrm dx_{ij} \\
-&amp;=&amp; \sum_{i=1}^n \sum_{j=1}^n \operatorname{adj}(X)_{ji} \mathrm dx_{ij} \\
-&amp;=&amp; \operatorname{tr}(\operatorname{adj}(X)\mathrm dX)
-\end{eqnarray*}
-\]</span> 当<span class="math inline">\(X\)</span>可逆时，有<span class="math inline">\(X^{-1}=\frac{\operatorname{adj}(X)}{|X|}\)</span>，因此 <span class="math display">\[
-\begin{eqnarray*}
-\mathrm d|X| &amp;=&amp; \operatorname{tr}(\operatorname{adj}(X)\mathrm dX) \\
-&amp;=&amp; \operatorname{tr}(|X|X^{-1}\mathrm dX) \\
-&amp;=&amp; |X|\operatorname{tr}(X^{-1}\mathrm dX) \\
-\end{eqnarray*}
-\]</span></p></li>
-<li><p>逆： <span class="math display">\[
-\mathrm{d} X^{-1} =-X^{-1}(\mathrm{d} X) X^{-1}
-\]</span> <span class="math inline">\(\mathrm dX^{-1}\)</span>的推导： <span class="math display">\[
-0=\mathrm dI=\mathrm dX^{-1}X=(\mathrm dX^{-1})X+X^{-1}\mathrm dX
-\]</span> 从中可以推导出<span class="math inline">\(\mathrm dX^{-1}\)</span>。</p></li>
-<li><p><a href="#克罗內克积">克罗內克积</a>： <span class="math display">\[
-\mathrm{d}(X \otimes Y)=(\mathrm{d} X) \otimes Y+X \otimes \mathrm{d} Y
-\]</span></p></li>
-<li><p><a href="#哈达玛积">哈达玛积</a>： <span class="math display">\[
-\mathrm{d}(X \circ Y) =(\mathrm{d} X) \circ Y+X \circ \mathrm{d} Y
-\]</span></p></li>
-<li><p>逐元素函数： <span class="math display">\[
-\mathrm d f(X)= f&#39;(X)\circ \mathrm dX
-\]</span> <span class="math inline">\(f(X)=[f(x_{ij})]\)</span>是逐元素标量函数运算，<span class="math inline">\(f&#39;(X)=[f&#39;(x_{ij})]\)</span>是逐元素求导数。例如：</p>
-<p><span class="math inline">\(X=\left[\begin{array}{cc} x_{11} &amp; x_{12} \\ x_{21} &amp; x_{22} \end{array}\right]\)</span>，<span class="math inline">\(\mathrm d \sin (X)=\left[\begin{array}{cc} \cos x_{11} \mathrm d x_{11} &amp; \cos x_{12} \mathrm d x_{12} \\ \cos x_{21} \mathrm d x_{21} &amp; \cos x_{22} \mathrm d x_{22} \end{array}\right]=\cos (X) \circ \mathrm d X\)</span>。</p></li>
-</ul>
-<p>大部分规则的证明可以通过<span class="math inline">\(F(X+\mathrm dX)-F(X)\)</span>并取线性部分得到。比如： <span class="math display">\[
-\begin{eqnarray*}
-F(X, Y)=XY:\\
-&amp; &amp; F(X+\mathrm dX, Y+\mathrm dY)-F(X, Y) \\
-&amp;=&amp; (X+\mathrm dX)(Y+\mathrm dY)-XY \\
-&amp;=&amp; XY+\mathrm dXY+X\mathrm dY+\mathrm dX \mathrm dY - XY\\
-&amp;=&amp; \mathrm dXY+X\mathrm dY+o(\mathrm P)
-\end{eqnarray*}
-\]</span> 利用这些性质，便可以使用链式法则得出一些比较复杂的微分，比如： <span class="math display">\[
-\begin{aligned}
-&amp;\mathrm d(AX+Y)\\
-=&amp;\mathrm d(AX)+\mathrm d(Y)\\
-=&amp;(\mathrm dA)X+A\mathrm dX+\mathrm dY\\
-=&amp;A\mathrm dX+\mathrm dY
-\end{aligned}
-\]</span></p>
-<p>求出微分后，下一步就是将微分整理成下面的六种形式之一。</p>
-<table>
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 34%" />
-<col style="width: 34%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>自变量</th>
-<th>标量</th>
-<th>向量</th>
-<th>矩阵</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>标量</td>
-<td><span class="math inline">\(\mathrm dy=a\mathrm dx\)</span></td>
-<td><span class="math inline">\(\mathrm d \mathbf y=\mathbf a\mathrm dx\)</span></td>
-<td><span class="math inline">\(\mathrm dY=A\mathrm dx\)</span></td>
-</tr>
-<tr class="even">
-<td>向量</td>
-<td><span class="math inline">\(\mathrm dy=\mathbf a\mathrm d \mathbf x\)</span></td>
-<td><span class="math inline">\(\mathrm d\mathbf y=A\mathrm d\mathbf x\)</span></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>矩阵</td>
-<td><span class="math inline">\(\mathrm dy=tr(A\mathrm dX)\)</span></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>其对应的导数如下表</p>
-<table>
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 34%" />
-<col style="width: 34%" />
-<col style="width: 22%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>自变量</th>
-<th>标量</th>
-<th>向量</th>
-<th>矩阵</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>标量</td>
-<td><span class="math inline">\(\frac{\mathrm dy}{\mathrm dx}=a\)</span></td>
-<td><span class="math inline">\(\frac{\mathrm d \mathbf y}{\mathbf dx}=\mathbf a\)</span></td>
-<td><span class="math inline">\(\frac{\mathrm dY}{\mathrm dx}=A\)</span></td>
-</tr>
-<tr class="even">
-<td>向量</td>
-<td><span class="math inline">\(\frac{\mathrm dy}{\mathrm d \mathbf x}=\mathbf a\)</span></td>
-<td><span class="math inline">\(\frac{\mathrm d\mathbf y}{\mathrm d\mathbf x}=A\)</span></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>矩阵</td>
-<td><span class="math inline">\(\frac{\mathrm dy}{\mathrm dX}=A\)</span></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>注意到矩阵<span class="math inline">\(Y\)</span>对矩阵<span class="math inline">\(X\)</span>的导数无法用矩阵来表示，因此通常会转化成<span class="math inline">\(\frac{\mathbf d \operatorname{vec}(Y)}{\mathbf d \operatorname{vec}(X)}\)</span>，如果微分的目的是使导数等于零，则此变换不会影响结果。</p>
-<p>在整理过程中一些特别有用的技巧：</p>
-<ul>
-<li>标量套上迹：<span class="math inline">\(y=\operatorname{tr}(y)\)</span>。</li>
-<li>转置：<span class="math inline">\(\operatorname{tr}\left(A^{T}\right)=\operatorname{tr}(A)\)</span>。</li>
-<li>加减法：<span class="math inline">\(\operatorname{tr}(A \pm B)=\operatorname{tr}(A) \pm \operatorname{tr}(B)\)</span>。</li>
-<li>数乘：<span class="math inline">\(\operatorname{tr}(aA)=a\operatorname{tr}(A)\)</span>。</li>
-<li>矩阵乘法：<span class="math inline">\(\operatorname{tr}(AB)=\operatorname{tr}(BA)\)</span>。</li>
-<li>矩阵乘法、逐元素乘法交换：<span class="math inline">\(\operatorname{tr}\left(A^{T}(B \circ C)\right)=\operatorname{tr}\left((A \circ B)^{T} C\right)\)</span>，其中<span class="math inline">\(A,B,C\)</span>尺寸相同，两侧都等于<span class="math inline">\(\sum_{i, j}a_{ij}b_{ij}c_{ij}\)</span>。</li>
-</ul>
-<p>下面举几个例子：</p>
-<ul>
-<li><p><span class="math display">\[
-\frac{\mathrm d}{\mathrm d \mathbf x}\operatorname{tr}(AXB)=BA
-\]</span></p>
-<p>令<span class="math inline">\(y=tr(AXB)\)</span>，则 <span class="math display">\[
-\mathrm d y=\mathrm d \operatorname{tr}(AXB)=\mathrm d \operatorname{tr}(BAX)=\operatorname{tr}(\mathrm d(BAX))=\operatorname{tr}((BA)\mathrm dX)
-\]</span></p></li>
-<li><p><span class="math display">\[
-\frac{\mathrm d}{\mathrm dX}\operatorname{tr}(AX^TBXC)=CAX^TB+A^TC^TX^TB^T
-\]</span></p>
-<p>因为 <span class="math display">\[
-\begin{eqnarray*}
-\mathrm d \operatorname{tr}(AX^TBXC)&amp;=&amp;\operatorname{tr}(\mathrm d(AX^TBXC))\\
-&amp;=&amp;\operatorname{tr}(\mathrm d(AX^T)BXC+AX^T\mathrm d(BXC)) \\
-&amp;=&amp;\operatorname{tr}(A(\mathrm dX)^TBXC+AX^TB\mathrm dX C) \\
-&amp;=&amp;\operatorname{tr}(A(\mathrm dX)^TBXC)+\operatorname{tr}(AX^TB\mathrm dX C) \\
-&amp;=&amp;\operatorname{tr}(A^TC^TX^TB^T\mathrm dX)+\operatorname{tr}(CAX^TB\mathrm dX) \\
-&amp;=&amp;\operatorname{tr}((A^TC^TX^TB^T+CAX^TB)\mathrm dX) \\
-\end{eqnarray*}
-\]</span></p></li>
-</ul>
-<h2 id="克罗內克积">克罗內克积</h2>
-<p><span class="math display">\[
-A \otimes B=\left[\begin{array}{ccc}
-a_{11} B &amp; \cdots &amp; a_{1 n} B \\
-\vdots &amp; \ddots &amp; \vdots \\
-a_{m 1} B &amp; \cdots &amp; a_{m n} B
-\end{array}\right]
-\]</span></p>
-<p>克罗內克积满足双线性和结合律： <span class="math display">\[
-\begin{eqnarray*}
-A \otimes(B+C)&amp;=&amp;A \otimes B+A \otimes C \quad(\text { if } B \text { and } C \text { have the same size }), \\
-(A+B) \otimes C&amp;=&amp;A \otimes C+B \otimes C \quad(\text { if } A \text { and } B \text { have the same size }), \\
-(k A) \otimes B&amp;=&amp;A \otimes(k B)=k(A \otimes B), \\
-(A \otimes B) \otimes C&amp;=&amp;A \otimes(B \otimes C)
-\end{eqnarray*}
-\]</span> 克罗內克积不满足交换律：通常，<span class="math inline">\(A \otimes B \neq B \otimes A\)</span>。</p>
-<p>克罗內克积满足混合乘积性质：<span class="math inline">\((A \otimes B)(C \otimes D)=AC \otimes BD\)</span>。从中可以推出：<span class="math inline">\((A \otimes B)^{-1}=A^{-1} \otimes B^{-1}\)</span>。</p>
-<p>克罗內克积对转置运算满足分配律：<span class="math inline">\((A \otimes B)^T=A^T \otimes B^T\)</span>。</p>
-<p>克罗內克积对矩阵的迹运算满足：<span class="math inline">\(\operatorname{tr}(A\otimes B)=\operatorname{tr}A \operatorname{tr}B\)</span>。</p>
-<p>克罗內克积对矩阵的行列式运算满足：<span class="math inline">\(\det(A \otimes B)=(\det A)^b(det B)^a\)</span>，其中<span class="math inline">\(a\)</span>为矩阵<span class="math inline">\(A\)</span>的特征值数量，<span class="math inline">\(b\)</span>为矩阵<span class="math inline">\(B\)</span>的特征值数量。</p>
-<p>克罗內克积对矩阵的秩满足：<span class="math inline">\(\operatorname{rank}(A \otimes B)=\operatorname{rank}A \operatorname{rank}B\)</span></p>
-<h2 id="哈达玛积">哈达玛积</h2>
-<p><span class="math display">\[
-(A \circ B)_{i j}=a_{i j}b_{i j}
-\]</span></p>
-<p>说白了就是对应元素相乘。</p>
-<p>哈达玛积满足交换律，结合律和对加法的分配律： <span class="math display">\[
-\begin{eqnarray*}
-A \circ B&amp;=&amp;B \circ A \\
-A \circ(B\circ C)&amp;=&amp;(A \circ B) \circ C \\
-A \circ(B + C) &amp;=&amp; A \circ B + A \circ C
-\end{eqnarray*}
-\]</span></p>
-<h2 id="向量化">向量化</h2>
-<p><span class="math display">\[
-\operatorname{vec}
-(\left[\begin{array}{cccc}
-a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
-a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \\
-\end{array}\right])
-=
-\left[\begin{array}{c}
-a_{11} \\ a_{21} \\ \vdots \\ a_{m1} \\
-a_{12} \\ a_{22} \\ \vdots \\ a_{m2} \\
-\vdots \\
-a_{1n} \\ a_{2n} \\ \vdots \\ a_{mn}
-\end{array}\right]
-\]</span></p>
-<h1 id="参考网页">参考网页</h1>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Matrix_calculus#Identities_in_differential_form">Matrix calculus - Wikipedia</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/24709748">矩阵求导术（上） - 知乎</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/24863977">矩阵求导术（下） - 知乎</a></li>
-<li><a href="https://tminka.github.io/papers/matrix/minka-matrix.pdf">t.dvi</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>矩阵</tag>
-        <tag>微积分</tag>
       </tags>
   </entry>
   <entry>
