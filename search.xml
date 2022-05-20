@@ -1267,25 +1267,6 @@ http:&#x2F;&#x2F;open.trackerlist.xyz:80&#x2F;announce
       </tags>
   </entry>
   <entry>
-    <title>Listary Pro 注册码</title>
-    <url>/2020/11/08/Listary-Pro-%E6%B3%A8%E5%86%8C%E7%A0%81/</url>
-    <content><![CDATA[<p>Name:</p>
-<pre class="line-numbers language-none"><code class="language-none">Mike Rountree<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>Email:</p>
-<pre class="line-numbers language-none"><code class="language-none">soft@instant-demo.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>Activation key:</p>
-<pre class="line-numbers language-none"><code class="language-none">JE4V8T3M96PWT4SUCNZNVZ37XKLBU2QW
-N64LEJQ3VHY7MPL6KY2R5SQZ76QFFTKP
-VVE8JBVEAME8MMBRHRGF2P6MAJG7ZSQY
-MUY2PGTQ2EG3W2YHTU2CFWL7SE6THU3Q
-TAL3U894S2BWA9629EFCXYYYG3S65WEQ
-5R234G26AT52UWD27PNENP4GR2EKKDK6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      <tags>
-        <tag>Listary</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>LaTeX数学公式符号备忘</title>
     <url>/2019/11/01/LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%AC%A6%E5%8F%B7%E5%A4%87%E5%BF%98/</url>
     <content><![CDATA[<p>这里收录一些常用的数学公式和符号的<span class="math inline">\(\LaTeX\)</span>表示，需要的一些新的符号也会继续更新。</p>
@@ -1600,6 +1581,25 @@ TAL3U894S2BWA9629EFCXYYYG3S65WEQ
 ]]></content>
       <tags>
         <tag>LaTeX</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Listary Pro 注册码</title>
+    <url>/2020/11/08/Listary-Pro-%E6%B3%A8%E5%86%8C%E7%A0%81/</url>
+    <content><![CDATA[<p>Name:</p>
+<pre class="line-numbers language-none"><code class="language-none">Mike Rountree<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Email:</p>
+<pre class="line-numbers language-none"><code class="language-none">soft@instant-demo.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Activation key:</p>
+<pre class="line-numbers language-none"><code class="language-none">JE4V8T3M96PWT4SUCNZNVZ37XKLBU2QW
+N64LEJQ3VHY7MPL6KY2R5SQZ76QFFTKP
+VVE8JBVEAME8MMBRHRGF2P6MAJG7ZSQY
+MUY2PGTQ2EG3W2YHTU2CFWL7SE6THU3Q
+TAL3U894S2BWA9629EFCXYYYG3S65WEQ
+5R234G26AT52UWD27PNENP4GR2EKKDK6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <tags>
+        <tag>Listary</tag>
       </tags>
   </entry>
   <entry>
@@ -4534,6 +4534,90 @@ hexo<span class="token punctuation">.</span><span class="token function">on</spa
       </tags>
   </entry>
   <entry>
+    <title>使用Node.js包管理工具Yarn</title>
+    <url>/2018/09/05/%E4%BD%BF%E7%94%A8Node-js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Yarn/</url>
+    <content><![CDATA[<h1 id="为什么要使用yarn">为什么要使用Yarn？</h1>
+<p>Node.js自带一个包管理工具npm，不过在我的日常使用（写博客）过程中（比如说要卸载模块的时候），npm出现了一些奇怪的问题，网上也没有查询到解决办法。所以打算尝试使用另外一个包管理工具Yarn看看是否问题能得到解决。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_09_05_%E4%BD%BF%E7%94%A8Node-js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Yarn_npm%E9%97%AE%E9%A2%98.png" alt="npm问题.png" /><figcaption aria-hidden="true">npm问题.png</figcaption>
+</figure>
+<h1 id="什么是yarn">什么是Yarn？</h1>
+<p>Yarn是Facebook，Google，Exponent和Tilde开发的一款新的JavaScript包管理工具，目的是解决这些团队使用npm时遇到的问题。</p>
+<h1 id="安装yarn">安装Yarn</h1>
+<p>我们使用npm来安装Yarn。在命令行或Git Bash中输入：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g <span class="token function">yarn</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="使用yarn">使用Yarn</h1>
+<p>对于我们来说，只要知道常见的npm操作对应的Yarn命令就行了，下面采用对比的方式罗列出Yarn对应于npm的命令。</p>
+<h2 id="安装依赖">安装依赖</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>或者</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>等同于</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Yarn将通过自己的解析算法来重新组织<code>node_modules</code> 目录，这个算法和<code>node.js</code>模块解析算法是兼容的。</p>
+<p>执行这个命令或者<code>yarn add &lt;package&gt;</code>命令后，Yarn还会在该目录下生成一个<code>yarn.lock</code>文件，大致类似于npm的<code>package-lock.json</code>。<strong>在迁移博客的时候<code>yarn.lock</code>也要记得一同复制到新的地方。</strong>（见我的另一篇文章：<a href="/2018/08/21/%E5%B0%86%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E5%8F%A6%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91/" title="将博客迁移到另一台电脑">将博客迁移到另一台电脑</a>）</p>
+<h2 id="安装新模块本地">安装新模块（本地）</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> <span class="token function">add</span> <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>等同于</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --save <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>[package]是你想要安装的模块名，Yarn会安装该模块并自动更新<code>package.json</code>和<code>yarn.lock</code>文件。如果你看过我之前的文章<a href="https://xfdj.github.io/2018/07/27/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2/">搭建一个免费博客</a>，那么就知道安装到本地和全局的区别了。</p>
+<h2 id="安装新模块全局">安装新模块（全局）</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> global <span class="token function">add</span> <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>等同于</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="删除模块本地">删除模块（本地）</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> remove <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>等同于</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> uninstall --save <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="删除模块全局">删除模块（全局）</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> global remove <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>等同于</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> uninstall -g <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="修改镜像源">修改镜像源</h1>
+<p>由于 Yarn 的默认源地址在国外，因此有时从国内访问的速度会比较慢，甚至会出现连接不上的情况。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_09_05_%E4%BD%BF%E7%94%A8Node-js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Yarn_Yarn%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5.png" alt="Yarn连接失败.png" /><figcaption aria-hidden="true">Yarn连接失败.png</figcaption>
+</figure>
+<p>我们可以使用如下命令来查看 Yarn 当前使用的源：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> config get registry<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_09_05_%E4%BD%BF%E7%94%A8Node-js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Yarn_%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E6%BA%90.png" alt="查看当前源.png" /><figcaption aria-hidden="true">查看当前源.png</figcaption>
+</figure>
+<p>去查询网站搜索可以得知，这个网址的归属地在美国。</p>
+<p>不过好在阿里旗下维护着一个完整的 npm 镜像源 https://registry.npm.taobao.org/ 同样适用于 Yarn。下面提供了两种修改方式。</p>
+<h2 id="手动修改源">手动修改源</h2>
+<p>可以使用下面的命令来修改镜像源。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> config <span class="token builtin class-name">set</span> registry https://registry.npm.taobao.org/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_09_05_%E4%BD%BF%E7%94%A8Node-js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Yarn_%E6%88%90%E5%8A%9F%E5%88%87%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90.png" alt="成功切换镜像源.png" /><figcaption aria-hidden="true">成功切换镜像源.png</figcaption>
+</figure>
+<h2 id="使用yrm快速切换源">使用yrm快速切换源</h2>
+<p>yrm（Yarn registry manager）不仅可以快速切换镜像源，还可以测试自己网络访问不同源的速度。</p>
+<h3 id="安装yrm">安装yrm</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> global <span class="token function">add</span> yrm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="使用方式">使用方式</h3>
+<ul>
+<li><p>列出当前可用的所有镜像源</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yrm <span class="token function">ls</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>使用淘宝镜像源</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yrm use taobao<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>测试访问速度</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yrm <span class="token builtin class-name">test</span> taobao<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<p>更多用法可以查看<a href="https://github.com/i5ting/yrm">yrm的GitHub</a>。</p>
+<h1 id="参考网页">参考网页</h1>
+<ul>
+<li><a href="https://learnku.com/articles/15976/yarn-accelerate-and-modify-mirror-source-in-china">yarn 国内加速，修改镜像源 | Laravel China 社区</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+        <tag>Node.js</tag>
+        <tag>Yarn</tag>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>修改Ubuntu 18.04的启动效果</title>
     <url>/2018/10/01/%E4%BF%AE%E6%94%B9Ubuntu-18-04%E7%9A%84%E5%90%AF%E5%8A%A8%E6%95%88%E6%9E%9C/</url>
     <content><![CDATA[<p>Ubuntu 18.04的启动效果看起来比较土，所以打算更换Ubuntu的Grub主题和加载动画。在网上查找资料时发现有许多方法都已经过时，所以自己在这里整理出适用于18.04版本的方法。亲测可用。</p>
@@ -4660,90 +4744,6 @@ ScriptFile&#x3D;&#x2F;usr&#x2F;share&#x2F;plymouth&#x2F;themes&#x2F;ubuntu-spinn
         <tag>Grub</tag>
         <tag>Plymouth</tag>
         <tag>Gnome</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用Node.js包管理工具Yarn</title>
-    <url>/2018/09/05/%E4%BD%BF%E7%94%A8Node-js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Yarn/</url>
-    <content><![CDATA[<h1 id="为什么要使用yarn">为什么要使用Yarn？</h1>
-<p>Node.js自带一个包管理工具npm，不过在我的日常使用（写博客）过程中（比如说要卸载模块的时候），npm出现了一些奇怪的问题，网上也没有查询到解决办法。所以打算尝试使用另外一个包管理工具Yarn看看是否问题能得到解决。</p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_09_05_%E4%BD%BF%E7%94%A8Node-js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Yarn_npm%E9%97%AE%E9%A2%98.png" alt="npm问题.png" /><figcaption aria-hidden="true">npm问题.png</figcaption>
-</figure>
-<h1 id="什么是yarn">什么是Yarn？</h1>
-<p>Yarn是Facebook，Google，Exponent和Tilde开发的一款新的JavaScript包管理工具，目的是解决这些团队使用npm时遇到的问题。</p>
-<h1 id="安装yarn">安装Yarn</h1>
-<p>我们使用npm来安装Yarn。在命令行或Git Bash中输入：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g <span class="token function">yarn</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h1 id="使用yarn">使用Yarn</h1>
-<p>对于我们来说，只要知道常见的npm操作对应的Yarn命令就行了，下面采用对比的方式罗列出Yarn对应于npm的命令。</p>
-<h2 id="安装依赖">安装依赖</h2>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>或者</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>等同于</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>Yarn将通过自己的解析算法来重新组织<code>node_modules</code> 目录，这个算法和<code>node.js</code>模块解析算法是兼容的。</p>
-<p>执行这个命令或者<code>yarn add &lt;package&gt;</code>命令后，Yarn还会在该目录下生成一个<code>yarn.lock</code>文件，大致类似于npm的<code>package-lock.json</code>。<strong>在迁移博客的时候<code>yarn.lock</code>也要记得一同复制到新的地方。</strong>（见我的另一篇文章：<a href="/2018/08/21/%E5%B0%86%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E5%8F%A6%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91/" title="将博客迁移到另一台电脑">将博客迁移到另一台电脑</a>）</p>
-<h2 id="安装新模块本地">安装新模块（本地）</h2>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> <span class="token function">add</span> <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>等同于</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --save <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>[package]是你想要安装的模块名，Yarn会安装该模块并自动更新<code>package.json</code>和<code>yarn.lock</code>文件。如果你看过我之前的文章<a href="https://xfdj.github.io/2018/07/27/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2/">搭建一个免费博客</a>，那么就知道安装到本地和全局的区别了。</p>
-<h2 id="安装新模块全局">安装新模块（全局）</h2>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> global <span class="token function">add</span> <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>等同于</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="删除模块本地">删除模块（本地）</h2>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> remove <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>等同于</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> uninstall --save <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="删除模块全局">删除模块（全局）</h2>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> global remove <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>等同于</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> uninstall -g <span class="token punctuation">[</span>package<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h1 id="修改镜像源">修改镜像源</h1>
-<p>由于 Yarn 的默认源地址在国外，因此有时从国内访问的速度会比较慢，甚至会出现连接不上的情况。</p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_09_05_%E4%BD%BF%E7%94%A8Node-js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Yarn_Yarn%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5.png" alt="Yarn连接失败.png" /><figcaption aria-hidden="true">Yarn连接失败.png</figcaption>
-</figure>
-<p>我们可以使用如下命令来查看 Yarn 当前使用的源：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> config get registry<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_09_05_%E4%BD%BF%E7%94%A8Node-js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Yarn_%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E6%BA%90.png" alt="查看当前源.png" /><figcaption aria-hidden="true">查看当前源.png</figcaption>
-</figure>
-<p>去查询网站搜索可以得知，这个网址的归属地在美国。</p>
-<p>不过好在阿里旗下维护着一个完整的 npm 镜像源 https://registry.npm.taobao.org/ 同样适用于 Yarn。下面提供了两种修改方式。</p>
-<h2 id="手动修改源">手动修改源</h2>
-<p>可以使用下面的命令来修改镜像源。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> config <span class="token builtin class-name">set</span> registry https://registry.npm.taobao.org/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2018_09_05_%E4%BD%BF%E7%94%A8Node-js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Yarn_%E6%88%90%E5%8A%9F%E5%88%87%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90.png" alt="成功切换镜像源.png" /><figcaption aria-hidden="true">成功切换镜像源.png</figcaption>
-</figure>
-<h2 id="使用yrm快速切换源">使用yrm快速切换源</h2>
-<p>yrm（Yarn registry manager）不仅可以快速切换镜像源，还可以测试自己网络访问不同源的速度。</p>
-<h3 id="安装yrm">安装yrm</h3>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> global <span class="token function">add</span> yrm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="使用方式">使用方式</h3>
-<ul>
-<li><p>列出当前可用的所有镜像源</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yrm <span class="token function">ls</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>使用淘宝镜像源</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yrm use taobao<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>测试访问速度</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yrm <span class="token builtin class-name">test</span> taobao<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
-<p>更多用法可以查看<a href="https://github.com/i5ting/yrm">yrm的GitHub</a>。</p>
-<h1 id="参考网页">参考网页</h1>
-<ul>
-<li><a href="https://learnku.com/articles/15976/yarn-accelerate-and-modify-mirror-source-in-china">yarn 国内加速，修改镜像源 | Laravel China 社区</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>博客</tag>
-        <tag>Node.js</tag>
-        <tag>Yarn</tag>
-        <tag>npm</tag>
       </tags>
   </entry>
   <entry>
@@ -5849,438 +5849,6 @@ ansq <span class="token operator">=</span> <span class="token function">q</span>
       </tags>
   </entry>
   <entry>
-    <title>Docker笔记</title>
-    <url>/2021/05/20/Docker%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="什么是docker">什么是Docker</h1>
-<h2 id="docker为什么出现">Docker为什么出现</h2>
-<p>产品开发到上线需要两套环境。环境配置十分麻烦。每一个机器都要部署环境，费时费力。</p>
-<p>项目能不能带上环境安装？</p>
-<p>使用Docker。</p>
-<p>Docker核心思想是隔离，打包装箱（logo），每个“箱子”是互相隔离的。</p>
-<p>官网：https://www.docker.com/</p>
-<p>文档：https://docs.docker.com/</p>
-<p>仓库：https://hub.docker.com/</p>
-<h2 id="docker能干嘛">Docker能干嘛</h2>
-<p>对比虚拟机技术：</p>
-<p>虚拟机技术缺点：</p>
-<ul>
-<li>启动慢</li>
-<li>资源占用多</li>
-<li>冗余步骤多</li>
-</ul>
-<p>容器化技术：容器化技术并没有模拟一个完整的操作系统。</p>
-<p>Docker和虚拟机的不同：</p>
-<p>传统虚拟机，虚拟出一套硬件，运行一个完整的操作系统，在这个系统上安装和运行软件。</p>
-<p>容器内的应用直接运行在宿主机的内核，容器是没有自己的内核的，也没有硬件。每个容器间相互隔离，每个容器内都有一个属于自己的文件系统，互不影响。</p>
-<p>DevOps（开发、运维）：更快速的交付和部署，更便捷的升级和扩缩容，更简单的系统运维，更高效的计算资源利用。</p>
-<h1 id="docker安装">Docker安装</h1>
-<h2 id="docker的基本组成">Docker的基本组成</h2>
-<p>镜像（image）：Docker镜像就好比是一个模板，可以通过这个模板来创建容器服务。通过一个镜像可以创建多个容器。最终服务运行或者项目运行就是在容器中的。</p>
-<p>容器（container）：Docker利用容器技术，通过镜像来创建并独立运行一个或者一组应用。目前可以把容器理解为一个简易的Linux系统。</p>
-<p>仓库（repository）：仓库就是存放镜像的地方。仓库分为公有仓库和私有仓库。默认是国外的Docker Hub，国内通常要配置镜像加速。</p>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2021_05_20_Docker%E7%AC%94%E8%AE%B0_Docker%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84.svg" alt="Docker系统架构.svg" /><figcaption aria-hidden="true">Docker系统架构.svg</figcaption>
-</figure>
-<h2 id="安装docker">安装Docker</h2>
-<p><a href="https://docs.docker.com/get-docker/">Get Docker | Docker Documentation</a></p>
-<p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package">在 Windows 10 上安装 WSL | Microsoft Docs</a></p>
-<p>如果是Windows需要在BIOS打开CPU虚拟化技术。</p>
-<p>可以在任务管理器查看虚拟化是否打开。</p>
-<p>另外还需要在启用或关闭Windows功能中打开适用于Linux的Windows子系统，并安装WSL 2。</p>
-<h3 id="配置阿里云镜像加速">配置阿里云镜像加速</h3>
-<p>在Docker Engine设置选项中，配置</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token property">"registry-mirrors"</span><span class="token operator">:</span> <span class="token punctuation">[</span>阿里云镜像加速的地址<span class="token punctuation">]</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>加速地址可以在登录阿里云之后的容器镜像服务-镜像工具-镜像加速器找到。</p>
-<h1 id="docker命令">Docker命令</h1>
-<ul>
-<li><p>查看Docker版本，验证Docker是否安装成功。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>运行hello world程序。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run hello-world<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>查看已经下载的镜像。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">docker images<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>帮助命令。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token punctuation">[</span>命令<span class="token punctuation">]</span> --help<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>显示Docker系统信息，包括镜像和容器的数量。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker info<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>官方帮助文档：<a href="https://docs.docker.com/reference/">Reference documentation | Docker Documentation</a></p></li>
-<li><p>提交镜像。提交到本地的镜像。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker commit 容器ID <span class="token punctuation">[</span>目标镜像名<span class="token punctuation">[</span>:tag<span class="token punctuation">]</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>提交信息：<code>-m string</code></p>
-<p>作者：<code>-a string</code></p></li>
-</ul>
-<h2 id="镜像命令">镜像命令</h2>
-<ul>
-<li><p>列出镜像。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker images<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
-hello-world   latest    d1165f221234   <span class="token number">2</span> months ago   <span class="token number">13</span>.3kB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>REPOSITORY：镜像的仓库源，使用这个名字从仓库下载镜像。</p>
-<p>TAG：镜像的标签</p>
-<p>IMAGE ID：镜像的ID</p>
-<p>CREATED：镜像的创建时间</p>
-<p>SIZE：镜像的大小</p>
-<p>列出所有镜像：<code>-a</code></p>
-<p>只显示镜像ID：<code>-q</code></p></li>
-<li><p>搜索镜像。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker search mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">NAME                              DESCRIPTION
-            STARS     OFFICIAL   AUTOMATED
-mysql                             MySQL is a widely used, open-source relation…   <span class="token number">10932</span>     <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
-mariadb                           MariaDB Server is a high performing <span class="token function">open</span> sou…   <span class="token number">4134</span>      <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
-mysql/mysql-server                Optimized MySQL Server Docker images. Create…   <span class="token number">812</span>                  <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
-percona                           Percona Server is a fork of the MySQL relati…   <span class="token number">539</span>       <span class="token punctuation">[</span>OK<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>过滤搜索结果：<code>-f=STARS=3000</code>过滤标星3000以下的镜像。</p></li>
-<li><p>下载镜像。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker pull 镜像名<span class="token punctuation">[</span>:TAG<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Using default tag: latest <span class="token comment"># 如果不写TAG，默认就是latest</span>
-latest: Pulling from library/mysql
-69692152171a: Pull complete <span class="token comment"># 分层下载，docker image的核心 联合文件系统</span>
-1651b0be3df3: Pull complete
-951da7386bc8: Pull complete
-0f86c95aa242: Pull complete
-37ba2d8bd4fe: Pull complete
-6d278bb05e94: Pull complete
-497efbd93a3e: Pull complete
-f7fddf10c2c2: Pull complete
-16415d159dfb: Pull complete
-0e530ffc6b73: Pull complete
-b0a4a1a77178: Pull complete
-cd90f92aa9ef: Pull complete
-Digest: sha256:d50098d7fcb25b1fcb24e2d3247cae3fc55815d64fec640dc395840f8fa80969 <span class="token comment"># 签名</span>
-Status: Downloaded newer image <span class="token keyword">for</span> mysql:latest
-docker.io/library/mysql:latest <span class="token comment"># 真实地址</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><p>删除镜像。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker rmi 镜像的名称或ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>批量删除全部的镜像</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker rmi -f <span class="token variable"><span class="token variable">$(</span>docker images -aq<span class="token variable">)</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>强制删除：<code>-f</code></p></li>
-</ul>
-<h2 id="容器命令">容器命令</h2>
-<p>有了镜像才可以创建容器。先下载一个CentOS系统进行学习。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker pull centos<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li><p>新建容器并启动。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run <span class="token punctuation">[</span>可选参数<span class="token punctuation">]</span> image<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>容器名字：<code>--name="name"</code>用来区分容器。</p>
-<p>后台方式运行：<code>-d</code>，问题：<code>docker ps</code>发现停止了。常见的坑：如果Docker容器使用后台运行，就必须要有一个前台进程，如果Docker发现没有前台应用，就会自动停止容器。</p>
-<p>使用交互方式运行，进入容器查看内容：<code>-it</code></p>
-<p>指定容器的端口：<code>-p</code></p>
-<ul>
-<li><code>-p IP:主机端口:容器端口</code></li>
-<li><code>-p 主机端口:容器端口</code></li>
-<li><code>-p 容器端口</code></li>
-<li><code>容器端口</code></li>
-</ul>
-<p>随机指定端口：<code>-P</code></p>
-<p>用完即删除：<code>--rm</code></p>
-<p>设置环境变量：<code>-e list</code></p>
-<p>添加到其他容器的链接：<code>--link list</code></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -it centos /bin/bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>停止容器并退出。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">exit</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>退出但不停止容器。</p>
-<p><code>Ctrl+p Ctrl+q</code></p></li>
-<li><p>列出所有正在运行的容器。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">ps</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>查看所有容器：<code>-a</code>注意这个不是查看所有镜像。</p>
-<p>显示最近创建的n个容器：<code>-n int</code></p>
-<p>只显示容器的ID：<code>-q</code></p></li>
-<li><p>删除容器，不能删除正在运行的容器。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">rm</span> 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>删除所有容器</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">rm</span> <span class="token variable"><span class="token variable">$(</span>docker <span class="token function">ps</span> -aq<span class="token variable">)</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>强制删除：<code>-f</code>，可以删除掉正在运行的容器。</p>
-<p>删除所有容器</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">ps</span> -aq <span class="token operator">|</span> <span class="token function">xargs</span> docker <span class="token function">rm</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>启动容器</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker start 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>停止正在运行的容器</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker stop 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>重启容器</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker restart 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>强制停止容器，在stop报错的时候可以使用</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">kill</span> 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>管理卷</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker volume<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>查看镜像的历史，就是说查看指定的镜像是怎么构建出来的。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">history</span> 镜像<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>登录Docker仓库。登录之后可以使用push等命令。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker login -u xfdj<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>登出Docker仓库。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token builtin class-name">logout</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>向仓库推送镜像</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker push 镜像名<span class="token punctuation">[</span>:TAG<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>给镜像打标签。当push被拒绝的时候，需要给要提交的镜像按照一定的格式打标签重命名。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker tag 原镜像<span class="token punctuation">[</span>:TAG<span class="token punctuation">]</span> 新镜像名称<span class="token punctuation">[</span>:TAG<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>比如</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker tag myapp xfdj/myapp:latest<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>要提交的镜像需要在命名的时候在镜像名之前加上用户名，然后在最后加上ID。</p></li>
-<li><p>将一个或多个镜像打包成一个tar压缩包。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker save -o 输出文件名 镜像1 <span class="token punctuation">[</span>镜像2<span class="token punctuation">..</span>.<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>从压缩包中读取镜像</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker load -i 压缩包<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>管理网络</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker network<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
-<h2 id="常用其它命令">常用其它命令</h2>
-<ul>
-<li><p>查看日志</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker logs 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>显示时间戳：<code>-t</code></p>
-<p>持续显示日志：<code>-f</code></p>
-<p>显示指定条数的日志：<code>-n 数量</code></p></li>
-<li><p>查看容器中的进程信息</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">top</span> 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>查看Docker对象的元数据。包括名称、挂载信息。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker inspect 名称或ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>进入当前正在运行的容器</p>
-<p>开启一个新的Shell</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token builtin class-name">exec</span> -it 容器ID 使用的Shell<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>进入当前正在运行命令的Shell</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker attach 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>在容器和主机之间拷贝文件或文件夹</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">cp</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>查看容器的资源占用信息</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker stats<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
-<figure>
-<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2021_05_20_Docker%E7%AC%94%E8%AE%B0_Docker%20Command%20Diagram.png" alt="Docker Command Diagram.png" /><figcaption aria-hidden="true">Docker Command Diagram.png</figcaption>
-</figure>
-<h1 id="docker底层原理">Docker底层原理</h1>
-<p>Docker是怎么工作的？</p>
-<p>Docker是一个Client-Server结构的系统。Docker的服务进程运行在主机上，通过Socket从客户端访问。服务进程接收到客户端的指令之后操作Docker容器。</p>
-<p>Docker为什么比虚拟机快？</p>
-<ol type="1">
-<li>Docker比虚拟机有更少的抽象层。</li>
-<li>Docker利用的是宿主机的内核，虚拟机需要一个Guest OS。</li>
-</ol>
-<h1 id="可视化">可视化</h1>
-<ul>
-<li><p>portainer</p>
-<p>什么是portainer？Docker图形化界面管理工具，提供一个后台面板供我们操作。</p></li>
-</ul>
-<h1 id="docker镜像详解">Docker镜像详解</h1>
-<p>镜像是什么？</p>
-<p>镜像是一种轻量级、可执行的独立软件包，用来打包软件运行环境和基于运行环境开发的软件，它包含运行某个软件所需的所有内容，包括代码、运行时、库、环境变量和配置文件。</p>
-<p>如何得到镜像？</p>
-<ul>
-<li>从远程仓库下载</li>
-<li>从其他渠道获得</li>
-<li>自己制作一个镜像DockerFile</li>
-</ul>
-<h2 id="docker镜像加载原理">Docker镜像加载原理</h2>
-<p>UnionFS（联合文件系统）</p>
-<p>UnionFS是一种分层、轻量级并且高性能的文件系统，它支持对文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下。UnionFS是Docker镜像的基础。镜像可以通过分层来进行继承，基于基础镜像，可以制作各种具体的应用镜像。</p>
-<p>特性：一次同时加载多个文件系统，但从外面看起来，只能看到一个文件系统，联合加载会把各层文件系统叠加起来，这样最终的文件系统会包含所有底层的文件和目录。</p>
-<p>Docker的镜像实际上是由一层一层的文件系统组成。</p>
-<p>bootfs（boot file system）主要包含bootloader和kernel，bootloader主要是引导加载kernel，Linux刚启动时会加载bootfs文件系统，在Docker镜像的最底层是bootfs。这一层和典型的Linux/Unix系统一样，包含boot加载器和内核。当boot加载完成之后整个内核就都在内存中了，此时内存的使用权已由bootfs转交给内核，此时系统也会卸载bootfs。</p>
-<p>rootfs（root file system），在bootfs之上。包含的就是典型Linux系统中的/dev、/proc、/bin、/etc等标准目录和文件。rootfs就是各种不同的操作系统发行版，比如Ubuntu、CentOS等等。</p>
-<p>对于一个精简的OS，rootfs可以很小，只需要包含最基本的命令、工具和程序库就可以了，因为底层直接用host的kernel，自己只需要提供rootfs就可以了。由此可见对于不同的linux发行版，bootfs基本是一致的，rootfs会有差别，因此不同的发行版可以公用bootfs。</p>
-<p>Docker采用快照机制来实现镜像层堆栈，并保证多层镜像对外展示为统一的文件系统。上层镜像中的文件会覆盖底层镜像中的文件。这样就使得文件的更新版本作为一个新镜像层添加到镜像当中。</p>
-<p>Docker镜像都是只读的，当容器启动时，一个新的可写层被加载到镜像的顶部，这一层就是我们通常说的容器层，容器之下的都叫镜像层。</p>
-<h1 id="数据卷">数据卷</h1>
-<p>什么是数据卷？</p>
-<p>Docker的理念是把应用和环境打包成一个镜像。数据不应该放在容器中，如果数据都在容器中，只要容器一删除，数据就会丢失！需求：数据可以持久化。</p>
-<p>容器之间可以有一个数据共享的技术。Docker容器中产生的数据，能直接保存到容器外。</p>
-<p>将容器内的目录挂载到本机上。实现容器的持久化和同步操作。容器间也可以数据共享。</p>
-<h2 id="使用数据卷">使用数据卷</h2>
-<ul>
-<li><p>使用命令方式来挂载</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -v 主机目录:容器内目录<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
-<h2 id="具名和匿名挂载">具名和匿名挂载</h2>
-<ul>
-<li><p>匿名挂载</p>
-<pre class="line-numbers language-none"><code class="language-none">docker run -v 容器内目录<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>具名挂载。卷名不以<code>/</code>开头。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -v 卷名:容器内目录<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>指定路径挂载</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -v 主机目录:容器内目录<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
-<h2 id="读写权限">读写权限</h2>
-<ul>
-<li><p>只读。这个路径智能通过宿主机来操作，容器内部无法操作。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -v 容器内目录:ro<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>读写（默认）</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -v 容器内目录:rw<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
-<h2 id="数据卷容器">数据卷容器</h2>
-<p>子容器可以继承父容器的数据卷，此时的父容器既是一个容器也是一个数据卷，因此叫做数据卷容器。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run --volume-from 父容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>通过数据卷容器可以实现容器之间的数据同步。而且数据卷不会随着容器的删除而被删除。数据卷容器的生命周期一直持续到没有容器使用为止。</p>
-<h1 id="dockerfile">Dockerfile</h1>
-<p>什么是Dockerfile？</p>
-<p>Dockerfile就是用来构建Docker镜像的构建文件。使用Dockerfile来构建Docker镜像是除去使用commit来构建Docker镜像的第二种方式。</p>
-<p>通过Dockerfile这个脚本可以生成镜像。镜像是一层一层的，脚本是一个一个的命令，每个命令都是一层。</p>
-<p>编写一个Dockerfile。命名为<code>dockerfile1</code></p>
-<pre class="line-numbers language-dockerfile" data-language="dockerfile"><code class="language-dockerfile">FROM centos
-VOLUME [ &quot;volume01&quot;, &quot;volume02&quot; ]
-CMD [ &quot;&#x2F;bin&#x2F;bash&quot; ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>每一个命令，就相当于镜像的一层。</p>
-<p>使用Dockerfile构建镜像。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker build -f dockerfile1 -t centos:1.0 <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><code>-f</code>表示使用的文件，<code>-t</code>表示生成的名字和标签。最后的<code>.</code>不能忘记！表示构建的路径。</p>
-<p>官方推荐的命名为<code>Dockerfile</code>，如果没有<code>-f</code>参数，Docker会自动寻找官方推荐命名的文件来构建镜像。</p>
-<p>启动并进入镜像。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -it 镜像名/ID /bin/bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>进入镜像之后使用<code>ls</code>命令。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ls</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">bin  etc   lib    lost+found  mnt  proc  run   srv  tmp  var       volume02
-dev  home  lib64  media       opt  root  sbin  sys  usr  volume01<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>这里的两个新的目录<code>volume01</code>和<code>volume02</code>就是生成镜像的时候自动挂载的数据卷目录。</p>
-<p>如果构建镜像的时候没有挂载卷，要手动挂载。<code>-v 卷名:容器内路径</code></p>
-<h2 id="dockerfile构建步骤">Dockerfile构建步骤</h2>
-<ol type="1">
-<li>编写Dockerfile</li>
-<li>docker build构建镜像</li>
-<li>docker run运行镜像</li>
-<li>docker push发布镜像（Docker Hub、阿里云）</li>
-</ol>
-<h2 id="dockerfile的指令">Dockerfile的指令</h2>
-<p>Dockerfile的指令是忽略大小写的，只是通常建议大写。</p>
-<pre class="line-numbers language-dockerfile" data-language="dockerfile"><code class="language-dockerfile"># 基础镜像，从这个镜像开始构建
-FROM
-# 镜像是谁维护的，姓名+邮箱
-MAINTAINER
-# 镜像构建的时候需要运行的命令
-RUN
-# 添加内容或者文件的命令
-ADD
-# 镜像的工作目录
-WORKDIR
-# 挂载的目录
-VOLUME
-# 指定对外的端口
-EXPOSE
-# 指定这个容器启动的时候要运行的命令，只有最后一个会生效，而且会被命令行中的命令覆盖
-CMD
-# 指定这个容器启动的时候要运行的命令，可以在命令行追加命令
-ENTRYPOINT
-# 当构建一个被继承的Dockerfile的时候就会运行。是一个触发指令
-ONBUILD
-# 类似ADD，将文件拷贝到镜像中
-COPY
-# 构建的时候设置环境变量
-ENV<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="发布自己的镜像">发布自己的镜像</h2>
-<h3 id="docker-hub">Docker Hub</h3>
-<ol type="1">
-<li>注册账号。<a href="https://hub.docker.com/">Docker Hub</a></li>
-<li>确定这个账号可以登录<code>docker login</code></li>
-<li>提交自己的镜像<code>docker push</code></li>
-</ol>
-<h2 id="阿里云">阿里云</h2>
-<ol type="1">
-<li>登录阿里云。<a href="https://cn.aliyun.com/">阿里云</a></li>
-<li>找到容器镜像服务-实例列表-镜像仓库</li>
-<li>创建命名空间</li>
-<li>创建镜像仓库</li>
-</ol>
-<p>提交或拉取步骤参考官方文档。</p>
-<h1 id="docker网络">Docker网络</h1>
-<p>Docker是如何处理容器的网络访问的？</p>
-<p>如果使用<code>ip addr</code>查看容器的内部网络地址，会发现容器启动的时候会得到一个类似于<code>eth0@if15</code>的IP地址<code>172.17.0.2</code>，这个地址是Docker分配的。如果在Linux上<code>ping</code>容器内部的地址，是可以ping通的。</p>
-<p>如果使用<code>ip addr</code>查看Linux的IP地址，会发现其中有一个docker0的IP地址<code>172.17.0.1</code>。而且会多出一个地址类似<code>veth11306d6@if14</code>的网络。</p>
-<p>每启动一个Docker容器，Docker就会给Docker容器分配一个IP，只要安装了Docker，就会有一个网卡docker0。这个网卡使用的是桥接模式，使用的技术是veth-pair技术。</p>
-<p>不同的容器也可以通过这个分配的IP互相ping通。这是把docker0当做路由器来实现的。而docker0还充当物理网卡的网桥。</p>
-<p>Docker中所有的网络接口都是虚拟的，转发效率高。容器只要删除，对应的一对网桥就没了。</p>
-<h2 id="link">--link</h2>
-<p>添加到其他容器的链接。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -dP --name tomcat03 --link tomcat02 tomcat<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>这样容器可以使用名字来ping通。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token builtin class-name">exec</span> -it tomcat03 <span class="token function">ping</span> tomcat02<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">PING tomcat02 <span class="token punctuation">(</span><span class="token number">172.17</span>.0.3<span class="token punctuation">)</span> <span class="token number">56</span><span class="token punctuation">(</span><span class="token number">84</span><span class="token punctuation">)</span> bytes of data.
-<span class="token number">64</span> bytes from tomcat02 <span class="token punctuation">(</span><span class="token number">172.17</span>.0.3<span class="token punctuation">)</span>: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.131</span> ms
-<span class="token number">64</span> bytes from tomcat02 <span class="token punctuation">(</span><span class="token number">172.17</span>.0.3<span class="token punctuation">)</span>: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">2</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.104</span> ms
-<span class="token punctuation">..</span>.
-^C
---- tomcat02 <span class="token function">ping</span> statistics ---
-<span class="token number">6</span> packets transmitted, <span class="token number">6</span> received, <span class="token number">0</span>% packet loss, <span class="token function">time</span> 157ms
-rtt min/avg/max/mdev <span class="token operator">=</span> <span class="token number">0.086</span>/0.105/0.133/0.022 ms<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>原理：在<code>/etc/hosts</code>配置中增加了一条映射。</p>
-<p>现在Docker不建议使用<code>--link</code>。docker0存在的问题：不支持容器名连接访问。</p>
-<h2 id="自定义网络">自定义网络</h2>
-<p>网络模式：</p>
-<ul>
-<li>bridge：桥接模式（默认）。</li>
-<li>none：不配置网络。</li>
-<li>host：和宿主机共享网络。</li>
-<li>container：容器内网络连通。</li>
-</ul>
-<p>平时启动容器的命令：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -dP --name tomcat01 tomcat<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>实际上和下面的命令是等价的：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -dP --name tomcat01 --net bridge tomcat<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>其中的bridge实际上就是默认的docker0网络。</p>
-<p>docker0网络的特点：</p>
-<ul>
-<li>默认</li>
-<li>域名不能访问</li>
-</ul>
-<p>自定义网络：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker network create --driver bridge --subnet <span class="token number">192.168</span>.0.0/16 --gateway <span class="token number">192.168</span>.0.1 mynet<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>在自定义网络中启动容器：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -dP --name tomcat-net-01 --net mynet tomcat
-docker run -dP --name tomcat-net-02 --net mynet tomcat<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>在自定义网络中可以直接通过容器名ping通：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token builtin class-name">exec</span> -it tomcat-net-01 <span class="token function">ping</span> tomcat-net-02<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>而且这不是通过写hosts的方式实现的。</p>
-<p>好处：</p>
-<ul>
-<li>不同的集群使用不同的网络，网络之间是隔离的。保证集群是健康的</li>
-<li>不同的网络之间还可以连通</li>
-</ul>
-<h2 id="网络连通">网络连通</h2>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker network connect 网络 容器<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>这个命令可以将一个容器连接到一个网络。</p>
-<p>连通之后就会把容器放到该网络下。</p>
-<p>一个容器两个IP地址。</p>
-<h1 id="docker-compose">Docker Compose</h1>
-<p>原先使用Docker：</p>
-<p>编写Dockerfile，build，run。手动操作，单个容器。</p>
-<p>如果实际场景需要部署100个微服务，而且这100个微服务还具有依赖关系怎么办？</p>
-<p>Docker Compose是用来定义运行多个容器的工具，可以轻松高效地管理容器。</p>
-<blockquote>
-<p>Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services. Then, with a single command, you create and start all the services from your configuration.</p>
-<p>Using Compose is basically a three-step process:</p>
-<ol type="1">
-<li>Define your app's environment with a <code>Dockerfile</code> so it can be reproduced anywhere.</li>
-<li>Define the services that make up your app in <code>docker-compose.yml</code> so they can be run together in an isolated environment.</li>
-<li>Run <code>docker-compose up</code> and Compose starts and runs your entire app.</li>
-</ol>
-</blockquote>
-<p>一个<code>docker-compose.yml</code>文件类似下面这个样子：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">"3.9"</span>  <span class="token comment"># optional since v1.27.0</span>
-<span class="token key atrule">services</span><span class="token punctuation">:</span>
-  <span class="token key atrule">web</span><span class="token punctuation">:</span>
-    <span class="token key atrule">build</span><span class="token punctuation">:</span> .
-    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
-      <span class="token punctuation">-</span> <span class="token string">"5000:5000"</span>
-    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
-      <span class="token punctuation">-</span> .<span class="token punctuation">:</span>/code
-      <span class="token punctuation">-</span> logvolume01<span class="token punctuation">:</span>/var/log
-    <span class="token key atrule">links</span><span class="token punctuation">:</span>
-      <span class="token punctuation">-</span> redis
-  <span class="token key atrule">redis</span><span class="token punctuation">:</span>
-    <span class="token key atrule">image</span><span class="token punctuation">:</span> redis
-<span class="token key atrule">volumes</span><span class="token punctuation">:</span>
-  <span class="token key atrule">logvolume01</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Compose 有一些重要的概念：</p>
-<ul>
-<li>服务service：容器或者应用。（web、Redis、MySQL...）</li>
-<li>项目project：一组关联的容器。</li>
-</ul>
-<h2 id="安装">安装</h2>
-<p><a href="https://docs.docker.com/compose/install/">Install Docker Compose | Docker Documentation</a></p>
-<p>加速下载：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">curl</span> -L <span class="token string">"https://get.daocloud.io/docker/compose/releases/download/1.29.2/docker-compose-<span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> -s<span class="token variable">)</span></span>-<span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> -m<span class="token variable">)</span></span>"</span> -o /usr/local/bin/docker-compose<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-]]></content>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS笔记</title>
     <url>/2021/05/05/CSS%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="css简单介绍">CSS简单介绍</h1>
@@ -7198,6 +6766,438 @@ overflow
 ]]></content>
       <tags>
         <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker笔记</title>
+    <url>/2021/05/20/Docker%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="什么是docker">什么是Docker</h1>
+<h2 id="docker为什么出现">Docker为什么出现</h2>
+<p>产品开发到上线需要两套环境。环境配置十分麻烦。每一个机器都要部署环境，费时费力。</p>
+<p>项目能不能带上环境安装？</p>
+<p>使用Docker。</p>
+<p>Docker核心思想是隔离，打包装箱（logo），每个“箱子”是互相隔离的。</p>
+<p>官网：https://www.docker.com/</p>
+<p>文档：https://docs.docker.com/</p>
+<p>仓库：https://hub.docker.com/</p>
+<h2 id="docker能干嘛">Docker能干嘛</h2>
+<p>对比虚拟机技术：</p>
+<p>虚拟机技术缺点：</p>
+<ul>
+<li>启动慢</li>
+<li>资源占用多</li>
+<li>冗余步骤多</li>
+</ul>
+<p>容器化技术：容器化技术并没有模拟一个完整的操作系统。</p>
+<p>Docker和虚拟机的不同：</p>
+<p>传统虚拟机，虚拟出一套硬件，运行一个完整的操作系统，在这个系统上安装和运行软件。</p>
+<p>容器内的应用直接运行在宿主机的内核，容器是没有自己的内核的，也没有硬件。每个容器间相互隔离，每个容器内都有一个属于自己的文件系统，互不影响。</p>
+<p>DevOps（开发、运维）：更快速的交付和部署，更便捷的升级和扩缩容，更简单的系统运维，更高效的计算资源利用。</p>
+<h1 id="docker安装">Docker安装</h1>
+<h2 id="docker的基本组成">Docker的基本组成</h2>
+<p>镜像（image）：Docker镜像就好比是一个模板，可以通过这个模板来创建容器服务。通过一个镜像可以创建多个容器。最终服务运行或者项目运行就是在容器中的。</p>
+<p>容器（container）：Docker利用容器技术，通过镜像来创建并独立运行一个或者一组应用。目前可以把容器理解为一个简易的Linux系统。</p>
+<p>仓库（repository）：仓库就是存放镜像的地方。仓库分为公有仓库和私有仓库。默认是国外的Docker Hub，国内通常要配置镜像加速。</p>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2021_05_20_Docker%E7%AC%94%E8%AE%B0_Docker%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84.svg" alt="Docker系统架构.svg" /><figcaption aria-hidden="true">Docker系统架构.svg</figcaption>
+</figure>
+<h2 id="安装docker">安装Docker</h2>
+<p><a href="https://docs.docker.com/get-docker/">Get Docker | Docker Documentation</a></p>
+<p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package">在 Windows 10 上安装 WSL | Microsoft Docs</a></p>
+<p>如果是Windows需要在BIOS打开CPU虚拟化技术。</p>
+<p>可以在任务管理器查看虚拟化是否打开。</p>
+<p>另外还需要在启用或关闭Windows功能中打开适用于Linux的Windows子系统，并安装WSL 2。</p>
+<h3 id="配置阿里云镜像加速">配置阿里云镜像加速</h3>
+<p>在Docker Engine设置选项中，配置</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token property">"registry-mirrors"</span><span class="token operator">:</span> <span class="token punctuation">[</span>阿里云镜像加速的地址<span class="token punctuation">]</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>加速地址可以在登录阿里云之后的容器镜像服务-镜像工具-镜像加速器找到。</p>
+<h1 id="docker命令">Docker命令</h1>
+<ul>
+<li><p>查看Docker版本，验证Docker是否安装成功。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>运行hello world程序。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run hello-world<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>查看已经下载的镜像。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">docker images<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>帮助命令。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token punctuation">[</span>命令<span class="token punctuation">]</span> --help<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>显示Docker系统信息，包括镜像和容器的数量。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker info<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>官方帮助文档：<a href="https://docs.docker.com/reference/">Reference documentation | Docker Documentation</a></p></li>
+<li><p>提交镜像。提交到本地的镜像。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker commit 容器ID <span class="token punctuation">[</span>目标镜像名<span class="token punctuation">[</span>:tag<span class="token punctuation">]</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>提交信息：<code>-m string</code></p>
+<p>作者：<code>-a string</code></p></li>
+</ul>
+<h2 id="镜像命令">镜像命令</h2>
+<ul>
+<li><p>列出镜像。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker images<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+hello-world   latest    d1165f221234   <span class="token number">2</span> months ago   <span class="token number">13</span>.3kB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>REPOSITORY：镜像的仓库源，使用这个名字从仓库下载镜像。</p>
+<p>TAG：镜像的标签</p>
+<p>IMAGE ID：镜像的ID</p>
+<p>CREATED：镜像的创建时间</p>
+<p>SIZE：镜像的大小</p>
+<p>列出所有镜像：<code>-a</code></p>
+<p>只显示镜像ID：<code>-q</code></p></li>
+<li><p>搜索镜像。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker search mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">NAME                              DESCRIPTION
+            STARS     OFFICIAL   AUTOMATED
+mysql                             MySQL is a widely used, open-source relation…   <span class="token number">10932</span>     <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+mariadb                           MariaDB Server is a high performing <span class="token function">open</span> sou…   <span class="token number">4134</span>      <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+mysql/mysql-server                Optimized MySQL Server Docker images. Create…   <span class="token number">812</span>                  <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+percona                           Percona Server is a fork of the MySQL relati…   <span class="token number">539</span>       <span class="token punctuation">[</span>OK<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>过滤搜索结果：<code>-f=STARS=3000</code>过滤标星3000以下的镜像。</p></li>
+<li><p>下载镜像。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker pull 镜像名<span class="token punctuation">[</span>:TAG<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Using default tag: latest <span class="token comment"># 如果不写TAG，默认就是latest</span>
+latest: Pulling from library/mysql
+69692152171a: Pull complete <span class="token comment"># 分层下载，docker image的核心 联合文件系统</span>
+1651b0be3df3: Pull complete
+951da7386bc8: Pull complete
+0f86c95aa242: Pull complete
+37ba2d8bd4fe: Pull complete
+6d278bb05e94: Pull complete
+497efbd93a3e: Pull complete
+f7fddf10c2c2: Pull complete
+16415d159dfb: Pull complete
+0e530ffc6b73: Pull complete
+b0a4a1a77178: Pull complete
+cd90f92aa9ef: Pull complete
+Digest: sha256:d50098d7fcb25b1fcb24e2d3247cae3fc55815d64fec640dc395840f8fa80969 <span class="token comment"># 签名</span>
+Status: Downloaded newer image <span class="token keyword">for</span> mysql:latest
+docker.io/library/mysql:latest <span class="token comment"># 真实地址</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>删除镜像。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker rmi 镜像的名称或ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>批量删除全部的镜像</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker rmi -f <span class="token variable"><span class="token variable">$(</span>docker images -aq<span class="token variable">)</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>强制删除：<code>-f</code></p></li>
+</ul>
+<h2 id="容器命令">容器命令</h2>
+<p>有了镜像才可以创建容器。先下载一个CentOS系统进行学习。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker pull centos<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li><p>新建容器并启动。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run <span class="token punctuation">[</span>可选参数<span class="token punctuation">]</span> image<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>容器名字：<code>--name="name"</code>用来区分容器。</p>
+<p>后台方式运行：<code>-d</code>，问题：<code>docker ps</code>发现停止了。常见的坑：如果Docker容器使用后台运行，就必须要有一个前台进程，如果Docker发现没有前台应用，就会自动停止容器。</p>
+<p>使用交互方式运行，进入容器查看内容：<code>-it</code></p>
+<p>指定容器的端口：<code>-p</code></p>
+<ul>
+<li><code>-p IP:主机端口:容器端口</code></li>
+<li><code>-p 主机端口:容器端口</code></li>
+<li><code>-p 容器端口</code></li>
+<li><code>容器端口</code></li>
+</ul>
+<p>随机指定端口：<code>-P</code></p>
+<p>用完即删除：<code>--rm</code></p>
+<p>设置环境变量：<code>-e list</code></p>
+<p>添加到其他容器的链接：<code>--link list</code></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -it centos /bin/bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>停止容器并退出。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">exit</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>退出但不停止容器。</p>
+<p><code>Ctrl+p Ctrl+q</code></p></li>
+<li><p>列出所有正在运行的容器。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">ps</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>查看所有容器：<code>-a</code>注意这个不是查看所有镜像。</p>
+<p>显示最近创建的n个容器：<code>-n int</code></p>
+<p>只显示容器的ID：<code>-q</code></p></li>
+<li><p>删除容器，不能删除正在运行的容器。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">rm</span> 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>删除所有容器</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">rm</span> <span class="token variable"><span class="token variable">$(</span>docker <span class="token function">ps</span> -aq<span class="token variable">)</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>强制删除：<code>-f</code>，可以删除掉正在运行的容器。</p>
+<p>删除所有容器</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">ps</span> -aq <span class="token operator">|</span> <span class="token function">xargs</span> docker <span class="token function">rm</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>启动容器</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker start 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>停止正在运行的容器</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker stop 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>重启容器</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker restart 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>强制停止容器，在stop报错的时候可以使用</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">kill</span> 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>管理卷</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker volume<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>查看镜像的历史，就是说查看指定的镜像是怎么构建出来的。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">history</span> 镜像<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>登录Docker仓库。登录之后可以使用push等命令。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker login -u xfdj<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>登出Docker仓库。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token builtin class-name">logout</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>向仓库推送镜像</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker push 镜像名<span class="token punctuation">[</span>:TAG<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>给镜像打标签。当push被拒绝的时候，需要给要提交的镜像按照一定的格式打标签重命名。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker tag 原镜像<span class="token punctuation">[</span>:TAG<span class="token punctuation">]</span> 新镜像名称<span class="token punctuation">[</span>:TAG<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>比如</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker tag myapp xfdj/myapp:latest<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>要提交的镜像需要在命名的时候在镜像名之前加上用户名，然后在最后加上ID。</p></li>
+<li><p>将一个或多个镜像打包成一个tar压缩包。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker save -o 输出文件名 镜像1 <span class="token punctuation">[</span>镜像2<span class="token punctuation">..</span>.<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>从压缩包中读取镜像</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker load -i 压缩包<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>管理网络</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker network<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<h2 id="常用其它命令">常用其它命令</h2>
+<ul>
+<li><p>查看日志</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker logs 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>显示时间戳：<code>-t</code></p>
+<p>持续显示日志：<code>-f</code></p>
+<p>显示指定条数的日志：<code>-n 数量</code></p></li>
+<li><p>查看容器中的进程信息</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">top</span> 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>查看Docker对象的元数据。包括名称、挂载信息。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker inspect 名称或ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>进入当前正在运行的容器</p>
+<p>开启一个新的Shell</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token builtin class-name">exec</span> -it 容器ID 使用的Shell<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>进入当前正在运行命令的Shell</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker attach 容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>在容器和主机之间拷贝文件或文件夹</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">cp</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>查看容器的资源占用信息</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker stats<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<figure>
+<img src="https://xfdjblog-1258179712.cos.ap-guangzhou.myqcloud.com/2021_05_20_Docker%E7%AC%94%E8%AE%B0_Docker%20Command%20Diagram.png" alt="Docker Command Diagram.png" /><figcaption aria-hidden="true">Docker Command Diagram.png</figcaption>
+</figure>
+<h1 id="docker底层原理">Docker底层原理</h1>
+<p>Docker是怎么工作的？</p>
+<p>Docker是一个Client-Server结构的系统。Docker的服务进程运行在主机上，通过Socket从客户端访问。服务进程接收到客户端的指令之后操作Docker容器。</p>
+<p>Docker为什么比虚拟机快？</p>
+<ol type="1">
+<li>Docker比虚拟机有更少的抽象层。</li>
+<li>Docker利用的是宿主机的内核，虚拟机需要一个Guest OS。</li>
+</ol>
+<h1 id="可视化">可视化</h1>
+<ul>
+<li><p>portainer</p>
+<p>什么是portainer？Docker图形化界面管理工具，提供一个后台面板供我们操作。</p></li>
+</ul>
+<h1 id="docker镜像详解">Docker镜像详解</h1>
+<p>镜像是什么？</p>
+<p>镜像是一种轻量级、可执行的独立软件包，用来打包软件运行环境和基于运行环境开发的软件，它包含运行某个软件所需的所有内容，包括代码、运行时、库、环境变量和配置文件。</p>
+<p>如何得到镜像？</p>
+<ul>
+<li>从远程仓库下载</li>
+<li>从其他渠道获得</li>
+<li>自己制作一个镜像DockerFile</li>
+</ul>
+<h2 id="docker镜像加载原理">Docker镜像加载原理</h2>
+<p>UnionFS（联合文件系统）</p>
+<p>UnionFS是一种分层、轻量级并且高性能的文件系统，它支持对文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下。UnionFS是Docker镜像的基础。镜像可以通过分层来进行继承，基于基础镜像，可以制作各种具体的应用镜像。</p>
+<p>特性：一次同时加载多个文件系统，但从外面看起来，只能看到一个文件系统，联合加载会把各层文件系统叠加起来，这样最终的文件系统会包含所有底层的文件和目录。</p>
+<p>Docker的镜像实际上是由一层一层的文件系统组成。</p>
+<p>bootfs（boot file system）主要包含bootloader和kernel，bootloader主要是引导加载kernel，Linux刚启动时会加载bootfs文件系统，在Docker镜像的最底层是bootfs。这一层和典型的Linux/Unix系统一样，包含boot加载器和内核。当boot加载完成之后整个内核就都在内存中了，此时内存的使用权已由bootfs转交给内核，此时系统也会卸载bootfs。</p>
+<p>rootfs（root file system），在bootfs之上。包含的就是典型Linux系统中的/dev、/proc、/bin、/etc等标准目录和文件。rootfs就是各种不同的操作系统发行版，比如Ubuntu、CentOS等等。</p>
+<p>对于一个精简的OS，rootfs可以很小，只需要包含最基本的命令、工具和程序库就可以了，因为底层直接用host的kernel，自己只需要提供rootfs就可以了。由此可见对于不同的linux发行版，bootfs基本是一致的，rootfs会有差别，因此不同的发行版可以公用bootfs。</p>
+<p>Docker采用快照机制来实现镜像层堆栈，并保证多层镜像对外展示为统一的文件系统。上层镜像中的文件会覆盖底层镜像中的文件。这样就使得文件的更新版本作为一个新镜像层添加到镜像当中。</p>
+<p>Docker镜像都是只读的，当容器启动时，一个新的可写层被加载到镜像的顶部，这一层就是我们通常说的容器层，容器之下的都叫镜像层。</p>
+<h1 id="数据卷">数据卷</h1>
+<p>什么是数据卷？</p>
+<p>Docker的理念是把应用和环境打包成一个镜像。数据不应该放在容器中，如果数据都在容器中，只要容器一删除，数据就会丢失！需求：数据可以持久化。</p>
+<p>容器之间可以有一个数据共享的技术。Docker容器中产生的数据，能直接保存到容器外。</p>
+<p>将容器内的目录挂载到本机上。实现容器的持久化和同步操作。容器间也可以数据共享。</p>
+<h2 id="使用数据卷">使用数据卷</h2>
+<ul>
+<li><p>使用命令方式来挂载</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -v 主机目录:容器内目录<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<h2 id="具名和匿名挂载">具名和匿名挂载</h2>
+<ul>
+<li><p>匿名挂载</p>
+<pre class="line-numbers language-none"><code class="language-none">docker run -v 容器内目录<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>具名挂载。卷名不以<code>/</code>开头。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -v 卷名:容器内目录<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>指定路径挂载</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -v 主机目录:容器内目录<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<h2 id="读写权限">读写权限</h2>
+<ul>
+<li><p>只读。这个路径智能通过宿主机来操作，容器内部无法操作。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -v 容器内目录:ro<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>读写（默认）</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -v 容器内目录:rw<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<h2 id="数据卷容器">数据卷容器</h2>
+<p>子容器可以继承父容器的数据卷，此时的父容器既是一个容器也是一个数据卷，因此叫做数据卷容器。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run --volume-from 父容器ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>通过数据卷容器可以实现容器之间的数据同步。而且数据卷不会随着容器的删除而被删除。数据卷容器的生命周期一直持续到没有容器使用为止。</p>
+<h1 id="dockerfile">Dockerfile</h1>
+<p>什么是Dockerfile？</p>
+<p>Dockerfile就是用来构建Docker镜像的构建文件。使用Dockerfile来构建Docker镜像是除去使用commit来构建Docker镜像的第二种方式。</p>
+<p>通过Dockerfile这个脚本可以生成镜像。镜像是一层一层的，脚本是一个一个的命令，每个命令都是一层。</p>
+<p>编写一个Dockerfile。命名为<code>dockerfile1</code></p>
+<pre class="line-numbers language-dockerfile" data-language="dockerfile"><code class="language-dockerfile">FROM centos
+VOLUME [ &quot;volume01&quot;, &quot;volume02&quot; ]
+CMD [ &quot;&#x2F;bin&#x2F;bash&quot; ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>每一个命令，就相当于镜像的一层。</p>
+<p>使用Dockerfile构建镜像。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker build -f dockerfile1 -t centos:1.0 <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>-f</code>表示使用的文件，<code>-t</code>表示生成的名字和标签。最后的<code>.</code>不能忘记！表示构建的路径。</p>
+<p>官方推荐的命名为<code>Dockerfile</code>，如果没有<code>-f</code>参数，Docker会自动寻找官方推荐命名的文件来构建镜像。</p>
+<p>启动并进入镜像。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -it 镜像名/ID /bin/bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>进入镜像之后使用<code>ls</code>命令。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ls</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">bin  etc   lib    lost+found  mnt  proc  run   srv  tmp  var       volume02
+dev  home  lib64  media       opt  root  sbin  sys  usr  volume01<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>这里的两个新的目录<code>volume01</code>和<code>volume02</code>就是生成镜像的时候自动挂载的数据卷目录。</p>
+<p>如果构建镜像的时候没有挂载卷，要手动挂载。<code>-v 卷名:容器内路径</code></p>
+<h2 id="dockerfile构建步骤">Dockerfile构建步骤</h2>
+<ol type="1">
+<li>编写Dockerfile</li>
+<li>docker build构建镜像</li>
+<li>docker run运行镜像</li>
+<li>docker push发布镜像（Docker Hub、阿里云）</li>
+</ol>
+<h2 id="dockerfile的指令">Dockerfile的指令</h2>
+<p>Dockerfile的指令是忽略大小写的，只是通常建议大写。</p>
+<pre class="line-numbers language-dockerfile" data-language="dockerfile"><code class="language-dockerfile"># 基础镜像，从这个镜像开始构建
+FROM
+# 镜像是谁维护的，姓名+邮箱
+MAINTAINER
+# 镜像构建的时候需要运行的命令
+RUN
+# 添加内容或者文件的命令
+ADD
+# 镜像的工作目录
+WORKDIR
+# 挂载的目录
+VOLUME
+# 指定对外的端口
+EXPOSE
+# 指定这个容器启动的时候要运行的命令，只有最后一个会生效，而且会被命令行中的命令覆盖
+CMD
+# 指定这个容器启动的时候要运行的命令，可以在命令行追加命令
+ENTRYPOINT
+# 当构建一个被继承的Dockerfile的时候就会运行。是一个触发指令
+ONBUILD
+# 类似ADD，将文件拷贝到镜像中
+COPY
+# 构建的时候设置环境变量
+ENV<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="发布自己的镜像">发布自己的镜像</h2>
+<h3 id="docker-hub">Docker Hub</h3>
+<ol type="1">
+<li>注册账号。<a href="https://hub.docker.com/">Docker Hub</a></li>
+<li>确定这个账号可以登录<code>docker login</code></li>
+<li>提交自己的镜像<code>docker push</code></li>
+</ol>
+<h2 id="阿里云">阿里云</h2>
+<ol type="1">
+<li>登录阿里云。<a href="https://cn.aliyun.com/">阿里云</a></li>
+<li>找到容器镜像服务-实例列表-镜像仓库</li>
+<li>创建命名空间</li>
+<li>创建镜像仓库</li>
+</ol>
+<p>提交或拉取步骤参考官方文档。</p>
+<h1 id="docker网络">Docker网络</h1>
+<p>Docker是如何处理容器的网络访问的？</p>
+<p>如果使用<code>ip addr</code>查看容器的内部网络地址，会发现容器启动的时候会得到一个类似于<code>eth0@if15</code>的IP地址<code>172.17.0.2</code>，这个地址是Docker分配的。如果在Linux上<code>ping</code>容器内部的地址，是可以ping通的。</p>
+<p>如果使用<code>ip addr</code>查看Linux的IP地址，会发现其中有一个docker0的IP地址<code>172.17.0.1</code>。而且会多出一个地址类似<code>veth11306d6@if14</code>的网络。</p>
+<p>每启动一个Docker容器，Docker就会给Docker容器分配一个IP，只要安装了Docker，就会有一个网卡docker0。这个网卡使用的是桥接模式，使用的技术是veth-pair技术。</p>
+<p>不同的容器也可以通过这个分配的IP互相ping通。这是把docker0当做路由器来实现的。而docker0还充当物理网卡的网桥。</p>
+<p>Docker中所有的网络接口都是虚拟的，转发效率高。容器只要删除，对应的一对网桥就没了。</p>
+<h2 id="link">--link</h2>
+<p>添加到其他容器的链接。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -dP --name tomcat03 --link tomcat02 tomcat<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这样容器可以使用名字来ping通。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token builtin class-name">exec</span> -it tomcat03 <span class="token function">ping</span> tomcat02<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">PING tomcat02 <span class="token punctuation">(</span><span class="token number">172.17</span>.0.3<span class="token punctuation">)</span> <span class="token number">56</span><span class="token punctuation">(</span><span class="token number">84</span><span class="token punctuation">)</span> bytes of data.
+<span class="token number">64</span> bytes from tomcat02 <span class="token punctuation">(</span><span class="token number">172.17</span>.0.3<span class="token punctuation">)</span>: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.131</span> ms
+<span class="token number">64</span> bytes from tomcat02 <span class="token punctuation">(</span><span class="token number">172.17</span>.0.3<span class="token punctuation">)</span>: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">2</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.104</span> ms
+<span class="token punctuation">..</span>.
+^C
+--- tomcat02 <span class="token function">ping</span> statistics ---
+<span class="token number">6</span> packets transmitted, <span class="token number">6</span> received, <span class="token number">0</span>% packet loss, <span class="token function">time</span> 157ms
+rtt min/avg/max/mdev <span class="token operator">=</span> <span class="token number">0.086</span>/0.105/0.133/0.022 ms<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>原理：在<code>/etc/hosts</code>配置中增加了一条映射。</p>
+<p>现在Docker不建议使用<code>--link</code>。docker0存在的问题：不支持容器名连接访问。</p>
+<h2 id="自定义网络">自定义网络</h2>
+<p>网络模式：</p>
+<ul>
+<li>bridge：桥接模式（默认）。</li>
+<li>none：不配置网络。</li>
+<li>host：和宿主机共享网络。</li>
+<li>container：容器内网络连通。</li>
+</ul>
+<p>平时启动容器的命令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -dP --name tomcat01 tomcat<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>实际上和下面的命令是等价的：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -dP --name tomcat01 --net bridge tomcat<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>其中的bridge实际上就是默认的docker0网络。</p>
+<p>docker0网络的特点：</p>
+<ul>
+<li>默认</li>
+<li>域名不能访问</li>
+</ul>
+<p>自定义网络：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker network create --driver bridge --subnet <span class="token number">192.168</span>.0.0/16 --gateway <span class="token number">192.168</span>.0.1 mynet<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在自定义网络中启动容器：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -dP --name tomcat-net-01 --net mynet tomcat
+docker run -dP --name tomcat-net-02 --net mynet tomcat<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>在自定义网络中可以直接通过容器名ping通：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token builtin class-name">exec</span> -it tomcat-net-01 <span class="token function">ping</span> tomcat-net-02<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>而且这不是通过写hosts的方式实现的。</p>
+<p>好处：</p>
+<ul>
+<li>不同的集群使用不同的网络，网络之间是隔离的。保证集群是健康的</li>
+<li>不同的网络之间还可以连通</li>
+</ul>
+<h2 id="网络连通">网络连通</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker network connect 网络 容器<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这个命令可以将一个容器连接到一个网络。</p>
+<p>连通之后就会把容器放到该网络下。</p>
+<p>一个容器两个IP地址。</p>
+<h1 id="docker-compose">Docker Compose</h1>
+<p>原先使用Docker：</p>
+<p>编写Dockerfile，build，run。手动操作，单个容器。</p>
+<p>如果实际场景需要部署100个微服务，而且这100个微服务还具有依赖关系怎么办？</p>
+<p>Docker Compose是用来定义运行多个容器的工具，可以轻松高效地管理容器。</p>
+<blockquote>
+<p>Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services. Then, with a single command, you create and start all the services from your configuration.</p>
+<p>Using Compose is basically a three-step process:</p>
+<ol type="1">
+<li>Define your app's environment with a <code>Dockerfile</code> so it can be reproduced anywhere.</li>
+<li>Define the services that make up your app in <code>docker-compose.yml</code> so they can be run together in an isolated environment.</li>
+<li>Run <code>docker-compose up</code> and Compose starts and runs your entire app.</li>
+</ol>
+</blockquote>
+<p>一个<code>docker-compose.yml</code>文件类似下面这个样子：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">"3.9"</span>  <span class="token comment"># optional since v1.27.0</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">web</span><span class="token punctuation">:</span>
+    <span class="token key atrule">build</span><span class="token punctuation">:</span> .
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">"5000:5000"</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> .<span class="token punctuation">:</span>/code
+      <span class="token punctuation">-</span> logvolume01<span class="token punctuation">:</span>/var/log
+    <span class="token key atrule">links</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> redis
+  <span class="token key atrule">redis</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> redis
+<span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token key atrule">logvolume01</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Compose 有一些重要的概念：</p>
+<ul>
+<li>服务service：容器或者应用。（web、Redis、MySQL...）</li>
+<li>项目project：一组关联的容器。</li>
+</ul>
+<h2 id="安装">安装</h2>
+<p><a href="https://docs.docker.com/compose/install/">Install Docker Compose | Docker Documentation</a></p>
+<p>加速下载：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">curl</span> -L <span class="token string">"https://get.daocloud.io/docker/compose/releases/download/1.29.2/docker-compose-<span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> -s<span class="token variable">)</span></span>-<span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> -m<span class="token variable">)</span></span>"</span> -o /usr/local/bin/docker-compose<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+]]></content>
+      <tags>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -11618,803 +11618,6 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
       </tags>
   </entry>
   <entry>
-    <title>矩阵微积分公式速查</title>
-    <url>/2020/08/16/%E7%9F%A9%E9%98%B5%E5%BE%AE%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F%E9%80%9F%E6%9F%A5/</url>
-    <content><![CDATA[<h1 id="向量求导">向量求导</h1>
-<h2 id="向量对标量求导">向量对标量求导</h2>
-<p>记向量<span class="math inline">\(\mathbf y: \mathbb R \to \mathbb R^m\)</span> <span class="math display">\[
-\mathbf y=\left[\begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_m \end{array}\right]=\left[\begin{array}{c} f_1(x) \\ f_2(x) \\ \vdots \\ f_m(x) \end{array}\right]
-\]</span> 则向量<span class="math inline">\(\mathbf y\)</span>关于标量<span class="math inline">\(x\)</span>的导数<span class="math inline">\(\frac{\partial \mathbf y}{\partial x}\)</span>有 <span class="math display">\[
-\frac{\partial \mathbf{y}}{\partial x}=\left[\begin{array}{c}
-\frac{\partial y_{1}}{\partial x} \\
-\frac{\partial y_{2}}{\partial x} \\
-\vdots \\
-\frac{\partial y_{m}}{\partial x}
-\end{array}\right]
-\]</span> 这个导数也被称为向量<span class="math inline">\(\mathbf y\)</span>的<strong>切向量</strong>。比如，速度向量是位移向量的切向量，加速度向量是速度向量的切向量。</p>
-<h2 id="标量对向量求导">标量对向量求导</h2>
-<p>对标量<span class="math inline">\(y \in \mathbb R\)</span>和向量<span class="math inline">\(\mathbf x \in \mathbb R^n\)</span> <span class="math display">\[
-\mathbf x=\left[\begin{array}{c}x_1\\x_2\\\vdots\\x_n\end{array}\right], y = f(\mathbf x)=f(x_1, x_2, \cdots, x_n)
-\]</span> 则标量<span class="math inline">\(y\)</span>对向量<span class="math inline">\(\mathbf x\)</span>的导数<span class="math inline">\(\frac{\partial y}{\partial \mathbf x}\)</span> <span class="math display">\[
-\frac{\partial y}{\partial \mathbf{x}}=\left[\begin{array}{llll}
-\frac{\partial y}{\partial x_{1}} &amp; \frac{\partial y}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{n}}
-\end{array}\right]
-\]</span> 一个标量场<span class="math inline">\(y\)</span>在<span class="math inline">\(\mathbb R^n\)</span>空间中的<strong>梯度</strong>（gradient）是上述导数的转置。也就是说 <span class="math display">\[
-\nabla y=\left[\begin{array}{c}
-\frac{\partial y}{\partial x_{1}} \\
-\vdots \\
-\frac{\partial y}{\partial x_{n}}
-\end{array}\right]=\left(\frac{\partial y}{\partial \mathbf{x}}\right)^{T}
-\]</span> 标量函数<span class="math inline">\(y=f(\mathbf x)\)</span>在单位向量<span class="math inline">\(\mathbf u\)</span>方向上的<strong>方向导数</strong>可以用梯度来定义 <span class="math display">\[
-\nabla_{\mathbf{u}} y=\nabla y \cdot \mathbf{u}=(\frac{\partial y}{\partial \mathbf x})^T\cdot \mathbf u=\frac{\partial y}{\partial \mathbf x} \mathbf u
-\]</span></p>
-<h2 id="向量对向量求导">向量对向量求导</h2>
-<p>前面两种情况可以看作是向量对向量求导在其中一个是一维向量情况下的特例。</p>
-<p>对向量<span class="math inline">\(\mathbf y \in \mathbb R^m\)</span>和向量<span class="math inline">\(\mathbf x \in \mathbb R^n\)</span>，向量函数<span class="math inline">\(\mathbf y=f(\mathbf x)\)</span> <span class="math display">\[
-\mathbf x=\left[\begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array}\right], \mathbf y=\left[\begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_m \end{array}\right]=\left[\begin{array}{c} f_1(\mathbf x) \\ f_2(\mathbf x) \\ \vdots \\ f_m(\mathbf x) \end{array}\right]=\left[\begin{array}{c} f_1(x_1, x_2, \cdots, x_n) \\ f_2(x_1, x_2, \cdots, x_n) \\ \vdots \\ f_m(x_1, x_2, \cdots, x_n) \end{array}\right]
-\]</span> 则向量<span class="math inline">\(\mathbf y\)</span>对向量<span class="math inline">\(\mathbf x\)</span>的导数<span class="math inline">\(J=\frac{\partial \mathbf y}{\partial \mathbf x}\)</span> <span class="math display">\[
-J=\frac{\partial \mathbf{y}}{\partial \mathbf{x}}=\left[\begin{array}{cccc}
-\frac{\partial y_{1}}{\partial x_{1}} &amp; \frac{\partial y_{1}}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y_{1}}{\partial x_{n}} \\
-\frac{\partial y_{2}}{\partial x_{1}} &amp; \frac{\partial y_{2}}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y_{2}}{\partial x_{n}} \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-\frac{\partial y_{m}}{\partial x_{1}} &amp; \frac{\partial y_{m}}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y_{m}}{\partial x_{n}}
-\end{array}\right]
-\]</span> 这个导数也被称为<strong>雅可比矩阵</strong>（Jacobian matrix）。</p>
-<p>可以这样记忆这些导数的排列方式。分子的偏微分是根据<span class="math inline">\(\mathbf y\)</span>的形状来排列的，而分母的偏微分是根据<span class="math inline">\(\mathbf x\)</span>的转置的形状来排列的。例如，<span class="math inline">\(\frac{\partial \mathbf y}{\partial x}\)</span>是列向量，而<span class="math inline">\(\frac{\partial y}{\partial \mathbf x}\)</span>是行向量（假设<span class="math inline">\(\mathbf x\)</span>和<span class="math inline">\(\mathbf y\)</span>是列向量，否则将翻转）。这种布局方式也被称为<strong>分子布局</strong>。与之相反的还有分母布局。</p>
-<h1 id="矩阵求导">矩阵求导</h1>
-<h2 id="矩阵对标量求导">矩阵对标量求导</h2>
-<p>记标量<span class="math inline">\(x \in \mathbb R\)</span>，矩阵<span class="math inline">\(Y \in \mathbb R^{m \times n}\)</span>，则矩阵<span class="math inline">\(Y\)</span>对标量<span class="math inline">\(x\)</span>的导数 <span class="math display">\[
-\frac{\partial Y}{\partial x}=\left[\begin{array}{cccc}
-\frac{\partial y_{11}}{\partial x} &amp; \frac{\partial y_{12}}{\partial x} &amp; \cdots &amp; \frac{\partial y_{1 n}}{\partial x} \\
-\frac{\partial y_{21}}{\partial x} &amp; \frac{\partial y_{22}}{\partial x} &amp; \cdots &amp; \frac{\partial y_{2 n}}{\partial x} \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-\frac{\partial y_{m 1}}{\partial x} &amp; \frac{\partial y_{m 2}}{\partial x} &amp; \cdots &amp; \frac{\partial y_{m n}}{\partial x}
-\end{array}\right]
-\]</span> 和向量类似，得到的矩阵被称为<strong>切矩阵</strong>。</p>
-<h2 id="标量对矩阵求导">标量对矩阵求导</h2>
-<p>记矩阵<span class="math inline">\(X \in \mathbb R^{p \times q}\)</span>，标量<span class="math inline">\(y \in \mathbb R\)</span>，则标量<span class="math inline">\(y\)</span>对矩阵<span class="math inline">\(X\)</span>的导数 <span class="math display">\[
-\frac{\partial y}{\partial X}=\left[\begin{array}{cccc}
-\frac{\partial y}{\partial x_{11}} &amp; \frac{\partial y}{\partial x_{21}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{p 1}} \\
-\frac{\partial y}{\partial x_{12}} &amp; \frac{\partial y}{\partial x_{22}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{p 2}} \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-\frac{\partial y}{\partial x_{1 q}} &amp; \frac{\partial y}{\partial x_{2 q}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{p q}}
-\end{array}\right]
-\]</span> 矩阵的标量函数的典型例子有矩阵的迹和行列式。在类似的向量演算中，这个导数通常写成如下形式。 <span class="math display">\[
-\nabla_X y(X)=\frac{\partial y(X)}{\partial X}
-\]</span></p>
-<h2 id="标量对向量求二阶导">标量对向量求二阶导</h2>
-<p>记向量<span class="math inline">\(\mathbf x \in \mathbb R^n\)</span>，函数<span class="math inline">\(f:\mathbb R^n \to \mathbb R\)</span>。则<span class="math inline">\(f\)</span>对于<span class="math inline">\(\mathbf x\)</span>的二阶导<span class="math inline">\(H=\frac{\partial ^2 f}{\partial \mathbf x^2}\)</span> <span class="math display">\[
-H=\frac{\partial ^2 f}{\partial \mathbf x^2}=\left[\begin{array}{cccc}
-\frac{\partial^{2} f}{\partial x_{1}^{2}} &amp; \frac{\partial^{2} f}{\partial x_{1} \partial x_{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{1} \partial x_{n}} \\
-\frac{\partial^{2} f}{\partial x_{2} \partial x_{1}} &amp; \frac{\partial^{2} f}{\partial x_{2}^{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{2} \partial x_{n}} \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-\frac{\partial^{2} f}{\partial x_{n} \partial x_{1}} &amp; \frac{\partial^{2} f}{\partial x_{n} \partial x_{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{n}^{2}}
-\end{array}\right]
-\]</span> 这个矩阵也被称为<strong>海森矩阵</strong>（Hessian matrix）。海森矩阵和雅可比矩阵以及梯度有如下关系： <span class="math display">\[
-H(f(\mathbf x))=J(\nabla f(\mathbf x))=\frac{\partial \left(\frac{\partial f}{\partial \mathbf x}\right)^T}{\partial \mathbf x}
-\]</span></p>
-<h1 id="恒等式">恒等式</h1>
-<h2 id="向量对向量求导-1">向量对向量求导</h2>
-<p>形如<span class="math inline">\(\frac{\partial \mathbf y}{\partial \mathbf x}\)</span></p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>条件</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf a}{\partial \mathbf x}=\mathbf 0\)</span></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><span class="math inline">\(\frac{\partial \mathbf x}{\partial \mathbf x}=I\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial A \mathbf x}{\partial \mathbf x}=A\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf x^T A}{\partial \mathbf x^T}=A\)</span></td>
-</tr>
-<tr class="odd">
-<td>标量<span class="math inline">\(a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial a\mathbf u}{\partial \mathbf x}=a\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(v=v(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial v \mathbf u}{\partial \mathbf x}=v\frac{\partial \mathbf u}{\partial \mathbf x}+\mathbf u\frac{\partial v}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial A \mathbf u}{\partial \mathbf x}=A\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial (\mathbf u + \mathbf v)}{\partial \mathbf x}=\frac{\partial \mathbf u}{\partial \mathbf x}+\frac{\partial \mathbf v}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf g=\mathbf g(\mathbf u)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \mathbf g}{\partial \mathbf x}=\frac{\partial \mathbf g}{\partial \mathbf u}\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf g=\mathbf g(\mathbf u)\)</span>，向量<span class="math inline">\(\mathbf f=\mathbf f(\mathbf g)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \mathbf f}{\partial \mathbf x}=\frac{\partial \mathbf f}{\partial \mathbf g}\frac{\partial \mathbf g}{\partial \mathbf u}\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
-</tr>
-</tbody>
-</table>
-<h2 id="标量对向量求导-1">标量对向量求导</h2>
-<p>形如<span class="math inline">\(\frac{\partial y}{\partial \mathbf x}=(\nabla_{\mathbf x}y)^T\)</span></p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>条件</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>标量<span class="math inline">\(a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial a}{\partial \mathbf x}=\mathbf 0^T\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，标量<span class="math inline">\(u=u(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial a u}{\partial \mathbf x}=a\frac{\partial u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="odd">
-<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(v=v(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial (u+v)}{\partial \mathbf x}=\frac{\partial u}{\partial \mathbf x} + \frac{\partial v}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(v=v(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial u v}{\partial \mathbf x}=u\frac{\partial v}{\partial \mathbf x}+v\frac{\partial u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="odd">
-<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(g=g(u)\)</span></td>
-<td><span class="math inline">\(\frac{\partial g}{\partial \mathbf x}=\frac{\partial g}{\partial u}\frac{\partial u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(g=g(u)\)</span>，标量<span class="math inline">\(f=f(g)\)</span></td>
-<td><span class="math inline">\(\frac{\partial f}{\partial \mathbf x}=\frac{\partial f}{\partial g}\frac{\partial g}{\partial u}\frac{\partial u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \mathbf u \cdot \mathbf v}{\partial \mathbf x}=\frac{\partial \mathbf u^T \mathbf v}{\partial \mathbf x}=\mathbf u^{T} \frac{\partial \mathbf v}{\partial \mathbf x}+\mathbf v^{T} \frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span>，矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf{x}\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf{u}^T A \mathbf{v}}{\partial \mathbf{x}}=\mathbf{u}^{T} A \frac{\partial \mathbf{v}}{\partial \mathbf{x}}+\mathbf{v}^{T} A^{T} \frac{\partial \mathbf{u}}{\partial \mathbf{x}}\)</span></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(\frac{\partial ^2 f}{\partial \mathbf x \partial \mathbf x^T}=H^T\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial(\mathbf{a} \cdot \mathbf{x})}{\partial \mathbf{x}} =\frac{\partial(\mathbf{x} \cdot \mathbf{a})}{\partial \mathbf{x}}=\frac{\partial \mathbf{a}^{T} \mathbf{x}}{\partial \mathbf{x}} =\frac{\partial \mathbf{x}^{T} \mathbf{a}}{\partial \mathbf{x}}=\mathbf a^T\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf b\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf b^T A \mathbf x}{\partial \mathbf x}=\mathbf b^T A\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf x^T A \mathbf x}{\partial \mathbf x}=\mathbf x^T (A+A^T)\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，并且矩阵<span class="math inline">\(A\)</span>是对称矩阵（即<span class="math inline">\(A=A^T\)</span>）</td>
-<td><span class="math inline">\(\frac{\partial \mathbf x^T A \mathbf x}{\partial \mathbf x}=2 \mathbf x^T A\)</span></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><span class="math inline">\(\frac{\partial \|\mathbf{x} \|^{2}}{\partial \mathbf{x}}=\frac{\partial \mathbf x \cdot \mathbf x}{\partial \mathbf x}=\frac{\partial \mathbf x^T \mathbf x}{\partial \mathbf x}=2 \mathbf x^T\)</span></td>
-</tr>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial(\mathbf{a} \cdot \mathbf{u})}{\partial \mathbf{x}}=\frac{\partial \mathbf{a}^{T} \mathbf{u}}{\partial \mathbf{x}}=\mathbf{a}^{T} \frac{\partial \mathbf{u}}{\partial \mathbf{x}}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf a, \mathbf b\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf{a}^{T} \mathbf{x} \mathbf{x}^{T} \mathbf{b}}{\partial \mathbf{x}}=\mathbf{x}^{T}\left(\mathbf{a} \mathbf{b}^{T}+\mathbf{b a}^{T}\right)\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(A, \mathbf b, C, D, \mathbf e\)</span> 不是向量 <span class="math inline">\(\mathbf x\)</span> 的函数</td>
-<td><span class="math inline">\(\frac{\partial(A \mathbf{x}+\mathbf{b})^T \mathbf{C}(\mathbf{D} \mathbf{x}+\mathbf{e})}{\partial \mathbf{x}}=(\mathbf{D} \mathbf{x}+\mathbf{e})^T \mathbf{C}^TA+(A \mathbf{x}+\mathbf{b})^T \mathbf{C D}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial\|\mathbf{x}-\mathbf{a}\|}{\partial \mathbf{x}}=\frac{(\mathbf{x}-\mathbf{a})^T}{\|\mathbf{x}-\mathbf{a}\|}\)</span></td>
-</tr>
-</tbody>
-</table>
-<h2 id="向量对标量求导-1">向量对标量求导</h2>
-<p>形如<span class="math inline">\(\frac{\partial \mathbf y}{\partial x}\)</span></p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>条件</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf a\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf{a}}{\partial x}=\mathbf{0}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(a\)</span>不是标量<span class="math inline">\(x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial a \mathbf{u}}{\partial x}=a \frac{\partial \mathbf{u}}{\partial x}\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial A \mathbf{u}}{\partial x}=A \frac{\partial \mathbf{u}}{\partial x}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \mathbf{u}^T}{\partial x}=\left( \frac{\partial \mathbf{u}}{\partial x}\right)^T\)</span></td>
-</tr>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial(\mathbf{u}+\mathbf{v})}{\partial x}=\frac{\partial \mathbf{u}}{\partial x}+\frac{\partial \mathbf{v}}{\partial x}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial\left(\mathbf{u}^{T} \mathbf{v}\right)}{\partial x}=\left(\frac{\partial \mathbf{u}}{\partial x}\right)^{T} \mathbf{v}+\mathbf{u}^{T} \frac{\partial \mathbf{v}}{\partial x}\)</span></td>
-</tr>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf g=\mathbf g(\mathbf u)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \mathbf{g}(\mathbf{u})}{\partial x}=\frac{\partial \mathbf{g}(\mathbf{u})}{\partial \mathbf{u}} \frac{\partial \mathbf{u}}{\partial x}\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial(U \mathbf{v})}{\partial x}=\frac{\partial U}{\partial x} \mathbf{v}+U \frac{\partial \mathbf{v}}{\partial x}\)</span></td>
-</tr>
-</tbody>
-</table>
-<h2 id="标量对矩阵求导-1">标量对矩阵求导</h2>
-<p>形如<span class="math inline">\(\frac{\partial y}{\partial X}\)</span></p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>条件</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial a}{\partial X}=\mathbf{0}^{T}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，标量<span class="math inline">\(u=u(X)\)</span></td>
-<td><span class="math inline">\(\frac{\partial a u}{\partial X}=\quad a \frac{\partial u}{\partial X}\)</span></td>
-</tr>
-<tr class="odd">
-<td>标量<span class="math inline">\(u=u(X)\)</span>，标量<span class="math inline">\(v=v(X)\)</span></td>
-<td><span class="math inline">\(\frac{\partial(u+v)}{\partial X}=\frac{\partial u}{\partial X}+\frac{\partial v}{\partial X}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(u=u(X)\)</span>，标量<span class="math inline">\(v=v(X)\)</span></td>
-<td><span class="math inline">\(\frac{\partial u v}{\partial X}=u \frac{\partial v}{\partial X}+v \frac{\partial u}{\partial X}\)</span></td>
-</tr>
-<tr class="odd">
-<td>标量<span class="math inline">\(u=u(X)\)</span>，标量<span class="math inline">\(g=g(u)\)</span></td>
-<td><span class="math inline">\(\frac{\partial g(u)}{\partial X}=\frac{\partial g(u)}{\partial u} \frac{\partial u}{\partial X}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf a, \mathbf b\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf{a}^{T} X \mathbf{b}}{\partial X}=\mathbf{b a}^T\)</span></td>
-</tr>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf a, \mathbf b\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf{a}^{T} X^T \mathbf{b}}{\partial X}=\mathbf{ab}^T\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\mathbf a, \mathbf b, C\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial(X \mathbf{a}+\mathbf{b})^{T} C(X \mathbf{a}+\mathbf{b})}{\partial X}=\left(\left(C+C^{T}\right)(X \mathbf{a}+\mathbf{b}) \mathbf{a}^{T}\right)^T\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\mathbf a, \mathbf b, C\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial(X \mathbf{a})^{T} C(X \mathbf{b})}{\partial X}=\left(C X \mathbf{b} \mathbf{a}^{T}+C^T X \mathbf{a} \mathbf{b}^T\right)^{T}\)</span></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(X)}{\partial X}=I\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(U=U(X), V=V(X)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(U+V)}{\partial X}=\frac{\partial \operatorname{tr}(U)}{\partial X}+\frac{\partial \operatorname{tr}(V)}{\partial X}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(U=U(X)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(a U)}{\partial X}=a \frac{\partial \operatorname{tr}(U)}{\partial X}\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(A X)}{\partial X}=\frac{\partial \operatorname{tr}(X A)}{\partial X}=A\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(A X^T)}{\partial X}=\frac{\partial \operatorname{tr}(X^T A)}{\partial X}=A^T\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(X^T A X\right)}{\partial X}=X^T\left(A+A^T\right)\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(X^{-1} A\right)}{\partial X}=-X^{-1} AX^{-1}\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A, B\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(AXB)}{\partial X}=\frac{\partial \operatorname{tr}(B A X)}{\partial X}=BA\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A, B, C\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(AXBX^{T} C\right)}{\partial X}=BX^T CA+B^T X^T A^T C^T\)</span></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(X^{n}\right)}{\partial X}=n X^{n-1}\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(AX^{n}\right)}{\partial X}=\sum_{i=0}^{n-1} X^{i} AX^{n-i-1}\)</span></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(e^{X}\right)}{\partial X}= e^{X}\)</span></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(\sin (X))}{\partial X}= \cos (X)\)</span></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(\frac{\partial|X|}{\partial X}=|X| X^{-1}\)</span></td>
-</tr>
-<tr class="even">
-<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \ln |a X|}{\partial X}=X^{-1}\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A, B\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial |AXB|}{\partial X}=|AXB|X^{-1}\)</span></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><span class="math inline">\(\frac{\partial|X^n|}{\partial X}=n|X^n| X^{-1}\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(X^{\dagger}\)</span>表示<span class="math inline">\(X\)</span>的广义逆</td>
-<td><span class="math inline">\(\frac{\partial \ln |X^TX|}{\partial X}=2X^{\dagger}\)</span></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><span class="math inline">\(\frac{\partial \ln |X^TX|}{\partial X^\dagger}=-2X\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(X\)</span>是可逆方阵</td>
-<td><span class="math inline">\(\frac{\partial\left|X^T A X\right|}{\partial X}=2\left|X^T A X\right| X^{-1}=2\left|X^T\right||A||X| X^{-1}\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(X\)</span>不是方阵，矩阵<span class="math inline">\(A\)</span>是对称矩阵</td>
-<td><span class="math inline">\(\frac{\partial\left|X^T A X\right|}{\partial X}= 2\left|X^T A X\right|\left(X^T A^T X\right)^{-1} X^T A^T\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(X\)</span>不是方阵，矩阵<span class="math inline">\(A\)</span>不是对称矩阵</td>
-<td><span class="math inline">\(\frac{\partial\left|X^T A X\right|}{\partial X}= \left|X^T A X\right|\left(\left(X^T A^T X\right)^{-1} X^T A+\left(X^T A^T X\right)^{-1} X^T A^T\right)\)</span></td>
-</tr>
-</tbody>
-</table>
-<h2 id="矩阵对标量求导-1">矩阵对标量求导</h2>
-<p>形如<span class="math inline">\(\frac{\partial Y}{\partial x}\)</span></p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>条件</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span>，标量<span class="math inline">\(a\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial a U}{\partial x}=a\frac{\partial U}{\partial x}\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A, B\)</span>不是标量<span class="math inline">\(x\)</span>的函数，矩阵<span class="math inline">\(U=U(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial A U B}{\partial x}=A\frac{\partial U}{\partial x} B\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial (U + V)}{\partial x} = \frac{\partial U}{\partial x}+\frac{\partial V}{\partial x}\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial (U V)}{\partial x} = U \frac{\partial V}{\partial x}+\frac{\partial U}{\partial x} V\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial (U \otimes V)}{\partial x} = U \otimes \frac{\partial V}{\partial x}+\frac{\partial U}{\partial x} \otimes V\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial (U \circ V)}{\partial x} = U \circ \frac{\partial V}{\partial x}+\frac{\partial U}{\partial x} \circ V\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial U^{-1}}{\partial x}=-U^{-1}\frac{\partial U}{\partial x}U^{-1}\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(U=U(x,y)\)</span></td>
-<td><span class="math inline">\(\frac{\partial^{2} U^{-1}}{\partial x \partial y}=U^{-1}\left(\frac{\partial U}{\partial x} U^{-1} \frac{\partial U}{\partial y}-\frac{\partial^{2} U}{\partial x \partial y}+\frac{\partial U}{\partial y} U^{-1} \frac{\partial U}{\partial x}\right) U^{-1}\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数，<span class="math inline">\(\mathbf g(X)\)</span>是具有标量系数的任意多项式或多项式级数定义的任何矩阵函数（例如<span class="math inline">\(e^X\)</span>，<span class="math inline">\(\sin(X)\)</span>，<span class="math inline">\(\cos(X)\)</span>，<span class="math inline">\(\ln(X)\)</span>等）；<span class="math inline">\(g(x)\)</span>是对应的标量函数，<span class="math inline">\(g&#39;(x)\)</span>是其导数，<span class="math inline">\(\mathbf g&#39;(X)\)</span>是对应的矩阵函数</td>
-<td><span class="math inline">\(\frac{\partial \mathbf g(xA)}{\partial x}=A \mathbf g&#39;(xA)=\mathbf g&#39;(xA)A\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial e^{xA}}{\partial x}=Ae^{xA}=e^{xA}A\)</span></td>
-</tr>
-</tbody>
-</table>
-<h2 id="标量对标量求导">标量对标量求导</h2>
-<p>形如<span class="math inline">\(\frac{\partial y}{\partial x}\)</span></p>
-<h3 id="涉及向量">涉及向量</h3>
-<table>
-<colgroup>
-<col style="width: 49%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>条件</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial g(\mathbf u)}{\partial x}=\frac{\partial g(\mathbf u)}{\partial \mathbf u} \frac{\partial \mathbf u}{\partial x}\)</span></td>
-</tr>
-<tr class="even">
-<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial (\mathbf u \cdot \mathbf v)}{\partial x}=\mathbf u \cdot \frac{\partial \mathbf v}{\partial x}+\frac{\partial \mathbf u}{\partial x} \cdot \mathbf v\)</span></td>
-</tr>
-</tbody>
-</table>
-<h3 id="涉及矩阵">涉及矩阵</h3>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>条件</th>
-<th>表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial|U|}{\partial x}=|U| \operatorname{tr}\left(U^{-1} \frac{\partial U}{\partial x}\right)\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial \ln|U|}{\partial x}= \operatorname{tr}\left(U^{-1} \frac{\partial U}{\partial x}\right)\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial^{2}|U|}{\partial x^{2}}=|U|\left[\operatorname{tr}\left(U^{-1} \frac{\partial^{2} U}{\partial x^{2}}\right)+\operatorname{tr}^{2}\left(U^{-1} \frac{\partial U}{\partial x}\right)-\operatorname{tr}\left(\left(U^{-1} \frac{\partial U}{\partial x}\right)^{2}\right)\right]\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
-<td><span class="math inline">\(\frac{\partial g(U)}{\partial x}= \operatorname{tr}\left(\frac{\partial g(U)}{\partial U} \frac{\partial U}{\partial x}\right)\)</span></td>
-</tr>
-<tr class="odd">
-<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数，<span class="math inline">\(\mathbf g(X)\)</span>是具有标量系数的任意多项式或多项式级数定义的任何矩阵函数（例如<span class="math inline">\(e^X\)</span>，<span class="math inline">\(\sin(X)\)</span>，<span class="math inline">\(\cos(X)\)</span>，<span class="math inline">\(\ln(X)\)</span>等）；<span class="math inline">\(g(x)\)</span>是对应的标量函数，<span class="math inline">\(g&#39;(x)\)</span>是其导数，<span class="math inline">\(\mathbf g&#39;(X)\)</span>是对应的矩阵函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(\mathbf{g}(x A))}{\partial x}=\operatorname{tr}\left(A \mathbf{g}&#39;(x A)\right)\)</span></td>
-</tr>
-<tr class="even">
-<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
-<td><span class="math inline">\(\frac{\partial \operatorname{tr}(e^{x A})}{\partial x}=\operatorname{tr}\left(A e^{x A}\right)\)</span></td>
-</tr>
-</tbody>
-</table>
-<h1 id="微分">微分</h1>
-<p>直接进行矩阵求导是一件麻烦事，原因在于很多时候，链式法则和乘法法则并不适用，里面混杂着很多转置运算。</p>
-<p>另一种方式由Thomas P. Minka在《Old and New Matrix Algebra Useful for Statistics》中提出。思路是不直接求导，而是先写出矩阵的微分形式，然后利用微分和导数的关系，得出导数。</p>
-<p>我们首先从标量中的微分说起。标量中的微分定义如下：</p>
-<p>设<span class="math inline">\(y=f(x)\)</span>在<span class="math inline">\((a,b)\)</span>有定义，如果对给定的<span class="math inline">\(x \in (a, b)\)</span>，有 <span class="math display">\[
-\Delta y = f(x+\Delta x)-f(x)=A \Delta x + \omicron (\Delta x),(\Delta x \to 0)
-\]</span> 其中<span class="math inline">\(A\)</span>与<span class="math inline">\(\Delta x\)</span>无关，则称<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x\)</span>点可微，并称<span class="math inline">\(A\Delta x\)</span>为函数<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x\)</span>点的微分，记为 <span class="math display">\[
-\mathrm dy=A\Delta x
-\]</span> 由于<span class="math inline">\(\mathrm d x=\Delta x\)</span>，因此<span class="math inline">\(\mathrm dy=A\mathrm dx\)</span>。</p>
-<p>上面的定义可以直接推广到向量中。也就是说，对于满足某些连续性的向量函数<span class="math inline">\(\mathbf y=f(\mathbf x)\)</span>，有 <span class="math display">\[
-\Delta \mathbf y=\mathbf y(\mathbf x+\mathrm d\mathbf x)-\mathbf y(\mathbf x)=A \mathrm d \mathbf x + \omicron(\mathbf x)
-\]</span> 成立。因此也有<span class="math inline">\(\mathrm d \mathbf y=A \mathrm d \mathbf x\)</span>，<span class="math inline">\(A\)</span>就是<span class="math inline">\(\mathbf y\)</span>对<span class="math inline">\(\mathbf x\)</span>的导数，也叫做雅可比矩阵，记为<span class="math inline">\(J_{\mathbf x \to \mathbf y}\)</span>。雅可比矩阵的转置被认为是<span class="math inline">\(\mathbf y\)</span>的梯度，记为<span class="math inline">\(\nabla \mathbf y\)</span>。一般来说，雅可比矩阵用于微积分，而梯度则用于优化。</p>
-<p>因此，涉及矩阵的任何表达式的导数可以通过两个步骤来计算：</p>
-<ol type="1">
-<li>计算微分。</li>
-<li>将结果整理为规范形式。</li>
-</ol>
-<p>表达式的微分可以通过迭代应用以下规则来计算：</p>
-<ul>
-<li><p>常量： <span class="math display">\[
-\mathrm{d} A =0 \text { (for constant } A)
-\]</span></p></li>
-<li><p>数乘： <span class="math display">\[
-\mathrm{d}(a X) =a \mathrm{d} X
-\]</span></p></li>
-<li><p>加减法： <span class="math display">\[
-\mathrm{d}(X \pm Y) =\mathrm{d} X \pm \mathrm{d} Y
-\]</span></p></li>
-<li><p>矩阵乘法： <span class="math display">\[
-\mathrm{d}(X Y) =(\mathrm{d} X) Y+X \mathrm{d} Y
-\]</span></p></li>
-<li><p>排列变换： <span class="math display">\[
-\mathrm{d} X^{\star} =(\mathrm{d} X)^{\star}
-\]</span> 最后的符号<span class="math inline">\(\star\)</span>是指重新排列元素的任何运算符，例如转置、共轭转置和向量化。</p></li>
-<li><p>迹： <span class="math display">\[
-\mathrm{d}(\operatorname{tr}(X)) =\operatorname{tr}(\mathrm{d} X)
-\]</span></p></li>
-<li><p>行列式： <span class="math display">\[
-\begin{eqnarray*}
-\mathrm{d}{|X|} &amp;=&amp; \operatorname{tr}\left(\operatorname{adj}(X) \mathrm{d}X\right) \\
-\mathrm{d}|X| &amp;=&amp; \operatorname{tr}\left(|X|X^{-1} \mathrm{d} X\right)，当X可逆时
-\end{eqnarray*}
-\]</span> <span class="math inline">\(\mathrm d |X|\)</span>的推导比较复杂，首先需要一条引理：</p>
-<p><strong>引理：</strong><span class="math inline">\(\frac{\partial \mathrm d|X|}{\partial x_{ij}}=\operatorname{adj}(X)_{ji}\)</span></p>
-<p>证明：</p>
-<p>令算符<span class="math inline">\(+_{ij}\)</span>表示对矩阵中位置<span class="math inline">\((i, j)\)</span>的元素增加某个量。 <span class="math display">\[
-\begin{eqnarray*}
-\frac{\partial \mathrm d|X|}{\partial x_{ij}} &amp;=&amp; \lim_{\varepsilon \to 0} \frac{|X+_{ij} \varepsilon|-|X|}{\varepsilon} \\
-&amp;=&amp; \lim_{\varepsilon \to 0} \frac{\sum_{\underset{k \neq j}{k=1}}^n x_{ik}(-1)^{i+k}|X_{ik}|+(x_{ij}+\varepsilon)(-1)^{i+j}|X_{ij}|-\sum_{k=1}^n x_{ik}(-1)^{i+k}|X_{ik}|}{\varepsilon} \\
-&amp;=&amp; \lim_{\varepsilon \to 0} \frac{\sum_{k=1}^n x_{ik}(-1)^{i+k}|X_{ik}|+\varepsilon(-1)^{i+j}|X_{ij}|-\sum_{k=1}^n x_{ik}(-1)^{i+k}|X_{ik}|}{\varepsilon} \\
-&amp;=&amp; \lim_{\varepsilon \to 0} (-1)^{i+j}|X_{ij}| \\
-&amp;=&amp; (-1)^{i+j}|X_{ij}| \\
-&amp;=&amp; \operatorname{adj}(X)_{ji}
-\end{eqnarray*}
-\]</span> 根据全微分的性质，<span class="math inline">\(\mathrm d f=\sum_i \frac{\partial f}{\partial x_i} \mathrm dx\)</span>，由此可以推导出<span class="math inline">\(\mathrm d|X|\)</span>： <span class="math display">\[
-\begin{eqnarray*}
-\mathrm d|X| &amp;=&amp; \sum_{i=1}^n \sum_{j=1}^n \frac{\partial |X|}{\partial x_{ij}} \mathrm dx_{ij} \\
-&amp;=&amp; \sum_{i=1}^n \sum_{j=1}^n \operatorname{adj}(X)_{ji} \mathrm dx_{ij} \\
-&amp;=&amp; \operatorname{tr}(\operatorname{adj}(X)\mathrm dX)
-\end{eqnarray*}
-\]</span> 当<span class="math inline">\(X\)</span>可逆时，有<span class="math inline">\(X^{-1}=\frac{\operatorname{adj}(X)}{|X|}\)</span>，因此 <span class="math display">\[
-\begin{eqnarray*}
-\mathrm d|X| &amp;=&amp; \operatorname{tr}(\operatorname{adj}(X)\mathrm dX) \\
-&amp;=&amp; \operatorname{tr}(|X|X^{-1}\mathrm dX) \\
-&amp;=&amp; |X|\operatorname{tr}(X^{-1}\mathrm dX) \\
-\end{eqnarray*}
-\]</span></p></li>
-<li><p>逆： <span class="math display">\[
-\mathrm{d} X^{-1} =-X^{-1}(\mathrm{d} X) X^{-1}
-\]</span> <span class="math inline">\(\mathrm dX^{-1}\)</span>的推导： <span class="math display">\[
-0=\mathrm dI=\mathrm dX^{-1}X=(\mathrm dX^{-1})X+X^{-1}\mathrm dX
-\]</span> 从中可以推导出<span class="math inline">\(\mathrm dX^{-1}\)</span>。</p></li>
-<li><p><a href="#克罗內克积">克罗內克积</a>： <span class="math display">\[
-\mathrm{d}(X \otimes Y)=(\mathrm{d} X) \otimes Y+X \otimes \mathrm{d} Y
-\]</span></p></li>
-<li><p><a href="#哈达玛积">哈达玛积</a>： <span class="math display">\[
-\mathrm{d}(X \circ Y) =(\mathrm{d} X) \circ Y+X \circ \mathrm{d} Y
-\]</span></p></li>
-<li><p>逐元素函数： <span class="math display">\[
-\mathrm d f(X)= f&#39;(X)\circ \mathrm dX
-\]</span> <span class="math inline">\(f(X)=[f(x_{ij})]\)</span>是逐元素标量函数运算，<span class="math inline">\(f&#39;(X)=[f&#39;(x_{ij})]\)</span>是逐元素求导数。例如：</p>
-<p><span class="math inline">\(X=\left[\begin{array}{cc} x_{11} &amp; x_{12} \\ x_{21} &amp; x_{22} \end{array}\right]\)</span>，<span class="math inline">\(\mathrm d \sin (X)=\left[\begin{array}{cc} \cos x_{11} \mathrm d x_{11} &amp; \cos x_{12} \mathrm d x_{12} \\ \cos x_{21} \mathrm d x_{21} &amp; \cos x_{22} \mathrm d x_{22} \end{array}\right]=\cos (X) \circ \mathrm d X\)</span>。</p></li>
-</ul>
-<p>大部分规则的证明可以通过<span class="math inline">\(F(X+\mathrm dX)-F(X)\)</span>并取线性部分得到。比如： <span class="math display">\[
-\begin{eqnarray*}
-F(X, Y)=XY:\\
-&amp; &amp; F(X+\mathrm dX, Y+\mathrm dY)-F(X, Y) \\
-&amp;=&amp; (X+\mathrm dX)(Y+\mathrm dY)-XY \\
-&amp;=&amp; XY+\mathrm dXY+X\mathrm dY+\mathrm dX \mathrm dY - XY\\
-&amp;=&amp; \mathrm dXY+X\mathrm dY+o(\mathrm P)
-\end{eqnarray*}
-\]</span> 利用这些性质，便可以使用链式法则得出一些比较复杂的微分，比如： <span class="math display">\[
-\begin{aligned}
-&amp;\mathrm d(AX+Y)\\
-=&amp;\mathrm d(AX)+\mathrm d(Y)\\
-=&amp;(\mathrm dA)X+A\mathrm dX+\mathrm dY\\
-=&amp;A\mathrm dX+\mathrm dY
-\end{aligned}
-\]</span></p>
-<p>求出微分后，下一步就是将微分整理成下面的六种形式之一。</p>
-<table>
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 34%" />
-<col style="width: 34%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>自变量</th>
-<th>标量</th>
-<th>向量</th>
-<th>矩阵</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>标量</td>
-<td><span class="math inline">\(\mathrm dy=a\mathrm dx\)</span></td>
-<td><span class="math inline">\(\mathrm d \mathbf y=\mathbf a\mathrm dx\)</span></td>
-<td><span class="math inline">\(\mathrm dY=A\mathrm dx\)</span></td>
-</tr>
-<tr class="even">
-<td>向量</td>
-<td><span class="math inline">\(\mathrm dy=\mathbf a\mathrm d \mathbf x\)</span></td>
-<td><span class="math inline">\(\mathrm d\mathbf y=A\mathrm d\mathbf x\)</span></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>矩阵</td>
-<td><span class="math inline">\(\mathrm dy=tr(A\mathrm dX)\)</span></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>其对应的导数如下表</p>
-<table>
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 34%" />
-<col style="width: 34%" />
-<col style="width: 22%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>自变量</th>
-<th>标量</th>
-<th>向量</th>
-<th>矩阵</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>标量</td>
-<td><span class="math inline">\(\frac{\mathrm dy}{\mathrm dx}=a\)</span></td>
-<td><span class="math inline">\(\frac{\mathrm d \mathbf y}{\mathbf dx}=\mathbf a\)</span></td>
-<td><span class="math inline">\(\frac{\mathrm dY}{\mathrm dx}=A\)</span></td>
-</tr>
-<tr class="even">
-<td>向量</td>
-<td><span class="math inline">\(\frac{\mathrm dy}{\mathrm d \mathbf x}=\mathbf a\)</span></td>
-<td><span class="math inline">\(\frac{\mathrm d\mathbf y}{\mathrm d\mathbf x}=A\)</span></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>矩阵</td>
-<td><span class="math inline">\(\frac{\mathrm dy}{\mathrm dX}=A\)</span></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>注意到矩阵<span class="math inline">\(Y\)</span>对矩阵<span class="math inline">\(X\)</span>的导数无法用矩阵来表示，因此通常会转化成<span class="math inline">\(\frac{\mathbf d \operatorname{vec}(Y)}{\mathbf d \operatorname{vec}(X)}\)</span>，如果微分的目的是使导数等于零，则此变换不会影响结果。</p>
-<p>在整理过程中一些特别有用的技巧：</p>
-<ul>
-<li>标量套上迹：<span class="math inline">\(y=\operatorname{tr}(y)\)</span>。</li>
-<li>转置：<span class="math inline">\(\operatorname{tr}\left(A^{T}\right)=\operatorname{tr}(A)\)</span>。</li>
-<li>加减法：<span class="math inline">\(\operatorname{tr}(A \pm B)=\operatorname{tr}(A) \pm \operatorname{tr}(B)\)</span>。</li>
-<li>数乘：<span class="math inline">\(\operatorname{tr}(aA)=a\operatorname{tr}(A)\)</span>。</li>
-<li>矩阵乘法：<span class="math inline">\(\operatorname{tr}(AB)=\operatorname{tr}(BA)\)</span>。</li>
-<li>矩阵乘法、逐元素乘法交换：<span class="math inline">\(\operatorname{tr}\left(A^{T}(B \circ C)\right)=\operatorname{tr}\left((A \circ B)^{T} C\right)\)</span>，其中<span class="math inline">\(A,B,C\)</span>尺寸相同，两侧都等于<span class="math inline">\(\sum_{i, j}a_{ij}b_{ij}c_{ij}\)</span>。</li>
-</ul>
-<p>下面举几个例子：</p>
-<ul>
-<li><p><span class="math display">\[
-\frac{\mathrm d}{\mathrm d \mathbf x}\operatorname{tr}(AXB)=BA
-\]</span></p>
-<p>令<span class="math inline">\(y=tr(AXB)\)</span>，则 <span class="math display">\[
-\mathrm d y=\mathrm d \operatorname{tr}(AXB)=\mathrm d \operatorname{tr}(BAX)=\operatorname{tr}(\mathrm d(BAX))=\operatorname{tr}((BA)\mathrm dX)
-\]</span></p></li>
-<li><p><span class="math display">\[
-\frac{\mathrm d}{\mathrm dX}\operatorname{tr}(AX^TBXC)=CAX^TB+A^TC^TX^TB^T
-\]</span></p>
-<p>因为 <span class="math display">\[
-\begin{eqnarray*}
-\mathrm d \operatorname{tr}(AX^TBXC)&amp;=&amp;\operatorname{tr}(\mathrm d(AX^TBXC))\\
-&amp;=&amp;\operatorname{tr}(\mathrm d(AX^T)BXC+AX^T\mathrm d(BXC)) \\
-&amp;=&amp;\operatorname{tr}(A(\mathrm dX)^TBXC+AX^TB\mathrm dX C) \\
-&amp;=&amp;\operatorname{tr}(A(\mathrm dX)^TBXC)+\operatorname{tr}(AX^TB\mathrm dX C) \\
-&amp;=&amp;\operatorname{tr}(A^TC^TX^TB^T\mathrm dX)+\operatorname{tr}(CAX^TB\mathrm dX) \\
-&amp;=&amp;\operatorname{tr}((A^TC^TX^TB^T+CAX^TB)\mathrm dX) \\
-\end{eqnarray*}
-\]</span></p></li>
-</ul>
-<h2 id="克罗內克积">克罗內克积</h2>
-<p><span class="math display">\[
-A \otimes B=\left[\begin{array}{ccc}
-a_{11} B &amp; \cdots &amp; a_{1 n} B \\
-\vdots &amp; \ddots &amp; \vdots \\
-a_{m 1} B &amp; \cdots &amp; a_{m n} B
-\end{array}\right]
-\]</span></p>
-<p>克罗內克积满足双线性和结合律： <span class="math display">\[
-\begin{eqnarray*}
-A \otimes(B+C)&amp;=&amp;A \otimes B+A \otimes C \quad(\text { if } B \text { and } C \text { have the same size }), \\
-(A+B) \otimes C&amp;=&amp;A \otimes C+B \otimes C \quad(\text { if } A \text { and } B \text { have the same size }), \\
-(k A) \otimes B&amp;=&amp;A \otimes(k B)=k(A \otimes B), \\
-(A \otimes B) \otimes C&amp;=&amp;A \otimes(B \otimes C)
-\end{eqnarray*}
-\]</span> 克罗內克积不满足交换律：通常，<span class="math inline">\(A \otimes B \neq B \otimes A\)</span>。</p>
-<p>克罗內克积满足混合乘积性质：<span class="math inline">\((A \otimes B)(C \otimes D)=AC \otimes BD\)</span>。从中可以推出：<span class="math inline">\((A \otimes B)^{-1}=A^{-1} \otimes B^{-1}\)</span>。</p>
-<p>克罗內克积对转置运算满足分配律：<span class="math inline">\((A \otimes B)^T=A^T \otimes B^T\)</span>。</p>
-<p>克罗內克积对矩阵的迹运算满足：<span class="math inline">\(\operatorname{tr}(A\otimes B)=\operatorname{tr}A \operatorname{tr}B\)</span>。</p>
-<p>克罗內克积对矩阵的行列式运算满足：<span class="math inline">\(\det(A \otimes B)=(\det A)^b(det B)^a\)</span>，其中<span class="math inline">\(a\)</span>为矩阵<span class="math inline">\(A\)</span>的特征值数量，<span class="math inline">\(b\)</span>为矩阵<span class="math inline">\(B\)</span>的特征值数量。</p>
-<p>克罗內克积对矩阵的秩满足：<span class="math inline">\(\operatorname{rank}(A \otimes B)=\operatorname{rank}A \operatorname{rank}B\)</span></p>
-<h2 id="哈达玛积">哈达玛积</h2>
-<p><span class="math display">\[
-(A \circ B)_{i j}=a_{i j}b_{i j}
-\]</span></p>
-<p>说白了就是对应元素相乘。</p>
-<p>哈达玛积满足交换律，结合律和对加法的分配律： <span class="math display">\[
-\begin{eqnarray*}
-A \circ B&amp;=&amp;B \circ A \\
-A \circ(B\circ C)&amp;=&amp;(A \circ B) \circ C \\
-A \circ(B + C) &amp;=&amp; A \circ B + A \circ C
-\end{eqnarray*}
-\]</span></p>
-<h2 id="向量化">向量化</h2>
-<p><span class="math display">\[
-\operatorname{vec}
-(\left[\begin{array}{cccc}
-a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
-a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \\
-\end{array}\right])
-=
-\left[\begin{array}{c}
-a_{11} \\ a_{21} \\ \vdots \\ a_{m1} \\
-a_{12} \\ a_{22} \\ \vdots \\ a_{m2} \\
-\vdots \\
-a_{1n} \\ a_{2n} \\ \vdots \\ a_{mn}
-\end{array}\right]
-\]</span></p>
-<h1 id="参考网页">参考网页</h1>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Matrix_calculus#Identities_in_differential_form">Matrix calculus - Wikipedia</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/24709748">矩阵求导术（上） - 知乎</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/24863977">矩阵求导术（下） - 知乎</a></li>
-<li><a href="https://tminka.github.io/papers/matrix/minka-matrix.pdf">t.dvi</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>矩阵</tag>
-        <tag>微积分</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>李宏毅机器学习笔记</title>
     <url>/2020/12/16/%E6%9D%8E%E5%AE%8F%E6%AF%85%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="前言">前言</h1>
@@ -13319,6 +12522,803 @@ f_{\boldsymbol \mu, \Sigma}(x)=\frac{1}{(2\pi)^{D/2}|\Sigma|^{1/2}}\exp\left(-\f
       <tags>
         <tag>填坑中</tag>
         <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>矩阵微积分公式速查</title>
+    <url>/2020/08/16/%E7%9F%A9%E9%98%B5%E5%BE%AE%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F%E9%80%9F%E6%9F%A5/</url>
+    <content><![CDATA[<h1 id="向量求导">向量求导</h1>
+<h2 id="向量对标量求导">向量对标量求导</h2>
+<p>记向量<span class="math inline">\(\mathbf y: \mathbb R \to \mathbb R^m\)</span> <span class="math display">\[
+\mathbf y=\left[\begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_m \end{array}\right]=\left[\begin{array}{c} f_1(x) \\ f_2(x) \\ \vdots \\ f_m(x) \end{array}\right]
+\]</span> 则向量<span class="math inline">\(\mathbf y\)</span>关于标量<span class="math inline">\(x\)</span>的导数<span class="math inline">\(\frac{\partial \mathbf y}{\partial x}\)</span>有 <span class="math display">\[
+\frac{\partial \mathbf{y}}{\partial x}=\left[\begin{array}{c}
+\frac{\partial y_{1}}{\partial x} \\
+\frac{\partial y_{2}}{\partial x} \\
+\vdots \\
+\frac{\partial y_{m}}{\partial x}
+\end{array}\right]
+\]</span> 这个导数也被称为向量<span class="math inline">\(\mathbf y\)</span>的<strong>切向量</strong>。比如，速度向量是位移向量的切向量，加速度向量是速度向量的切向量。</p>
+<h2 id="标量对向量求导">标量对向量求导</h2>
+<p>对标量<span class="math inline">\(y \in \mathbb R\)</span>和向量<span class="math inline">\(\mathbf x \in \mathbb R^n\)</span> <span class="math display">\[
+\mathbf x=\left[\begin{array}{c}x_1\\x_2\\\vdots\\x_n\end{array}\right], y = f(\mathbf x)=f(x_1, x_2, \cdots, x_n)
+\]</span> 则标量<span class="math inline">\(y\)</span>对向量<span class="math inline">\(\mathbf x\)</span>的导数<span class="math inline">\(\frac{\partial y}{\partial \mathbf x}\)</span> <span class="math display">\[
+\frac{\partial y}{\partial \mathbf{x}}=\left[\begin{array}{llll}
+\frac{\partial y}{\partial x_{1}} &amp; \frac{\partial y}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{n}}
+\end{array}\right]
+\]</span> 一个标量场<span class="math inline">\(y\)</span>在<span class="math inline">\(\mathbb R^n\)</span>空间中的<strong>梯度</strong>（gradient）是上述导数的转置。也就是说 <span class="math display">\[
+\nabla y=\left[\begin{array}{c}
+\frac{\partial y}{\partial x_{1}} \\
+\vdots \\
+\frac{\partial y}{\partial x_{n}}
+\end{array}\right]=\left(\frac{\partial y}{\partial \mathbf{x}}\right)^{T}
+\]</span> 标量函数<span class="math inline">\(y=f(\mathbf x)\)</span>在单位向量<span class="math inline">\(\mathbf u\)</span>方向上的<strong>方向导数</strong>可以用梯度来定义 <span class="math display">\[
+\nabla_{\mathbf{u}} y=\nabla y \cdot \mathbf{u}=(\frac{\partial y}{\partial \mathbf x})^T\cdot \mathbf u=\frac{\partial y}{\partial \mathbf x} \mathbf u
+\]</span></p>
+<h2 id="向量对向量求导">向量对向量求导</h2>
+<p>前面两种情况可以看作是向量对向量求导在其中一个是一维向量情况下的特例。</p>
+<p>对向量<span class="math inline">\(\mathbf y \in \mathbb R^m\)</span>和向量<span class="math inline">\(\mathbf x \in \mathbb R^n\)</span>，向量函数<span class="math inline">\(\mathbf y=f(\mathbf x)\)</span> <span class="math display">\[
+\mathbf x=\left[\begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array}\right], \mathbf y=\left[\begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_m \end{array}\right]=\left[\begin{array}{c} f_1(\mathbf x) \\ f_2(\mathbf x) \\ \vdots \\ f_m(\mathbf x) \end{array}\right]=\left[\begin{array}{c} f_1(x_1, x_2, \cdots, x_n) \\ f_2(x_1, x_2, \cdots, x_n) \\ \vdots \\ f_m(x_1, x_2, \cdots, x_n) \end{array}\right]
+\]</span> 则向量<span class="math inline">\(\mathbf y\)</span>对向量<span class="math inline">\(\mathbf x\)</span>的导数<span class="math inline">\(J=\frac{\partial \mathbf y}{\partial \mathbf x}\)</span> <span class="math display">\[
+J=\frac{\partial \mathbf{y}}{\partial \mathbf{x}}=\left[\begin{array}{cccc}
+\frac{\partial y_{1}}{\partial x_{1}} &amp; \frac{\partial y_{1}}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y_{1}}{\partial x_{n}} \\
+\frac{\partial y_{2}}{\partial x_{1}} &amp; \frac{\partial y_{2}}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y_{2}}{\partial x_{n}} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial y_{m}}{\partial x_{1}} &amp; \frac{\partial y_{m}}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial y_{m}}{\partial x_{n}}
+\end{array}\right]
+\]</span> 这个导数也被称为<strong>雅可比矩阵</strong>（Jacobian matrix）。</p>
+<p>可以这样记忆这些导数的排列方式。分子的偏微分是根据<span class="math inline">\(\mathbf y\)</span>的形状来排列的，而分母的偏微分是根据<span class="math inline">\(\mathbf x\)</span>的转置的形状来排列的。例如，<span class="math inline">\(\frac{\partial \mathbf y}{\partial x}\)</span>是列向量，而<span class="math inline">\(\frac{\partial y}{\partial \mathbf x}\)</span>是行向量（假设<span class="math inline">\(\mathbf x\)</span>和<span class="math inline">\(\mathbf y\)</span>是列向量，否则将翻转）。这种布局方式也被称为<strong>分子布局</strong>。与之相反的还有分母布局。</p>
+<h1 id="矩阵求导">矩阵求导</h1>
+<h2 id="矩阵对标量求导">矩阵对标量求导</h2>
+<p>记标量<span class="math inline">\(x \in \mathbb R\)</span>，矩阵<span class="math inline">\(Y \in \mathbb R^{m \times n}\)</span>，则矩阵<span class="math inline">\(Y\)</span>对标量<span class="math inline">\(x\)</span>的导数 <span class="math display">\[
+\frac{\partial Y}{\partial x}=\left[\begin{array}{cccc}
+\frac{\partial y_{11}}{\partial x} &amp; \frac{\partial y_{12}}{\partial x} &amp; \cdots &amp; \frac{\partial y_{1 n}}{\partial x} \\
+\frac{\partial y_{21}}{\partial x} &amp; \frac{\partial y_{22}}{\partial x} &amp; \cdots &amp; \frac{\partial y_{2 n}}{\partial x} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial y_{m 1}}{\partial x} &amp; \frac{\partial y_{m 2}}{\partial x} &amp; \cdots &amp; \frac{\partial y_{m n}}{\partial x}
+\end{array}\right]
+\]</span> 和向量类似，得到的矩阵被称为<strong>切矩阵</strong>。</p>
+<h2 id="标量对矩阵求导">标量对矩阵求导</h2>
+<p>记矩阵<span class="math inline">\(X \in \mathbb R^{p \times q}\)</span>，标量<span class="math inline">\(y \in \mathbb R\)</span>，则标量<span class="math inline">\(y\)</span>对矩阵<span class="math inline">\(X\)</span>的导数 <span class="math display">\[
+\frac{\partial y}{\partial X}=\left[\begin{array}{cccc}
+\frac{\partial y}{\partial x_{11}} &amp; \frac{\partial y}{\partial x_{21}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{p 1}} \\
+\frac{\partial y}{\partial x_{12}} &amp; \frac{\partial y}{\partial x_{22}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{p 2}} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial y}{\partial x_{1 q}} &amp; \frac{\partial y}{\partial x_{2 q}} &amp; \cdots &amp; \frac{\partial y}{\partial x_{p q}}
+\end{array}\right]
+\]</span> 矩阵的标量函数的典型例子有矩阵的迹和行列式。在类似的向量演算中，这个导数通常写成如下形式。 <span class="math display">\[
+\nabla_X y(X)=\frac{\partial y(X)}{\partial X}
+\]</span></p>
+<h2 id="标量对向量求二阶导">标量对向量求二阶导</h2>
+<p>记向量<span class="math inline">\(\mathbf x \in \mathbb R^n\)</span>，函数<span class="math inline">\(f:\mathbb R^n \to \mathbb R\)</span>。则<span class="math inline">\(f\)</span>对于<span class="math inline">\(\mathbf x\)</span>的二阶导<span class="math inline">\(H=\frac{\partial ^2 f}{\partial \mathbf x^2}\)</span> <span class="math display">\[
+H=\frac{\partial ^2 f}{\partial \mathbf x^2}=\left[\begin{array}{cccc}
+\frac{\partial^{2} f}{\partial x_{1}^{2}} &amp; \frac{\partial^{2} f}{\partial x_{1} \partial x_{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{1} \partial x_{n}} \\
+\frac{\partial^{2} f}{\partial x_{2} \partial x_{1}} &amp; \frac{\partial^{2} f}{\partial x_{2}^{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{2} \partial x_{n}} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial^{2} f}{\partial x_{n} \partial x_{1}} &amp; \frac{\partial^{2} f}{\partial x_{n} \partial x_{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{n}^{2}}
+\end{array}\right]
+\]</span> 这个矩阵也被称为<strong>海森矩阵</strong>（Hessian matrix）。海森矩阵和雅可比矩阵以及梯度有如下关系： <span class="math display">\[
+H(f(\mathbf x))=J(\nabla f(\mathbf x))=\frac{\partial \left(\frac{\partial f}{\partial \mathbf x}\right)^T}{\partial \mathbf x}
+\]</span></p>
+<h1 id="恒等式">恒等式</h1>
+<h2 id="向量对向量求导-1">向量对向量求导</h2>
+<p>形如<span class="math inline">\(\frac{\partial \mathbf y}{\partial \mathbf x}\)</span></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>条件</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf a}{\partial \mathbf x}=\mathbf 0\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="math inline">\(\frac{\partial \mathbf x}{\partial \mathbf x}=I\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial A \mathbf x}{\partial \mathbf x}=A\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf x^T A}{\partial \mathbf x^T}=A\)</span></td>
+</tr>
+<tr class="odd">
+<td>标量<span class="math inline">\(a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial a\mathbf u}{\partial \mathbf x}=a\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(v=v(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial v \mathbf u}{\partial \mathbf x}=v\frac{\partial \mathbf u}{\partial \mathbf x}+\mathbf u\frac{\partial v}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial A \mathbf u}{\partial \mathbf x}=A\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial (\mathbf u + \mathbf v)}{\partial \mathbf x}=\frac{\partial \mathbf u}{\partial \mathbf x}+\frac{\partial \mathbf v}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf g=\mathbf g(\mathbf u)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \mathbf g}{\partial \mathbf x}=\frac{\partial \mathbf g}{\partial \mathbf u}\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf g=\mathbf g(\mathbf u)\)</span>，向量<span class="math inline">\(\mathbf f=\mathbf f(\mathbf g)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \mathbf f}{\partial \mathbf x}=\frac{\partial \mathbf f}{\partial \mathbf g}\frac{\partial \mathbf g}{\partial \mathbf u}\frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="标量对向量求导-1">标量对向量求导</h2>
+<p>形如<span class="math inline">\(\frac{\partial y}{\partial \mathbf x}=(\nabla_{\mathbf x}y)^T\)</span></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>条件</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>标量<span class="math inline">\(a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial a}{\partial \mathbf x}=\mathbf 0^T\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，标量<span class="math inline">\(u=u(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial a u}{\partial \mathbf x}=a\frac{\partial u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(v=v(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial (u+v)}{\partial \mathbf x}=\frac{\partial u}{\partial \mathbf x} + \frac{\partial v}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(v=v(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial u v}{\partial \mathbf x}=u\frac{\partial v}{\partial \mathbf x}+v\frac{\partial u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(g=g(u)\)</span></td>
+<td><span class="math inline">\(\frac{\partial g}{\partial \mathbf x}=\frac{\partial g}{\partial u}\frac{\partial u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(u=u(\mathbf x)\)</span>，标量<span class="math inline">\(g=g(u)\)</span>，标量<span class="math inline">\(f=f(g)\)</span></td>
+<td><span class="math inline">\(\frac{\partial f}{\partial \mathbf x}=\frac{\partial f}{\partial g}\frac{\partial g}{\partial u}\frac{\partial u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \mathbf u \cdot \mathbf v}{\partial \mathbf x}=\frac{\partial \mathbf u^T \mathbf v}{\partial \mathbf x}=\mathbf u^{T} \frac{\partial \mathbf v}{\partial \mathbf x}+\mathbf v^{T} \frac{\partial \mathbf u}{\partial \mathbf x}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span>，矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf{x}\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf{u}^T A \mathbf{v}}{\partial \mathbf{x}}=\mathbf{u}^{T} A \frac{\partial \mathbf{v}}{\partial \mathbf{x}}+\mathbf{v}^{T} A^{T} \frac{\partial \mathbf{u}}{\partial \mathbf{x}}\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(\frac{\partial ^2 f}{\partial \mathbf x \partial \mathbf x^T}=H^T\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial(\mathbf{a} \cdot \mathbf{x})}{\partial \mathbf{x}} =\frac{\partial(\mathbf{x} \cdot \mathbf{a})}{\partial \mathbf{x}}=\frac{\partial \mathbf{a}^{T} \mathbf{x}}{\partial \mathbf{x}} =\frac{\partial \mathbf{x}^{T} \mathbf{a}}{\partial \mathbf{x}}=\mathbf a^T\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf b\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf b^T A \mathbf x}{\partial \mathbf x}=\mathbf b^T A\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf x^T A \mathbf x}{\partial \mathbf x}=\mathbf x^T (A+A^T)\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，并且矩阵<span class="math inline">\(A\)</span>是对称矩阵（即<span class="math inline">\(A=A^T\)</span>）</td>
+<td><span class="math inline">\(\frac{\partial \mathbf x^T A \mathbf x}{\partial \mathbf x}=2 \mathbf x^T A\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="math inline">\(\frac{\partial \|\mathbf{x} \|^{2}}{\partial \mathbf{x}}=\frac{\partial \mathbf x \cdot \mathbf x}{\partial \mathbf x}=\frac{\partial \mathbf x^T \mathbf x}{\partial \mathbf x}=2 \mathbf x^T\)</span></td>
+</tr>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial(\mathbf{a} \cdot \mathbf{u})}{\partial \mathbf{x}}=\frac{\partial \mathbf{a}^{T} \mathbf{u}}{\partial \mathbf{x}}=\mathbf{a}^{T} \frac{\partial \mathbf{u}}{\partial \mathbf{x}}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf a, \mathbf b\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf{a}^{T} \mathbf{x} \mathbf{x}^{T} \mathbf{b}}{\partial \mathbf{x}}=\mathbf{x}^{T}\left(\mathbf{a} \mathbf{b}^{T}+\mathbf{b a}^{T}\right)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(A, \mathbf b, C, D, \mathbf e\)</span> 不是向量 <span class="math inline">\(\mathbf x\)</span> 的函数</td>
+<td><span class="math inline">\(\frac{\partial(A \mathbf{x}+\mathbf{b})^T \mathbf{C}(\mathbf{D} \mathbf{x}+\mathbf{e})}{\partial \mathbf{x}}=(\mathbf{D} \mathbf{x}+\mathbf{e})^T \mathbf{C}^TA+(A \mathbf{x}+\mathbf{b})^T \mathbf{C D}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf a\)</span>不是向量<span class="math inline">\(\mathbf x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial\|\mathbf{x}-\mathbf{a}\|}{\partial \mathbf{x}}=\frac{(\mathbf{x}-\mathbf{a})^T}{\|\mathbf{x}-\mathbf{a}\|}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="向量对标量求导-1">向量对标量求导</h2>
+<p>形如<span class="math inline">\(\frac{\partial \mathbf y}{\partial x}\)</span></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>条件</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf a\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf{a}}{\partial x}=\mathbf{0}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(a\)</span>不是标量<span class="math inline">\(x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial a \mathbf{u}}{\partial x}=a \frac{\partial \mathbf{u}}{\partial x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数，向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial A \mathbf{u}}{\partial x}=A \frac{\partial \mathbf{u}}{\partial x}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \mathbf{u}^T}{\partial x}=\left( \frac{\partial \mathbf{u}}{\partial x}\right)^T\)</span></td>
+</tr>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial(\mathbf{u}+\mathbf{v})}{\partial x}=\frac{\partial \mathbf{u}}{\partial x}+\frac{\partial \mathbf{v}}{\partial x}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial\left(\mathbf{u}^{T} \mathbf{v}\right)}{\partial x}=\left(\frac{\partial \mathbf{u}}{\partial x}\right)^{T} \mathbf{v}+\mathbf{u}^{T} \frac{\partial \mathbf{v}}{\partial x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf g=\mathbf g(\mathbf u)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \mathbf{g}(\mathbf{u})}{\partial x}=\frac{\partial \mathbf{g}(\mathbf{u})}{\partial \mathbf{u}} \frac{\partial \mathbf{u}}{\partial x}\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(\mathbf x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial(U \mathbf{v})}{\partial x}=\frac{\partial U}{\partial x} \mathbf{v}+U \frac{\partial \mathbf{v}}{\partial x}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="标量对矩阵求导-1">标量对矩阵求导</h2>
+<p>形如<span class="math inline">\(\frac{\partial y}{\partial X}\)</span></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>条件</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial a}{\partial X}=\mathbf{0}^{T}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，标量<span class="math inline">\(u=u(X)\)</span></td>
+<td><span class="math inline">\(\frac{\partial a u}{\partial X}=\quad a \frac{\partial u}{\partial X}\)</span></td>
+</tr>
+<tr class="odd">
+<td>标量<span class="math inline">\(u=u(X)\)</span>，标量<span class="math inline">\(v=v(X)\)</span></td>
+<td><span class="math inline">\(\frac{\partial(u+v)}{\partial X}=\frac{\partial u}{\partial X}+\frac{\partial v}{\partial X}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(u=u(X)\)</span>，标量<span class="math inline">\(v=v(X)\)</span></td>
+<td><span class="math inline">\(\frac{\partial u v}{\partial X}=u \frac{\partial v}{\partial X}+v \frac{\partial u}{\partial X}\)</span></td>
+</tr>
+<tr class="odd">
+<td>标量<span class="math inline">\(u=u(X)\)</span>，标量<span class="math inline">\(g=g(u)\)</span></td>
+<td><span class="math inline">\(\frac{\partial g(u)}{\partial X}=\frac{\partial g(u)}{\partial u} \frac{\partial u}{\partial X}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf a, \mathbf b\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf{a}^{T} X \mathbf{b}}{\partial X}=\mathbf{b a}^T\)</span></td>
+</tr>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf a, \mathbf b\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf{a}^{T} X^T \mathbf{b}}{\partial X}=\mathbf{ab}^T\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf a, \mathbf b, C\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial(X \mathbf{a}+\mathbf{b})^{T} C(X \mathbf{a}+\mathbf{b})}{\partial X}=\left(\left(C+C^{T}\right)(X \mathbf{a}+\mathbf{b}) \mathbf{a}^{T}\right)^T\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf a, \mathbf b, C\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial(X \mathbf{a})^{T} C(X \mathbf{b})}{\partial X}=\left(C X \mathbf{b} \mathbf{a}^{T}+C^T X \mathbf{a} \mathbf{b}^T\right)^{T}\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(X)}{\partial X}=I\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(U=U(X), V=V(X)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(U+V)}{\partial X}=\frac{\partial \operatorname{tr}(U)}{\partial X}+\frac{\partial \operatorname{tr}(V)}{\partial X}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(U=U(X)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(a U)}{\partial X}=a \frac{\partial \operatorname{tr}(U)}{\partial X}\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(A X)}{\partial X}=\frac{\partial \operatorname{tr}(X A)}{\partial X}=A\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(A X^T)}{\partial X}=\frac{\partial \operatorname{tr}(X^T A)}{\partial X}=A^T\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(X^T A X\right)}{\partial X}=X^T\left(A+A^T\right)\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(X^{-1} A\right)}{\partial X}=-X^{-1} AX^{-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A, B\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(AXB)}{\partial X}=\frac{\partial \operatorname{tr}(B A X)}{\partial X}=BA\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A, B, C\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(AXBX^{T} C\right)}{\partial X}=BX^T CA+B^T X^T A^T C^T\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(X^{n}\right)}{\partial X}=n X^{n-1}\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(AX^{n}\right)}{\partial X}=\sum_{i=0}^{n-1} X^{i} AX^{n-i-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}\left(e^{X}\right)}{\partial X}= e^{X}\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(\sin (X))}{\partial X}= \cos (X)\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(\frac{\partial|X|}{\partial X}=|X| X^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td>标量<span class="math inline">\(a\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \ln |a X|}{\partial X}=X^{-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A, B\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial |AXB|}{\partial X}=|AXB|X^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="math inline">\(\frac{\partial|X^n|}{\partial X}=n|X^n| X^{-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(X^{\dagger}\)</span>表示<span class="math inline">\(X\)</span>的广义逆</td>
+<td><span class="math inline">\(\frac{\partial \ln |X^TX|}{\partial X}=2X^{\dagger}\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="math inline">\(\frac{\partial \ln |X^TX|}{\partial X^\dagger}=-2X\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(X\)</span>是可逆方阵</td>
+<td><span class="math inline">\(\frac{\partial\left|X^T A X\right|}{\partial X}=2\left|X^T A X\right| X^{-1}=2\left|X^T\right||A||X| X^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(X\)</span>不是方阵，矩阵<span class="math inline">\(A\)</span>是对称矩阵</td>
+<td><span class="math inline">\(\frac{\partial\left|X^T A X\right|}{\partial X}= 2\left|X^T A X\right|\left(X^T A^T X\right)^{-1} X^T A^T\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是矩阵<span class="math inline">\(X\)</span>的函数，矩阵<span class="math inline">\(X\)</span>不是方阵，矩阵<span class="math inline">\(A\)</span>不是对称矩阵</td>
+<td><span class="math inline">\(\frac{\partial\left|X^T A X\right|}{\partial X}= \left|X^T A X\right|\left(\left(X^T A^T X\right)^{-1} X^T A+\left(X^T A^T X\right)^{-1} X^T A^T\right)\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="矩阵对标量求导-1">矩阵对标量求导</h2>
+<p>形如<span class="math inline">\(\frac{\partial Y}{\partial x}\)</span></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>条件</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span>，标量<span class="math inline">\(a\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial a U}{\partial x}=a\frac{\partial U}{\partial x}\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A, B\)</span>不是标量<span class="math inline">\(x\)</span>的函数，矩阵<span class="math inline">\(U=U(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial A U B}{\partial x}=A\frac{\partial U}{\partial x} B\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial (U + V)}{\partial x} = \frac{\partial U}{\partial x}+\frac{\partial V}{\partial x}\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial (U V)}{\partial x} = U \frac{\partial V}{\partial x}+\frac{\partial U}{\partial x} V\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial (U \otimes V)}{\partial x} = U \otimes \frac{\partial V}{\partial x}+\frac{\partial U}{\partial x} \otimes V\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span>，矩阵<span class="math inline">\(V=V(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial (U \circ V)}{\partial x} = U \circ \frac{\partial V}{\partial x}+\frac{\partial U}{\partial x} \circ V\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial U^{-1}}{\partial x}=-U^{-1}\frac{\partial U}{\partial x}U^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(U=U(x,y)\)</span></td>
+<td><span class="math inline">\(\frac{\partial^{2} U^{-1}}{\partial x \partial y}=U^{-1}\left(\frac{\partial U}{\partial x} U^{-1} \frac{\partial U}{\partial y}-\frac{\partial^{2} U}{\partial x \partial y}+\frac{\partial U}{\partial y} U^{-1} \frac{\partial U}{\partial x}\right) U^{-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数，<span class="math inline">\(\mathbf g(X)\)</span>是具有标量系数的任意多项式或多项式级数定义的任何矩阵函数（例如<span class="math inline">\(e^X\)</span>，<span class="math inline">\(\sin(X)\)</span>，<span class="math inline">\(\cos(X)\)</span>，<span class="math inline">\(\ln(X)\)</span>等）；<span class="math inline">\(g(x)\)</span>是对应的标量函数，<span class="math inline">\(g&#39;(x)\)</span>是其导数，<span class="math inline">\(\mathbf g&#39;(X)\)</span>是对应的矩阵函数</td>
+<td><span class="math inline">\(\frac{\partial \mathbf g(xA)}{\partial x}=A \mathbf g&#39;(xA)=\mathbf g&#39;(xA)A\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial e^{xA}}{\partial x}=Ae^{xA}=e^{xA}A\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="标量对标量求导">标量对标量求导</h2>
+<p>形如<span class="math inline">\(\frac{\partial y}{\partial x}\)</span></p>
+<h3 id="涉及向量">涉及向量</h3>
+<table>
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>条件</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial g(\mathbf u)}{\partial x}=\frac{\partial g(\mathbf u)}{\partial \mathbf u} \frac{\partial \mathbf u}{\partial x}\)</span></td>
+</tr>
+<tr class="even">
+<td>向量<span class="math inline">\(\mathbf u=\mathbf u(x)\)</span>，向量<span class="math inline">\(\mathbf v=\mathbf v(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial (\mathbf u \cdot \mathbf v)}{\partial x}=\mathbf u \cdot \frac{\partial \mathbf v}{\partial x}+\frac{\partial \mathbf u}{\partial x} \cdot \mathbf v\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="涉及矩阵">涉及矩阵</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>条件</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial|U|}{\partial x}=|U| \operatorname{tr}\left(U^{-1} \frac{\partial U}{\partial x}\right)\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial \ln|U|}{\partial x}= \operatorname{tr}\left(U^{-1} \frac{\partial U}{\partial x}\right)\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial^{2}|U|}{\partial x^{2}}=|U|\left[\operatorname{tr}\left(U^{-1} \frac{\partial^{2} U}{\partial x^{2}}\right)+\operatorname{tr}^{2}\left(U^{-1} \frac{\partial U}{\partial x}\right)-\operatorname{tr}\left(\left(U^{-1} \frac{\partial U}{\partial x}\right)^{2}\right)\right]\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(U=U(x)\)</span></td>
+<td><span class="math inline">\(\frac{\partial g(U)}{\partial x}= \operatorname{tr}\left(\frac{\partial g(U)}{\partial U} \frac{\partial U}{\partial x}\right)\)</span></td>
+</tr>
+<tr class="odd">
+<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数，<span class="math inline">\(\mathbf g(X)\)</span>是具有标量系数的任意多项式或多项式级数定义的任何矩阵函数（例如<span class="math inline">\(e^X\)</span>，<span class="math inline">\(\sin(X)\)</span>，<span class="math inline">\(\cos(X)\)</span>，<span class="math inline">\(\ln(X)\)</span>等）；<span class="math inline">\(g(x)\)</span>是对应的标量函数，<span class="math inline">\(g&#39;(x)\)</span>是其导数，<span class="math inline">\(\mathbf g&#39;(X)\)</span>是对应的矩阵函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(\mathbf{g}(x A))}{\partial x}=\operatorname{tr}\left(A \mathbf{g}&#39;(x A)\right)\)</span></td>
+</tr>
+<tr class="even">
+<td>矩阵<span class="math inline">\(A\)</span>不是标量<span class="math inline">\(x\)</span>的函数</td>
+<td><span class="math inline">\(\frac{\partial \operatorname{tr}(e^{x A})}{\partial x}=\operatorname{tr}\left(A e^{x A}\right)\)</span></td>
+</tr>
+</tbody>
+</table>
+<h1 id="微分">微分</h1>
+<p>直接进行矩阵求导是一件麻烦事，原因在于很多时候，链式法则和乘法法则并不适用，里面混杂着很多转置运算。</p>
+<p>另一种方式由Thomas P. Minka在《Old and New Matrix Algebra Useful for Statistics》中提出。思路是不直接求导，而是先写出矩阵的微分形式，然后利用微分和导数的关系，得出导数。</p>
+<p>我们首先从标量中的微分说起。标量中的微分定义如下：</p>
+<p>设<span class="math inline">\(y=f(x)\)</span>在<span class="math inline">\((a,b)\)</span>有定义，如果对给定的<span class="math inline">\(x \in (a, b)\)</span>，有 <span class="math display">\[
+\Delta y = f(x+\Delta x)-f(x)=A \Delta x + \omicron (\Delta x),(\Delta x \to 0)
+\]</span> 其中<span class="math inline">\(A\)</span>与<span class="math inline">\(\Delta x\)</span>无关，则称<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x\)</span>点可微，并称<span class="math inline">\(A\Delta x\)</span>为函数<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x\)</span>点的微分，记为 <span class="math display">\[
+\mathrm dy=A\Delta x
+\]</span> 由于<span class="math inline">\(\mathrm d x=\Delta x\)</span>，因此<span class="math inline">\(\mathrm dy=A\mathrm dx\)</span>。</p>
+<p>上面的定义可以直接推广到向量中。也就是说，对于满足某些连续性的向量函数<span class="math inline">\(\mathbf y=f(\mathbf x)\)</span>，有 <span class="math display">\[
+\Delta \mathbf y=\mathbf y(\mathbf x+\mathrm d\mathbf x)-\mathbf y(\mathbf x)=A \mathrm d \mathbf x + \omicron(\mathbf x)
+\]</span> 成立。因此也有<span class="math inline">\(\mathrm d \mathbf y=A \mathrm d \mathbf x\)</span>，<span class="math inline">\(A\)</span>就是<span class="math inline">\(\mathbf y\)</span>对<span class="math inline">\(\mathbf x\)</span>的导数，也叫做雅可比矩阵，记为<span class="math inline">\(J_{\mathbf x \to \mathbf y}\)</span>。雅可比矩阵的转置被认为是<span class="math inline">\(\mathbf y\)</span>的梯度，记为<span class="math inline">\(\nabla \mathbf y\)</span>。一般来说，雅可比矩阵用于微积分，而梯度则用于优化。</p>
+<p>因此，涉及矩阵的任何表达式的导数可以通过两个步骤来计算：</p>
+<ol type="1">
+<li>计算微分。</li>
+<li>将结果整理为规范形式。</li>
+</ol>
+<p>表达式的微分可以通过迭代应用以下规则来计算：</p>
+<ul>
+<li><p>常量： <span class="math display">\[
+\mathrm{d} A =0 \text { (for constant } A)
+\]</span></p></li>
+<li><p>数乘： <span class="math display">\[
+\mathrm{d}(a X) =a \mathrm{d} X
+\]</span></p></li>
+<li><p>加减法： <span class="math display">\[
+\mathrm{d}(X \pm Y) =\mathrm{d} X \pm \mathrm{d} Y
+\]</span></p></li>
+<li><p>矩阵乘法： <span class="math display">\[
+\mathrm{d}(X Y) =(\mathrm{d} X) Y+X \mathrm{d} Y
+\]</span></p></li>
+<li><p>排列变换： <span class="math display">\[
+\mathrm{d} X^{\star} =(\mathrm{d} X)^{\star}
+\]</span> 最后的符号<span class="math inline">\(\star\)</span>是指重新排列元素的任何运算符，例如转置、共轭转置和向量化。</p></li>
+<li><p>迹： <span class="math display">\[
+\mathrm{d}(\operatorname{tr}(X)) =\operatorname{tr}(\mathrm{d} X)
+\]</span></p></li>
+<li><p>行列式： <span class="math display">\[
+\begin{eqnarray*}
+\mathrm{d}{|X|} &amp;=&amp; \operatorname{tr}\left(\operatorname{adj}(X) \mathrm{d}X\right) \\
+\mathrm{d}|X| &amp;=&amp; \operatorname{tr}\left(|X|X^{-1} \mathrm{d} X\right)，当X可逆时
+\end{eqnarray*}
+\]</span> <span class="math inline">\(\mathrm d |X|\)</span>的推导比较复杂，首先需要一条引理：</p>
+<p><strong>引理：</strong><span class="math inline">\(\frac{\partial \mathrm d|X|}{\partial x_{ij}}=\operatorname{adj}(X)_{ji}\)</span></p>
+<p>证明：</p>
+<p>令算符<span class="math inline">\(+_{ij}\)</span>表示对矩阵中位置<span class="math inline">\((i, j)\)</span>的元素增加某个量。 <span class="math display">\[
+\begin{eqnarray*}
+\frac{\partial \mathrm d|X|}{\partial x_{ij}} &amp;=&amp; \lim_{\varepsilon \to 0} \frac{|X+_{ij} \varepsilon|-|X|}{\varepsilon} \\
+&amp;=&amp; \lim_{\varepsilon \to 0} \frac{\sum_{\underset{k \neq j}{k=1}}^n x_{ik}(-1)^{i+k}|X_{ik}|+(x_{ij}+\varepsilon)(-1)^{i+j}|X_{ij}|-\sum_{k=1}^n x_{ik}(-1)^{i+k}|X_{ik}|}{\varepsilon} \\
+&amp;=&amp; \lim_{\varepsilon \to 0} \frac{\sum_{k=1}^n x_{ik}(-1)^{i+k}|X_{ik}|+\varepsilon(-1)^{i+j}|X_{ij}|-\sum_{k=1}^n x_{ik}(-1)^{i+k}|X_{ik}|}{\varepsilon} \\
+&amp;=&amp; \lim_{\varepsilon \to 0} (-1)^{i+j}|X_{ij}| \\
+&amp;=&amp; (-1)^{i+j}|X_{ij}| \\
+&amp;=&amp; \operatorname{adj}(X)_{ji}
+\end{eqnarray*}
+\]</span> 根据全微分的性质，<span class="math inline">\(\mathrm d f=\sum_i \frac{\partial f}{\partial x_i} \mathrm dx\)</span>，由此可以推导出<span class="math inline">\(\mathrm d|X|\)</span>： <span class="math display">\[
+\begin{eqnarray*}
+\mathrm d|X| &amp;=&amp; \sum_{i=1}^n \sum_{j=1}^n \frac{\partial |X|}{\partial x_{ij}} \mathrm dx_{ij} \\
+&amp;=&amp; \sum_{i=1}^n \sum_{j=1}^n \operatorname{adj}(X)_{ji} \mathrm dx_{ij} \\
+&amp;=&amp; \operatorname{tr}(\operatorname{adj}(X)\mathrm dX)
+\end{eqnarray*}
+\]</span> 当<span class="math inline">\(X\)</span>可逆时，有<span class="math inline">\(X^{-1}=\frac{\operatorname{adj}(X)}{|X|}\)</span>，因此 <span class="math display">\[
+\begin{eqnarray*}
+\mathrm d|X| &amp;=&amp; \operatorname{tr}(\operatorname{adj}(X)\mathrm dX) \\
+&amp;=&amp; \operatorname{tr}(|X|X^{-1}\mathrm dX) \\
+&amp;=&amp; |X|\operatorname{tr}(X^{-1}\mathrm dX) \\
+\end{eqnarray*}
+\]</span></p></li>
+<li><p>逆： <span class="math display">\[
+\mathrm{d} X^{-1} =-X^{-1}(\mathrm{d} X) X^{-1}
+\]</span> <span class="math inline">\(\mathrm dX^{-1}\)</span>的推导： <span class="math display">\[
+0=\mathrm dI=\mathrm dX^{-1}X=(\mathrm dX^{-1})X+X^{-1}\mathrm dX
+\]</span> 从中可以推导出<span class="math inline">\(\mathrm dX^{-1}\)</span>。</p></li>
+<li><p><a href="#克罗內克积">克罗內克积</a>： <span class="math display">\[
+\mathrm{d}(X \otimes Y)=(\mathrm{d} X) \otimes Y+X \otimes \mathrm{d} Y
+\]</span></p></li>
+<li><p><a href="#哈达玛积">哈达玛积</a>： <span class="math display">\[
+\mathrm{d}(X \circ Y) =(\mathrm{d} X) \circ Y+X \circ \mathrm{d} Y
+\]</span></p></li>
+<li><p>逐元素函数： <span class="math display">\[
+\mathrm d f(X)= f&#39;(X)\circ \mathrm dX
+\]</span> <span class="math inline">\(f(X)=[f(x_{ij})]\)</span>是逐元素标量函数运算，<span class="math inline">\(f&#39;(X)=[f&#39;(x_{ij})]\)</span>是逐元素求导数。例如：</p>
+<p><span class="math inline">\(X=\left[\begin{array}{cc} x_{11} &amp; x_{12} \\ x_{21} &amp; x_{22} \end{array}\right]\)</span>，<span class="math inline">\(\mathrm d \sin (X)=\left[\begin{array}{cc} \cos x_{11} \mathrm d x_{11} &amp; \cos x_{12} \mathrm d x_{12} \\ \cos x_{21} \mathrm d x_{21} &amp; \cos x_{22} \mathrm d x_{22} \end{array}\right]=\cos (X) \circ \mathrm d X\)</span>。</p></li>
+</ul>
+<p>大部分规则的证明可以通过<span class="math inline">\(F(X+\mathrm dX)-F(X)\)</span>并取线性部分得到。比如： <span class="math display">\[
+\begin{eqnarray*}
+F(X, Y)=XY:\\
+&amp; &amp; F(X+\mathrm dX, Y+\mathrm dY)-F(X, Y) \\
+&amp;=&amp; (X+\mathrm dX)(Y+\mathrm dY)-XY \\
+&amp;=&amp; XY+\mathrm dXY+X\mathrm dY+\mathrm dX \mathrm dY - XY\\
+&amp;=&amp; \mathrm dXY+X\mathrm dY+o(\mathrm P)
+\end{eqnarray*}
+\]</span> 利用这些性质，便可以使用链式法则得出一些比较复杂的微分，比如： <span class="math display">\[
+\begin{aligned}
+&amp;\mathrm d(AX+Y)\\
+=&amp;\mathrm d(AX)+\mathrm d(Y)\\
+=&amp;(\mathrm dA)X+A\mathrm dX+\mathrm dY\\
+=&amp;A\mathrm dX+\mathrm dY
+\end{aligned}
+\]</span></p>
+<p>求出微分后，下一步就是将微分整理成下面的六种形式之一。</p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 34%" />
+<col style="width: 34%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>自变量</th>
+<th>标量</th>
+<th>向量</th>
+<th>矩阵</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>标量</td>
+<td><span class="math inline">\(\mathrm dy=a\mathrm dx\)</span></td>
+<td><span class="math inline">\(\mathrm d \mathbf y=\mathbf a\mathrm dx\)</span></td>
+<td><span class="math inline">\(\mathrm dY=A\mathrm dx\)</span></td>
+</tr>
+<tr class="even">
+<td>向量</td>
+<td><span class="math inline">\(\mathrm dy=\mathbf a\mathrm d \mathbf x\)</span></td>
+<td><span class="math inline">\(\mathrm d\mathbf y=A\mathrm d\mathbf x\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>矩阵</td>
+<td><span class="math inline">\(\mathrm dy=tr(A\mathrm dX)\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>其对应的导数如下表</p>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 34%" />
+<col style="width: 34%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>自变量</th>
+<th>标量</th>
+<th>向量</th>
+<th>矩阵</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>标量</td>
+<td><span class="math inline">\(\frac{\mathrm dy}{\mathrm dx}=a\)</span></td>
+<td><span class="math inline">\(\frac{\mathrm d \mathbf y}{\mathbf dx}=\mathbf a\)</span></td>
+<td><span class="math inline">\(\frac{\mathrm dY}{\mathrm dx}=A\)</span></td>
+</tr>
+<tr class="even">
+<td>向量</td>
+<td><span class="math inline">\(\frac{\mathrm dy}{\mathrm d \mathbf x}=\mathbf a\)</span></td>
+<td><span class="math inline">\(\frac{\mathrm d\mathbf y}{\mathrm d\mathbf x}=A\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>矩阵</td>
+<td><span class="math inline">\(\frac{\mathrm dy}{\mathrm dX}=A\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>注意到矩阵<span class="math inline">\(Y\)</span>对矩阵<span class="math inline">\(X\)</span>的导数无法用矩阵来表示，因此通常会转化成<span class="math inline">\(\frac{\mathbf d \operatorname{vec}(Y)}{\mathbf d \operatorname{vec}(X)}\)</span>，如果微分的目的是使导数等于零，则此变换不会影响结果。</p>
+<p>在整理过程中一些特别有用的技巧：</p>
+<ul>
+<li>标量套上迹：<span class="math inline">\(y=\operatorname{tr}(y)\)</span>。</li>
+<li>转置：<span class="math inline">\(\operatorname{tr}\left(A^{T}\right)=\operatorname{tr}(A)\)</span>。</li>
+<li>加减法：<span class="math inline">\(\operatorname{tr}(A \pm B)=\operatorname{tr}(A) \pm \operatorname{tr}(B)\)</span>。</li>
+<li>数乘：<span class="math inline">\(\operatorname{tr}(aA)=a\operatorname{tr}(A)\)</span>。</li>
+<li>矩阵乘法：<span class="math inline">\(\operatorname{tr}(AB)=\operatorname{tr}(BA)\)</span>。</li>
+<li>矩阵乘法、逐元素乘法交换：<span class="math inline">\(\operatorname{tr}\left(A^{T}(B \circ C)\right)=\operatorname{tr}\left((A \circ B)^{T} C\right)\)</span>，其中<span class="math inline">\(A,B,C\)</span>尺寸相同，两侧都等于<span class="math inline">\(\sum_{i, j}a_{ij}b_{ij}c_{ij}\)</span>。</li>
+</ul>
+<p>下面举几个例子：</p>
+<ul>
+<li><p><span class="math display">\[
+\frac{\mathrm d}{\mathrm d \mathbf x}\operatorname{tr}(AXB)=BA
+\]</span></p>
+<p>令<span class="math inline">\(y=tr(AXB)\)</span>，则 <span class="math display">\[
+\mathrm d y=\mathrm d \operatorname{tr}(AXB)=\mathrm d \operatorname{tr}(BAX)=\operatorname{tr}(\mathrm d(BAX))=\operatorname{tr}((BA)\mathrm dX)
+\]</span></p></li>
+<li><p><span class="math display">\[
+\frac{\mathrm d}{\mathrm dX}\operatorname{tr}(AX^TBXC)=CAX^TB+A^TC^TX^TB^T
+\]</span></p>
+<p>因为 <span class="math display">\[
+\begin{eqnarray*}
+\mathrm d \operatorname{tr}(AX^TBXC)&amp;=&amp;\operatorname{tr}(\mathrm d(AX^TBXC))\\
+&amp;=&amp;\operatorname{tr}(\mathrm d(AX^T)BXC+AX^T\mathrm d(BXC)) \\
+&amp;=&amp;\operatorname{tr}(A(\mathrm dX)^TBXC+AX^TB\mathrm dX C) \\
+&amp;=&amp;\operatorname{tr}(A(\mathrm dX)^TBXC)+\operatorname{tr}(AX^TB\mathrm dX C) \\
+&amp;=&amp;\operatorname{tr}(A^TC^TX^TB^T\mathrm dX)+\operatorname{tr}(CAX^TB\mathrm dX) \\
+&amp;=&amp;\operatorname{tr}((A^TC^TX^TB^T+CAX^TB)\mathrm dX) \\
+\end{eqnarray*}
+\]</span></p></li>
+</ul>
+<h2 id="克罗內克积">克罗內克积</h2>
+<p><span class="math display">\[
+A \otimes B=\left[\begin{array}{ccc}
+a_{11} B &amp; \cdots &amp; a_{1 n} B \\
+\vdots &amp; \ddots &amp; \vdots \\
+a_{m 1} B &amp; \cdots &amp; a_{m n} B
+\end{array}\right]
+\]</span></p>
+<p>克罗內克积满足双线性和结合律： <span class="math display">\[
+\begin{eqnarray*}
+A \otimes(B+C)&amp;=&amp;A \otimes B+A \otimes C \quad(\text { if } B \text { and } C \text { have the same size }), \\
+(A+B) \otimes C&amp;=&amp;A \otimes C+B \otimes C \quad(\text { if } A \text { and } B \text { have the same size }), \\
+(k A) \otimes B&amp;=&amp;A \otimes(k B)=k(A \otimes B), \\
+(A \otimes B) \otimes C&amp;=&amp;A \otimes(B \otimes C)
+\end{eqnarray*}
+\]</span> 克罗內克积不满足交换律：通常，<span class="math inline">\(A \otimes B \neq B \otimes A\)</span>。</p>
+<p>克罗內克积满足混合乘积性质：<span class="math inline">\((A \otimes B)(C \otimes D)=AC \otimes BD\)</span>。从中可以推出：<span class="math inline">\((A \otimes B)^{-1}=A^{-1} \otimes B^{-1}\)</span>。</p>
+<p>克罗內克积对转置运算满足分配律：<span class="math inline">\((A \otimes B)^T=A^T \otimes B^T\)</span>。</p>
+<p>克罗內克积对矩阵的迹运算满足：<span class="math inline">\(\operatorname{tr}(A\otimes B)=\operatorname{tr}A \operatorname{tr}B\)</span>。</p>
+<p>克罗內克积对矩阵的行列式运算满足：<span class="math inline">\(\det(A \otimes B)=(\det A)^b(det B)^a\)</span>，其中<span class="math inline">\(a\)</span>为矩阵<span class="math inline">\(A\)</span>的特征值数量，<span class="math inline">\(b\)</span>为矩阵<span class="math inline">\(B\)</span>的特征值数量。</p>
+<p>克罗內克积对矩阵的秩满足：<span class="math inline">\(\operatorname{rank}(A \otimes B)=\operatorname{rank}A \operatorname{rank}B\)</span></p>
+<h2 id="哈达玛积">哈达玛积</h2>
+<p><span class="math display">\[
+(A \circ B)_{i j}=a_{i j}b_{i j}
+\]</span></p>
+<p>说白了就是对应元素相乘。</p>
+<p>哈达玛积满足交换律，结合律和对加法的分配律： <span class="math display">\[
+\begin{eqnarray*}
+A \circ B&amp;=&amp;B \circ A \\
+A \circ(B\circ C)&amp;=&amp;(A \circ B) \circ C \\
+A \circ(B + C) &amp;=&amp; A \circ B + A \circ C
+\end{eqnarray*}
+\]</span></p>
+<h2 id="向量化">向量化</h2>
+<p><span class="math display">\[
+\operatorname{vec}
+(\left[\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \\
+\end{array}\right])
+=
+\left[\begin{array}{c}
+a_{11} \\ a_{21} \\ \vdots \\ a_{m1} \\
+a_{12} \\ a_{22} \\ \vdots \\ a_{m2} \\
+\vdots \\
+a_{1n} \\ a_{2n} \\ \vdots \\ a_{mn}
+\end{array}\right]
+\]</span></p>
+<h1 id="参考网页">参考网页</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Matrix_calculus#Identities_in_differential_form">Matrix calculus - Wikipedia</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/24709748">矩阵求导术（上） - 知乎</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/24863977">矩阵求导术（下） - 知乎</a></li>
+<li><a href="https://tminka.github.io/papers/matrix/minka-matrix.pdf">t.dvi</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>矩阵</tag>
+        <tag>微积分</tag>
       </tags>
   </entry>
   <entry>
