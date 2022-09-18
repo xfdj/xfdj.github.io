@@ -528,6 +528,9 @@ pre[class*="language-"].line-numbers > code {
 pre:hover .copy-btn {
   opacity: 1;
 }
+figure.highlight .table-container {
+  position: relative;
+}
 .copy-btn {
   color: #333;
   cursor: pointer;
@@ -3053,7 +3056,7 @@ hr {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #98ffa1;
+  background: #ff60e5;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
